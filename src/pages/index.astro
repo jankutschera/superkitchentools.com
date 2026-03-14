@@ -21,6 +21,7 @@ const schema = generateItemListSchema(featuredProducts, "Best Kitchen Tools 2026
   title="SuperKitchenTools — Expert-Tested Kitchen Gear Reviews 2026"
   description="Find the best chef's knives, air fryers, stand mixers, and more. Expert-tested, honestly reviewed kitchen tools for every budget and cooking style."
   schemas={[schema]}
+  isHomepage={true}
 >
 
   <!-- ============================================================
@@ -310,7 +311,7 @@ const schema = generateItemListSchema(featuredProducts, "Best Kitchen Tools 2026
 
   .section-overline {
     font-family: var(--font-ui);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -344,7 +345,8 @@ const schema = generateItemListSchema(featuredProducts, "Best Kitchen Tools 2026
     color: var(--copper);
     text-decoration: none;
     white-space: nowrap;
-    padding-bottom: 0.25rem; /* align to baseline of title */
+    min-height: 2.75rem; /* 44px touch target on mobile */
+    padding: 0.625rem 0;
     transition: color 0.15s;
   }
 
@@ -442,7 +444,7 @@ const schema = generateItemListSchema(featuredProducts, "Best Kitchen Tools 2026
   .hero-eyebrow {
     display: inline-block;
     font-family: var(--font-ui);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -510,7 +512,7 @@ const schema = generateItemListSchema(featuredProducts, "Best Kitchen Tools 2026
 
   .trust-item span {
     font-family: var(--font-ui);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     color: var(--muted);
     text-transform: uppercase;
     letter-spacing: 0.07em;
@@ -779,7 +781,7 @@ const schema = generateItemListSchema(featuredProducts, "Best Kitchen Tools 2026
 
   .cta-overline {
     font-family: var(--font-ui);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -830,8 +832,3 @@ const schema = generateItemListSchema(featuredProducts, "Best Kitchen Tools 2026
   }
 </style>
 
-<!-- Pull Playfair Display for editorial headings -->
-<!-- This supplements the Inter already loaded in BaseLayout -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />

@@ -13,9 +13,10 @@ interface Props {
   breadcrumbs?: { label: string; href: string }[];
   schemas?: string[];
   ogImage?: string;
+  isHomepage?: boolean;
 }
 
-const { title, description, canonical, breadcrumbs, schemas, ogImage } = Astro.props;
+const { title, description, canonical, breadcrumbs, schemas, ogImage, isHomepage = false } = Astro.props;
 
 const siteUrl = "https://superkitchentools.com";
 const resolvedCanonical = canonical ?? (siteUrl + Astro.url.pathname);
@@ -38,11 +39,22 @@ const navLinks = [
   <meta name="robots" content="index, follow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Inter (UI) + Playfair Display (editorial headings) in one request -->
+  <!-- Inter (UI) + Playfair Display (editorial headings) — non-render-blocking -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
-    rel="stylesheet"
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;700;800&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'"
   />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;700;800&display=swap"
+    />
+  </noscript>
+  {isHomepage && (
+    <link rel="preload" as="image" href="/images/hero.jpg" fetchpriority="high" />
+  )}
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
   <meta name="theme-color" content="#C67B4B" />
@@ -474,7 +486,7 @@ const navLinks = [
   .site-logo-tagline {
     display: block;
     font-family: var(--font-ui);
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -687,7 +699,7 @@ const navLinks = [
 
   .footer-network-label {
     font-family: var(--font-ui);
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -767,7 +779,7 @@ const navLinks = [
   /* Footer columns */
   .footer-col-heading {
     font-family: var(--font-ui);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;

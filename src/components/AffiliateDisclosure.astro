@@ -9,7 +9,7 @@ const { variant } = Astro.props;
 {variant === "inline" ? (
   <p class="text-sm text-muted">
     We independently review everything we recommend. When you buy through our links, we may earn a commission.{" "}
-    <a href="/disclosure/" class="text-accent hover:underline">Learn more</a>
+    <a href="/disclosure/" class="text-accent hover:underline" aria-label="Learn more about our affiliate disclosure">Learn more</a>
   </p>
 ) : (
   <p class="text-xs text-gray-500 leading-relaxed">

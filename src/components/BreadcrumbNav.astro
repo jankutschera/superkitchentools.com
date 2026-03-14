@@ -16,7 +16,7 @@ const { items } = Astro.props;
             <span class="text-primary font-medium truncate max-w-[200px]" aria-current="page">{item.label}</span>
           ) : (
             <>
-              <a href={item.href} class="text-muted hover:text-accent transition-colors whitespace-nowrap">
+              <a href={item.href} class="text-muted hover:text-accent transition-colors whitespace-nowrap inline-flex items-center py-2">
                 {item.label}
               </a>
               <svg class="w-3.5 h-3.5 text-gray-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
