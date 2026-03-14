@@ -22,39 +22,197 @@ const categoryImages: Record<string, string> = {
 };
 ---
 
-<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-  {categories.map((category) => {
+<!--
+  Editorial magazine category grid.
+  First item spans 2 columns on wide screens (featured/hero slot).
+  Rest fill standard portrait cards.
+-->
+<div class="cat-grid">
+  {categories.map((category, index) => {
     const imgSrc = categoryImages[category.slug] ?? null;
+    const isFeatured = index === 0;
     return (
       <a
         href={`/best/${category.slug}/`}
-        class="group relative rounded-xl overflow-hidden aspect-[4/3] block"
+        class:list={["cat-card", isFeatured && "cat-card--featured"]}
         aria-label={`Best ${category.displayName}`}
       >
-        {/* Photo background */}
+        {/* Photo */}
         {imgSrc ? (
           <div
-            class="absolute inset-0 category-hero-bg transition-transform duration-500 group-hover:scale-105"
+            class="cat-photo"
             style={`background-image: url('${imgSrc}');`}
             aria-hidden="true"
           ></div>
         ) : (
-          <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900" aria-hidden="true"></div>
+          <div class="cat-photo cat-photo--fallback" aria-hidden="true"></div>
         )}
 
-        {/* Dark gradient overlay — stronger at bottom */}
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 group-hover:from-black/70 transition-all duration-300" aria-hidden="true"></div>
+        {/* Gradient overlay — stronger at bottom */}
+        <div class="cat-overlay" aria-hidden="true"></div>
 
-        {/* Text content at bottom */}
-        <div class="absolute inset-x-0 bottom-0 p-3.5">
-          <h3 class="text-white font-bold text-sm leading-tight font-heading drop-shadow-sm">
-            {category.displayName}
-          </h3>
-          <p class="text-white/75 text-xs mt-0.5 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            See best picks &rarr;
-          </p>
+        {/* Text */}
+        <div class="cat-text">
+          <h3 class="cat-name">{category.displayName}</h3>
+          <span class="cat-cta" aria-hidden="true">See best picks</span>
         </div>
+
+        {/* Copper corner accent */}
+        <div class="cat-corner" aria-hidden="true"></div>
       </a>
     );
   })}
 </div>
+
+<style>
+  :root {
+    --copper: #C67B4B;
+    --charcoal: #2D2D2D;
+    --font-editorial: 'Playfair Display', Georgia, serif;
+    --font-ui: 'Inter', system-ui, sans-serif;
+  }
+
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+    gap: 0.875rem;
+  }
+
+  @media (max-width: 1100px) {
+    .cat-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (max-width: 800px) {
+    .cat-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 560px) {
+    .cat-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Base card */
+  .cat-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    text-decoration: none;
+    background: var(--charcoal);
+    /* Sharp corners — editorial, not soft */
+    border-radius: 2px;
+  }
+
+  /* Featured card: spans 2 cols on large screens */
+  .cat-card--featured {
+    grid-column: span 2;
+    aspect-ratio: 16 / 9;
+  }
+
+  @media (max-width: 560px) {
+    .cat-card--featured {
+      grid-column: span 2;
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  /* Photo */
+  .cat-photo {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .cat-photo--fallback {
+    background: linear-gradient(135deg, #3d3a37 0%, #1a1816 100%);
+  }
+
+  .cat-card:hover .cat-photo {
+    transform: scale(1.04);
+  }
+
+  /* Gradient overlay */
+  .cat-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(20, 18, 16, 0.88) 0%,
+      rgba(20, 18, 16, 0.35) 45%,
+      rgba(20, 18, 16, 0.08) 100%
+    );
+    transition: opacity 0.3s;
+  }
+
+  .cat-card:hover .cat-overlay {
+    opacity: 0.92;
+  }
+
+  /* Text block pinned to bottom */
+  .cat-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.875rem 1rem;
+  }
+
+  .cat-name {
+    font-family: var(--font-ui);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.1875rem;
+  }
+
+  .cat-card--featured .cat-name {
+    font-family: var(--font-editorial);
+    font-size: 1.25rem;
+  }
+
+  .cat-cta {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--copper);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .cat-card:hover .cat-cta {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Signature: thin copper corner accent (top-right) */
+  .cat-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    transition: border-width 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .cat-card:hover .cat-corner {
+    border-width: 0 2.25rem 2.25rem 0;
+    border-color: transparent var(--copper) transparent transparent;
+  }
+</style>

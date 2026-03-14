@@ -7,13 +7,15 @@
   --color-success: #2D8544;
   --color-stars: #F5A623;
   --color-muted: #6B7280;
-  --font-heading: 'Inter', system-ui, sans-serif;
-  --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Playfair Display', 'Inter', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 /* Smooth scroll for anchor links */
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Better focus styles */
@@ -30,13 +32,14 @@ html {
 }
 
 .prose-editorial h2 {
-  font-family: 'Inter', system-ui, sans-serif;
-  font-size: 1.5rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.625rem;
   font-weight: 700;
   color: #2D2D2D;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-  line-height: 1.3;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
 }
 
 .prose-editorial h3 {
@@ -66,4 +69,13 @@ details > summary::-webkit-details-marker {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Editorial section rule — shared utility used across pages */
+.editorial-rule {
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background: #C67B4B;
+  margin-bottom: 0.75rem;
 }

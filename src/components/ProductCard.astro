@@ -19,69 +19,288 @@ const formattedPrice = product.price.toLocaleString("en-US", {
 });
 ---
 
-<article class="group bg-white rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col">
+<article class="pcard">
 
   <!-- Image area -->
-  <a href={`/reviews/${product.slug}/`} class="block relative bg-gray-50 overflow-hidden" style="aspect-ratio: 4/3;">
-    <ProductImage
-      src={product.imageUrl}
-      alt={product.name}
-      category={category || product.category}
-      class="absolute inset-0 w-full h-full"
-    />
-    <!-- Badges -->
-    {(product.isBestSeller || product.isAmazonChoice) && (
-      <div class="absolute top-3 left-3">
-        {product.isBestSeller
-          ? <DealBadge type="best-seller" />
-          : <DealBadge type="amazon-choice" />
-        }
-      </div>
-    )}
+  <a href={`/reviews/${product.slug}/`} class="pcard-image-link" aria-tabindex="-1">
+    <div class="pcard-image-wrap">
+      <ProductImage
+        src={product.imageUrl}
+        alt={product.name}
+        category={category || product.category}
+        class="pcard-image"
+      />
+      <!-- Badge -->
+      {(product.isBestSeller || product.isAmazonChoice) && (
+        <div class="pcard-badge">
+          {product.isBestSeller
+            ? <DealBadge type="best-seller" />
+            : <DealBadge type="amazon-choice" />
+          }
+        </div>
+      )}
+      <!-- Hover overlay with subtle copper tint -->
+      <div class="pcard-image-overlay" aria-hidden="true"></div>
+    </div>
   </a>
 
   <!-- Content -->
-  <div class="flex flex-col flex-1 p-5">
+  <div class="pcard-body">
 
-    <!-- Brand + Name -->
-    <div class="mb-3">
-      <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-1">{product.brand}</p>
-      <h3 class="font-bold text-primary leading-snug text-base line-clamp-2 font-heading">
-        <a href={`/reviews/${product.slug}/`} class="hover:text-accent transition-colors">
-          {product.name}
-        </a>
-      </h3>
-    </div>
+    <!-- Brand -->
+    <p class="pcard-brand">{product.brand}</p>
+
+    <!-- Name -->
+    <h3 class="pcard-name">
+      <a href={`/reviews/${product.slug}/`} class="pcard-name-link">
+        {product.name}
+      </a>
+    </h3>
 
     <!-- Rating -->
-    <div class="mb-3">
+    <div class="pcard-rating">
       <RatingStars rating={product.rating} reviewCount={product.reviewCount} />
     </div>
 
-    <!-- Top pro — single most important feature -->
+    <!-- Top selling point -->
     {topPro && (
-      <p class="text-sm text-muted leading-relaxed mb-4 flex-1 line-clamp-2">
-        <svg class="inline-block w-3.5 h-3.5 mr-1 mb-0.5 text-success shrink-0 fill-current" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-        </svg>
+      <p class="pcard-pro">
+        <span class="pcard-pro-check" aria-hidden="true">
+          <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+        </span>
         {topPro}
       </p>
     )}
 
-    <!-- Price + CTA — pinned to bottom -->
-    <div class="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
-      <span class="text-xl font-extrabold text-primary">{formattedPrice}</span>
+    <!-- Price + CTA -->
+    <div class="pcard-footer">
+      <span class="pcard-price">{formattedPrice}</span>
       <a
         href={amazonUrl}
         rel="nofollow sponsored"
         target="_blank"
-        class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-accent text-white text-xs font-semibold rounded-lg hover:bg-amber-600 transition-colors whitespace-nowrap"
+        class="pcard-buy"
+        aria-label={`Check price for ${product.name} on Amazon`}
       >
         Check Price
-        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <svg width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
       </a>
     </div>
   </div>
+
+  <!-- Signature: thin copper left border that reveals on hover -->
+  <div class="pcard-accent-bar" aria-hidden="true"></div>
 </article>
+
+<style>
+  :root {
+    --copper: #C67B4B;
+    --charcoal: #2D2D2D;
+    --warm-white: #FAFAF8;
+    --muted: #6B7280;
+    --success: #2D8544;
+    --border: #E5E3DF;
+    --font-editorial: 'Playfair Display', Georgia, serif;
+    --font-ui: 'Inter', system-ui, sans-serif;
+  }
+
+  .pcard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+
+  .pcard:hover {
+    border-color: #ccc9c4;
+    box-shadow:
+      0 1px 2px rgba(45, 45, 45, 0.04),
+      0 4px 16px rgba(45, 45, 45, 0.08);
+  }
+
+  /* Signature: left copper accent bar that slides in on hover */
+  .pcard-accent-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--copper);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .pcard:hover .pcard-accent-bar {
+    transform: scaleY(1);
+  }
+
+  /* Image */
+  .pcard-image-link {
+    display: block;
+    text-decoration: none;
+  }
+
+  .pcard-image-wrap {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #f0eeeb;
+  }
+
+  .pcard-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .pcard:hover .pcard-image {
+    transform: scale(1.03);
+  }
+
+  .pcard-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 2;
+  }
+
+  /* Subtle copper tint overlay on hover */
+  .pcard-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(198, 123, 75, 0);
+    transition: background 0.3s;
+    pointer-events: none;
+  }
+
+  .pcard:hover .pcard-image-overlay {
+    background: rgba(198, 123, 75, 0.04);
+  }
+
+  /* Body */
+  .pcard-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  }
+
+  .pcard-brand {
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 0.3125rem;
+  }
+
+  .pcard-name {
+    font-family: var(--font-ui);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.625rem;
+    /* Clamp to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .pcard-name-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s;
+  }
+
+  .pcard-name-link:hover {
+    color: var(--copper);
+  }
+
+  .pcard-rating {
+    margin-bottom: 0.75rem;
+  }
+
+  /* Top selling point */
+  .pcard-pro {
+    font-family: var(--font-ui);
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.55;
+    margin-bottom: 1rem;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.375rem;
+  }
+
+  .pcard-pro-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    background: var(--success);
+    color: #fff;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+  }
+
+  /* Footer */
+  .pcard-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+  }
+
+  .pcard-price {
+    font-family: var(--font-ui);
+    font-size: 1.1875rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    letter-spacing: -0.02em;
+  }
+
+  .pcard-buy {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 0.875rem;
+    background: var(--copper);
+    color: #fff;
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+
+  .pcard-buy:hover {
+    background: #a05e32;
+  }
+</style>

@@ -23,228 +23,815 @@ const schema = generateItemListSchema(featuredProducts, "Best Kitchen Tools 2026
   schemas={[schema]}
 >
 
-  <!-- ============================
-       HERO — full-width photo
-  =============================== -->
-  <section class="relative min-h-[580px] md:min-h-[640px] flex items-center overflow-hidden">
-    <!-- Background image -->
-    <div
-      class="absolute inset-0 category-hero-bg"
-      style="background-image: url('/images/hero.jpg');"
-      aria-hidden="true"
-    ></div>
-    <!-- Dark gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/30" aria-hidden="true"></div>
-    <!-- Subtle texture overlay for depth -->
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" aria-hidden="true"></div>
+  <!-- ============================================================
+       HERO — editorial split layout
+       Left panel: clean warm-white with large serif headline
+       Right panel: full-bleed photo, no text overlay
+  ============================================================= -->
+  <section class="hero-split" aria-label="SuperKitchenTools — Expert-Tested Kitchen Gear">
+    <!-- Left: editorial text panel -->
+    <div class="hero-panel-text">
+      <span class="hero-eyebrow">Expert-Tested Kitchen Gear</span>
 
-    <!-- Content -->
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-      <div class="max-w-2xl">
-        <span class="inline-block text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-5 bg-black/30 backdrop-blur-sm px-3 py-1 rounded-full border border-accent/30">
-          Expert-Tested Kitchen Gear
-        </span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6 font-heading">
-          Find Kitchen Tools<br class="hidden sm:block" />
-          Worth Buying
-        </h1>
-        <p class="text-lg md:text-xl text-white/85 max-w-xl mb-10 leading-relaxed font-body">
-          We research, test, and rank the top kitchen gear across 10 categories.
-          Honest picks — no fluff, no hype.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a
-            href="/best/"
-            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-accent text-white text-base font-semibold rounded-lg hover:bg-amber-600 transition-colors shadow-lg"
-          >
-            See Best Picks
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-          <a
-            href="/reviews/"
-            class="inline-flex items-center justify-center px-7 py-3.5 bg-white/15 backdrop-blur-sm text-white text-base font-semibold rounded-lg border border-white/30 hover:bg-white/25 transition-colors"
-          >
-            Browse All Reviews
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Signature element: thick copper left rule on the H1 -->
+      <h1 class="hero-headline">
+        The&nbsp;Kitchen<br />Tools Worth<br />Buying
+      </h1>
 
-  <!-- ============================
-       TRUST BAR
-  =============================== -->
-  <div class="bg-white border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-      <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-        <div class="flex items-center gap-2 text-sm text-muted">
-          <svg class="w-4 h-4 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-          </svg>
-          <span>100+ products tested</span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-muted">
-          <svg class="w-4 h-4 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-          </svg>
-          <span>4.7 avg. rating</span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-muted">
-          <svg class="w-4 h-4 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span>Updated March 2026</span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-muted">
-          <svg class="w-4 h-4 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-          </svg>
-          <span>Editorially independent</span>
-        </div>
-      </div>
-    </div>
-  </div>
+      <p class="hero-body">
+        We research, test, and rank the top kitchen gear across 10 categories.
+        Honest picks — no fluff, no hype, no sponsored placements.
+      </p>
 
-  <!-- ============================
-       AFFILIATE DISCLOSURE
-  =============================== -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-    <AffiliateDisclosure variant="inline" />
-  </div>
-
-  <!-- ============================
-       CATEGORIES — photo cards
-  =============================== -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-    <div class="flex items-end justify-between mb-10">
-      <div>
-        <p class="text-xs font-semibold uppercase tracking-[0.12em] text-accent mb-2">What We Cover</p>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-primary font-heading leading-tight">Shop by Category</h2>
-        <p class="text-muted mt-2 text-base">10 categories, expert-ranked picks in each</p>
-      </div>
-      <a href="/best/" class="hidden sm:inline-flex items-center gap-1.5 text-sm text-accent font-semibold hover:text-amber-700 transition-colors">
-        View all categories
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
-      </a>
-    </div>
-    <CategoryGrid categories={categories} />
-  </section>
-
-  <!-- ============================
-       FEATURED PRODUCTS — editorial
-  =============================== -->
-  <section class="bg-gray-50 border-y border-gray-200 py-16 md:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-end justify-between mb-10">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.12em] text-accent mb-2">Editors' Picks</p>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-primary font-heading leading-tight">Top-Rated Picks</h2>
-          <p class="text-muted mt-2 text-base">Best sellers across our most popular categories</p>
-        </div>
-        <a href="/reviews/" class="hidden sm:inline-flex items-center gap-1.5 text-sm text-accent font-semibold hover:text-amber-700 transition-colors">
-          All reviews
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <div class="hero-cta-group">
+        <a href="/best/" class="btn-primary">
+          See Best Picks
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
+        <a href="/reviews/" class="btn-ghost">Browse All Reviews</a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Inline trust signals inside the text panel -->
+      <div class="hero-trust">
+        <div class="trust-item">
+          <strong>100+</strong>
+          <span>products tested</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <strong>4.7★</strong>
+          <span>avg. rating</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <strong>Mar 2026</strong>
+          <span>last updated</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: photo panel, no overlay, no text -->
+    <div class="hero-panel-photo" aria-hidden="true">
+      <img
+        src="/images/hero.jpg"
+        alt="Copper cookware, marble surface, fresh herbs — a well-equipped kitchen"
+        class="hero-photo"
+        width="900"
+        height="700"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <!-- Thin copper edge line — signature decorative element -->
+      <div class="hero-photo-edge" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AFFILIATE DISCLOSURE — editorial inline style
+  ============================================================= -->
+  <div class="disclosure-bar">
+    <div class="content-wrap">
+      <AffiliateDisclosure variant="inline" />
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CATEGORIES — magazine masonry-style header + grid
+  ============================================================= -->
+  <section class="section-categories" aria-labelledby="categories-heading">
+    <div class="content-wrap">
+
+      <!-- Section header: editorial rule + oversize label -->
+      <div class="section-header">
+        <div class="section-rule-group">
+          <span class="section-rule-line" aria-hidden="true"></span>
+          <span class="section-overline">What We Cover</span>
+        </div>
+        <div class="section-title-row">
+          <h2 id="categories-heading" class="section-title">Shop by Category</h2>
+          <a href="/best/" class="section-see-all">
+            All 10 categories
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+        <p class="section-subtitle">Expert-ranked picks in each category, updated regularly.</p>
+      </div>
+
+      <CategoryGrid categories={categories} />
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURED PRODUCTS — editorial list style
+       Signature: alternating large/small cards, copper accent bar
+  ============================================================= -->
+  <section class="section-products" aria-labelledby="products-heading">
+    <!-- Full-width copper rule at top -->
+    <div class="products-top-rule" aria-hidden="true"></div>
+
+    <div class="content-wrap">
+      <div class="section-header">
+        <div class="section-rule-group">
+          <span class="section-rule-line" aria-hidden="true"></span>
+          <span class="section-overline">Editors' Picks</span>
+        </div>
+        <div class="section-title-row">
+          <h2 id="products-heading" class="section-title">Top-Rated Picks</h2>
+          <a href="/reviews/" class="section-see-all">
+            All reviews
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+        <p class="section-subtitle">Best sellers across our most popular categories — tested and ranked.</p>
+      </div>
+
+      <div class="products-grid">
         {featuredProducts.map((product) => (
           <ProductCard product={product} />
         ))}
       </div>
     </div>
+
+    <div class="products-bottom-rule" aria-hidden="true"></div>
   </section>
 
-  <!-- ============================
-       HOW WE PICK — editorial trust
-  =============================== -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <div class="text-center mb-14">
-      <p class="text-xs font-semibold uppercase tracking-[0.12em] text-accent mb-3">Our Methodology</p>
-      <h2 class="text-3xl md:text-4xl font-extrabold text-primary font-heading">
-        How We Pick the Best Gear
-      </h2>
-      <p class="text-muted mt-3 text-base max-w-xl mx-auto">
-        Every recommendation follows the same process — no shortcuts, no sponsored placements.
-      </p>
-    </div>
+  <!-- ============================================================
+       HOW WE PICK — numbered editorial methodology
+       Signature: enormous ink numerals, thick left rule on steps
+  ============================================================= -->
+  <section class="section-methodology" aria-labelledby="methodology-heading">
+    <div class="content-wrap">
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-
-      <!-- Research-First -->
-      <div class="flex flex-col">
-        <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C67B4B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="11" cy="11" r="8" />
-            <path d="M21 21l-4.35-4.35" />
-          </svg>
+      <div class="methodology-header">
+        <div class="section-rule-group">
+          <span class="section-rule-line" aria-hidden="true"></span>
+          <span class="section-overline">Our Methodology</span>
         </div>
-        <h3 class="text-lg font-bold text-primary mb-3 font-heading">Research-First</h3>
-        <p class="text-muted text-sm leading-relaxed">Every recommendation starts with thorough research across professional reviews, user feedback, and hands-on testing data from verified purchasers.</p>
+        <h2 id="methodology-heading" class="methodology-title">
+          How We Pick<br />the Best Gear
+        </h2>
+        <p class="methodology-intro">
+          Every recommendation follows the same rigorous process — no shortcuts,
+          no sponsored placements, no brand relationships that influence picks.
+        </p>
       </div>
 
-      <!-- Honest Trade-offs -->
-      <div class="flex flex-col">
-        <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C67B4B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-            <polyline points="17 6 23 6 23 12" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-bold text-primary mb-3 font-heading">Honest Trade-offs</h3>
-        <p class="text-muted text-sm leading-relaxed">We tell you what each product does badly, not just what it does well. Real cons, not invented ones — so you know exactly what you're buying.</p>
-      </div>
+      <ol class="methodology-steps" role="list">
+        <!-- Step 1 -->
+        <li class="methodology-step">
+          <span class="step-number" aria-hidden="true">01</span>
+          <div class="step-content">
+            <h3 class="step-title">Research-First</h3>
+            <p class="step-body">
+              Every recommendation starts with thorough research across professional reviews,
+              user feedback, and hands-on testing data from verified purchasers. We read the
+              1-star reviews too.
+            </p>
+          </div>
+        </li>
 
-      <!-- Clear Guidance -->
-      <div class="flex flex-col">
-        <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C67B4B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 20h9" />
-            <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-bold text-primary mb-3 font-heading">Clear Guidance</h3>
-        <p class="text-muted text-sm leading-relaxed">We explain exactly who each product is right for — so you buy the correct tool for your actual cooking style and budget, not ours.</p>
-      </div>
+        <!-- Step 2 -->
+        <li class="methodology-step">
+          <span class="step-number" aria-hidden="true">02</span>
+          <div class="step-content">
+            <h3 class="step-title">Honest Trade-offs</h3>
+            <p class="step-body">
+              We tell you what each product does badly, not just well. Real cons — not invented
+              ones — so you know exactly what you're buying before it ships.
+            </p>
+          </div>
+        </li>
+
+        <!-- Step 3 -->
+        <li class="methodology-step">
+          <span class="step-number" aria-hidden="true">03</span>
+          <div class="step-content">
+            <h3 class="step-title">Clear Guidance</h3>
+            <p class="step-body">
+              We explain exactly who each product is right for — so you buy the correct tool
+              for your actual cooking style and budget, not what's best for someone else.
+            </p>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <!-- ============================
-       RECENT PICKS — narrow strip
-  =============================== -->
-  <section class="bg-primary py-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
-        <div class="shrink-0 text-center md:text-left">
-          <p class="text-accent text-xs font-semibold uppercase tracking-[0.12em] mb-2">Ready to buy?</p>
-          <h2 class="text-2xl md:text-3xl font-extrabold text-white font-heading leading-tight">
-            Find your perfect<br />kitchen tool today
-          </h2>
-        </div>
-        <div class="flex flex-wrap gap-3 justify-center md:justify-start">
-          {[
-            { label: "Best Chef's Knives", href: "/best/chefs-knives/" },
-            { label: "Best Air Fryers", href: "/best/air-fryers/" },
-            { label: "Best Stand Mixers", href: "/best/stand-mixers/" },
-            { label: "Best Cast Iron", href: "/best/cast-iron-cookware/" },
-            { label: "Best Coffee Makers", href: "/best/coffee-makers/" },
-            { label: "Best Blenders", href: "/best/blenders/" },
-          ].map((item) => (
-            <a
-              href={item.href}
-              class="px-4 py-2 bg-white/10 text-white/90 text-sm font-medium rounded-lg border border-white/15 hover:bg-white/20 hover:text-white transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
+  <!-- ============================================================
+       CTA STRIP — dark charcoal with copper accents
+       Signature: oversized rotated label behind quick-links
+  ============================================================= -->
+  <section class="section-cta" aria-labelledby="cta-heading">
+    <!-- Decorative watermark text -->
+    <span class="cta-watermark" aria-hidden="true">GEAR</span>
+
+    <div class="content-wrap cta-inner">
+      <div class="cta-text">
+        <p class="cta-overline">Ready to buy?</p>
+        <h2 id="cta-heading" class="cta-title">
+          Find your perfect<br />kitchen tool today
+        </h2>
       </div>
+      <nav class="cta-links" aria-label="Top categories">
+        {[
+          { label: "Chef's Knives", href: "/best/chefs-knives/" },
+          { label: "Air Fryers", href: "/best/air-fryers/" },
+          { label: "Stand Mixers", href: "/best/stand-mixers/" },
+          { label: "Cast Iron", href: "/best/cast-iron-cookware/" },
+          { label: "Coffee Makers", href: "/best/coffee-makers/" },
+          { label: "Blenders", href: "/best/blenders/" },
+        ].map((item) => (
+          <a href={item.href} class="cta-link">
+            {item.label}
+          </a>
+        ))}
+      </nav>
     </div>
   </section>
 
 </BaseLayout>
+
+<style>
+  /* ============================================================
+     DESIGN TOKENS
+     (supplement global Tailwind tokens)
+  ============================================================ */
+  :root {
+    --copper: #C67B4B;
+    --copper-light: #D9956B;
+    --charcoal: #2D2D2D;
+    --warm-white: #FAFAF8;
+    --warm-off: #F3F1EE;
+    --muted: #6B7280;
+    --border: #E5E3DF;
+    --font-editorial: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-ui: 'Inter', system-ui, sans-serif;
+    --max-w: 1280px;
+    --px: clamp(1rem, 4vw, 3rem);
+  }
+
+  /* ============================================================
+     SHARED UTILITIES
+  ============================================================ */
+  .content-wrap {
+    max-width: var(--max-w);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--px);
+    padding-right: var(--px);
+  }
+
+  /* Shared section header pattern */
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-rule-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.875rem;
+  }
+
+  /* Signature: copper rule line before overline */
+  .section-rule-line {
+    display: block;
+    width: 2rem;
+    height: 2px;
+    background: var(--copper);
+    flex-shrink: 0;
+  }
+
+  .section-overline {
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--copper);
+  }
+
+  .section-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-family: var(--font-editorial);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  .section-see-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--copper);
+    text-decoration: none;
+    white-space: nowrap;
+    padding-bottom: 0.25rem; /* align to baseline of title */
+    transition: color 0.15s;
+  }
+
+  .section-see-all:hover {
+    color: #a05e32;
+  }
+
+  .section-subtitle {
+    font-family: var(--font-ui);
+    font-size: 0.9375rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8125rem 1.75rem;
+    background: var(--copper);
+    color: #fff;
+    font-family: var(--font-ui);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.15s, transform 0.1s;
+  }
+
+  .btn-primary:hover {
+    background: #a05e32;
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8125rem 1.75rem;
+    background: transparent;
+    color: var(--charcoal);
+    font-family: var(--font-ui);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1.5px solid var(--border);
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--charcoal);
+    background: var(--warm-off);
+  }
+
+  /* ============================================================
+     HERO — SPLIT PANEL
+     Signature: no-overlay editorial split, text on warm white
+  ============================================================ */
+  .hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+    background: var(--warm-white);
+  }
+
+  @media (max-width: 900px) {
+    .hero-split {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+  }
+
+  /* Text panel — left */
+  .hero-panel-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2.5rem, 6vw, 5rem) var(--px) clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 5vw, 5rem);
+    /* Subtle warm gradient right edge blending into photo */
+    background: linear-gradient(to right, var(--warm-white) 85%, transparent);
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (max-width: 900px) {
+    .hero-panel-text {
+      padding: 3rem var(--px) 2rem;
+      background: var(--warm-white);
+      order: 2;
+    }
+  }
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 1.25rem;
+  }
+
+  /* SIGNATURE ELEMENT: thick copper left border on H1 */
+  .hero-headline {
+    font-family: var(--font-editorial);
+    font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+    font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    padding-left: 1.25rem;
+    border-left: 4px solid var(--copper);
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .hero-headline {
+      font-size: clamp(2.25rem, 8vw, 3rem);
+    }
+  }
+
+  .hero-body {
+    font-family: var(--font-ui);
+    font-size: 1.0625rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 38ch;
+    margin-bottom: 2rem;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Trust signals row inside text panel */
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .trust-item strong {
+    font-family: var(--font-ui);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1;
+  }
+
+  .trust-item span {
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 500;
+  }
+
+  .trust-divider {
+    width: 1px;
+    height: 2rem;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  /* Photo panel — right */
+  .hero-panel-photo {
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+  }
+
+  @media (max-width: 900px) {
+    .hero-panel-photo {
+      min-height: 280px;
+      order: 1;
+    }
+  }
+
+  .hero-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Signature decorative edge: thin copper line at left edge of photo */
+  .hero-photo-edge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--copper), var(--copper-light), transparent);
+    z-index: 2;
+  }
+
+  /* ============================================================
+     DISCLOSURE BAR
+  ============================================================ */
+  .disclosure-bar {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--warm-white);
+    padding: 0.75rem 0;
+  }
+
+  /* ============================================================
+     CATEGORIES SECTION
+  ============================================================ */
+  .section-categories {
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    background: var(--warm-white);
+  }
+
+  /* ============================================================
+     PRODUCTS SECTION
+     Full-width tinted background with top/bottom rules
+  ============================================================ */
+  .section-products {
+    background: var(--warm-off);
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    position: relative;
+  }
+
+  .products-top-rule {
+    height: 3px;
+    background: var(--charcoal);
+  }
+
+  .products-bottom-rule {
+    height: 1px;
+    background: var(--border);
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ============================================================
+     METHODOLOGY SECTION
+     Signature: enormous ink numeral + left rule on each step
+  ============================================================ */
+  .section-methodology {
+    padding: clamp(3.5rem, 7vw, 6rem) 0;
+    background: var(--warm-white);
+  }
+
+  .methodology-header {
+    max-width: 52ch;
+    margin-bottom: 3.5rem;
+  }
+
+  .methodology-title {
+    font-family: var(--font-editorial);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+  }
+
+  .methodology-intro {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 48ch;
+  }
+
+  /* Step list */
+  .methodology-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .methodology-step {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    align-items: start;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    position: relative;
+  }
+
+  .methodology-step:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Signature: enormous editorial step number */
+  .step-number {
+    font-family: var(--font-editorial);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--warm-off);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    user-select: none;
+    position: relative;
+    /* Copper underline on the numeral */
+    padding-bottom: 0.25rem;
+  }
+
+  .step-number::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1.5rem;
+    height: 2px;
+    background: var(--copper);
+  }
+
+  /* Left copper border on step content */
+  .step-content {
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--border);
+    transition: border-color 0.2s;
+  }
+
+  .methodology-step:hover .step-content {
+    border-left-color: var(--copper);
+  }
+
+  .step-title {
+    font-family: var(--font-ui);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 0.625rem;
+    letter-spacing: -0.01em;
+  }
+
+  .step-body {
+    font-family: var(--font-ui);
+    font-size: 0.9375rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 60ch;
+  }
+
+  @media (max-width: 640px) {
+    .methodology-step {
+      grid-template-columns: 3.5rem 1fr;
+      gap: 1rem;
+    }
+
+    .step-number {
+      font-size: 2.5rem;
+    }
+  }
+
+  /* ============================================================
+     CTA STRIP
+     Signature: oversized watermark text behind content
+  ============================================================ */
+  .section-cta {
+    background: var(--charcoal);
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Signature: enormous watermark text behind the content */
+  .cta-watermark {
+    position: absolute;
+    right: -0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-editorial);
+    font-size: clamp(6rem, 18vw, 14rem);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.03);
+    letter-spacing: -0.05em;
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .cta-inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    .cta-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  .cta-overline {
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 0.625rem;
+  }
+
+  .cta-title {
+    font-family: var(--font-editorial);
+    font-size: clamp(1.625rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 480px) {
+    .cta-title {
+      white-space: normal;
+    }
+  }
+
+  .cta-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+  }
+
+  .cta-link {
+    display: inline-block;
+    padding: 0.5625rem 1rem;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-ui);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+  }
+
+  .cta-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(198, 123, 75, 0.5);
+    color: #fff;
+  }
+</style>
+
+<!-- Pull Playfair Display for editorial headings -->
+<!-- This supplements the Inter already loaded in BaseLayout -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
