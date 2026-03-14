@@ -42,9 +42,20 @@ function buildVerdict(pros: string[], cons: string[], name: string): string {
   return `The ${name} earns a strong recommendation thanks to ${topPro.toLowerCase()}. The main caveat is that ${topCon.toLowerCase()}, so keep that in mind before buying. Overall, it delivers excellent value within its price range and is a well-rounded pick for most home cooks.`;
 }
 
-function buildWhoShouldBuy(product: { name: string; pros: string[]; features: string[]; price: number }): string {
-  const priceRange = product.price < 50 ? "budget-conscious buyers" : product.price < 150 ? "value-seeking home cooks" : "serious cooks willing to invest in quality";
-  return `The ${product.name} is best suited to ${priceRange} who want ${(product.pros[0] ?? "reliable performance").toLowerCase()}. If you cook regularly and want a tool that won't let you down, this is a worthy investment. It's particularly well-suited to those who prioritize ${(product.features[0] ?? "performance").toLowerCase()}.`;
+function buildWhoShouldBuy(product: { name: string; pros: string[]; features: string[]; price: number; category: string }): string {
+  const categoryLabel = product.category.replace(/-/g, " ");
+  if (product.price < 50) {
+    const topPro = (product.pros[0] ?? "reliable performance").toLowerCase();
+    return `Best for beginners, students, or anyone who wants solid ${categoryLabel} performance without spending more than $${Math.ceil(product.price)}. The ${product.name} delivers ${topPro} at a price point that makes it easy to recommend without hesitation. It's particularly well-suited to first-time buyers who want to try a category before committing to a more expensive model.`;
+  } else if (product.price < 150) {
+    const topPro = (product.pros[0] ?? "versatile performance").toLowerCase();
+    const topFeature = (product.features[0] ?? "its feature set").toLowerCase();
+    return `Ideal for home cooks who use ${categoryLabel} regularly and want ${topPro} without paying a premium price. The ${product.name} sits in the sweet spot where quality and value intersect — you get ${topFeature} at a price that justifies the investment for anyone who cooks more than a few times a week. Not the choice for professionals, but perfect for the serious home cook.`;
+  } else {
+    const topPro = (product.pros[0] ?? "exceptional quality and performance").toLowerCase();
+    const topFeature = (product.features[0] ?? "its premium construction").toLowerCase();
+    return `Worth it for serious cooks who rely on their ${categoryLabel} daily and value ${topPro}. The ${product.name} is a long-term investment — you're paying for ${topFeature}, durability that outlasts budget alternatives by years, and the kind of performance that makes everyday cooking genuinely better. Not for casual cooks or those who rarely use this category, but for those who do, it's the right tool for the long haul.`;
+  }
 }
 
 const faqs = [
@@ -100,7 +111,7 @@ const schemas = [
 
 const amazonUrl = affiliateUrl(product.asin);
 const verdict = buildVerdict(product.pros, product.cons, product.name);
-const whoShouldBuy = buildWhoShouldBuy(product);
+const whoShouldBuy = buildWhoShouldBuy({ ...product, category: product.category });
 const formatted = product.price.toLocaleString("en-US", { style: "currency", currency: "USD" });
 ---
 

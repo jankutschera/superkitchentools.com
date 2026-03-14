@@ -1,0 +1,92 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { generateBreadcrumbSchema } from "../../lib/seo.ts";
+
+const guides = await getCollection("guides");
+guides.sort((a, b) => {
+  const dateA = new Date(a.data.updatedDate ?? a.data.publishDate).getTime();
+  const dateB = new Date(b.data.updatedDate ?? b.data.publishDate).getTime();
+  return dateB - dateA;
+});
+
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "Buying Guides", href: "/guides/" },
+];
+
+const schemas = [
+  generateBreadcrumbSchema([
+    { name: "Home", url: "https://superkitchentools.com/" },
+    { name: "Buying Guides", url: "https://superkitchentools.com/guides/" },
+  ]),
+];
+---
+
+<BaseLayout
+  title="Kitchen Buying Guides 2026 — SuperKitchenTools"
+  description="Expert buying guides for kitchen equipment. Learn what to look for before you buy — chef's knives, cast iron, air fryers, and more."
+  breadcrumbs={breadcrumbs}
+  schemas={schemas}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Page header -->
+    <div class="mb-12">
+      <div class="w-20 h-1 bg-accent mb-5"></div>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading leading-tight mb-4">
+        Kitchen Buying Guides
+      </h1>
+      <p class="text-muted text-base leading-relaxed max-w-2xl">
+        In-depth guides to help you choose the right kitchen equipment. We cover materials, features, price tiers, and exactly what to look for — so you can buy with confidence.
+      </p>
+    </div>
+
+    <!-- Guides grid -->
+    {guides.length > 0 ? (
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {guides.map((guide) => (
+          <a
+            href={`/guides/${guide.slug}/`}
+            class="group flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-accent/30 hover:shadow-md transition-all duration-200"
+          >
+            {guide.data.category && (
+              <div class="w-full h-36 bg-gray-100 overflow-hidden">
+                <img
+                  src={`/images/categories/${guide.data.category}.jpg`}
+                  alt={guide.data.title}
+                  width="400"
+                  height="144"
+                  loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            )}
+            <div class="p-5 flex-1 flex flex-col">
+              {guide.data.category && (
+                <p class="text-xs font-semibold uppercase tracking-[0.1em] text-accent mb-2">
+                  {guide.data.category.replace(/-/g, " ")}
+                </p>
+              )}
+              <h2 class="font-bold text-primary text-base leading-snug font-heading mb-2 group-hover:text-accent transition-colors">
+                {guide.data.title}
+              </h2>
+              <p class="text-sm text-muted leading-relaxed flex-1 line-clamp-3">
+                {guide.data.description}
+              </p>
+              <div class="mt-4 flex items-center gap-1.5 text-xs font-semibold text-accent">
+                Read guide
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <p class="text-muted">No guides available yet. Check back soon.</p>
+    )}
+
+  </div>
+</BaseLayout>

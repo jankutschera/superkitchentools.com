@@ -1,0 +1,111 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { generateBreadcrumbSchema } from "../../lib/seo.ts";
+
+export async function getStaticPaths() {
+  const guides = await getCollection("guides");
+  return guides.map((guide) => ({
+    params: { slug: guide.id },
+    props: { guide },
+  }));
+}
+
+interface Props {
+  guide: CollectionEntry<"guides">;
+}
+
+const { guide } = Astro.props;
+const { Content } = await render(guide);
+
+const guideSlug = guide.id;
+
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "Guides", href: "/guides/" },
+  { label: guide.data.title, href: `/guides/${guideSlug}/` },
+];
+
+const schemas = [
+  generateBreadcrumbSchema([
+    { name: "Home", url: "https://superkitchentools.com/" },
+    { name: "Guides", url: "https://superkitchentools.com/guides/" },
+    { name: guide.data.title, url: `https://superkitchentools.com/guides/${guideSlug}/` },
+  ]),
+];
+---
+
+<BaseLayout
+  title={`${guide.data.title} — SuperKitchenTools`}
+  description={guide.data.description}
+  breadcrumbs={breadcrumbs}
+  schemas={schemas}
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Article header -->
+    <header class="mb-10">
+      <div class="w-20 h-1 bg-accent mb-5"></div>
+      {guide.data.category && (
+        <a
+          href={`/best/${guide.data.category}/`}
+          class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent hover:text-amber-600 transition-colors mb-4"
+        >
+          <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          {guide.data.category.replace(/-/g, " ")}
+        </a>
+      )}
+      <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading leading-tight mb-4">
+        {guide.data.title}
+      </h1>
+      <p class="text-muted text-base leading-relaxed mb-4">{guide.data.description}</p>
+      <p class="text-sm text-muted/70 flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        {guide.data.updatedDate
+          ? `Updated ${new Date(guide.data.updatedDate).toLocaleDateString("en-US", { month: "long", year: "numeric" })}`
+          : `Published ${new Date(guide.data.publishDate).toLocaleDateString("en-US", { month: "long", year: "numeric" })}`
+        }
+        &nbsp;&middot;&nbsp; SuperKitchenTools Editorial Team
+      </p>
+    </header>
+
+    <!-- Guide content -->
+    <article class="
+      prose prose-gray max-w-none
+      prose-headings:font-heading prose-headings:text-primary
+      prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4
+      prose-h3:text-lg prose-h3:font-bold prose-h3:mt-6 prose-h3:mb-3
+      prose-p:text-muted prose-p:leading-relaxed
+      prose-a:text-accent prose-a:no-underline hover:prose-a:underline
+      prose-strong:text-primary
+      prose-ul:text-muted prose-ol:text-muted
+      prose-li:leading-relaxed
+      prose-table:text-sm
+      prose-th:font-semibold prose-th:text-primary prose-th:bg-gray-50
+      prose-td:text-muted
+      prose-blockquote:border-accent prose-blockquote:text-muted
+    ">
+      <Content />
+    </article>
+
+    <!-- Back to category link -->
+    {guide.data.category && (
+      <div class="mt-14 pt-8 border-t border-gray-100">
+        <a
+          href={`/best/${guide.data.category}/`}
+          class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-gray-200 text-primary text-sm font-semibold rounded-lg hover:border-accent/30 hover:bg-gray-50 transition-colors"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          See Best {guide.data.category.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
+        </a>
+      </div>
+    )}
+
+  </div>
+</BaseLayout>
