@@ -168,5 +168,90 @@
       {"label": "Maintenance", "a": "Hand wash only — dishwasher causes oxidation", "b": "Hand wash recommended but more forgiving", "winner": "b"},
       {"label": "Warranty", "a": "Nordic Ware limited warranty", "b": "Lifetime warranty — stronger guarantee", "winner": "b"}
     ]
+  },
+  {
+    "slug": "oxo-pop-container-vs-rubbermaid-brilliance",
+    "productA": "B01LZQBMHE",
+    "productB": "B01L7PGX4O",
+    "categorySlug": "kitchen-storage",
+    "winner": "B01LZQBMHE",
+    "verdict": "The OXO POP Container wins for most home cooks on single-container convenience and the satisfying one-touch seal mechanism. Choose the Rubbermaid Brilliance set if you're outfitting an entire pantry at once — the multi-size set costs less per container and the four-latch seal excels for portability and transport.",
+    "comparisonPoints": [
+      {"label": "Seal Mechanism", "a": "One-touch push button — faster, one-handed", "b": "Four-latch — more secure for transport", "winner": "a"},
+      {"label": "Stain Resistance", "a": "Good — standard BPA-free plastic", "b": "Excellent — Tritan resists tomato and curry stains", "winner": "b"},
+      {"label": "Visibility", "a": "Crystal-clear 360-degree view", "b": "Crystal-clear Tritan — equally transparent", "winner": "tie"},
+      {"label": "Value", "a": "$14.99 per container", "b": "$39.99 for 10-piece set — $4 per container", "winner": "b"},
+      {"label": "Modularity", "a": "Stackable square design — excellent space efficiency", "b": "Stackable rectangular — also excellent", "winner": "tie"},
+      {"label": "Ease of Filling", "a": "Lid lifts off completely for easy filling", "b": "Four latches require all four to release for filling", "winner": "a"},
+      {"label": "Dishwasher Safe", "a": "Yes", "b": "Yes", "winner": "tie"}
+    ]
+  },
+  {
+    "slug": "spaceaid-spice-rack-vs-kamenstein-revolving",
+    "productA": "B08JHJ5QPY",
+    "productB": "B0716PTVWN",
+    "categorySlug": "spice-racks",
+    "winner": "B08JHJ5QPY",
+    "verdict": "The SpaceAid rack wins for cooks who already have a spice collection and want to organize it inside a cabinet without sacrificing counter space. The Kamenstein wins if you're starting from scratch and want a complete spice collection delivered ready-to-use, plus the 5-year refill program makes it the better long-term value for busy households.",
+    "comparisonPoints": [
+      {"label": "Counter Space Required", "a": "None — stores in cabinet", "b": "Requires dedicated counter space", "winner": "a"},
+      {"label": "Spices Included", "a": "None — you provide your own jars", "b": "20 pre-filled jars included", "winner": "b"},
+      {"label": "Accessibility", "a": "4-tier stepped — all rows visible at once", "b": "360-degree revolving — all jars accessible", "winner": "tie"},
+      {"label": "Refill Program", "a": "None — buy spices separately", "b": "5 years free refills included", "winner": "b"},
+      {"label": "Price", "a": "$29.99", "b": "$49.99 — but includes 20 jars", "winner": "tie"},
+      {"label": "Adjustability", "a": "Adjustable width 8\" to 15\"", "b": "Fixed diameter", "winner": "a"},
+      {"label": "Setup Time", "a": "Immediate — slide in and go", "b": "Immediate — arrives pre-filled", "winner": "tie"}
+    ]
+  },
+  {
+    "slug": "oxo-food-scale-vs-escali-primo",
+    "productA": "B06X9BCST2",
+    "productB": "B01JTDG084",
+    "categorySlug": "kitchen-scales",
+    "winner": "B06X9BCST2",
+    "verdict": "The OXO wins for everyday bakers who frequently weigh ingredients in large bowls — the pull-out display is a practical innovation that directly addresses the most common frustration with kitchen scales. Choose the Escali Primo for its 15-year warranty and NSF certification if you want a no-frills precision tool built to last with professional validation.",
+    "comparisonPoints": [
+      {"label": "Display Design", "a": "Pull-out display — works under any size bowl", "b": "Fixed display — can be obscured by large bowls", "winner": "a"},
+      {"label": "Warranty", "a": "Standard 1 year", "b": "15 years — category-leading", "winner": "b"},
+      {"label": "Certification", "a": "None", "b": "NSF International certified", "winner": "b"},
+      {"label": "Platform", "a": "Stainless steel — easy to clean", "b": "Stainless steel — equally easy to clean", "winner": "tie"},
+      {"label": "Price", "a": "$49.99", "b": "$34.99 — $15 less", "winner": "b"},
+      {"label": "Precision", "a": "1 gram / 0.1 oz", "b": "1 gram / 0.05 oz — slightly finer", "winner": "b"},
+      {"label": "Ease of Use", "a": "Pull-out display adds practical convenience", "b": "Simple straightforward interface", "winner": "a"}
+    ]
+  },
+  {
+    "slug": "thermapen-one-vs-thermopro-tp19h",
+    "productA": "B01IHHLB3W",
+    "productB": "B01GGJT9UY",
+    "categorySlug": "thermometers",
+    "winner": "B01IHHLB3W",
+    "verdict": "The Thermapen ONE wins on every measurable dimension of performance: speed, accuracy, and waterproofing. However, the ThermoPro TP19H delivers 80% of the Thermapen's practical performance at 20% of the price — for home cooks who check temperature a few times a week, the ThermoPro is the rational choice. The Thermapen makes sense for enthusiasts who grill daily and want the best.",
+    "comparisonPoints": [
+      {"label": "Response Time", "a": "1 second — fastest available", "b": "3-4 seconds — still fast", "winner": "a"},
+      {"label": "Accuracy", "a": "±0.5°F — professional grade", "b": "±1°F — good for home use", "winner": "a"},
+      {"label": "Waterproofing", "a": "IP67 — fully submersible 30 min", "b": "IPX5 — splash resistant", "winner": "a"},
+      {"label": "Price", "a": "$99.00 — premium investment", "b": "$19.99 — exceptional value", "winner": "b"},
+      {"label": "Magnetic Back", "a": "No", "b": "Yes — sticks to fridge or oven", "winner": "b"},
+      {"label": "Temperature Guide", "a": "No built-in guide", "b": "Built-in meat temperature reference", "winner": "b"},
+      {"label": "Display Rotation", "a": "Yes — auto-rotates", "b": "Yes — auto-rotates", "winner": "tie"}
+    ]
+  },
+  {
+    "slug": "oxo-y-peeler-vs-microplane-zester",
+    "productA": "B00004OCNS",
+    "productB": "B0000T0OAK",
+    "categorySlug": "kitchen-gadgets",
+    "winner": "B0000T0OAK",
+    "verdict": "These two tools serve different primary purposes, so the 'winner' depends on your cooking style. The Microplane wins as the single most transformative gadget in the category — if you've never used a Microplane, you've been missing freshly zested citrus, cloud-like Parmesan, and fine ginger in all your cooking. The OXO Peeler wins for volume prep cooks who peel large quantities of root vegetables frequently.",
+    "comparisonPoints": [
+      {"label": "Primary Use", "a": "Peeling vegetables and fruit skins", "b": "Zesting citrus, grating hard cheese and spices", "winner": "tie"},
+      {"label": "Versatility", "a": "Peeling only — specialized function", "b": "Zest, Parmesan, chocolate, nutmeg, ginger, garlic", "winner": "b"},
+      {"label": "Cooking Impact", "a": "Moderate — makes peeling faster", "b": "High — fresh zest transforms recipes fundamentally", "winner": "b"},
+      {"label": "Ease of Use", "a": "Ergonomic — Y-shape is faster than straight peelers", "b": "Simple — stroke across food, collect output", "winner": "tie"},
+      {"label": "Price", "a": "$9.99", "b": "$14.95", "winner": "a"},
+      {"label": "Cleaning", "a": "Dishwasher-safe — easy", "b": "Sharp edges require care — clean with a brush", "winner": "a"},
+      {"label": "Frequency of Use", "a": "Daily for cooks with vegetable-heavy cooking", "b": "Several times per week for bakers and citrus users", "winner": "tie"}
+    ]
   }
 ]

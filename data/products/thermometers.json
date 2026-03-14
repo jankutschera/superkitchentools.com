@@ -1,0 +1,374 @@
+[
+  {
+    "asin": "B01IHHLB3W",
+    "slug": "thermoworks-thermapen-one-instant-read",
+    "name": "ThermoWorks Thermapen ONE Instant-Read Thermometer",
+    "brand": "ThermoWorks",
+    "category": "thermometers",
+    "price": 99.00,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 18340,
+    "imageUrl": "/images/products/thermometer-product.jpg",
+    "features": [
+      "1-second response time — the fastest instant-read thermometer available to home cooks",
+      "Accuracy within ±0.5°F across the full -58°F to 572°F range",
+      "Rotating display automatically orients to the correct reading direction",
+      "Motion-sensing backlight activates in low-light conditions automatically",
+      "IP67 waterproof rating — fully submersible for 30 minutes",
+      "Foldable probe with auto-off when folded to protect the tip and extend battery life"
+    ],
+    "pros": [
+      "1-second response is genuinely noticeable vs 3-5 second competitors — less heat loss from open oven",
+      "Best-in-class accuracy validated by professional test kitchens worldwide",
+      "IP67 waterproof rating means no fear of drops or splashes in real cooking"
+    ],
+    "cons": [
+      "Premium price ($99) is hard to justify for occasional use",
+      "Probe is thin and requires careful storage to avoid bending"
+    ],
+    "specs": {
+      "Response Time": "1 second",
+      "Accuracy": "±0.5°F / ±0.3°C",
+      "Temperature Range": "-58°F to 572°F",
+      "Waterproof": "IP67",
+      "Battery": "AAA (included)"
+    },
+    "isBestSeller": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B01GGJT9UY",
+    "slug": "thermopro-tp19h-waterproof-meat-thermometer",
+    "name": "ThermoPro TP19H Digital Meat Thermometer for Cooking",
+    "brand": "ThermoPro",
+    "category": "thermometers",
+    "price": 19.99,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 48920,
+    "imageUrl": "/images/products/thermometer-product.jpg",
+    "features": [
+      "3-4 second response time for fast, accurate temperature readings",
+      "Backlit display auto-rotates to the correct reading direction",
+      "IPX5 waterproof for easy cleaning under running water",
+      "Foldable probe with magnetic back for fridge or stove storage",
+      "Temperature range -58°F to 572°F covers all cooking applications",
+      "Includes meat temperature guide printed on the unit for reference"
+    ],
+    "pros": [
+      "Best value thermometer — delivers 80% of Thermapen performance at 20% of the price",
+      "Magnetic back is a practical everyday feature that higher-priced models lack",
+      "Built-in temperature guide eliminates the need to look up safe temperatures"
+    ],
+    "cons": [
+      "3-4 second response vs 1 second on Thermapen — noticeable difference on high-heat searing",
+      "Accuracy is ±1°F vs ±0.5°F on Thermapen — acceptable for most home use"
+    ],
+    "specs": {
+      "Response Time": "3-4 seconds",
+      "Accuracy": "±1°F / ±0.5°C",
+      "Temperature Range": "-58°F to 572°F",
+      "Waterproof": "IPX5",
+      "Special Features": "Magnetic back, temperature guide"
+    },
+    "isAmazonChoice": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00FJXX3VK",
+    "slug": "lavatools-javelin-pro-instant-read",
+    "name": "Lavatools Javelin PRO Duo Instant Read Digital Meat Thermometer",
+    "brand": "Lavatools",
+    "category": "thermometers",
+    "price": 49.99,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 32110,
+    "imageUrl": "/images/products/thermometer-product.jpg",
+    "features": [
+      "2-3 second response time in the performance gap between budget and premium",
+      "Accuracy within ±0.9°F — tighter than most mid-range thermometers",
+      "Dual sensors measure ambient temperature in addition to food temperature",
+      "Smart auto-off protects battery when probe is folded for 10+ minutes",
+      "Boost Mode option delivers faster reading on demand",
+      "IP65 splash-proof for cooking splatter protection"
+    ],
+    "pros": [
+      "Dual sensors provide both food and ambient kitchen temperature — unique feature",
+      "Best mid-range balance of price, speed, and accuracy",
+      "Boost Mode lets you choose between speed and battery conservation"
+    ],
+    "cons": [
+      "Dual-sensor feature adds bulk vs single-sensor models",
+      "Higher price than ThermoPro without quite matching Thermapen performance"
+    ],
+    "specs": {
+      "Response Time": "2-3 seconds",
+      "Accuracy": "±0.9°F",
+      "Temperature Range": "-40°F to 482°F",
+      "Waterproof": "IP65",
+      "Special Features": "Dual sensors, Boost Mode"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00B7HPB4E",
+    "slug": "thermoworks-dot-leave-in-probe-thermometer",
+    "name": "ThermoWorks DOT Simple Alarm Thermometer",
+    "brand": "ThermoWorks",
+    "category": "thermometers",
+    "price": 34.00,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 9870,
+    "imageUrl": "/images/products/thermometer-product.jpg",
+    "features": [
+      "Leave-in probe stays in the oven or grill throughout cooking — no need to open the door",
+      "Alarm sounds when target temperature is reached",
+      "High and low temperature alerts for use as a smoker temperature monitor",
+      "4-foot heat-resistant probe cable rated to 700°F",
+      "Simple 3-button interface — set target temp and walk away",
+      "±1°F accuracy with instantaneous probe readings displayed on base unit"
+    ],
+    "pros": [
+      "Leave-in functionality eliminates temperature guessing during long roasts",
+      "Simple interface means setup takes 30 seconds — no learning curve",
+      "High/low alerts make it equally useful for monitoring smoker temperature as a grill pit thermometer"
+    ],
+    "cons": [
+      "Single probe only — can't monitor multiple pieces simultaneously",
+      "No wireless connectivity — you must be near the unit to read temperature"
+    ],
+    "specs": {
+      "Type": "Leave-in probe with base unit",
+      "Accuracy": "±1°F",
+      "Cable Length": "4 feet",
+      "Cable Rating": "700°F",
+      "Alerts": "High and low temperature alarms"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B015TKUPIC",
+    "slug": "meater-plus-wireless-meat-thermometer",
+    "name": "MEATER Plus Smart Wireless Meat Thermometer",
+    "brand": "MEATER",
+    "category": "thermometers",
+    "price": 99.95,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 22760,
+    "imageUrl": "/images/products/thermometer-product.jpg",
+    "features": [
+      "Completely wireless — no cables between probe and oven or grill",
+      "Dual sensors monitor both internal meat temperature and ambient oven/grill temperature simultaneously",
+      "MEATER app provides guided cook with estimated completion time",
+      "165 ft Bluetooth range via MEATER Plus relay",
+      "Estimated rest time calculation alerts you when carryover cooking is done",
+      "Dishwasher-safe probe handles cleanup easily"
+    ],
+    "pros": [
+      "Wireless design is genuinely transformative for open-lid grilling and smokers",
+      "Estimated time-to-done based on probe data removes all guesswork",
+      "App integration makes monitoring a full roast while watching TV effortless"
+    ],
+    "cons": [
+      "App required for full functionality — limited standalone use",
+      "Probe must stay in meat throughout cooking — not suitable for quick checks"
+    ],
+    "specs": {
+      "Type": "Wireless leave-in probe",
+      "Sensors": "2 (internal + ambient)",
+      "Range": "165 ft (with relay)",
+      "Connectivity": "Bluetooth + WiFi via MEATER app",
+      "Waterproof": "Dishwasher-safe"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00IEFHQJQ",
+    "slug": "polder-digital-in-oven-thermometer",
+    "name": "Polder Digital In-Oven Meat Thermometer with Timer",
+    "brand": "Polder",
+    "category": "thermometers",
+    "price": 22.99,
+    "currency": "USD",
+    "rating": 4.3,
+    "reviewCount": 14530,
+    "imageUrl": "/images/products/thermometer-product.jpg",
+    "features": [
+      "Probe-and-cable design stays in the oven during cooking with display outside",
+      "Built-in timer counts up or down simultaneously with temperature monitoring",
+      "Alarm sounds at preset target temperature",
+      "Heat-resistant cable rated to 400°F for standard oven temperatures",
+      "Magnet on back attaches to oven door or refrigerator for display placement",
+      "Preset temperature guides for beef, chicken, pork, fish, and more"
+    ],
+    "pros": [
+      "Combined thermometer and timer in one device eliminates two separate tools",
+      "Preset temperature guides make it beginner-friendly for proper food safety",
+      "Magnetic display placement provides hands-free monitoring flexibility"
+    ],
+    "cons": [
+      "Cable is only rated to 400°F — not suitable for high-temperature pizza oven use",
+      "Accuracy is ±2°F — lower than premium options at the same leave-in type"
+    ],
+    "specs": {
+      "Type": "Leave-in probe with external display",
+      "Accuracy": "±2°F",
+      "Cable Rating": "400°F",
+      "Timer": "Built-in up/down timer",
+      "Special Features": "Preset temperature guides, magnetic back"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B01N5NR9MT",
+    "slug": "infrared-thermometer-lasergrip-774",
+    "name": "Etekcity Lasergrip 774 Non-Contact Digital Infrared Thermometer",
+    "brand": "Etekcity",
+    "category": "thermometers",
+    "price": 15.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 67200,
+    "imageUrl": "/images/products/thermometer-product.jpg",
+    "features": [
+      "Measures surface temperature without contact — ideal for pans, griddles, and pizza stones",
+      "Laser pointer guides aim to the exact measurement spot",
+      "Temperature range -58°F to 716°F covers pizza ovens, cast iron, and freezer surfaces",
+      "Instant readings with no warm-up time",
+      "Hold feature freezes display for easy reading after measurement",
+      "Measures surface temperature only — not for internal food temperature readings"
+    ],
+    "pros": [
+      "Surface temperature measurement fills the gap instant-read probes can't cover",
+      "Checking cast iron pan temperature before searing is genuinely transformative",
+      "Most affordable way to verify pizza stone is at proper cooking temperature"
+    ],
+    "cons": [
+      "Measures surface only — cannot verify internal meat temperature",
+      "Not accurate on shiny or reflective surfaces without adjusting emissivity"
+    ],
+    "specs": {
+      "Type": "Infrared (non-contact)",
+      "Temperature Range": "-58°F to 716°F",
+      "Accuracy": "±2% or ±3.6°F",
+      "Laser": "Yes (Class II)",
+      "Response Time": "Instant"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B07WQCBR4M",
+    "slug": "thermopro-tp-25-wireless-meat-thermometer",
+    "name": "ThermoPro TP25 Bluetooth Wireless Meat Thermometer with 4 Probes",
+    "brand": "ThermoPro",
+    "category": "thermometers",
+    "price": 44.99,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 18870,
+    "imageUrl": "/images/products/thermometer-product.jpg",
+    "features": [
+      "4 probes monitor 4 pieces of meat simultaneously on the same display",
+      "Bluetooth connection to smartphone app for remote monitoring up to 500 ft",
+      "Smart alerts notify you when any probe reaches target temperature",
+      "Meat presets for beef, chicken, pork, fish, lamb, and custom settings",
+      "Graph display shows temperature curve over time in the app",
+      "Color-coded probe tips for easy identification of which probe is in which meat"
+    ],
+    "pros": [
+      "4-probe capability is essential for BBQ hosts managing multiple meats",
+      "500 ft Bluetooth range covers the largest backyard grilling scenarios",
+      "Color-coded probes eliminate confusion in multi-protein cooks"
+    ],
+    "cons": [
+      "App required for multi-probe remote monitoring — bluetooth-only on base unit",
+      "4 probes plus cables create significant cord management overhead during cooking"
+    ],
+    "specs": {
+      "Probes": "4",
+      "Range": "500 ft Bluetooth",
+      "Connectivity": "Bluetooth + app",
+      "Alert Type": "Smart app notifications",
+      "Special Features": "Temperature graph, color-coded probes"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B07GVPBDMF",
+    "slug": "kizen-instantpro-thermometer",
+    "name": "Kizen InstantPro Instant Read Meat Thermometer",
+    "brand": "Kizen",
+    "category": "thermometers",
+    "price": 24.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 28630,
+    "imageUrl": "/images/products/thermometer-product.jpg",
+    "features": [
+      "2-3 second response for fast temperature checks",
+      "Accuracy within ±1°F in the full temperature range",
+      "Waterproof design (IP67) for cooking and easy cleaning",
+      "Large backlit display readable in daylight and at night",
+      "Foldable probe auto-turns off when folded to conserve battery",
+      "Comes with storage case that protects the probe during storage"
+    ],
+    "pros": [
+      "Included storage case is unusual at this price and extends probe life significantly",
+      "IP67 waterproofing at under $25 makes it the best waterproof value buy",
+      "Large display is readable at grill distance without squinting"
+    ],
+    "cons": [
+      "Brand is newer with less track record than ThermoPro or Lavatools",
+      "Accuracy is ±1°F vs ±0.5°F on Thermapen — sufficient but not pro-grade"
+    ],
+    "specs": {
+      "Response Time": "2-3 seconds",
+      "Accuracy": "±1°F",
+      "Temperature Range": "-58°F to 572°F",
+      "Waterproof": "IP67",
+      "Includes": "Storage case"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00EXPGVXM",
+    "slug": "taylor-1470n-leave-in-thermometer",
+    "name": "Taylor 1470N Analog Leave-In Meat Thermometer",
+    "brand": "Taylor",
+    "category": "thermometers",
+    "price": 9.99,
+    "currency": "USD",
+    "rating": 4.1,
+    "reviewCount": 31400,
+    "imageUrl": "/images/products/thermometer-product.jpg",
+    "features": [
+      "Traditional analog dial with large, easy-to-read face",
+      "Goes directly in the oven throughout cooking — no cables or batteries needed",
+      "Stainless steel probe rated for continuous oven use up to 500°F",
+      "Temperature range 130°F to 190°F covers all standard meat cooking temperatures",
+      "NSF certified for food service use",
+      "No batteries, no apps, no charging — works indefinitely"
+    ],
+    "pros": [
+      "No batteries required — will never fail due to dead batteries at a critical moment",
+      "Analog simplicity is preferred by many experienced cooks for its reliability",
+      "NSF certified accuracy at the most affordable price point in the category"
+    ],
+    "cons": [
+      "Analog dial is less precise than digital — readings accurate to ±5°F only",
+      "Must open oven to read — no remote monitoring capability"
+    ],
+    "specs": {
+      "Type": "Analog leave-in",
+      "Accuracy": "±5°F",
+      "Temperature Range": "130°F to 190°F",
+      "Material": "Stainless steel",
+      "Power": "None required"
+    },
+    "lastUpdated": "2026-03-14"
+  }
+]

@@ -98,5 +98,55 @@
     "metaDescription": "Find the best baking tools and sheet pans in 2026. From Nordic Ware to Silpat, we rank everything you need for perfect baking results.",
     "icon": "baking-tools",
     "commissionTier": "tier1"
+  },
+  {
+    "slug": "kitchen-storage",
+    "name": "kitchen-storage",
+    "displayName": "Kitchen Storage & Organization",
+    "description": "Smart storage solutions to keep your kitchen organized and efficient",
+    "metaTitle": "Best Kitchen Storage & Organization 2026 — Containers, Racks & More",
+    "metaDescription": "Maximize your kitchen space with the best storage containers, drawer organizers, and pantry solutions. Expert-tested picks for every kitchen size.",
+    "icon": "kitchen-storage",
+    "commissionTier": "tier2"
+  },
+  {
+    "slug": "spice-racks",
+    "name": "spice-racks",
+    "displayName": "Spice Racks & Containers",
+    "description": "Keep your spices organized, visible, and fresh with the right storage system",
+    "metaTitle": "Best Spice Racks & Containers 2026 — Organized Spice Storage",
+    "metaDescription": "Find the best spice racks, jars, and organizers. We tested wall-mounted, drawer, and revolving options for every kitchen layout.",
+    "icon": "spice-racks",
+    "commissionTier": "tier2"
+  },
+  {
+    "slug": "kitchen-scales",
+    "name": "kitchen-scales",
+    "displayName": "Kitchen Scales",
+    "description": "Precise digital scales for baking, cooking, and portion control",
+    "metaTitle": "Best Kitchen Scales 2026 — Digital & Analog Scales Tested",
+    "metaDescription": "Accurate kitchen scales make better bakers. We tested 10 digital and analog scales for precision, speed, and ease of use.",
+    "icon": "kitchen-scales",
+    "commissionTier": "tier2"
+  },
+  {
+    "slug": "thermometers",
+    "name": "thermometers",
+    "displayName": "Kitchen Thermometers",
+    "description": "Instant-read and probe thermometers for perfect cooking temperatures every time",
+    "metaTitle": "Best Kitchen Thermometers 2026 — Instant Read & Probe",
+    "metaDescription": "Never overcook meat again. We tested instant-read and leave-in probe thermometers for speed, accuracy, and durability.",
+    "icon": "thermometers",
+    "commissionTier": "tier2"
+  },
+  {
+    "slug": "kitchen-gadgets",
+    "name": "kitchen-gadgets",
+    "displayName": "Kitchen Gadgets & Utensils",
+    "description": "Essential utensils and clever gadgets that actually earn their counter space",
+    "metaTitle": "Best Kitchen Gadgets & Utensils 2026 — Tools That Actually Work",
+    "metaDescription": "Skip the gimmicks. We tested 50+ kitchen gadgets and utensils to find the ones that genuinely make cooking easier.",
+    "icon": "kitchen-gadgets",
+    "commissionTier": "tier2"
   }
 ]

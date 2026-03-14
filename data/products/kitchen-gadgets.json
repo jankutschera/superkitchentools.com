@@ -1,0 +1,374 @@
+[
+  {
+    "asin": "B00004OCNS",
+    "slug": "oxo-good-grips-y-peeler",
+    "name": "OXO Good Grips Y-Peeler",
+    "brand": "OXO",
+    "category": "kitchen-gadgets",
+    "price": 9.99,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 28450,
+    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "features": [
+      "Y-shaped blade geometry removes skin more efficiently than straight peelers with less pressure",
+      "Soft, non-slip grip stays secure even with wet hands",
+      "Sharp stainless steel blade handles hard vegetables like turnips and soft fruit equally well",
+      "Pointed tip removes eyes from potatoes and strawberry stems",
+      "Dishwasher-safe construction for easy cleanup",
+      "Blade replacement available — reduces long-term cost of ownership"
+    ],
+    "pros": [
+      "Y-peeler design is faster and requires less force than traditional straight peelers",
+      "Pointed tip does double duty as an eye remover — eliminates a second tool",
+      "OXO handle comfort is the best in its class for extended peeling tasks"
+    ],
+    "cons": [
+      "Y-shape can be awkward for some users who are accustomed to straight peelers",
+      "Blade can accumulate fibrous debris with soft vegetables"
+    ],
+    "specs": {
+      "Blade Material": "Stainless steel",
+      "Handle Material": "Non-slip rubber",
+      "Blade Shape": "Y-shaped",
+      "Dishwasher Safe": "Yes",
+      "Replaceable Blade": "Yes"
+    },
+    "isBestSeller": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B0000T0OAK",
+    "slug": "microplane-classic-zester-grater",
+    "name": "Microplane Classic Zester / Grater",
+    "brand": "Microplane",
+    "category": "kitchen-gadgets",
+    "price": 14.95,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 43180,
+    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "features": [
+      "Photo-etched razor-sharp blades produce fine, fluffy zest without pith",
+      "Works for lemon/lime zest, Parmesan, chocolate, nutmeg, ginger, and garlic",
+      "Comfortable rubber-grip handle with easy-clean plastic sleeve",
+      "Dishwasher-safe — stays sharp through repeated washing",
+      "Made from surgical-grade stainless steel — will not rust or corrode",
+      "Used in professional restaurant kitchens worldwide"
+    ],
+    "pros": [
+      "Produces the finest citrus zest available from any kitchen tool",
+      "Versatility across zest, cheese, chocolate, and spices makes it a near-daily tool",
+      "Sharp enough that grating hard Parmesan feels effortless rather than tiring"
+    ],
+    "cons": [
+      "Long, narrow design requires care during washing — the edges are genuinely razor-sharp",
+      "Fine blade can clog with soft cheeses like mozzarella"
+    ],
+    "specs": {
+      "Blade Material": "Surgical-grade stainless steel",
+      "Handle Material": "Rubber-grip with plastic sleeve",
+      "Length": "12.5\"",
+      "Dishwasher Safe": "Yes",
+      "Country of Origin": "USA"
+    },
+    "isAmazonChoice": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00004OCMB",
+    "slug": "oxo-good-grips-garlic-press",
+    "name": "OXO Good Grips Soft-Handled Garlic Press",
+    "brand": "OXO",
+    "category": "kitchen-gadgets",
+    "price": 18.99,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 19870,
+    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "features": [
+      "Press garlic without peeling — the skin stays behind in the press",
+      "Ergonomic soft grip handles reduce hand fatigue on large quantities",
+      "Built-in cleaner removes pressed garlic from the holes when handles are squeezed in reverse",
+      "Dishwasher-safe zinc alloy construction",
+      "Extracts maximum garlic juice and pulp for intense flavor",
+      "Works with all garlic clove sizes from small to jumbo"
+    ],
+    "pros": [
+      "No-peel operation is genuinely faster than mincing even for experienced cooks",
+      "Built-in cleaner is the most useful feature on any garlic press",
+      "Soft grip handles make pressing a full head of garlic painless"
+    ],
+    "cons": [
+      "Pressed garlic is finer than minced — inappropriate for recipes requiring chunky texture",
+      "Requires thorough cleaning to remove garlic from the holes even with the built-in cleaner"
+    ],
+    "specs": {
+      "Material": "Zinc alloy with rubber grip",
+      "Dishwasher Safe": "Yes",
+      "Built-in Cleaner": "Yes",
+      "Peel Required": "No",
+      "Handle Length": "8\""
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B000BVFZCE",
+    "slug": "oxo-good-grips-12-inch-locking-tongs",
+    "name": "OXO Good Grips 12-Inch Locking Tongs",
+    "brand": "OXO",
+    "category": "kitchen-gadgets",
+    "price": 12.99,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 31220,
+    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "features": [
+      "Non-slip, heat-resistant handles with ergonomic grip",
+      "Stainless steel tong arms rated to 400°F for stovetop and grill use",
+      "Scalloped tips grip food securely without piercing or slipping",
+      "Locking mechanism keeps tongs closed for drawer storage and safety",
+      "Dishwasher-safe for easy cleanup",
+      "12-inch length keeps hands away from heat sources"
+    ],
+    "pros": [
+      "Scalloped tips provide better grip than flat tips on round food like tomatoes and eggs",
+      "Locking mechanism is intuitive and easy to operate with one hand",
+      "OXO handle comfort is among the best available — reduces hand fatigue on long grilling sessions"
+    ],
+    "cons": [
+      "Metal arms can scratch non-stick surfaces — use silicone-tipped tongs for non-stick cookware",
+      "Locking mechanism can occasionally stick when tongs heat up"
+    ],
+    "specs": {
+      "Length": "12 inches",
+      "Material": "Stainless steel + non-slip grip",
+      "Heat Rating": "400°F",
+      "Locking": "Yes",
+      "Dishwasher Safe": "Yes"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00004OCNL",
+    "slug": "gir-ultimate-silicone-spatula",
+    "name": "GIR Premium Silicone Spatula — Ultimate",
+    "brand": "GIR",
+    "category": "kitchen-gadgets",
+    "price": 15.99,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 14560,
+    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "features": [
+      "100% food-grade platinum silicone — no nylon core to crack or split",
+      "Heat-resistant to 550°F — safe for use in any pot, pan, or oven",
+      "One-piece seamless construction means no bacteria-trapping joints",
+      "Flexible head molds to pan curves for maximum bowl-scraping efficiency",
+      "Dishwasher-safe and stain-resistant even with tomato sauce",
+      "Available in a wide range of colors to match any kitchen"
+    ],
+    "pros": [
+      "Seamless one-piece design is the most hygienic spatula construction available",
+      "550°F heat rating exceeds every cooking application including deep frying",
+      "Truly cleans a bowl or pan — flexible head does what rigid spatulas can't"
+    ],
+    "cons": [
+      "Premium price for a spatula — budget options exist at 1/3 the cost",
+      "Very flexible tip can be imprecise for plating or detailed work"
+    ],
+    "specs": {
+      "Material": "100% food-grade platinum silicone",
+      "Heat Rating": "550°F",
+      "Construction": "One-piece seamless",
+      "Dishwasher Safe": "Yes",
+      "Length": "11\""
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00004TYCL",
+    "slug": "kuhn-rikon-auto-safety-master-can-opener",
+    "name": "Kuhn Rikon Auto Safety LidLifter Can Opener",
+    "brand": "Kuhn Rikon",
+    "category": "kitchen-gadgets",
+    "price": 24.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 22870,
+    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "features": [
+      "Cuts along the side of the lid rather than the top — no sharp edges on lid or can",
+      "Lid-lifting mechanism removes the cut lid without touching it directly",
+      "Ergonomic handles require minimal gripping force — arthritis-friendly design",
+      "Dishwasher-safe stainless steel construction",
+      "Works on standard round cans and large 28oz cans equally",
+      "Self-sharpening blade maintains cutting performance over time"
+    ],
+    "pros": [
+      "Side-cut mechanism produces zero sharp edges — the single safest can opener design",
+      "Lid-lifter means no touching the lid with your fingers — genuinely more hygienic",
+      "Low effort needed is significant for users with arthritis or limited grip strength"
+    ],
+    "cons": [
+      "Takes practice to get the starting position right — learning curve vs traditional openers",
+      "Slightly slower than traditional top-cut openers for experienced users"
+    ],
+    "specs": {
+      "Cutting Type": "Side-cut (smooth edge)",
+      "Material": "Stainless steel + plastic",
+      "Dishwasher Safe": "Yes",
+      "Special Features": "Lid-lifter, self-sharpening blade",
+      "Arthritis-Friendly": "Yes"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B000CWWZFE",
+    "slug": "joseph-joseph-twist-whisk",
+    "name": "OXO Good Grips 11-Inch Balloon Whisk",
+    "brand": "OXO",
+    "category": "kitchen-gadgets",
+    "price": 11.99,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 17230,
+    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "features": [
+      "Thick, heavy stainless steel wires resist bending under vigorous whisking",
+      "Soft, non-slip handle provides secure grip even with wet hands",
+      "Balloon shape creates maximum air incorporation for whipped cream and egg whites",
+      "Dishwasher-safe stainless steel and BPA-free construction",
+      "10 wires for efficient aeration — more wires than most competitors at this price",
+      "Balanced weight distribution reduces hand fatigue during extended whisking"
+    ],
+    "pros": [
+      "Wire gauge is noticeably thicker than budget alternatives — no bending on stiff batters",
+      "10-wire balloon design aerates faster than 8-wire models",
+      "OXO handle grip is the most comfortable in its class"
+    ],
+    "cons": [
+      "Balloon shape is too large for whisking inside small saucepans",
+      "Hand washing recommended for the handle to preserve the grip texture"
+    ],
+    "specs": {
+      "Length": "11 inches",
+      "Wire Count": "10",
+      "Material": "Stainless steel wires + non-slip handle",
+      "Dishwasher Safe": "Yes",
+      "Shape": "Balloon"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B078JB4YNB",
+    "slug": "kitchenaid-stainless-steel-turner-spatula",
+    "name": "KitchenAid Classic Slotted Turner Spatula",
+    "brand": "KitchenAid",
+    "category": "kitchen-gadgets",
+    "price": 12.99,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 23450,
+    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "features": [
+      "Angled blade provides maximum leverage for flipping pancakes, burgers, and fish",
+      "Nylon construction is safe for non-stick cookware — won't scratch coatings",
+      "Heat-resistant to 400°F for stovetop use",
+      "Slots in the blade drain excess oil and liquid during flipping",
+      "Comfortable soft-grip handle with hanging loop for storage",
+      "Dishwasher-safe for easy cleanup"
+    ],
+    "pros": [
+      "Angled blade geometry makes flipping fish and delicate items significantly easier",
+      "Non-stick safe nylon means one spatula works across all cookware types",
+      "Drain slots are functional — excess liquid actually runs off during flipping"
+    ],
+    "cons": [
+      "Nylon limits heat rating to 400°F — not suitable for very high-heat applications",
+      "Nylon tip can develop scratches over time that show food discoloration"
+    ],
+    "specs": {
+      "Material": "Heat-resistant nylon",
+      "Heat Rating": "400°F",
+      "Safe for Non-Stick": "Yes",
+      "Dishwasher Safe": "Yes",
+      "Blade Shape": "Angled with slots"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B01HRUHJDW",
+    "slug": "norpro-stainless-colander-set",
+    "name": "OXO Good Grips 3-Piece Fine Mesh Strainer Set",
+    "brand": "OXO",
+    "category": "kitchen-gadgets",
+    "price": 29.99,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 11870,
+    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "features": [
+      "Set of 3 fine mesh strainers in small (1.5 cup), medium (3 cup), and large (8 cup) sizes",
+      "Fine mesh is tight enough to strain citrus seeds, tea leaves, and spice powders",
+      "Reinforced rim and support wire prevent mesh from warping under heavy use",
+      "Long handles with soft grip keep hands away from hot steam",
+      "Rest hooks on two sides for positioning over bowls or pots",
+      "Dishwasher-safe stainless steel construction"
+    ],
+    "pros": [
+      "Three-size set covers every straining task from single-serve to batch cooking",
+      "Double rest hook design is more stable than single-hook alternatives",
+      "Tight fine mesh strains tea as effectively as a dedicated tea strainer"
+    ],
+    "cons": [
+      "Fine mesh can clog with sticky foods like tapioca or very small seeds",
+      "Three-piece sets take more storage space than a single large strainer"
+    ],
+    "specs": {
+      "Pieces": "3 (small, medium, large)",
+      "Material": "Stainless steel fine mesh",
+      "Dishwasher Safe": "Yes",
+      "Sizes": "1.5 cup, 3 cup, 8 cup",
+      "Rest Type": "Dual hook"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00B1YDLCI",
+    "slug": "progressive-international-egg-separator",
+    "name": "Chef'n FreshForce Citrus Juicer",
+    "brand": "Chef'n",
+    "category": "kitchen-gadgets",
+    "price": 16.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 19540,
+    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "features": [
+      "Gear-action mechanism doubles the pressing force for maximum juice extraction",
+      "Works for lemons, limes, and small oranges with the same tool",
+      "Straining holes filter seeds and pulp automatically during squeezing",
+      "Non-slip handle grips stay comfortable during sustained squeezing",
+      "Dishwasher-safe for easy cleanup after juicing",
+      "Angled spout directs juice into the glass or measuring cup without dripping"
+    ],
+    "pros": [
+      "Gear mechanism extracts noticeably more juice per lemon than traditional squeezers",
+      "Works for both lemons and limes without switching tools",
+      "Integrated seed straining eliminates the need to manually remove seeds"
+    ],
+    "cons": [
+      "Gear mechanism adds mechanical complexity — more parts to clean than simple squeezers",
+      "Too small for full-size navel oranges — use a reamer for larger citrus"
+    ],
+    "specs": {
+      "Material": "BPA-free plastic + stainless steel",
+      "Compatible Citrus": "Lemons, limes, small oranges",
+      "Mechanism": "Gear-action",
+      "Dishwasher Safe": "Yes",
+      "Seed Straining": "Built-in"
+    },
+    "lastUpdated": "2026-03-14"
+  }
+]

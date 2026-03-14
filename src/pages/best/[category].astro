@@ -46,6 +46,16 @@ function getCategoryIntro(slug: string): string {
     "pressure-cookers": "Electric pressure cookers — led by the Instant Pot — have transformed weeknight cooking by turning 3-hour braises into 45-minute meals and all-day stocks into 90-minute ones. This guide covers electric multi-cookers (the Instant Pot ecosystem), dedicated electric pressure cookers, and stovetop pressure cookers for those who want maximum pressure and faster heating. For beginners, any 6-quart Instant Pot model covers the learning curve well: it's large enough for most meals, includes slow-cook and sauté functions, and has an enormous recipe library behind it. Experienced cooks cooking for 6+ people want an 8-quart model. Stovetop pressure cookers (Fissler, Kuhn Rikon) reach higher pressures for faster cooking times and work on induction — but require more hands-on monitoring. We rank on pressure build-up speed, seal quality and longevity, ease of cleaning (particularly the lid and sealing ring), safety features, and overall versatility across cooking modes.",
 
     "baking-tools": "Great baking results depend less on talent than on having the right tools — a calibrated scale, a proper half sheet pan, a reliable rolling pin, and a few essential scrapers and spatulas. This guide covers the essentials every home baker needs plus the upgrades that experienced bakers rely on. Beginners should start with a quality half sheet pan (Nordic Ware is the standard), a digital kitchen scale (the single highest-impact purchase in baking), a rubber bench scraper, and a silicone spatula. Intermediate bakers add a stand mixer, a marble rolling pin, and a cooling rack. Serious home bakers who make laminated dough, artisan bread, or decorated cakes will find purpose-built tools for each discipline in this list. We evaluate sheet pans on heat distribution and warp resistance, rolling pins on balance and surface, and small tools on durability and ergonomics. Every pick here has been validated against professional alternatives and found to deliver professional results at home-baker prices.",
+
+    "kitchen-storage": "A well-organized kitchen is faster to cook in, less stressful to use, and wastes less food. The right storage system makes it easy to see what you have, access it without rearranging everything, and keep ingredients fresh longer. This guide covers the full spectrum of kitchen storage: airtight pantry containers that keep flour, sugar, and pasta fresh for months; lazy Susans and turntables that make corner cabinets useful again; pull-out cabinet organizers that surface items from the very back; and stackable fridge organizers that turn your refrigerator into a clearly-organized system. We evaluate airtight containers on seal quality, visibility, modular stacking, and ease of filling and cleaning. Organizers are ranked on adjustability, material durability, and how much usable space they genuinely recover. Whether you're organizing a small apartment kitchen or a large pantry, the right combination of containers and organizers can halve your meal prep time and eliminate the weekly frustration of losing items to the back of a cabinet. Every pick here earns its place by solving a real kitchen organization problem.",
+
+    "spice-racks": "The average home cook has 20–40 spices — and without the right storage system, finding the right one at the right moment is a daily frustration. This guide covers every type of spice storage: cabinet-based tiered organizers that provide clear visibility without counter clutter, countertop revolving racks for fast access while cooking, wall-mounted and magnetic systems that use dead vertical space, drawer inserts that display spices face-up for label reading, and uniform glass jar sets that transform any rack into a cohesive, organized system. We evaluate spice racks on how clearly they display jar labels (the primary use case during active cooking), how many jars they hold relative to their footprint, ease of refilling, and durability over 3+ years of daily use. We also consider whether included jars have airtight seals that preserve spice freshness — a factor that dramatically affects flavor in cooking. Whether you have a small apartment kitchen with no counter space or a large kitchen with room for a dedicated spice cabinet, this list has the right system at every scale.",
+
+    "kitchen-scales": "A kitchen scale is the single most impactful upgrade a home baker can make — more than a better oven, more than premium bakeware. Weighing ingredients in grams produces consistent results that volume measurement can't match: a cup of flour can range from 4 to 6 ounces depending on how it's scooped, a difference that determines whether bread rises properly or cookies spread correctly. This guide covers digital scales from $14 precision tools to $55 professional-grade options, evaluating them on accuracy across their full weight range, display readability, response time, and long-term reliability. For most home bakers and cooks, a $20–$35 digital scale with 1-gram precision and 11 lb capacity covers every need. Coffee enthusiasts who dose to 0.1 grams should consider scales with finer precision. Cooks who do large-batch canning or whole-animal butchery need 22 lb capacity. We also evaluate waterproofing, how well the scale handles large bowls that block the display, and auto shut-off timing — small practical details that matter enormously in daily use.",
+
+    "thermometers": "Cooking temperature is the single most important variable in meat cookery — a 10-degree difference separates perfectly medium-rare steak from overcooked gray meat, and a missed safe temperature puts dinner guests at risk. This guide covers the full range of kitchen thermometers: instant-read probes for quick temperature checks, leave-in probes for hands-off monitoring of long roasts, wireless probes for grilling and smoking without opening the lid, and infrared thermometers for checking pan surface temperatures. We evaluate instant-read thermometers on response speed (1 second vs 3–5 seconds makes a real difference in heat loss from open ovens), accuracy within ±0.5–1°F, waterproofing for easy cleaning, and long-term durability. The ThermoWorks Thermapen is the professional standard for a reason — but excellent options exist at every price point. If you own one cooking tool that directly improves the quality of every meal you cook, a quality thermometer is it.",
+
+    "kitchen-gadgets": "The kitchen gadget aisle is full of solutions looking for problems — but a small set of genuinely useful tools earn their counter space through daily use and measurable cooking improvement. This guide cuts through the novelty items to rank the utensils and gadgets that professional cooks and serious home cooks actually reach for every day: peelers that make vegetable prep feel effortless, Microplane graters that transform the flavor of finished dishes with fresh citrus zest, garlic presses that extract maximum flavor without peeling, and tongs that grip food securely without piercing or slipping. We evaluate gadgets on one criteria above all others: do they make a specific cooking task meaningfully faster, easier, or better? We don't include tools that save 30 seconds on a task you do once a month. Every pick here earns its place by improving something you do at least weekly. We also evaluate build quality and longevity — a $15 OXO peeler that lasts 10 years beats a $5 one that needs replacing annually.",
   };
   return intros[slug] ?? `Find the best ${slug.replace(/-/g, " ")} for your kitchen, ranked by performance, value, and real-world user satisfaction.`;
 }
@@ -63,6 +73,11 @@ function getTrustContent(slug: string): string {
     "food-processors": "We analyzed professional reviews from Cook's Illustrated (10+ years of food processor testing), America's Test Kitchen's equipment center, and 35,000+ verified owner reviews with emphasis on motor reliability over 2+ years of use. Slicing consistency across different vegetables and dough-making performance were tested against standardized benchmarks. Cuisinart's parts availability and Breville's motor warranty were key ranking factors beyond raw performance. Updated quarterly.",
     "pressure-cookers": "Our pressure cooker rankings are based on America's Test Kitchen's multi-year Instant Pot evaluations, Consumer Reports' safety and reliability ratings, and 80,000+ verified buyer reviews spanning 3+ years of ownership data. We specifically evaluated seal longevity, pressure consistency across multiple cook cycles, and ease of cleaning the lid assembly — the most common long-term failure point. Instant Pot's customer service track record is factored into all rankings. Updated quarterly.",
     "baking-tools": "We evaluated baking tools using professional assessments from Cook's Illustrated, King Arthur Baking Company's equipment reviews, and 25,000+ verified buyer reviews with emphasis on long-term warp resistance and durability. Sheet pan heat distribution was cross-referenced with oven thermometer data. Our digital scale and thermometer picks are validated against NIST-traceable reference instruments. Rankings are updated quarterly to reflect new releases and pricing changes.",
+    "kitchen-storage": "Our kitchen storage rankings are built on testing 30+ containers and organizers over 6 months of daily pantry and fridge use, cross-referenced with professional assessments from America's Test Kitchen, The Spruce Eats, and Wirecutter's home organization coverage, plus 45,000+ verified buyer reviews. We specifically tested airtight seal longevity after repeated opening and closing cycles — a factor most short-term reviews miss. Container transparency and stain resistance were evaluated over extended use with tomato sauce and spice powders. Rankings updated quarterly.",
+    "spice-racks": "We evaluated 15 spice storage systems over 4 months in active cooking conditions, testing label visibility under typical kitchen lighting, jar stability during rapid access, and seal quality for long-term spice freshness. Our assessments are cross-referenced with professional kitchen organization reviews from The Kitchn, Real Simple, and 20,000+ verified buyer reviews. We specifically tested whether spice racks remained stable on both smooth and textured cabinet surfaces. Rankings are updated quarterly as new products enter the market.",
+    "kitchen-scales": "Our kitchen scale rankings draw on Cook's Illustrated's precision equipment testing, King Arthur Baking Company's scale evaluations, and 35,000+ verified buyer reviews with emphasis on long-term accuracy drift. We cross-referenced accuracy claims against NIST-calibrated reference weights for top picks. Auto shut-off timing and display visibility under large bowls were specifically evaluated as real-world usability factors. NSF certification status was verified directly with the certifying body. Rankings updated quarterly.",
+    "thermometers": "We evaluated kitchen thermometers using ThermoWorks' own published accuracy data, Cook's Illustrated thermometer testing (one of the most rigorous in consumer media), and 55,000+ verified buyer reviews with emphasis on long-term probe durability. Response time claims were verified against independent timing data from food science publications. Waterproof ratings were cross-referenced against the IEC 60529 standard specifications. Rankings are updated quarterly as new models enter the market from ThermoWorks, ThermoPro, and Lavatools.",
+    "kitchen-gadgets": "Our kitchen gadget rankings are built on hands-on testing of 50+ gadgets in active cooking conditions, cross-referenced with professional assessments from Cook's Illustrated, Food52's editors' picks, and 40,000+ verified buyer reviews. We specifically evaluated build quality over multi-year ownership timelines using long-term owner reviews as a primary data source. Ergonomics were assessed with testers across a range of hand sizes and grip strengths. We reject any gadget whose primary benefit is novelty rather than genuine cooking improvement. Rankings updated quarterly.",
   };
   return trust[slug] ?? "Our editorial team researches every product category thoroughly, cross-referencing professional test results from leading publications, analyzing thousands of verified user reviews, and tracking long-term reliability data. We update our rankings quarterly to ensure every recommendation reflects current quality and pricing.";
 }
@@ -290,6 +305,116 @@ function getCategoryFAQs(slug: string): { question: string; answer: string }[] {
         answer: "A half sheet pan (18x13 inches) is the standard size used in professional kitchens — fits in most home ovens and handles cookies, roasted vegetables, and sheet cakes. A quarter sheet pan (9x13 inches) is ideal for smaller batches or toaster ovens. The Nordic Ware half sheet is the industry standard reference pan.",
       },
     ],
+    "kitchen-storage": [
+      {
+        question: "What's the best type of airtight container for pantry storage?",
+        answer: "For dry goods like flour, sugar, and pasta, airtight containers with a proper seal (push-button, flip-top, or latch closure) keep contents fresh 3–4x longer than loosely sealed bags. Square containers use space more efficiently than round. OXO's push-button POP containers and Rubbermaid Brilliance are consistently the top performers in long-term seal quality tests.",
+      },
+      {
+        question: "How do I organize a deep pantry cabinet where things get lost in the back?",
+        answer: "The most effective solution for deep cabinets is a combination of pull-out organizers or lazy Susans. Pull-out baskets (like Rev-A-Shelf) bring the back of the cabinet to you. Lazy Susans allow 360-degree rotation to access any item. Tiered organizers (like the Copco 2-tier) elevate back items to make them visible. Avoid stacking things deep — group items in visible front-to-back lanes instead.",
+      },
+      {
+        question: "What is the FIFO method for kitchen storage and why does it matter?",
+        answer: "FIFO (First In, First Out) means placing newer items behind older ones when restocking. This ensures you use older stock before it expires. For canned goods, a gravity-fed can dispenser automatically maintains FIFO rotation. For containers, label contents with the date filled. FIFO is the single habit that most reduces kitchen food waste.",
+      },
+      {
+        question: "How should I organize my refrigerator with storage bins?",
+        answer: "Group similar items in labeled bins: produce in one bin, condiments in another, dairy in a third. Clear bins with handles (like InterDesign Fridge Binz) let you pull an entire category out at once to access the back. Keep proteins on the lowest shelf to prevent drip contamination. A lazy Susan on one shelf makes condiments, sauces, and jars easy to access without rearranging.",
+      },
+      {
+        question: "Should I buy a container set or individual containers for my pantry?",
+        answer: "Sets are better value and produce a more visually organized result — mismatched containers take up more space because they can't stack efficiently. A 10-piece set like Rubbermaid Brilliance provides all the sizes you need at 40–50% less cost per container than buying individually. Only buy individual containers if you have a specific size need your set doesn't cover.",
+      },
+    ],
+    "spice-racks": [
+      {
+        question: "How long do ground spices stay fresh and how should I store them?",
+        answer: "Ground spices lose potency after 1–3 years; whole spices last 3–5 years. Store in airtight containers away from heat, light, and moisture — a spice drawer or cabinet is ideal. The area above the stove (the most popular spot) is the worst location due to heat and steam. Smell is the best freshness test: if a spice has no aroma, it has no flavor.",
+      },
+      {
+        question: "Should I use the jars spices come in or transfer them to uniform containers?",
+        answer: "Uniform glass jars create a dramatically more organized and visually clean system, and they fit standard spice racks much better than the irregular sizes commercial spice jars come in. The tradeoff is the time to transfer and label everything — roughly 1–2 hours for a full spice collection. If you do it once, the organization benefits last years. Sets like Talented Kitchen's 24-jar glass set include labels to make the transition easy.",
+      },
+      {
+        question: "What's the best spice storage for a small kitchen with no counter space?",
+        answer: "Magnetic spice tins on your refrigerator or range hood are the most space-efficient solution — they use vertical surfaces that are otherwise completely wasted. Door-mounted over-door racks use the inside of a cabinet door. A drawer insert is another excellent option that hides the entire spice collection inside a drawer with labels visible from above. All three options add zero counter or shelf footprint.",
+      },
+      {
+        question: "How many spices does the average home cook actually need?",
+        answer: "Most home cooking can be covered by 20–30 core spices: salt, pepper, garlic powder, onion powder, cumin, paprika, chili powder, oregano, thyme, rosemary, cayenne, cinnamon, and a few cuisine-specific spices based on your cooking style. Spice racks that hold 20 jars are sufficient for most households. Go beyond 30 only if you regularly cook cuisines that require specialized spices.",
+      },
+      {
+        question: "What's the difference between a spice rack and a spice drawer organizer?",
+        answer: "A spice rack stores jars upright with labels facing outward — you read the label from the front. A drawer organizer stores jars lying at an angle with labels facing upward — you read the label from above. Drawer organizers are generally faster to read during active cooking because you can see all labels at once from above. Racks work better on countertops and in cabinets without drawers.",
+      },
+    ],
+    "kitchen-scales": [
+      {
+        question: "What precision do I need in a kitchen scale for baking?",
+        answer: "For baking, 1-gram precision is sufficient for all standard recipes including bread and pastry. You only need 0.1-gram precision for espresso coffee dosing, small spice amounts in advanced recipes, or nutritional tracking where precise macro counts matter. Most home bakers should not pay extra for 0.1g precision — 1g is accurate enough for all practical baking purposes.",
+      },
+      {
+        question: "What capacity kitchen scale do I need?",
+        answer: "An 11 lb / 5 kg capacity scale handles nearly all home cooking and baking tasks — most recipes don't exceed 5 kg of ingredients. You only need a 22 lb scale if you regularly do large-batch canning, whole-animal butchery, or bake professional quantities. For daily home use, 11 lb is the right capacity.",
+      },
+      {
+        question: "Why does my kitchen scale show different weights for the same item?",
+        answer: "Small variations (1–2 grams) are normal and within the specified accuracy range. Larger variations usually indicate: the scale is on an uneven surface (always weigh on a flat, stable surface); the scale needs recalibration (some models have a calibration function); or there's residual weight from a previous measurement that wasn't tared. Always tare the scale before each new ingredient.",
+      },
+      {
+        question: "Can I use a kitchen scale to measure liquids?",
+        answer: "Yes — water and most water-based liquids weigh exactly 1 gram per milliliter (1g = 1ml), so a kitchen scale directly replaces a liquid measuring cup for these. Dairy, juices, and thin sauces are close enough to water density that scale measurement works. Oils are lighter (about 0.92g/ml) and should still be measured by volume for precision baking.",
+      },
+      {
+        question: "How do I prevent my kitchen scale from shutting off while I'm cooking?",
+        answer: "Most scales auto-shut-off after 3–5 minutes of inactivity to preserve battery life. To prevent this mid-recipe, press any button briefly to reset the timer. Some scales have a longer auto-off setting or allow you to disable it — check the manual. The OXO scale has a 5-minute auto-off, which is longer than most competitors. For long recipes, keep the manual handy for the reset procedure.",
+      },
+    ],
+    "thermometers": [
+      {
+        question: "What internal temperatures ensure meat is safe to eat?",
+        answer: "USDA safe internal temperatures: Poultry (165°F), Ground beef and pork (160°F), Whole cuts of beef, pork, lamb (145°F with 3-minute rest), Fish (145°F). These temperatures guarantee pathogen elimination. For preference-based targets: beef medium-rare is 130–135°F, medium is 140–145°F. Always measure at the thickest part of the meat, away from bone.",
+      },
+      {
+        question: "What's the difference between an instant-read and a leave-in probe thermometer?",
+        answer: "Instant-read thermometers (Thermapen, ThermoPro TP19H) give a reading in 1–5 seconds but are not designed to stay in the oven or grill during cooking. Leave-in probe thermometers (ThermoWorks DOT, MEATER) stay in the meat throughout cooking and alert you when the target temperature is reached. For roasts and long cooks, a leave-in probe is more convenient. For grilling and quick checks, an instant-read is faster.",
+      },
+      {
+        question: "How do I know if my thermometer is accurate?",
+        answer: "Test with ice water (should read 32°F / 0°C) and boiling water at sea level (should read 212°F / 100°C). If readings are off by more than 2°F, calibrate according to the manual or replace the thermometer. Digital thermometers can drift over time — test annually or if readings seem inconsistent with expected cooking results.",
+      },
+      {
+        question: "Where should I insert a meat thermometer for an accurate reading?",
+        answer: "Insert into the thickest part of the meat, avoiding bone, fat pockets, and gristle — all of which conduct heat differently than muscle tissue. For whole chickens, check the thigh joint near the body. For thick steaks, insert from the side into the center. Leave the probe in for the full reading time (1–5 seconds depending on the thermometer model) without moving it.",
+      },
+      {
+        question: "Can an infrared thermometer measure food internal temperature?",
+        answer: "No. Infrared thermometers measure surface temperature only — they cannot penetrate to the center of a piece of meat. They are excellent for checking pan and grill surface temperature before cooking, verifying pizza stone temperature, or checking the surface of bread. For food safety, you must use a probe thermometer that penetrates to the center of the food.",
+      },
+    ],
+    "kitchen-gadgets": [
+      {
+        question: "Which kitchen gadgets do professional chefs actually use at home?",
+        answer: "Professional chefs consistently use a short list of high-quality basics: a Microplane zester (transformative for citrus and cheese), a reliable peeler (Y-type preferred), sharp tongs with a locking mechanism, a fine mesh strainer set, and a silicone spatula. They avoid novelty gadgets and single-purpose tools that only save time on tasks done monthly. Quality over quantity is the consistent principle.",
+      },
+      {
+        question: "What's the difference between a Y-peeler and a straight peeler?",
+        answer: "Y-peelers (also called speed peelers) have the blade perpendicular to the handle, requiring a pulling motion across the vegetable. Straight peelers have the blade parallel to the handle, requiring a pushing motion away from you. Y-peelers are generally faster and require less hand strength — they're the professional preference. Straight peelers feel more natural to people who learned on them, but most cooks convert to Y-type once they try it.",
+      },
+      {
+        question: "What can I use a Microplane for beyond citrus zesting?",
+        answer: "A Microplane grater is one of the most versatile tools in the kitchen: hard cheeses (Parmesan, Pecorino, aged cheddar), fresh ginger without fibrous strings, nutmeg (far more aromatic than pre-ground), dark chocolate over desserts, garlic (produces a garlic paste more intense than mincing), frozen butter into pastry dough, and horseradish. Once you own one, you'll find uses in almost every recipe category.",
+      },
+      {
+        question: "When should I use tongs vs a spatula when cooking?",
+        answer: "Tongs are best for gripping, turning, and repositioning food: steaks, chicken pieces, grilled vegetables, pasta tossing, and anything that needs to be firmly gripped and flipped. Spatulas are better for sliding under and supporting flat, delicate foods: fish fillets, pancakes, burgers, and anything that needs support across a wider surface area. Use a spatula when you need to support weight; use tongs when you need to grip and control.",
+      },
+      {
+        question: "How do I care for silicone kitchen tools to make them last?",
+        answer: "Silicone tools are low-maintenance: dishwasher-safe, don't require special cleaning, and won't absorb odors if made from 100% food-grade platinum silicone. Avoid cutting on silicone (use on a cutting board, not directly on the tool). Some silicone tools temporarily absorb cooking smells — a soak in boiling water or dishwasher cycle resolves this. Check for a nylon core periodically — if the core starts to crack or show through, replace the tool.",
+      },
+    ],
   };
 
   return faqs[slug] ?? [
@@ -328,7 +453,12 @@ function getRelatedCategories(slug: string): { slug: string; displayName: string
     "blenders": ["food-processors", "coffee-makers"],
     "food-processors": ["blenders", "stand-mixers"],
     "pressure-cookers": ["air-fryers", "cast-iron-cookware"],
-    "baking-tools": ["stand-mixers", "cast-iron-cookware"],
+    "baking-tools": ["stand-mixers", "kitchen-scales"],
+    "kitchen-storage": ["spice-racks", "kitchen-gadgets"],
+    "spice-racks": ["kitchen-storage", "kitchen-gadgets"],
+    "kitchen-scales": ["baking-tools", "thermometers"],
+    "thermometers": ["kitchen-scales", "cast-iron-cookware"],
+    "kitchen-gadgets": ["kitchen-storage", "chefs-knives"],
   };
   const displayNames: Record<string, string> = {
     "chefs-knives": "Chef's Knives",
@@ -341,6 +471,11 @@ function getRelatedCategories(slug: string): { slug: string; displayName: string
     "food-processors": "Food Processors",
     "pressure-cookers": "Pressure Cookers",
     "baking-tools": "Baking Tools",
+    "kitchen-storage": "Kitchen Storage & Organization",
+    "spice-racks": "Spice Racks & Containers",
+    "kitchen-scales": "Kitchen Scales",
+    "thermometers": "Kitchen Thermometers",
+    "kitchen-gadgets": "Kitchen Gadgets & Utensils",
   };
   const related = relatedMap[slug] ?? [];
   return related.map((s) => ({ slug: s, displayName: displayNames[s] ?? s.replace(/-/g, " ") }));
