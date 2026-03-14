@@ -1,10 +1,26 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import CategoryIcon from "../../components/icons/CategoryIcon.astro";
-import { getAllCategories } from "../../lib/categories.ts";
-import type { Category } from "../../lib/products.ts";
+import ProductCard from "../../components/ProductCard.astro";
+import { getAllProducts } from "../../lib/products.ts";
+import type { Product } from "../../lib/products.ts";
 
-const categories = getAllCategories();
+const allProducts = getAllProducts();
+
+// Top 5: highest rating, ties broken by lowest price
+const topPicks = [...allProducts]
+  .sort((a, b) => b.rating - a.rating || a.price - b.price)
+  .slice(0, 5);
+
+// Budget picks: under $50, sorted by rating desc
+const budgetPicks = [...allProducts]
+  .filter((p) => p.price < 50)
+  .sort((a, b) => b.rating - a.rating || a.price - b.price)
+  .slice(0, 6);
+
+// Best value: highest rating-to-price ratio
+const bestValue = [...allProducts]
+  .sort((a, b) => b.rating / b.price - a.rating / a.price)
+  .slice(0, 5);
 
 const breadcrumbs = [
   { label: "Home", href: "/" },
@@ -13,11 +29,11 @@ const breadcrumbs = [
 ---
 
 <BaseLayout
-  title="Today's Best Kitchen Deals — SuperKitchenTools"
-  description="Find the best deals on kitchen tools today. Deals update automatically when our Amazon PA-API connection is active. Browse our best-pick categories in the meantime."
+  title="Best Value Kitchen Deals — SuperKitchenTools"
+  description="Find the best-value kitchen tools right now. Top-rated picks, budget buys under $50, and the best rating-to-price ratio products across all categories."
   breadcrumbs={breadcrumbs}
 >
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
     <!-- Hero -->
     <div class="text-center mb-14">
@@ -28,78 +44,73 @@ const breadcrumbs = [
         </svg>
       </span>
       <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading mb-4">
-        Today's Kitchen Deals
+        Best Value Kitchen Deals
       </h1>
       <p class="text-lg text-muted leading-relaxed max-w-xl mx-auto">
-        Live deal tracking is coming soon. We'll surface real-time Amazon price drops on all
-        the kitchen tools in our database once our PA-API connection is active.
+        Hand-picked kitchen tools with the best combination of ratings, reviews, and price.
+        Updated regularly across all categories.
       </p>
     </div>
 
-    <!-- Coming Soon Card -->
-    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 mb-12">
-      <div class="flex items-start gap-4 mb-6">
-        <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
-          <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-        </div>
+    <!-- Top 5 Best-Rated Products -->
+    <section class="mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-accent text-white text-sm font-bold shrink-0" aria-hidden="true">1</span>
         <div>
-          <h2 class="text-lg font-bold text-primary mb-1">What's Coming</h2>
-          <p class="text-muted text-sm leading-relaxed">
-            Once connected to the Amazon Product Advertising API, this page will auto-update with:
-          </p>
+          <h2 class="text-2xl font-extrabold text-primary font-heading leading-tight">Top 5 Best-Rated Picks</h2>
+          <p class="text-sm text-muted mt-0.5">Highest-rated products across all categories</p>
         </div>
       </div>
-      <ul class="flex flex-col gap-3 pl-14">
-        {[
-          "Real-time price drops on all products in our database",
-          "Lightning deals and limited-time offers",
-          "Price history charts to verify genuine savings",
-          "Email alerts for products on your watchlist",
-          "Daily deal digests for each kitchen category",
-        ].map((item) => (
-          <li class="flex items-start gap-2.5 text-sm text-muted">
-            <svg class="w-4 h-4 mt-0.5 text-success shrink-0 fill-current" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-            </svg>
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
-
-    <!-- Alternative: Category Links -->
-    <div>
-      <h2 class="text-xl font-bold text-primary mb-2">Browse Our Best Picks Instead</h2>
-      <p class="text-muted text-sm mb-6">
-        All our recommended products are already at excellent prices — check our
-        category pages to find the best value options right now.
-      </p>
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-        {categories.map((cat: Category) => (
-          <a
-            href={`/best/${cat.slug}/`}
-            class="group flex items-center gap-3 px-4 py-3 bg-white border border-gray-100 rounded-xl hover:border-accent/30 hover:shadow-sm transition-all"
-          >
-            <span class="shrink-0 text-muted group-hover:text-accent transition-colors" aria-hidden="true">
-              <CategoryIcon slug={cat.slug} size={20} />
-            </span>
-            <span class="text-sm font-medium text-primary group-hover:text-accent transition-colors leading-snug line-clamp-2">
-              Best {cat.displayName}
-            </span>
-          </a>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+        {topPicks.map((product: Product) => (
+          <ProductCard product={product} />
         ))}
       </div>
-    </div>
+    </section>
 
-    <!-- Notify CTA placeholder -->
-    <div class="mt-12 p-6 bg-accent/5 border border-accent/20 rounded-xl text-center">
-      <p class="text-sm font-semibold text-primary mb-1">Want to be notified when deals go live?</p>
-      <p class="text-sm text-muted">
-        Until the deals feature launches, bookmark this page or follow our best-picks pages for the latest recommendations.
-      </p>
-    </div>
+    <!-- Budget Picks Under $50 -->
+    {budgetPicks.length > 0 && (
+      <section class="mb-16">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-success text-white shrink-0" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+          </span>
+          <div>
+            <h2 class="text-2xl font-extrabold text-primary font-heading leading-tight">Budget Picks Under $50</h2>
+            <p class="text-sm text-muted mt-0.5">Top-rated tools that won't break the bank</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {budgetPicks.map((product: Product) => (
+            <ProductCard product={product} />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Best Value (rating/price ratio) -->
+    <section class="mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-white shrink-0" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+            <polyline points="17 6 23 6 23 12" />
+          </svg>
+        </span>
+        <div>
+          <h2 class="text-2xl font-extrabold text-primary font-heading leading-tight">Best Value</h2>
+          <p class="text-sm text-muted mt-0.5">Highest quality-per-dollar across the entire catalog</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+        {bestValue.map((product: Product) => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+    </section>
 
   </div>
 </BaseLayout>
