@@ -279,6 +279,8 @@ const faqs = getCategoryFAQs(category.slug);
 const sisterSites = getSisterSitesForCategory(category.slug);
 const firstSisterSite = sisterSites[0];
 
+const heroImageSrc = `/images/categories/${category.slug}.jpg`;
+
 const breadcrumbs = [
   { label: "Home", href: "/" },
   { label: "Best Picks", href: "/best/" },
@@ -303,65 +305,103 @@ const schemas = [
   breadcrumbs={breadcrumbs}
   schemas={schemas}
 >
+
+  <!-- ============================
+       CATEGORY HERO — photo background
+  =============================== -->
+  <section class="relative min-h-[320px] md:min-h-[360px] flex items-end overflow-hidden">
+    <!-- Photo background -->
+    <div
+      class="absolute inset-0 category-hero-bg"
+      style={`background-image: url('${heroImageSrc}');`}
+      aria-hidden="true"
+    ></div>
+    <!-- Dark overlay — stronger at bottom for text legibility -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 w-full">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-accent mb-3">Expert Picks</p>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-heading">
+            Best {category.displayName}
+          </h1>
+          <p class="text-white/75 mt-2 text-base max-w-xl leading-relaxed">
+            {category.description}
+          </p>
+          <p class="text-white/55 text-sm mt-3 flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Updated March 2026
+          </p>
+        </div>
+        <div class="shrink-0 hidden md:flex items-center gap-3 bg-black/30 backdrop-blur-sm rounded-xl px-5 py-3 border border-white/10">
+          <div class="text-center">
+            <p class="text-2xl font-extrabold text-white">{displayedProducts.length}</p>
+            <p class="text-white/60 text-xs">Products Ranked</p>
+          </div>
+          <div class="w-px h-10 bg-white/20"></div>
+          <div class="text-center">
+            <p class="text-2xl font-extrabold text-white">
+              {(displayedProducts.reduce((sum, p) => sum + p.rating, 0) / displayedProducts.length).toFixed(1)}
+            </p>
+            <p class="text-white/60 text-xs">Avg. Rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       ARTICLE CONTENT
+  =============================== -->
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
     <!-- Disclosure -->
     <AffiliateDisclosure variant="inline" />
 
-    <!-- Hero -->
-    <div class="mt-8 mb-10">
-      <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading mb-4">
-        Best {category.displayName} in 2026
-      </h1>
-      <p class="text-lg text-muted leading-relaxed max-w-3xl mb-3">
-        {category.description}
-      </p>
-      <p class="text-sm text-muted">
-        <svg class="inline-block w-4 h-4 mr-1 -mt-0.5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        Last updated: March 2026
-      </p>
-    </div>
-
     <!-- Quick Comparison Table — Top 3 -->
     {top3Products.length >= 2 && (
-      <div class="mb-12 bg-gray-50 rounded-xl border border-gray-200 p-6">
-        <h2 class="text-lg font-bold text-primary mb-4">Quick Comparison: Top 3 Picks</h2>
-        <div class="overflow-x-auto">
+      <div class="mt-10 mb-12">
+        <h2 class="text-xl font-bold text-primary font-heading mb-4">Quick Comparison: Top 3 Picks</h2>
+        <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
           <table class="w-full text-sm">
             <thead>
-              <tr class="border-b border-gray-200">
-                <th class="text-left py-2 pr-4 text-xs font-semibold uppercase tracking-wide text-muted w-1/4">Product</th>
-                <th class="text-left py-2 pr-4 text-xs font-semibold uppercase tracking-wide text-muted">Rating</th>
-                <th class="text-left py-2 pr-4 text-xs font-semibold uppercase tracking-wide text-muted">Price</th>
-                <th class="text-left py-2 text-xs font-semibold uppercase tracking-wide text-muted">Best For</th>
+              <tr class="bg-gray-50 border-b border-gray-200">
+                <th class="text-left px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.08em] text-muted w-2/5">Product</th>
+                <th class="text-left px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.08em] text-muted">Rating</th>
+                <th class="text-left px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.08em] text-muted">Price</th>
+                <th class="text-left px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.08em] text-muted hidden sm:table-cell">Best For</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-100">
               {top3Products.map((product: Product, i: number) => (
-                <tr class="hover:bg-white transition-colors">
-                  <td class="py-3 pr-4">
-                    <div class="flex items-center gap-2">
-                      {i === 0 && (
-                        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-accent text-white text-xs font-bold shrink-0">#1</span>
-                      )}
-                      {i !== 0 && (
-                        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gray-200 text-primary text-xs font-bold shrink-0">#{i + 1}</span>
-                      )}
-                      <a href={`/reviews/${product.slug}/`} class="font-medium text-primary hover:text-accent transition-colors line-clamp-2 text-xs leading-snug">
+                <tr class={`hover:bg-gray-50/70 transition-colors ${i === 0 ? "bg-amber-50/30" : "bg-white"}`}>
+                  <td class="px-5 py-4">
+                    <div class="flex items-center gap-3">
+                      <span class={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-extrabold shrink-0 ${i === 0 ? "bg-accent text-white" : "bg-gray-200 text-primary"}`}>
+                        {i + 1}
+                      </span>
+                      <a href={`/reviews/${product.slug}/`} class="font-semibold text-primary hover:text-accent transition-colors leading-snug text-sm">
                         {product.name}
                       </a>
                     </div>
                   </td>
-                  <td class="py-3 pr-4 whitespace-nowrap">
-                    <span class="text-stars font-semibold">{product.rating.toFixed(1)} ★</span>
+                  <td class="px-5 py-4 whitespace-nowrap">
+                    <span class="inline-flex items-center gap-1 text-sm font-bold text-stars">
+                      <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                      {product.rating.toFixed(1)}
+                    </span>
                   </td>
-                  <td class="py-3 pr-4 font-semibold text-primary whitespace-nowrap">
+                  <td class="px-5 py-4 font-bold text-primary whitespace-nowrap">
                     ${product.price.toFixed(2)}
                   </td>
-                  <td class="py-3 text-muted text-xs">
-                    {product.pros[0] ? product.pros[0].split('—')[0].trim() : "Top pick"}
+                  <td class="px-5 py-4 text-muted text-xs hidden sm:table-cell max-w-[160px]">
+                    <span class="line-clamp-2">{product.pros[0] ? product.pros[0].split('—')[0].trim() : "Top pick"}</span>
                   </td>
                 </tr>
               ))}
@@ -372,7 +412,7 @@ const schemas = [
     )}
 
     <!-- Products List -->
-    <div class="flex flex-col gap-12">
+    <div class="flex flex-col gap-10">
       {displayedProducts.map((product: Product, index: number) => {
         const rank = index + 1;
         const isTopPick = index === 0;
@@ -381,92 +421,84 @@ const schemas = [
         return (
           <article
             id={`pick-${rank}`}
-            class={`rounded-xl border ${isTopPick ? "border-accent/30 bg-amber-50/30 shadow-md" : "border-gray-200 bg-white shadow-sm"} overflow-hidden`}
+            class={`rounded-xl border overflow-hidden ${isTopPick ? "border-accent/25 shadow-md ring-1 ring-accent/15" : "border-gray-200 shadow-sm"}`}
           >
-            {/* Rank Header */}
-            <div class={`flex items-center gap-3 px-6 py-4 border-b ${isTopPick ? "border-accent/20 bg-amber-50/50" : "border-gray-100 bg-gray-50"}`}>
-              <span
-                class={`inline-flex items-center justify-center w-9 h-9 rounded-full text-base font-extrabold shrink-0 ${isTopPick ? "bg-accent text-white" : "bg-gray-200 text-primary"}`}
-              >
-                #{rank}
+            {/* Rank header */}
+            <div class={`flex items-center gap-3 px-5 py-3.5 border-b ${isTopPick ? "border-accent/20 bg-gradient-to-r from-amber-50 to-orange-50/40" : "border-gray-100 bg-gray-50/80"}`}>
+              <span class={`inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-extrabold shrink-0 ${isTopPick ? "bg-accent text-white" : "bg-gray-200 text-primary"}`}>
+                {rank}
               </span>
-              <div class="flex flex-col min-w-0">
+              <div class="flex-1 min-w-0">
                 {isTopPick && (
-                  <span class="text-xs font-semibold uppercase tracking-wide text-accent mb-0.5">
+                  <span class="text-[11px] font-bold uppercase tracking-[0.1em] text-accent block mb-0.5">
                     Our Top Pick
                   </span>
                 )}
-                <h2 class="text-lg font-bold text-primary leading-snug">
+                <h2 class={`font-bold text-primary leading-snug font-heading ${isTopPick ? "text-lg" : "text-base"}`}>
                   <a href={`/reviews/${product.slug}/`} class="hover:text-accent transition-colors">
                     {product.name}
                   </a>
                 </h2>
               </div>
-              <div class="ml-auto flex gap-2 shrink-0">
-                {product.isBestSeller && <span class="hidden sm:block"><slot />{/* DealBadge rendered below */}</span>}
+              <div class="shrink-0 flex items-center gap-2">
+                {product.isBestSeller && <DealBadge type="best-seller" />}
+                {!product.isBestSeller && product.isAmazonChoice && <DealBadge type="amazon-choice" />}
               </div>
             </div>
 
-            {/* Product Body */}
-            <div class="p-6">
+            {/* Product body */}
+            <div class={`p-5 ${isTopPick ? "bg-amber-50/15" : "bg-white"}`}>
               <div class="flex flex-col md:flex-row gap-6">
 
                 {/* Image */}
-                <div class="md:w-48 shrink-0">
+                <div class="md:w-44 shrink-0">
                   <a href={`/reviews/${product.slug}/`} class="block relative group">
-                    <img
-                      src={product.imageUrl}
-                      alt={product.name}
-                      width="192"
-                      height="192"
-                      loading={index < 2 ? "eager" : "lazy"}
-                      class="w-full md:w-48 aspect-square object-contain rounded-lg bg-gray-50 p-3"
-                      onerror="this.style.opacity='0';this.parentElement.classList.add('img-error')"
-                    />
-                    <span class="hidden img-error-fallback absolute inset-0 flex-col items-center justify-center gap-2 rounded-lg bg-gradient-to-br from-gray-100 to-gray-200 text-gray-400 text-xs font-medium text-center px-2">
-                      {product.name}
-                    </span>
-                    {product.isBestSeller && (
-                      <div class="absolute top-2 left-2">
-                        <DealBadge type="best-seller" />
+                    <div class="w-full aspect-square rounded-xl bg-gray-50 border border-gray-100 overflow-hidden flex items-center justify-center p-3">
+                      <img
+                        src={product.imageUrl}
+                        alt={product.name}
+                        width="160"
+                        height="160"
+                        loading={index < 2 ? "eager" : "lazy"}
+                        class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                        onerror={`
+                          this.style.display='none';
+                          this.nextElementSibling.style.display='flex';
+                        `}
+                      />
+                      <div class="hidden w-full h-full absolute inset-0 flex-col items-center justify-center gap-2 bg-gradient-to-br from-gray-100 to-gray-200 text-gray-400 p-3">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M3 21l12-12" /><path d="M6.5 17.5L18 3c1 0 3 1 3 3L7.5 17.5" /><path d="M3 21c0 0 2.5-.5 4-2" />
+                        </svg>
+                        <span class="text-xs text-center leading-snug">{product.name}</span>
                       </div>
-                    )}
-                    {!product.isBestSeller && product.isAmazonChoice && (
-                      <div class="absolute top-2 left-2">
-                        <DealBadge type="amazon-choice" />
-                      </div>
-                    )}
+                    </div>
                   </a>
                 </div>
 
                 {/* Details */}
-                <div class="flex-1 min-w-0 flex flex-col gap-4">
+                <div class="flex-1 min-w-0 flex flex-col gap-5">
 
-                  {/* Brand + Rating */}
+                  {/* Brand + Rating row */}
                   <div class="flex flex-wrap items-center gap-3">
-                    <span class="text-xs font-semibold uppercase tracking-wide text-muted">{product.brand}</span>
-                    <span class="text-gray-300" aria-hidden="true">•</span>
-                    <span class="inline-flex items-center gap-1 text-sm">
-                      <span class="text-stars font-bold">{product.rating.toFixed(1)} ★</span>
-                      <span class="text-muted">({product.reviewCount.toLocaleString()} reviews)</span>
-                    </span>
+                    <span class="text-xs font-semibold uppercase tracking-[0.1em] text-muted">{product.brand}</span>
+                    <span class="text-gray-300" aria-hidden="true">·</span>
+                    <RatingStars rating={product.rating} reviewCount={product.reviewCount} />
                   </div>
 
                   {/* Pros/Cons */}
                   <ProsConsList pros={product.pros} cons={product.cons} />
 
-                  {/* Key Specs */}
+                  {/* Key Specs — compact */}
                   {Object.keys(product.specs).length > 0 && (
-                    <div class="overflow-x-auto">
-                      <table class="w-full text-sm border border-gray-100 rounded-lg overflow-hidden">
-                        <caption class="text-xs font-semibold uppercase tracking-wide text-muted text-left pb-2">
-                          Key Specs
-                        </caption>
+                    <div class="overflow-x-auto rounded-xl border border-gray-100">
+                      <table class="w-full text-sm">
+                        <caption class="sr-only">Key Specifications</caption>
                         <tbody class="divide-y divide-gray-100">
-                          {Object.entries(product.specs).slice(0, 5).map(([key, val]) => (
-                            <tr class="bg-white">
-                              <td class="px-3 py-2 font-medium text-primary bg-gray-50 w-1/3">{key}</td>
-                              <td class="px-3 py-2 text-muted">{val}</td>
+                          {Object.entries(product.specs).slice(0, 4).map(([key, val]) => (
+                            <tr>
+                              <td class="px-4 py-2.5 font-medium text-primary bg-gray-50/70 w-2/5 text-sm">{key}</td>
+                              <td class="px-4 py-2.5 text-muted text-sm">{val}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -478,13 +510,6 @@ const schemas = [
                   <div class="pt-2">
                     <PriceTag price={product.price} amazonUrl={amazonUrl} />
                   </div>
-
-                  {/* Top Pick BuyBox */}
-                  {isTopPick && (
-                    <div class="mt-2">
-                      <BuyBox product={product} />
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
@@ -493,21 +518,26 @@ const schemas = [
       })}
     </div>
 
-    <!-- FAQ Section -->
+    <!-- ============================
+         FAQ
+    =============================== -->
     <section class="mt-16" aria-labelledby="faq-heading">
-      <h2 id="faq-heading" class="text-2xl font-bold text-primary mb-6">
-        Frequently Asked Questions About {category.displayName}
-      </h2>
-      <div class="flex flex-col gap-4">
-        {faqs.map((faq, i) => (
+      <div class="mb-8">
+        <p class="text-xs font-semibold uppercase tracking-[0.12em] text-accent mb-2">Common Questions</p>
+        <h2 id="faq-heading" class="text-2xl md:text-3xl font-bold text-primary font-heading">
+          Frequently Asked Questions
+        </h2>
+      </div>
+      <div class="flex flex-col gap-3">
+        {faqs.map((faq) => (
           <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
-            <summary class="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer list-none hover:bg-gray-50 transition-colors">
-              <span class="font-semibold text-primary">{faq.question}</span>
-              <svg class="w-5 h-5 text-muted shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none hover:bg-gray-50/70 transition-colors">
+              <span class="font-semibold text-primary text-sm leading-snug">{faq.question}</span>
+              <svg class="w-4 h-4 text-muted shrink-0 transition-transform duration-200 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </summary>
-            <div class="px-6 pb-5 pt-1 text-muted leading-relaxed border-t border-gray-100">
+            <div class="px-5 pb-5 pt-2 text-muted text-sm leading-relaxed border-t border-gray-100">
               {faq.answer}
             </div>
           </details>
@@ -518,7 +548,7 @@ const schemas = [
     <!-- Sister Site Link -->
     {firstSisterSite && (
       <div class="mt-12 pt-8 border-t border-gray-100">
-        <p class="text-xs font-semibold uppercase tracking-wide text-muted mb-3">From Our Network</p>
+        <p class="text-xs font-semibold uppercase tracking-[0.1em] text-muted mb-3">From Our Network</p>
         <SisterSiteLink site={firstSisterSite} variant="card" />
       </div>
     )}

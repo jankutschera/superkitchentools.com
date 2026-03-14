@@ -5,6 +5,7 @@ import ProsConsList from "../../components/ProsConsList.astro";
 import AffiliateDisclosure from "../../components/AffiliateDisclosure.astro";
 import SisterSiteLink from "../../components/SisterSiteLink.astro";
 import RatingStars from "../../components/RatingStars.astro";
+import DealBadge from "../../components/DealBadge.astro";
 import { getProductByAsin } from "../../lib/products.ts";
 import { getCategory } from "../../lib/categories.ts";
 import { affiliateUrl } from "../../lib/affiliateUrl.ts";
@@ -46,7 +47,6 @@ const winnerProduct =
 const loserProduct =
   winnerProduct?.asin === productA.asin ? productB : productA;
 
-// Comparison-specific FAQs
 const faqs = [
   {
     question: `${productA.name} vs ${productB.name}: which is better overall?`,
@@ -107,56 +107,65 @@ const schemas = [
     <AffiliateDisclosure variant="inline" />
 
     <!-- H1 -->
-    <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading mt-8 mb-8 leading-tight">
-      {productA.name} vs {productB.name}: Which Is Better in 2026?
+    <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading mt-8 mb-2 leading-tight">
+      {productA.name} vs {productB.name}
     </h1>
+    <p class="text-muted text-sm mb-8">Which is better in 2026? We compared them head-to-head so you don't have to.</p>
 
-    <!-- Quick Verdict Box -->
+    <!-- Winner Verdict Box -->
     {winnerProduct && (
-      <div class="mb-10 rounded-xl border-2 border-accent/30 bg-accent/5 p-6">
-        <p class="text-xs font-semibold uppercase tracking-wide text-accent mb-2">Our Verdict</p>
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
-          <img
-            src={winnerProduct.imageUrl}
-            alt={winnerProduct.name}
-            width="72"
-            height="72"
-            loading="eager"
-            class="w-16 h-16 object-contain rounded-lg bg-white border border-gray-200 p-2 shrink-0"
-            onerror="this.src='/images/placeholder-product.svg'"
-          />
-          <div>
-            <p class="text-lg font-bold text-primary">
-              Winner: {winnerProduct.name}
-            </p>
-            <RatingStars rating={winnerProduct.rating} reviewCount={winnerProduct.reviewCount} />
-          </div>
-          <a
-            href={affiliateUrl(winnerProduct.asin)}
-            rel="nofollow sponsored"
-            target="_blank"
-            class="sm:ml-auto inline-flex items-center gap-2 px-4 py-2.5 bg-accent text-white text-sm font-bold rounded-lg hover:bg-accent/90 transition-colors whitespace-nowrap shrink-0"
-          >
-            View on Amazon
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
+      <div class="mb-10 rounded-xl border-2 border-accent/25 bg-amber-50/50 overflow-hidden shadow-sm">
+        <div class="bg-amber-50 border-b border-accent/20 px-5 py-3">
+          <p class="text-xs font-bold uppercase tracking-[0.1em] text-accent">Our Verdict</p>
         </div>
-        <p class="text-muted leading-relaxed text-sm">{comparison.verdict}</p>
+        <div class="p-5">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
+            <!-- Winner image -->
+            <div class="w-16 h-16 rounded-xl bg-white border border-gray-200 overflow-hidden flex items-center justify-center p-1.5 shrink-0">
+              <img
+                src={winnerProduct.imageUrl}
+                alt={winnerProduct.name}
+                width="60"
+                height="60"
+                loading="eager"
+                class="w-full h-full object-contain"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <div class="flex-1">
+              <p class="text-xs font-semibold uppercase tracking-[0.1em] text-accent mb-1">Winner</p>
+              <p class="text-lg font-bold text-primary font-heading leading-snug">{winnerProduct.name}</p>
+              <div class="mt-1">
+                <RatingStars rating={winnerProduct.rating} reviewCount={winnerProduct.reviewCount} />
+              </div>
+            </div>
+            <a
+              href={affiliateUrl(winnerProduct.asin)}
+              rel="nofollow sponsored"
+              target="_blank"
+              class="inline-flex items-center gap-2 px-4 py-2.5 bg-accent text-white text-sm font-bold rounded-lg hover:bg-amber-600 transition-colors whitespace-nowrap shrink-0"
+            >
+              View on Amazon
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+          <p class="text-muted leading-relaxed text-sm">{comparison.verdict}</p>
+        </div>
       </div>
     )}
 
     {!winnerProduct && (
-      <div class="mb-10 rounded-xl border border-gray-200 bg-gray-50 p-6">
-        <p class="text-xs font-semibold uppercase tracking-wide text-muted mb-2">Our Verdict</p>
-        <p class="text-muted leading-relaxed">{comparison.verdict}</p>
+      <div class="mb-10 rounded-xl border border-gray-200 bg-gray-50 p-5">
+        <p class="text-xs font-semibold uppercase tracking-[0.1em] text-muted mb-2">Our Verdict</p>
+        <p class="text-muted leading-relaxed text-sm">{comparison.verdict}</p>
       </div>
     )}
 
-    <!-- Comparison Table -->
+    <!-- Full Comparison Table -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold text-primary mb-5">Full Comparison</h2>
+      <h2 class="text-2xl font-bold text-primary font-heading mb-5">Full Comparison</h2>
       <ComparisonTable
         productA={productA}
         productB={productB}
@@ -164,33 +173,42 @@ const schemas = [
       />
     </section>
 
-    <!-- Individual Product Sections -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+    <!-- Individual Product Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
 
       <!-- Product A -->
       <section class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
         <div class="bg-gray-50 border-b border-gray-200 px-5 py-4 flex items-center gap-3">
-          <img
-            src={productA.imageUrl}
-            alt={productA.name}
-            width="48"
-            height="48"
-            loading="lazy"
-            class="w-10 h-10 object-contain rounded bg-white p-1 border border-gray-100"
-            onerror="this.src='/images/placeholder-product.svg'"
-          />
+          <div class="w-10 h-10 rounded-lg bg-white border border-gray-100 overflow-hidden flex items-center justify-center p-1 shrink-0">
+            <img
+              src={productA.imageUrl}
+              alt={productA.name}
+              width="36"
+              height="36"
+              loading="lazy"
+              class="w-full h-full object-contain"
+              onerror="this.style.display='none'"
+            />
+          </div>
           <div class="min-w-0">
             <p class="text-xs text-muted font-medium">{productA.brand}</p>
-            <h3 class="font-bold text-primary leading-snug text-sm line-clamp-2">
+            <h3 class="font-bold text-primary text-sm leading-snug font-heading line-clamp-2">
               <a href={`/reviews/${productA.slug}/`} class="hover:text-accent transition-colors">
                 {productA.name}
               </a>
             </h3>
           </div>
+          {winnerProduct?.asin === productA.asin && (
+            <span class="ml-auto shrink-0">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-accent/10 text-accent text-xs font-bold border border-accent/20">
+                Winner
+              </span>
+            </span>
+          )}
         </div>
         <div class="p-5 flex flex-col gap-4">
           <div class="flex items-baseline gap-2">
-            <span class="text-xl font-bold text-primary">${productA.price.toFixed(2)}</span>
+            <span class="text-xl font-extrabold text-primary">${productA.price.toFixed(2)}</span>
           </div>
           <RatingStars rating={productA.rating} reviewCount={productA.reviewCount} />
           <ProsConsList pros={productA.pros} cons={productA.cons} />
@@ -199,13 +217,16 @@ const schemas = [
               href={affiliateUrl(productA.asin)}
               rel="nofollow sponsored"
               target="_blank"
-              class="block w-full py-2.5 px-4 bg-accent text-white text-center text-sm font-bold rounded-lg hover:bg-accent/90 transition-colors"
+              class="flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-accent text-white text-sm font-bold rounded-lg hover:bg-amber-600 transition-colors"
             >
               View on Amazon
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
             </a>
             <a
               href={`/reviews/${productA.slug}/`}
-              class="block w-full py-2.5 px-4 bg-white border border-gray-200 text-primary text-center text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+              class="flex items-center justify-center w-full py-2.5 px-4 bg-white border border-gray-200 text-primary text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
             >
               Full Review
             </a>
@@ -216,27 +237,36 @@ const schemas = [
       <!-- Product B -->
       <section class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
         <div class="bg-gray-50 border-b border-gray-200 px-5 py-4 flex items-center gap-3">
-          <img
-            src={productB.imageUrl}
-            alt={productB.name}
-            width="48"
-            height="48"
-            loading="lazy"
-            class="w-10 h-10 object-contain rounded bg-white p-1 border border-gray-100"
-            onerror="this.src='/images/placeholder-product.svg'"
-          />
+          <div class="w-10 h-10 rounded-lg bg-white border border-gray-100 overflow-hidden flex items-center justify-center p-1 shrink-0">
+            <img
+              src={productB.imageUrl}
+              alt={productB.name}
+              width="36"
+              height="36"
+              loading="lazy"
+              class="w-full h-full object-contain"
+              onerror="this.style.display='none'"
+            />
+          </div>
           <div class="min-w-0">
             <p class="text-xs text-muted font-medium">{productB.brand}</p>
-            <h3 class="font-bold text-primary leading-snug text-sm line-clamp-2">
+            <h3 class="font-bold text-primary text-sm leading-snug font-heading line-clamp-2">
               <a href={`/reviews/${productB.slug}/`} class="hover:text-accent transition-colors">
                 {productB.name}
               </a>
             </h3>
           </div>
+          {winnerProduct?.asin === productB.asin && (
+            <span class="ml-auto shrink-0">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-accent/10 text-accent text-xs font-bold border border-accent/20">
+                Winner
+              </span>
+            </span>
+          )}
         </div>
         <div class="p-5 flex flex-col gap-4">
           <div class="flex items-baseline gap-2">
-            <span class="text-xl font-bold text-primary">${productB.price.toFixed(2)}</span>
+            <span class="text-xl font-extrabold text-primary">${productB.price.toFixed(2)}</span>
           </div>
           <RatingStars rating={productB.rating} reviewCount={productB.reviewCount} />
           <ProsConsList pros={productB.pros} cons={productB.cons} />
@@ -245,13 +275,16 @@ const schemas = [
               href={affiliateUrl(productB.asin)}
               rel="nofollow sponsored"
               target="_blank"
-              class="block w-full py-2.5 px-4 bg-accent text-white text-center text-sm font-bold rounded-lg hover:bg-accent/90 transition-colors"
+              class="flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-accent text-white text-sm font-bold rounded-lg hover:bg-amber-600 transition-colors"
             >
               View on Amazon
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
             </a>
             <a
               href={`/reviews/${productB.slug}/`}
-              class="block w-full py-2.5 px-4 bg-white border border-gray-200 text-primary text-center text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+              class="flex items-center justify-center w-full py-2.5 px-4 bg-white border border-gray-200 text-primary text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
             >
               Full Review
             </a>
@@ -260,32 +293,32 @@ const schemas = [
       </section>
     </div>
 
-    <!-- Our Pick Section -->
+    <!-- Our Pick + CTA -->
     {winnerProduct && loserProduct && (
       <section class="mb-12 bg-white rounded-xl border border-gray-200 shadow-sm p-6">
-        <h2 class="text-2xl font-bold text-primary mb-4">Our Pick: {winnerProduct.name}</h2>
-        <p class="text-muted leading-relaxed mb-5">{comparison.verdict}</p>
-        <div class="flex flex-col sm:flex-row gap-3">
+        <h2 class="text-xl font-bold text-primary font-heading mb-3">Bottom Line: Our Pick</h2>
+        <p class="text-muted leading-relaxed text-sm mb-5">{comparison.verdict}</p>
+        <div class="flex flex-wrap gap-3">
           <a
             href={affiliateUrl(winnerProduct.asin)}
             rel="nofollow sponsored"
             target="_blank"
-            class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-accent text-white text-sm font-bold rounded-lg hover:bg-accent/90 transition-colors"
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white text-sm font-bold rounded-lg hover:bg-amber-600 transition-colors"
           >
             Buy the {winnerProduct.name} on Amazon
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
           <a
             href={`/reviews/${winnerProduct.slug}/`}
-            class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white border border-gray-200 text-primary text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-gray-200 text-primary text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
           >
             Read Full Review
           </a>
           <a
             href={`/best/${comparison.categorySlug}/`}
-            class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white border border-gray-200 text-primary text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-gray-200 text-primary text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
           >
             See All Best {categoryDisplayName}
           </a>
@@ -295,19 +328,22 @@ const schemas = [
 
     <!-- FAQ -->
     <section class="mb-12" aria-labelledby="faq-heading">
-      <h2 id="faq-heading" class="text-2xl font-bold text-primary mb-6">
-        Frequently Asked Questions
-      </h2>
-      <div class="flex flex-col gap-4">
+      <div class="mb-6">
+        <p class="text-xs font-semibold uppercase tracking-[0.12em] text-accent mb-2">Common Questions</p>
+        <h2 id="faq-heading" class="text-2xl font-bold text-primary font-heading">
+          Frequently Asked Questions
+        </h2>
+      </div>
+      <div class="flex flex-col gap-3">
         {faqs.map((faq) => (
           <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
-            <summary class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none hover:bg-gray-50 transition-colors">
-              <span class="font-semibold text-primary">{faq.question}</span>
-              <svg class="w-5 h-5 text-muted shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none hover:bg-gray-50/70 transition-colors">
+              <span class="font-semibold text-primary text-sm leading-snug">{faq.question}</span>
+              <svg class="w-4 h-4 text-muted shrink-0 transition-transform duration-200 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </summary>
-            <div class="px-5 pb-5 pt-1 text-muted leading-relaxed border-t border-gray-100">
+            <div class="px-5 pb-5 pt-2 text-muted text-sm leading-relaxed border-t border-gray-100">
               {faq.answer}
             </div>
           </details>
@@ -315,10 +351,10 @@ const schemas = [
       </div>
     </section>
 
-    <!-- Sister Site Link -->
+    <!-- Sister Site -->
     {firstSisterSite && (
       <div class="mt-8 pt-8 border-t border-gray-100">
-        <p class="text-xs font-semibold uppercase tracking-wide text-muted mb-3">From Our Network</p>
+        <p class="text-xs font-semibold uppercase tracking-[0.1em] text-muted mb-3">From Our Network</p>
         <SisterSiteLink site={firstSisterSite} variant="card" />
       </div>
     )}
