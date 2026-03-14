@@ -1,8 +1,8 @@
 # Session Log
 
 ## Projekt Status
-- **Letztes Update:** 2026-03-14
-- **Status:** MVP deployed, Design verbessert aber noch nicht Briefing-konform
+- **Letztes Update:** 2026-03-15
+- **Status:** MVP deployed + DevOps setup complete (Plausible, GSC, mobile fixes deployed)
 
 ## Was gebaut wurde
 - Astro 6 + Tailwind CSS 4 Site mit 185 Seiten
@@ -23,7 +23,17 @@
 - [ ] Visuelles Review-Protokoll (Desktop 1440px + Mobile 390px nach JEDER Seite) — nur teilweise gemacht
 - [ ] "Wenn es nicht besser aussieht als die Top 3 Google-Ergebnisse, ist es nicht gut genug" — noch nicht erreicht
 - [ ] Lighthouse Score > 95 — nie getestet
-- [ ] Mobile-View systematisch geprüft — nie gemacht
+- [x] Mobile-View systematisch geprüft — alle 5 Seiten auf 390px getestet (2026-03-15)
+  - Gefundene und behobene Issues:
+    - Search button: 36x36 → 44x44px
+    - pcard-buy CTA: 36px → 44px min-height
+    - Cookie consent button: 36px → 44px min-height
+    - section-see-all links: min-height 44px gesetzt
+    - Breadcrumb links: py-2 padding für touch targets
+    - Alle übergroßen small text fixes (10-11px → 12px): site-logo-tagline, hero-eyebrow, trust-item span, section-overline, cta-overline, footer-col-heading, footer-network-label, pcard-brand, cat-cta, guide-related-category, Our Top Pick badge
+    - Kein horizontaler Overflow auf allen Seiten
+    - Hamburger Menu auf allen Seiten sichtbar und funktional
+    - Alle Bilder responsive (max-width: 100%)
 
 ### Content & SEO (SEO Sam)
 - [ ] Content ist DÜNN — nur Seed-Daten-Beschreibungen, keine echten Reviews
@@ -48,8 +58,15 @@
 - [ ] Affiliate-Link-Platzierung nie als "natürlich vs spammy" bewertet
 
 ### DevOps (DevOps Dave)
-- [ ] Google Search Console — nie eingerichtet
-- [ ] Plausible Analytics — Script eingebunden aber Domain nie in Plausible angelegt
+- [x] Google Search Console — eingerichtet + Sitemap submitted (2026-03-15)
+  - Domain property: sc-domain:superkitchentools.com
+  - Verified via DNS TXT (google-site-verification=SOaliZ-ibaM3BnJDrtt_qbutG24i2s8ofPQNZrlT7go)
+  - Service account k-seo-371@k-seo-473709.iam.gserviceaccount.com is Owner
+  - Sitemap: https://superkitchentools.com/sitemap-index.xml submitted
+- [x] Plausible Analytics — superkitchentools.com war bereits in DB, proxy-Domain konfiguriert (2026-03-15)
+  - Domain in Plausible DB: confirmed (war schon drin)
+  - Proxy domain: applause.superkitchentools.com — DNS A-Record erstellt + Caddyfile updated
+  - Script in BaseLayout.astro korrekt: data-domain="superkitchentools.com"
 - [ ] Daily Refresh Cron (für PA-API Zukunft) — nicht eingerichtet
 - [ ] Pagefind Search UI im Header — nur installiert, kein UI-Component
 
