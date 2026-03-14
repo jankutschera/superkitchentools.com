@@ -41,7 +41,14 @@ const schemas = [
 
     <!-- Methodology Note -->
     <div class="mb-10 p-5 bg-gray-50 border border-gray-200 rounded-xl flex items-start gap-4">
-      <span class="text-2xl shrink-0" aria-hidden="true">🔬</span>
+      <span class="shrink-0 text-accent" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8" />
+          <path d="M21 21l-4.35-4.35" />
+          <path d="M11 8v6" />
+          <path d="M8 11h6" />
+        </svg>
+      </span>
       <div>
         <h2 class="font-bold text-primary text-sm mb-1">How We Choose Our Best Picks</h2>
         <p class="text-sm text-muted leading-relaxed">
@@ -59,41 +66,56 @@ const schemas = [
 
     <!-- Bottom CTA -->
     <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-      {[
-        {
-          icon: "⚡",
-          title: "Comparison Pages",
-          text: "See how the top options stack up head-to-head in our detailed comparison articles.",
-          href: "/vs/victorinox-fibrox-pro-vs-wusthof-classic/",
-          cta: "See an example →",
-        },
-        {
-          icon: "📋",
-          title: "Full Reviews",
-          text: "Every product in our database has a dedicated review page with specs, pros, cons, and a verdict.",
-          href: "/reviews/",
-          cta: "Browse all reviews →",
-        },
-        {
-          icon: "🏷️",
-          title: "Shop by Brand",
-          text: "Looking for a specific brand? Browse all KitchenAid, Lodge, Vitamix, and more.",
-          href: "/brands/",
-          cta: "See all brands →",
-        },
-      ].map((item) => (
-        <a
-          href={item.href}
-          class="group flex flex-col gap-3 p-5 bg-white border border-gray-100 rounded-xl hover:border-accent/30 hover:shadow-md transition-all duration-200"
-        >
-          <span class="text-2xl" aria-hidden="true">{item.icon}</span>
-          <h3 class="font-bold text-primary group-hover:text-accent transition-colors">
-            {item.title}
-          </h3>
-          <p class="text-sm text-muted leading-relaxed flex-1">{item.text}</p>
-          <span class="text-sm font-semibold text-accent">{item.cta}</span>
-        </a>
-      ))}
+      <!-- Comparison Pages -->
+      <a
+        href="/vs/victorinox-fibrox-pro-vs-wusthof-classic/"
+        class="group flex flex-col gap-3 p-5 bg-white border border-gray-100 rounded-xl hover:border-accent/30 hover:shadow-md transition-all duration-200"
+      >
+        <span class="text-accent" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="13 17 18 12 13 7" />
+            <polyline points="6 17 11 12 6 7" />
+          </svg>
+        </span>
+        <h3 class="font-bold text-primary group-hover:text-accent transition-colors">Comparison Pages</h3>
+        <p class="text-sm text-muted leading-relaxed flex-1">See how the top options stack up head-to-head in our detailed comparison articles.</p>
+        <span class="text-sm font-semibold text-accent">See an example &rarr;</span>
+      </a>
+
+      <!-- Full Reviews -->
+      <a
+        href="/reviews/"
+        class="group flex flex-col gap-3 p-5 bg-white border border-gray-100 rounded-xl hover:border-accent/30 hover:shadow-md transition-all duration-200"
+      >
+        <span class="text-accent" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+          </svg>
+        </span>
+        <h3 class="font-bold text-primary group-hover:text-accent transition-colors">Full Reviews</h3>
+        <p class="text-sm text-muted leading-relaxed flex-1">Every product in our database has a dedicated review page with specs, pros, cons, and a verdict.</p>
+        <span class="text-sm font-semibold text-accent">Browse all reviews &rarr;</span>
+      </a>
+
+      <!-- Shop by Brand -->
+      <a
+        href="/brands/"
+        class="group flex flex-col gap-3 p-5 bg-white border border-gray-100 rounded-xl hover:border-accent/30 hover:shadow-md transition-all duration-200"
+      >
+        <span class="text-accent" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+            <line x1="7" y1="7" x2="7.01" y2="7" />
+          </svg>
+        </span>
+        <h3 class="font-bold text-primary group-hover:text-accent transition-colors">Shop by Brand</h3>
+        <p class="text-sm text-muted leading-relaxed flex-1">Looking for a specific brand? Browse all KitchenAid, Lodge, Vitamix, and more.</p>
+        <span class="text-sm font-semibold text-accent">See all brands &rarr;</span>
+      </a>
     </div>
 
   </div>

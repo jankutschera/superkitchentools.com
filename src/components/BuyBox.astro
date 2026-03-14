@@ -3,12 +3,14 @@ import type { Product } from "../lib/products.ts";
 import { affiliateUrl } from "../lib/affiliateUrl.ts";
 import RatingStars from "./RatingStars.astro";
 import DealBadge from "./DealBadge.astro";
+import ProductImage from "./ProductImage.astro";
 
 interface Props {
   product: Product;
+  category?: string;
 }
 
-const { product } = Astro.props;
+const { product, category = "" } = Astro.props;
 const amazonUrl = affiliateUrl(product.asin);
 const formatted = product.price.toLocaleString("en-US", {
   style: "currency",
@@ -25,15 +27,12 @@ const formatted = product.price.toLocaleString("en-US", {
   {!product.isBestSeller && product.isAmazonChoice && <DealBadge type="amazon-choice" />}
 
   <!-- Image -->
-  <a href={amazonUrl} rel="nofollow sponsored" target="_blank" class="block">
-    <img
+  <a href={amazonUrl} rel="nofollow sponsored" target="_blank" class="block group">
+    <ProductImage
       src={product.imageUrl}
       alt={product.name}
-      width="200"
-      height="200"
-      loading="lazy"
-      class="w-full max-w-[160px] mx-auto aspect-square object-contain"
-      onerror="this.src='/images/placeholder-product.svg'"
+      category={category}
+      class="w-full max-w-[160px] mx-auto aspect-square rounded-lg overflow-hidden"
     />
   </a>
 

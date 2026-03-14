@@ -1,5 +1,6 @@
 ---
 import type { Category } from "../lib/products.ts";
+import CategoryIcon from "./icons/CategoryIcon.astro";
 
 interface Props {
   categories: Category[];
@@ -12,10 +13,10 @@ const { categories } = Astro.props;
   {categories.map((category) => (
     <a
       href={`/best/${category.slug}/`}
-      class="group flex flex-col items-center gap-3 p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-accent/30 hover:-translate-y-0.5 transition-all duration-200 text-center"
+      class="group flex flex-col items-center gap-3 p-5 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-accent/30 hover:-translate-y-0.5 transition-all duration-200 text-center"
     >
-      <span class="text-3xl" role="img" aria-label={category.displayName}>
-        {category.icon}
+      <span class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 text-primary group-hover:text-accent group-hover:bg-accent/8 transition-colors">
+        <CategoryIcon slug={category.slug} size={24} />
       </span>
       <div>
         <h3 class="text-sm font-semibold text-primary group-hover:text-accent transition-colors leading-snug">
@@ -26,7 +27,7 @@ const { categories } = Astro.props;
         </p>
       </div>
       <span class="mt-auto text-xs font-medium text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-        See Best Picks →
+        See Best Picks &rarr;
       </span>
     </a>
   ))}

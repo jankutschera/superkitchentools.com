@@ -63,13 +63,35 @@ const navLinks = [
   <!-- ============================
        HEADER
   =============================== -->
-  <header class="sticky top-0 z-40 bg-bg/95 backdrop-blur-sm border-b border-gray-200">
+  <header class="sticky top-0 z-40 bg-bg/95 backdrop-blur-sm border-b border-gray-200/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
 
         <!-- Logo -->
         <a href="/" class="flex items-center gap-2.5 shrink-0 group">
-          <span class="text-2xl" aria-hidden="true">🍴</span>
+          <!-- Kitchen utensil SVG mark -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#C67B4B"
+            stroke-width="1.75"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            class="shrink-0"
+          >
+            <!-- Fork tines -->
+            <line x1="8" y1="3" x2="8" y2="8" />
+            <line x1="11" y1="3" x2="11" y2="8" />
+            <!-- Fork handle -->
+            <path d="M8 8 Q9.5 10 9.5 11 L9.5 21" />
+            <path d="M11 8 Q9.5 10 9.5 11" />
+            <!-- Knife -->
+            <path d="M16 3 Q19 6 16 10 L16 21" />
+          </svg>
           <div class="leading-none">
             <span class="text-base font-extrabold text-primary group-hover:text-accent transition-colors tracking-tight">
               SuperKitchenTools
@@ -85,7 +107,7 @@ const navLinks = [
           {navLinks.map((link) => (
             <a
               href={link.href}
-              class="px-3 py-2 text-sm font-medium text-muted hover:text-primary hover:bg-gray-100 rounded-md transition-colors"
+              class="relative px-3 py-2 text-sm font-medium text-muted hover:text-primary transition-colors after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-accent after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-center"
             >
               {link.label}
             </a>
@@ -154,9 +176,9 @@ const navLinks = [
   <!-- ============================
        FOOTER
   =============================== -->
-  <footer class="bg-gray-900 text-gray-300 mt-16">
+  <footer class="bg-primary text-gray-300 mt-16">
     <!-- Sister Sites Banner -->
-    <div class="border-b border-gray-800 py-6">
+    <div class="border-b border-white/8 py-6">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">From Our Network</p>
         <div class="flex flex-wrap gap-4">
@@ -169,7 +191,7 @@ const navLinks = [
             >
               <span class="w-1 h-1 rounded-full bg-accent shrink-0"></span>
               <span class="font-medium">{site.name}</span>
-              <span class="text-gray-600">–</span>
+              <span class="text-gray-600">&ndash;</span>
               <span>{site.tagline}</span>
             </a>
           ))}
@@ -183,8 +205,26 @@ const navLinks = [
 
         <!-- Brand -->
         <div class="lg:col-span-2">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="text-xl" aria-hidden="true">🍴</span>
+          <div class="flex items-center gap-2.5 mb-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#C67B4B"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              class="shrink-0"
+            >
+              <line x1="8" y1="3" x2="8" y2="8" />
+              <line x1="11" y1="3" x2="11" y2="8" />
+              <path d="M8 8 Q9.5 10 9.5 11 L9.5 21" />
+              <path d="M11 8 Q9.5 10 9.5 11" />
+              <path d="M16 3 Q19 6 16 10 L16 21" />
+            </svg>
             <span class="text-base font-extrabold text-white">SuperKitchenTools</span>
           </div>
           <p class="text-sm text-gray-400 leading-relaxed max-w-sm">
@@ -237,7 +277,7 @@ const navLinks = [
       </div>
 
       <!-- Copyright -->
-      <div class="mt-10 pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+      <div class="mt-10 pt-6 border-t border-white/8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
         <p class="text-xs text-gray-600">
           &copy; 2026 SuperKitchenTools. All rights reserved.
         </p>

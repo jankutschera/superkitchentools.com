@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import CategoryIcon from "../../components/icons/CategoryIcon.astro";
 import { getAllCategories } from "../../lib/categories.ts";
 import type { Category } from "../../lib/products.ts";
 
@@ -20,7 +21,12 @@ const breadcrumbs = [
 
     <!-- Hero -->
     <div class="text-center mb-14">
-      <span class="text-5xl mb-5 block" aria-hidden="true">🔥</span>
+      <span class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 text-accent mb-5" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+          <line x1="7" y1="7" x2="7.01" y2="7" />
+        </svg>
+      </span>
       <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading mb-4">
         Today's Kitchen Deals
       </h1>
@@ -76,7 +82,9 @@ const breadcrumbs = [
             href={`/best/${cat.slug}/`}
             class="group flex items-center gap-3 px-4 py-3 bg-white border border-gray-100 rounded-xl hover:border-accent/30 hover:shadow-sm transition-all"
           >
-            <span class="text-xl shrink-0" aria-hidden="true">{cat.icon}</span>
+            <span class="shrink-0 text-muted group-hover:text-accent transition-colors" aria-hidden="true">
+              <CategoryIcon slug={cat.slug} size={20} />
+            </span>
             <span class="text-sm font-medium text-primary group-hover:text-accent transition-colors leading-snug line-clamp-2">
               Best {cat.displayName}
             </span>

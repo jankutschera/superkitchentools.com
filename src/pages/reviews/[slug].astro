@@ -3,10 +3,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import AffiliateDisclosure from "../../components/AffiliateDisclosure.astro";
 import ProsConsList from "../../components/ProsConsList.astro";
 import BuyBox from "../../components/BuyBox.astro";
+import DealBadge from "../../components/DealBadge.astro";
 import RatingStars from "../../components/RatingStars.astro";
 import ProductCard from "../../components/ProductCard.astro";
 import ArticleTOC from "../../components/ArticleTOC.astro";
 import SisterSiteLink from "../../components/SisterSiteLink.astro";
+import ProductImage from "../../components/ProductImage.astro";
 import { getAllProducts, getProductsByCategory } from "../../lib/products.ts";
 import { getCategory } from "../../lib/categories.ts";
 import { affiliateUrl } from "../../lib/affiliateUrl.ts";
@@ -131,15 +133,12 @@ const formatted = product.price.toLocaleString("en-US", { style: "currency", cur
 
         <!-- Product Hero: large image + key facts -->
         <div class="flex flex-col sm:flex-row gap-6 mb-8 p-6 bg-white rounded-xl border border-gray-200 shadow-sm">
-          <a href={amazonUrl} rel="nofollow sponsored" target="_blank" class="shrink-0">
-            <img
+          <a href={amazonUrl} rel="nofollow sponsored" target="_blank" class="shrink-0 group">
+            <ProductImage
               src={product.imageUrl}
               alt={product.name}
-              width="220"
-              height="220"
-              loading="eager"
-              class="w-full sm:w-52 aspect-square object-contain rounded-lg bg-gray-50 p-4"
-              onerror="this.src='/images/placeholder-product.svg'"
+              category={product.category}
+              class="w-full sm:w-52 aspect-square rounded-lg overflow-hidden"
             />
           </a>
           <div class="flex flex-col gap-3 justify-center">
@@ -151,14 +150,10 @@ const formatted = product.price.toLocaleString("en-US", { style: "currency", cur
               <span class="text-sm text-muted">at time of writing</span>
             </div>
             {product.isBestSeller && (
-              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-200 w-fit">
-                🏆 Best Seller
-              </span>
+              <span class="w-fit"><DealBadge type="best-seller" /></span>
             )}
             {!product.isBestSeller && product.isAmazonChoice && (
-              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-gray-900 text-white w-fit">
-                ✓ Amazon's Choice
-              </span>
+              <span class="w-fit"><DealBadge type="amazon-choice" /></span>
             )}
             <a
               href={amazonUrl}

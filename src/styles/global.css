@@ -10,3 +10,60 @@
   --font-heading: 'Inter', system-ui, sans-serif;
   --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus styles */
+*:focus-visible {
+  outline: 2px solid #C67B4B;
+  outline-offset: 2px;
+}
+
+/* Article-style typography for review content */
+.prose-editorial {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #2D2D2D;
+}
+
+.prose-editorial h2 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2D2D2D;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.prose-editorial h3 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2D2D2D;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-editorial p {
+  margin-bottom: 1.25rem;
+  color: #374151;
+}
+
+/* Details/summary accordion animation */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Category hero overlay */
+.category-hero-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
