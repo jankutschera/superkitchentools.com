@@ -10,6 +10,9 @@ guides.sort((a, b) => {
   return dateB - dateA;
 });
 
+const featuredGuide = guides[0];
+const restGuides = guides.slice(1);
+
 const breadcrumbs = [
   { label: "Home", href: "/" },
   { label: "Buying Guides", href: "/guides/" },
@@ -21,6 +24,10 @@ const schemas = [
     { name: "Buying Guides", url: "https://superkitchentools.com/guides/" },
   ]),
 ];
+
+function categoryLabel(slug: string) {
+  return slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+}
 ---
 
 <BaseLayout
@@ -29,64 +36,349 @@ const schemas = [
   breadcrumbs={breadcrumbs}
   schemas={schemas}
 >
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-    <!-- Page header -->
-    <div class="mb-12">
-      <div class="w-20 h-1 bg-accent mb-5"></div>
-      <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading leading-tight mb-4">
-        Kitchen Buying Guides
-      </h1>
-      <p class="text-muted text-base leading-relaxed max-w-2xl">
-        In-depth guides to help you choose the right kitchen equipment. We cover materials, features, price tiers, and exactly what to look for — so you can buy with confidence.
+  <!-- ============================
+       HERO
+  =============================== -->
+  <div class="guides-hero">
+    <div class="guides-hero-inner">
+      <span class="editorial-rule"></span>
+      <h1 class="guides-hero-title">Kitchen Buying Guides</h1>
+      <p class="guides-hero-sub">
+        In-depth guides to help you choose the right kitchen equipment.
+        We cover materials, features, price tiers, and exactly what to look for — so you can buy with confidence.
       </p>
     </div>
+  </div>
 
-    <!-- Guides grid -->
-    {guides.length > 0 ? (
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {guides.map((guide) => (
-          <a
-            href={`/guides/${guide.id}/`}
-            class="group flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-accent/30 hover:shadow-md transition-all duration-200"
-          >
-            {guide.data.category && (
-              <div class="w-full h-36 bg-gray-100 overflow-hidden">
-                <img
-                  src={`/images/categories/${guide.data.category}.jpg`}
-                  alt={guide.data.title}
-                  width="400"
-                  height="144"
-                  loading="lazy"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            )}
-            <div class="p-5 flex-1 flex flex-col">
-              {guide.data.category && (
-                <p class="text-xs font-semibold uppercase tracking-[0.1em] text-accent mb-2">
-                  {guide.data.category.replace(/-/g, " ")}
-                </p>
-              )}
-              <h2 class="font-bold text-primary text-base leading-snug font-heading mb-2 group-hover:text-accent transition-colors">
-                {guide.data.title}
-              </h2>
-              <p class="text-sm text-muted leading-relaxed flex-1 line-clamp-3">
-                {guide.data.description}
-              </p>
-              <div class="mt-4 flex items-center gap-1.5 text-xs font-semibold text-accent">
-                Read guide
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
-    ) : (
-      <p class="text-muted">No guides available yet. Check back soon.</p>
+  <!-- ============================
+       MAGAZINE GRID
+  =============================== -->
+  <div class="guides-container">
+
+    {guides.length === 0 && (
+      <p class="text-muted py-12">No guides available yet. Check back soon.</p>
     )}
 
+    {guides.length > 0 && (
+      <div class="guides-magazine">
+
+        <!-- Featured (first guide — full width card) -->
+        {featuredGuide && (
+          <a
+            href={`/guides/${featuredGuide.id}/`}
+            class="guides-featured"
+            style={featuredGuide.data.category
+              ? `background-image: url('/images/categories/${featuredGuide.data.category}.jpg')`
+              : ""}
+          >
+            <div class="guides-featured-overlay"></div>
+            <div class="guides-featured-body">
+              {featuredGuide.data.category && (
+                <p class="guides-card-category">
+                  {categoryLabel(featuredGuide.data.category)}
+                </p>
+              )}
+              <h2 class="guides-featured-title">{featuredGuide.data.title}</h2>
+              <p class="guides-featured-desc">{featuredGuide.data.description}</p>
+              <span class="guides-featured-cta">
+                Read Guide
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+            </div>
+          </a>
+        )}
+
+        <!-- Rest of guides in 2-col grid -->
+        {restGuides.length > 0 && (
+          <div class="guides-grid">
+            {restGuides.map((guide) => (
+              <a
+                href={`/guides/${guide.id}/`}
+                class="guides-card"
+              >
+                {guide.data.category && (
+                  <div class="guides-card-img-wrap">
+                    <img
+                      src={`/images/categories/${guide.data.category}.jpg`}
+                      alt={guide.data.title}
+                      width="400"
+                      height="200"
+                      loading="lazy"
+                      class="guides-card-img"
+                    />
+                    <div class="guides-card-img-overlay"></div>
+                  </div>
+                )}
+                <div class="guides-card-body">
+                  {guide.data.category && (
+                    <p class="guides-card-category">
+                      {categoryLabel(guide.data.category)}
+                    </p>
+                  )}
+                  <h2 class="guides-card-title">{guide.data.title}</h2>
+                  <p class="guides-card-desc">{guide.data.description}</p>
+                  <span class="guides-card-cta">
+                    Read Guide &rarr;
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
+
+      </div>
+    )}
   </div>
+
 </BaseLayout>
+
+<style>
+  /* ============================================================
+     HERO
+  ============================================================ */
+  .guides-hero {
+    background: #FAFAF8;
+    border-bottom: 1px solid #E5E3DF;
+    padding: 3.5rem 0 3rem;
+  }
+
+  .guides-hero-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 3rem);
+  }
+
+  .guides-hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #2D2D2D;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.875rem;
+    margin-top: 0.5rem;
+    line-height: 1.15;
+  }
+
+  .guides-hero-sub {
+    font-size: 1.0625rem;
+    color: #6B7280;
+    line-height: 1.65;
+    max-width: 600px;
+  }
+
+  /* ============================================================
+     CONTAINER
+  ============================================================ */
+  .guides-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem clamp(1rem, 4vw, 3rem) 5rem;
+  }
+
+  /* ============================================================
+     MAGAZINE LAYOUT
+  ============================================================ */
+  .guides-magazine {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* ============================================================
+     FEATURED CARD
+  ============================================================ */
+  .guides-featured {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 420px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #2D2D2D;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    transition: box-shadow 0.25s;
+  }
+
+  .guides-featured:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .guides-featured-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.55) 50%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+    transition: opacity 0.25s;
+  }
+
+  .guides-featured:hover .guides-featured-overlay {
+    opacity: 0.95;
+  }
+
+  .guides-featured-body {
+    position: relative;
+    z-index: 1;
+    padding: 2.5rem 2.5rem 2.5rem;
+    max-width: 680px;
+  }
+
+  .guides-featured-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2.125rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+    margin-top: 0.375rem;
+  }
+
+  .guides-featured-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    max-width: 560px;
+  }
+
+  .guides-featured-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5625rem 1.25rem;
+    background: #C67B4B;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: background 0.15s;
+  }
+
+  .guides-featured:hover .guides-featured-cta {
+    background: #a05e32;
+  }
+
+  /* ============================================================
+     GUIDE CARDS GRID
+  ============================================================ */
+  .guides-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 640px) {
+    .guides-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .guides-card {
+    display: flex;
+    flex-direction: column;
+    background: #FAFAF8;
+    border: 1px solid #E5E3DF;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .guides-card:hover {
+    border-color: rgba(198, 123, 75, 0.35);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  }
+
+  .guides-card-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    background: #E5E3DF;
+  }
+
+  .guides-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .guides-card:hover .guides-card-img {
+    transform: scale(1.04);
+  }
+
+  .guides-card-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.25s;
+  }
+
+  .guides-card:hover .guides-card-img-overlay {
+    background: rgba(198, 123, 75, 0.06);
+  }
+
+  .guides-card-body {
+    padding: 1.25rem 1.375rem 1.375rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  /* Shared category label */
+  .guides-card-category {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #C67B4B;
+    margin-bottom: 0.375rem;
+  }
+
+  .guides-card-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: #2D2D2D;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.625rem;
+    transition: color 0.15s;
+  }
+
+  .guides-card:hover .guides-card-title {
+    color: #C67B4B;
+  }
+
+  .guides-card-desc {
+    font-size: 0.9rem;
+    color: #6B7280;
+    line-height: 1.6;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .guides-card-cta {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #C67B4B;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+</style>

@@ -1,7 +1,10 @@
 ---
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleTOC from "../../components/ArticleTOC.astro";
+import ProductCard from "../../components/ProductCard.astro";
 import { generateBreadcrumbSchema } from "../../lib/seo.ts";
+import { getProductsByCategory } from "../../lib/products.ts";
 
 export async function getStaticPaths() {
   const guides = await getCollection("guides");
@@ -16,9 +19,40 @@ interface Props {
 }
 
 const { guide } = Astro.props;
-const { Content } = await render(guide);
+const { Content, headings } = await render(guide);
 
 const guideSlug = guide.id;
+const category = guide.data.category ?? "";
+
+// Related products: up to 3 from the same category
+const relatedProducts = category
+  ? getProductsByCategory(category).slice(0, 3)
+  : [];
+
+// Related guides: up to 3 other guides from the same collection
+const allGuides = await getCollection("guides");
+const relatedGuides = allGuides
+  .filter((g) => g.id !== guideSlug)
+  .filter((g) => !category || g.data.category === category)
+  .slice(0, 3);
+
+// Fallback: if not enough same-category guides, pull from all
+const relatedGuidesFinal =
+  relatedGuides.length >= 2
+    ? relatedGuides
+    : allGuides.filter((g) => g.id !== guideSlug).slice(0, 3);
+
+const heroImage = category
+  ? `/images/categories/${category}.jpg`
+  : null;
+
+const publishDateFormatted = new Date(
+  guide.data.updatedDate ?? guide.data.publishDate
+).toLocaleDateString("en-US", { month: "long", year: "numeric" });
+
+const categoryLabel = category
+  ? category.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())
+  : "";
 
 const breadcrumbs = [
   { label: "Home", href: "/" },
@@ -41,71 +75,520 @@ const schemas = [
   breadcrumbs={breadcrumbs}
   schemas={schemas}
 >
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-    <!-- Article header -->
-    <header class="mb-10">
-      <div class="w-20 h-1 bg-accent mb-5"></div>
-      {guide.data.category && (
-        <a
-          href={`/best/${guide.data.category}/`}
-          class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent hover:text-amber-600 transition-colors mb-4"
-        >
-          <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-          </svg>
-          {guide.data.category.replace(/-/g, " ")}
+  <!-- ============================
+       HERO
+  =============================== -->
+  <div class="guide-hero" style={heroImage ? `background-image: url('${heroImage}')` : ""}>
+    <div class="guide-hero-overlay"></div>
+    <div class="guide-hero-inner">
+      {categoryLabel && (
+        <a href={`/best/${category}/`} class="guide-hero-category">
+          {categoryLabel}
         </a>
       )}
-      <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading leading-tight mb-4">
-        {guide.data.title}
-      </h1>
-      <p class="text-muted text-base leading-relaxed mb-4">{guide.data.description}</p>
-      <p class="text-sm text-muted/70 flex items-center gap-1.5">
-        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        {guide.data.updatedDate
-          ? `Updated ${new Date(guide.data.updatedDate).toLocaleDateString("en-US", { month: "long", year: "numeric" })}`
-          : `Published ${new Date(guide.data.publishDate).toLocaleDateString("en-US", { month: "long", year: "numeric" })}`
-        }
-        &nbsp;&middot;&nbsp; SuperKitchenTools Editorial Team
+      <h1 class="guide-hero-title">{guide.data.title}</h1>
+      <p class="guide-hero-description">{guide.data.description}</p>
+      <p class="guide-hero-byline">
+        By SuperKitchenTools Editorial Team &middot; Published {publishDateFormatted}
       </p>
-    </header>
-
-    <!-- Guide content -->
-    <article class="
-      prose prose-gray max-w-none
-      prose-headings:font-heading prose-headings:text-primary
-      prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4
-      prose-h3:text-lg prose-h3:font-bold prose-h3:mt-6 prose-h3:mb-3
-      prose-p:text-muted prose-p:leading-relaxed
-      prose-a:text-accent prose-a:no-underline hover:prose-a:underline
-      prose-strong:text-primary
-      prose-ul:text-muted prose-ol:text-muted
-      prose-li:leading-relaxed
-      prose-table:text-sm
-      prose-th:font-semibold prose-th:text-primary prose-th:bg-gray-50
-      prose-td:text-muted
-      prose-blockquote:border-accent prose-blockquote:text-muted
-    ">
-      <Content />
-    </article>
-
-    <!-- Back to category link -->
-    {guide.data.category && (
-      <div class="mt-14 pt-8 border-t border-gray-100">
-        <a
-          href={`/best/${guide.data.category}/`}
-          class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-gray-200 text-primary text-sm font-semibold rounded-lg hover:border-accent/30 hover:bg-gray-50 transition-colors"
-        >
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-          </svg>
-          See Best {guide.data.category.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
-        </a>
-      </div>
-    )}
-
+    </div>
   </div>
+
+  <!-- ============================
+       CONTENT + SIDEBAR
+  =============================== -->
+  <div class="guide-layout">
+
+    <!-- Sidebar: TOC -->
+    <aside class="guide-sidebar">
+      <div class="guide-sidebar-sticky">
+        <ArticleTOC headings={headings} />
+        {category && (
+          <div class="guide-sidebar-back">
+            <a href={`/best/${category}/`} class="guide-sidebar-back-link">
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+              Best {categoryLabel}
+            </a>
+          </div>
+        )}
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div class="guide-main">
+
+      <!-- Article body -->
+      <article class="prose-editorial">
+        <Content />
+      </article>
+
+      <!-- ============================
+           RELATED PRODUCTS
+      =============================== -->
+      {relatedProducts.length > 0 && (
+        <section class="guide-related-products">
+          <div class="guide-section-header">
+            <span class="editorial-rule"></span>
+            <h2 class="guide-section-title">
+              Top Picks: {categoryLabel}
+            </h2>
+            <p class="guide-section-subtitle">
+              Expert-tested products from this category
+            </p>
+          </div>
+          <div class="guide-products-grid">
+            {relatedProducts.map((product) => (
+              <ProductCard product={product} category={category} />
+            ))}
+          </div>
+          {category && (
+            <div class="guide-section-cta">
+              <a href={`/best/${category}/`} class="guide-cta-link">
+                See all {categoryLabel} picks
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          )}
+        </section>
+      )}
+
+      <!-- ============================
+           RELATED GUIDES
+      =============================== -->
+      {relatedGuidesFinal.length > 0 && (
+        <section class="guide-related-guides">
+          <div class="guide-section-header">
+            <span class="editorial-rule"></span>
+            <h2 class="guide-section-title">More Buying Guides</h2>
+          </div>
+          <div class="guide-related-grid">
+            {relatedGuidesFinal.map((g) => {
+              const gCategory = g.data.category ?? "";
+              const gLabel = gCategory
+                ? gCategory.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())
+                : "";
+              return (
+                <a href={`/guides/${g.id}/`} class="guide-related-card">
+                  {gCategory && (
+                    <div class="guide-related-img-wrap">
+                      <img
+                        src={`/images/categories/${gCategory}.jpg`}
+                        alt={g.data.title}
+                        width="240"
+                        height="120"
+                        loading="lazy"
+                        class="guide-related-img"
+                      />
+                    </div>
+                  )}
+                  <div class="guide-related-body">
+                    {gLabel && (
+                      <p class="guide-related-category">{gLabel}</p>
+                    )}
+                    <p class="guide-related-title">{g.data.title}</p>
+                    <span class="guide-related-cta">
+                      Read guide
+                      <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+    </div>
+  </div>
+
 </BaseLayout>
+
+<style>
+  /* ============================================================
+     HERO
+  ============================================================ */
+  .guide-hero {
+    position: relative;
+    min-height: 360px;
+    display: flex;
+    align-items: flex-end;
+    background-color: #2D2D2D;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .guide-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0.55) 50%,
+      rgba(0, 0, 0, 0.80) 100%
+    );
+  }
+
+  .guide-hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 3rem clamp(1rem, 4vw, 3rem) 3.5rem;
+  }
+
+  .guide-hero-category {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #C67B4B;
+    text-decoration: none;
+    margin-bottom: 0.75rem;
+    transition: color 0.15s;
+  }
+
+  .guide-hero-category:hover {
+    color: #e8a87c;
+  }
+
+  .guide-hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+
+  .guide-hero-description {
+    font-size: 1.0625rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    max-width: 640px;
+  }
+
+  .guide-hero-byline {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.55);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  /* ============================================================
+     LAYOUT: CONTENT + SIDEBAR
+  ============================================================ */
+  .guide-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem clamp(1rem, 4vw, 3rem);
+    gap: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    .guide-layout {
+      grid-template-columns: minmax(0, 1fr) 220px;
+      align-items: start;
+    }
+
+    /* Sidebar goes to the right on desktop — put main first in DOM order */
+    .guide-sidebar {
+      order: 2;
+    }
+
+    .guide-main {
+      order: 1;
+    }
+  }
+
+  /* Sidebar */
+  .guide-sidebar {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .guide-sidebar {
+      display: block;
+    }
+  }
+
+  .guide-sidebar-sticky {
+    position: sticky;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .guide-sidebar-back {
+    margin-top: 0.5rem;
+  }
+
+  .guide-sidebar-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #6B7280;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .guide-sidebar-back-link:hover {
+    color: #C67B4B;
+  }
+
+  /* ============================================================
+     ARTICLE PROSE OVERRIDES
+  ============================================================ */
+  .guide-main .prose-editorial {
+    max-width: 720px;
+  }
+
+  /* Lists */
+  .prose-editorial ul,
+  .prose-editorial ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+    color: #374151;
+  }
+
+  .prose-editorial ul {
+    list-style: disc;
+  }
+
+  .prose-editorial ol {
+    list-style: decimal;
+  }
+
+  .prose-editorial li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+  }
+
+  /* Blockquotes */
+  .prose-editorial blockquote {
+    border-left: 3px solid #C67B4B;
+    padding-left: 1.25rem;
+    margin: 1.75rem 0;
+    color: #6B7280;
+    font-style: italic;
+  }
+
+  .prose-editorial blockquote p {
+    color: #6B7280;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+
+  /* Tables */
+  .prose-editorial table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+    margin: 1.75rem 0;
+  }
+
+  .prose-editorial thead {
+    background: #F9FAFB;
+  }
+
+  .prose-editorial th {
+    font-weight: 600;
+    color: #2D2D2D;
+    padding: 0.625rem 0.875rem;
+    text-align: left;
+    border-bottom: 2px solid #E5E7EB;
+  }
+
+  .prose-editorial td {
+    color: #374151;
+    padding: 0.625rem 0.875rem;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: top;
+  }
+
+  .prose-editorial tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Links */
+  .prose-editorial a {
+    color: #C67B4B;
+    text-decoration: none;
+  }
+
+  .prose-editorial a:hover {
+    text-decoration: underline;
+  }
+
+  /* Strong */
+  .prose-editorial strong {
+    font-weight: 700;
+    color: #2D2D2D;
+  }
+
+  /* H4 */
+  .prose-editorial h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2D2D2D;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ============================================================
+     SECTION HEADERS
+  ============================================================ */
+  .guide-section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .guide-section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2D2D2D;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.375rem;
+  }
+
+  .guide-section-subtitle {
+    font-size: 0.9375rem;
+    color: #6B7280;
+  }
+
+  /* ============================================================
+     RELATED PRODUCTS
+  ============================================================ */
+  .guide-related-products {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid #E5E3DF;
+  }
+
+  .guide-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .guide-section-cta {
+    margin-top: 1.5rem;
+  }
+
+  .guide-cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #C67B4B;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .guide-cta-link:hover {
+    color: #a05e32;
+  }
+
+  /* ============================================================
+     RELATED GUIDES
+  ============================================================ */
+  .guide-related-guides {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid #E5E3DF;
+  }
+
+  .guide-related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .guide-related-card {
+    display: flex;
+    flex-direction: column;
+    background: #FAFAF8;
+    border: 1px solid #E5E3DF;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .guide-related-card:hover {
+    border-color: rgba(198, 123, 75, 0.35);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  }
+
+  .guide-related-img-wrap {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background: #E5E3DF;
+  }
+
+  .guide-related-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+
+  .guide-related-card:hover .guide-related-img {
+    transform: scale(1.04);
+  }
+
+  .guide-related-body {
+    padding: 0.875rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .guide-related-category {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #C67B4B;
+  }
+
+  .guide-related-title {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #2D2D2D;
+    line-height: 1.35;
+    transition: color 0.15s;
+  }
+
+  .guide-related-card:hover .guide-related-title {
+    color: #C67B4B;
+  }
+
+  .guide-related-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #C67B4B;
+    margin-top: 0.5rem;
+  }
+</style>

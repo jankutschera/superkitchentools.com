@@ -56,6 +56,89 @@ html {
   color: #374151;
 }
 
+.prose-editorial ul,
+.prose-editorial ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: #374151;
+}
+
+.prose-editorial ul {
+  list-style: disc;
+}
+
+.prose-editorial ol {
+  list-style: decimal;
+}
+
+.prose-editorial li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.prose-editorial blockquote {
+  border-left: 3px solid #C67B4B;
+  padding-left: 1.25rem;
+  margin: 1.75rem 0;
+  font-style: italic;
+}
+
+.prose-editorial blockquote p {
+  color: #6B7280;
+}
+
+.prose-editorial table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  margin: 1.75rem 0;
+}
+
+.prose-editorial thead {
+  background: #F9FAFB;
+}
+
+.prose-editorial th {
+  font-weight: 600;
+  color: #2D2D2D;
+  padding: 0.625rem 0.875rem;
+  text-align: left;
+  border-bottom: 2px solid #E5E7EB;
+}
+
+.prose-editorial td {
+  color: #374151;
+  padding: 0.625rem 0.875rem;
+  border-bottom: 1px solid #F3F4F6;
+  vertical-align: top;
+}
+
+.prose-editorial tr:last-child td {
+  border-bottom: none;
+}
+
+.prose-editorial a {
+  color: #C67B4B;
+  text-decoration: none;
+}
+
+.prose-editorial a:hover {
+  text-decoration: underline;
+}
+
+.prose-editorial strong {
+  font-weight: 700;
+  color: #2D2D2D;
+}
+
+.prose-editorial h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2D2D2D;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
 /* Details/summary accordion animation */
 details > summary {
   list-style: none;
