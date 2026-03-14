@@ -1,0 +1,57 @@
+---
+// Cookie consent banner — shows only if localStorage flag is not set.
+// Uses vanilla JS, no framework dependency.
+---
+
+<div
+  id="cookie-banner"
+  role="dialog"
+  aria-label="Cookie consent"
+  aria-live="polite"
+  class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg translate-y-full transition-transform duration-300"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
+    <p class="text-sm text-gray-600 flex-1">
+      We use cookies for affiliate links and analytics. By continuing to browse, you agree to our use of cookies.{" "}
+      <a href="/privacy/" class="underline text-accent hover:text-accent/80 font-medium">Privacy Policy</a>
+    </p>
+    <button
+      id="cookie-accept"
+      type="button"
+      class="shrink-0 px-5 py-2 bg-accent text-white text-sm font-semibold rounded-lg hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 transition-colors cursor-pointer"
+    >
+      Accept
+    </button>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const STORAGE_KEY = "cookie_consent_accepted";
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("cookie-accept");
+
+    if (!banner || !acceptBtn) return;
+
+    // Show banner if not yet accepted
+    if (!localStorage.getItem(STORAGE_KEY)) {
+      // Small delay so the slide-in transition is visible
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          banner.classList.remove("translate-y-full");
+        });
+      });
+    }
+
+    acceptBtn.addEventListener("click", function () {
+      localStorage.setItem(STORAGE_KEY, "1");
+      banner.classList.add("translate-y-full");
+      // Remove from DOM after transition ends
+      banner.addEventListener(
+        "transitionend",
+        () => banner.remove(),
+        { once: true }
+      );
+    });
+  })();
+</script>

@@ -1,3 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <text y="26" font-size="28">🍴</text>
+  <rect width="32" height="32" rx="6" fill="#C67B4B"/>
+  <!-- Fork tines -->
+  <line x1="10" y1="4" x2="10" y2="11" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="14" y1="4" x2="14" y2="11" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <!-- Fork body / handle -->
+  <path d="M10 11 Q12 13.5 12 15 L12 28" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M14 11 Q12 13.5 12 15" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Knife blade -->
+  <path d="M21 4 Q26 9 21 14 L21 28" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
 </svg>

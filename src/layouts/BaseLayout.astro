@@ -3,6 +3,7 @@ import "../styles/global.css";
 import SEOHead from "../components/SEOHead.astro";
 import BreadcrumbNav from "../components/BreadcrumbNav.astro";
 import AffiliateDisclosure from "../components/AffiliateDisclosure.astro";
+import CookieConsent from "../components/CookieConsent.astro";
 import { getAllSisterSites } from "../lib/sisterSites.ts";
 
 interface Props {
@@ -42,6 +43,8 @@ const navLinks = [
     rel="stylesheet"
   />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
+  <meta name="theme-color" content="#C67B4B" />
   <SEOHead
     title={title}
     description={description}
@@ -118,18 +121,43 @@ const navLinks = [
           >
             All Reviews
           </a>
+          <!-- Search trigger -->
+          <button
+            id="search-trigger"
+            type="button"
+            aria-label="Open search"
+            class="ml-1 flex items-center justify-center w-9 h-9 rounded-md text-muted hover:text-primary hover:bg-gray-100 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.3-4.3"/>
+            </svg>
+          </button>
         </nav>
 
-        <!-- Mobile hamburger (CSS-only) -->
-        <label
-          for="mobile-menu-toggle"
-          class="md:hidden flex flex-col justify-center items-center w-10 h-10 cursor-pointer gap-1.5 rounded-md hover:bg-gray-100 transition-colors"
-          aria-label="Toggle menu"
-        >
-          <span class="w-5 h-0.5 bg-primary rounded-full transition-all"></span>
-          <span class="w-5 h-0.5 bg-primary rounded-full transition-all"></span>
-          <span class="w-5 h-0.5 bg-primary rounded-full transition-all"></span>
-        </label>
+        <!-- Mobile: search + hamburger -->
+        <div class="md:hidden flex items-center gap-1">
+          <button
+            id="search-trigger-mobile"
+            type="button"
+            aria-label="Open search"
+            class="flex items-center justify-center w-9 h-9 rounded-md text-muted hover:text-primary hover:bg-gray-100 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.3-4.3"/>
+            </svg>
+          </button>
+          <label
+            for="mobile-menu-toggle"
+            class="flex flex-col justify-center items-center w-10 h-10 cursor-pointer gap-1.5 rounded-md hover:bg-gray-100 transition-colors"
+            aria-label="Toggle menu"
+          >
+            <span class="w-5 h-0.5 bg-primary rounded-full transition-all"></span>
+            <span class="w-5 h-0.5 bg-primary rounded-full transition-all"></span>
+            <span class="w-5 h-0.5 bg-primary rounded-full transition-all"></span>
+          </label>
+        </div>
       </div>
     </div>
 
@@ -285,6 +313,136 @@ const navLinks = [
 
   <!-- Plausible Analytics -->
   <script defer data-domain="superkitchentools.com" src="https://applause.adhd-founder.com/js/script.js"></script>
+
+  <!-- ============================
+       SEARCH MODAL
+  =============================== -->
+  <div
+    id="search-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Search"
+    class="fixed inset-0 z-50 hidden"
+  >
+    <!-- Backdrop -->
+    <div id="search-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+
+    <!-- Modal panel -->
+    <div class="relative z-10 flex flex-col items-center pt-16 px-4 sm:pt-24">
+      <div class="w-full max-w-2xl bg-white rounded-xl shadow-2xl overflow-hidden">
+        <!-- Search input row -->
+        <div class="flex items-center gap-3 px-4 py-3 border-b border-gray-200">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.3-4.3"/>
+          </svg>
+          <div id="search-container" class="flex-1 min-w-0"></div>
+          <button
+            id="search-close"
+            type="button"
+            aria-label="Close search"
+            class="shrink-0 flex items-center justify-center w-8 h-8 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 6 6 18M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagefind search logic (loaded lazily on first open) -->
+  <script>
+    (function () {
+      const modal = document.getElementById("search-modal") as HTMLElement | null;
+      const backdrop = document.getElementById("search-backdrop") as HTMLElement | null;
+      const closeBtn = document.getElementById("search-close") as HTMLElement | null;
+      const searchContainer = document.getElementById("search-container") as HTMLElement | null;
+      const triggers = [
+        document.getElementById("search-trigger"),
+        document.getElementById("search-trigger-mobile"),
+      ].filter(Boolean) as HTMLElement[];
+
+      if (!modal || !backdrop || !closeBtn || !searchContainer) return;
+
+      let pagefindLoaded = false;
+
+      function openModal() {
+        modal!.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        if (!pagefindLoaded) {
+          pagefindLoaded = true;
+          loadPagefind();
+        } else {
+          focusSearchInput();
+        }
+      }
+
+      function closeModal() {
+        modal!.classList.add("hidden");
+        document.body.style.overflow = "";
+      }
+
+      function focusSearchInput() {
+        requestAnimationFrame(() => {
+          const input = searchContainer!.querySelector("input");
+          if (input) (input as HTMLInputElement).focus();
+        });
+      }
+
+      async function loadPagefind() {
+        if (!document.querySelector('link[href="/pagefind/pagefind-ui.css"]')) {
+          const link = document.createElement("link");
+          link.rel = "stylesheet";
+          link.href = "/pagefind/pagefind-ui.css";
+          document.head.appendChild(link);
+        }
+
+        try {
+          // Dynamic import with computed path prevents Rollup from trying to resolve
+          // the pagefind artifact (which only exists after build, not in node_modules)
+          const pagefindPath = "/pagefind/pagefind-ui.js";
+          // @ts-ignore — pagefind is a postbuild artifact, not resolvable at build time
+          const { PagefindUI } = await import(/* @vite-ignore */ pagefindPath);
+          new PagefindUI({
+            element: "#search-container",
+            showSubResults: true,
+            showImages: false,
+            resetStyles: false,
+            excerptLength: 15,
+          });
+          focusSearchInput();
+        } catch (_e) {
+          const msg = document.createElement("p");
+          msg.className = "p-4 text-sm text-gray-500";
+          msg.textContent = "Search is only available on the live site after build.";
+          searchContainer!.appendChild(msg);
+        }
+      }
+
+      triggers.forEach((btn) => btn.addEventListener("click", openModal));
+      closeBtn.addEventListener("click", closeModal);
+      backdrop.addEventListener("click", closeModal);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal!.classList.contains("hidden")) {
+          closeModal();
+        }
+        if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+          e.preventDefault();
+          if (modal!.classList.contains("hidden")) {
+            openModal();
+          } else {
+            closeModal();
+          }
+        }
+      });
+    })();
+  </script>
+
+  <!-- Cookie Consent -->
+  <CookieConsent />
 
 </body>
 </html>
