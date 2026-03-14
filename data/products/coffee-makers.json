@@ -11,8 +11,8 @@
     "reviewCount": 23840,
     "imageUrl": "/images/products/coffee-maker.jpg",
     "features": [
-      "SCA Gold Cup certified \u2014 meets Specialty Coffee Association brewing standards",
-      "Precise 200\u00b0F brewing temperature for optimal extraction",
+      "SCA Gold Cup certified — meets Specialty Coffee Association brewing standards",
+      "Precise 200°F brewing temperature for optimal extraction",
       "Thermal carafe keeps coffee hot for 2+ hours without a warming plate",
       "Adjustable brewing modes: Fast, Regular, Strong, and Gold Cup",
       "Programmable 24-hour timer for wake-up brewing",
@@ -21,15 +21,15 @@
     "pros": [
       "SCA Gold Cup certification is the best proof of drip coffee quality",
       "Thermal carafe eliminates the bitter taste of warming plate coffee",
-      "200\u00b0F brewing temperature is consistently accurate unlike budget machines"
+      "200°F brewing temperature is consistently accurate unlike budget machines"
     ],
     "cons": [
       "At $200, it's a premium investment for a drip machine",
-      "Thermal carafe requires pouring carefully \u2014 narrow opening drips slightly"
+      "Thermal carafe requires pouring carefully — narrow opening drips slightly"
     ],
     "specs": {
       "Capacity": "60 oz (12 cups)",
-      "Brewing Temperature": "200\u00b0F",
+      "Brewing Temperature": "200°F",
       "Carafe Type": "Double-wall stainless thermal",
       "Programmable": "Yes (24-hour)",
       "Dimensions": "15.5 x 8 x 16 inches"
@@ -49,12 +49,12 @@
     "reviewCount": 12430,
     "imageUrl": "/images/products/coffee-maker.jpg",
     "features": [
-      "SCA Gold Cup certified \u2014 one of the few drip makers to pass rigorous testing",
+      "SCA Gold Cup certified — one of the few drip makers to pass rigorous testing",
       "Rainmaker shower head distributes water evenly over all coffee grounds",
       "Precise temperature control with optimized pre-infusion bloom",
       "9-cup stainless steel thermal carafe",
       "One-touch brewing with intuitive controls",
-      "Pod-free design \u2014 no proprietary consumables"
+      "Pod-free design — no proprietary consumables"
     ],
     "pros": [
       "Rainmaker shower head produces more even extraction than standard drip",
@@ -67,7 +67,7 @@
     ],
     "specs": {
       "Capacity": "9 cups",
-      "Brewing Temperature": "197.6\u00b0F - 204.8\u00b0F",
+      "Brewing Temperature": "197.6°F - 204.8°F",
       "Carafe Type": "Stainless thermal",
       "Programmable": "No",
       "Dimensions": "14.2 x 8.7 x 15.5 inches"
@@ -90,7 +90,7 @@
     "features": [
       "40 grind settings cover everything from fine espresso to coarse French press",
       "Conical burr set produces consistent particle size for even extraction",
-      "Baratza's service ecosystem \u2014 easily repaired rather than replaced",
+      "Baratza's service ecosystem — easily repaired rather than replaced",
       "Pulse button for precise dosing",
       "Hardened steel conical burrs for durability",
       "Made in Taiwan with Baratza's quality control oversight"
@@ -101,7 +101,7 @@
       "40 settings provide enough range for drip, pour-over, and French press"
     ],
     "cons": [
-      "Not recommended for espresso \u2014 insufficient grind fineness and consistency",
+      "Not recommended for espresso — insufficient grind fineness and consistency",
       "Static can cause grounds to cling to hopper and grounds bin"
     ],
     "specs": {
@@ -127,7 +127,7 @@
     "features": [
       "14-cup capacity handles large households or office settings",
       "PerfecTemp technology maintains precise brewing temperature",
-      "Adjustable keep-warm temperature from 150\u00b0F to 185\u00b0F",
+      "Adjustable keep-warm temperature from 150°F to 185°F",
       "24-hour programmable timer for automatic brewing",
       "Brew Strength control: Regular or Bold",
       "Charcoal water filter included to improve taste"
@@ -139,7 +139,7 @@
     ],
     "cons": [
       "Glass carafe with warming plate degrades coffee quality after 30+ minutes",
-      "Not SCA certified \u2014 brewing temperature less precise than Breville or OXO"
+      "Not SCA certified — brewing temperature less precise than Breville or OXO"
     ],
     "specs": {
       "Capacity": "14 cups",
@@ -161,7 +161,7 @@
     "currency": "USD",
     "rating": 4.4,
     "reviewCount": 14380,
-    "imageUrl": "/images/products/coffee-maker.jpg",
+    "imageUrl": "/images/products/coffee-maker-2.jpg",
     "features": [
       "15-bar professional pump pressure for genuine espresso extraction",
       "Ultra-compact 6-inch wide body fits in tight kitchen spaces",
@@ -177,7 +177,7 @@
     ],
     "cons": [
       "Small 34oz water tank requires frequent refilling with regular use",
-      "Manual frother requires technique \u2014 less consistent than automatic frothers"
+      "Manual frother requires technique — less consistent than automatic frothers"
     ],
     "specs": {
       "Pump Pressure": "15 bar",
@@ -199,11 +199,11 @@
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 3840,
-    "imageUrl": "/images/products/coffee-maker.jpg",
+    "imageUrl": "/images/products/coffee-maker-2.jpg",
     "features": [
-      "83mm flat burrs designed for filter coffee \u2014 exceptional particle uniformity",
+      "83mm flat burrs designed for filter coffee — exceptional particle uniformity",
       "31 grind settings (Gen 2 adds micro-adjustments between main settings)",
-      "Single-dose design with zero retention \u2014 no stale grounds",
+      "Single-dose design with zero retention — no stale grounds",
       "Anti-static grounds catch eliminates mess",
       "Quiet Brewing Mode reduces motor noise by 50%",
       "Clocks a full dose in under 10 seconds"
@@ -214,7 +214,7 @@
       "Industrial design makes it the most aesthetically premium grinder available"
     ],
     "cons": [
-      "Not suitable for espresso \u2014 flat burr geometry optimized for filter only",
+      "Not suitable for espresso — flat burr geometry optimized for filter only",
       "At $365, it's a luxury purchase for home filter coffee enthusiasts"
     ],
     "specs": {
@@ -236,17 +236,17 @@
     "currency": "USD",
     "rating": 4.4,
     "reviewCount": 31560,
-    "imageUrl": "/images/products/coffee-maker.jpg",
+    "imageUrl": "/images/products/coffee-maker-2.jpg",
     "features": [
       "Centrifusion technology spins pods at 7,000 RPM for espresso and coffee",
       "6 cup sizes from espresso (1.35 oz) to Alto (14 oz)",
       "Automatic pod recognition via barcode scan",
       "15-second heat-up time",
       "WiFi connected for software updates",
-      "Slim design \u2014 only 5.5 inches wide"
+      "Slim design — only 5.5 inches wide"
     ],
     "pros": [
-      "Simplest operation of any espresso-adjacent machine \u2014 insert, close, press",
+      "Simplest operation of any espresso-adjacent machine — insert, close, press",
       "6 cup size options cover every coffee occasion",
       "WiFi connectivity enables recipe updates via Nespresso app"
     ],
@@ -274,7 +274,7 @@
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 8930,
-    "imageUrl": "/images/products/coffee-maker.jpg",
+    "imageUrl": "/images/products/coffee-maker-3.jpg",
     "features": [
       "Includes V60 dripper, glass server, measuring spoon, and paper filters",
       "Spiral ribs inside dripper maintain proper airflow for optimal extraction",
@@ -289,8 +289,8 @@
       "Glass dripper and server are BPA-free and easy to clean"
     ],
     "cons": [
-      "Requires technique \u2014 produces poor results without proper grind size and pour rate",
-      "Proprietary Hario V60 filters are required \u2014 not compatible with other brands"
+      "Requires technique — produces poor results without proper grind size and pour rate",
+      "Proprietary Hario V60 filters are required — not compatible with other brands"
     ],
     "specs": {
       "Dripper Size": "02 (for 1-4 cups)",
@@ -311,13 +311,13 @@
     "currency": "USD",
     "rating": 4.3,
     "reviewCount": 17650,
-    "imageUrl": "/images/products/coffee-maker.jpg",
+    "imageUrl": "/images/products/coffee-maker-3.jpg",
     "features": [
-      "SCA Gold Cup certified for precise 195-205\u00b0F brewing temperature",
+      "SCA Gold Cup certified for precise 195-205°F brewing temperature",
       "Pre-infusion mode saturates grounds before full brewing for better extraction",
       "Stainless steel thermal carafe maintains temperature for 4+ hours",
       "8-cup capacity in a compact, minimal footprint",
-      "Single button operation \u2014 no complicated programming",
+      "Single button operation — no complicated programming",
       "Flat-bottomed filter basket for even saturation"
     ],
     "pros": [
@@ -326,12 +326,12 @@
       "Single-button simplicity makes it the easiest quality coffee maker to use"
     ],
     "cons": [
-      "No programmable timer \u2014 must be present to start brewing",
+      "No programmable timer — must be present to start brewing",
       "8-cup capacity may be insufficient for large households"
     ],
     "specs": {
       "Capacity": "8 cups",
-      "Brewing Temperature": "195\u00b0F - 205\u00b0F",
+      "Brewing Temperature": "195°F - 205°F",
       "Carafe Type": "Stainless thermal",
       "Programmable": "No",
       "Weight": "4.2 lbs"
@@ -349,23 +349,23 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 6780,
-    "imageUrl": "/images/products/coffee-maker.jpg",
+    "imageUrl": "/images/products/coffee-maker-3.jpg",
     "features": [
       "Professional-grade steel conical burrs in a compact hand grinder",
       "32-click step adjustment covers French press through fine pour-over",
       "Aluminum alloy body with comfortable grip for efficient hand cranking",
       "Transparent grounds jar shows grind level during use",
-      "Designed for travel \u2014 fits in any bag or camping kit",
+      "Designed for travel — fits in any bag or camping kit",
       "Produces grind quality comparable to electric grinders at twice the price"
     ],
     "pros": [
       "Best grind quality available in a portable, travel-friendly package",
       "Burr quality rivals electric grinders at significantly lower cost",
-      "No electricity required \u2014 perfect for camping or minimalist setups"
+      "No electricity required — perfect for camping or minimalist setups"
     ],
     "cons": [
-      "Manual grinding takes 1-2 minutes per 18g dose \u2014 time-consuming daily",
-      "Capacity limited to ~30g \u2014 insufficient for brewing multiple large cups"
+      "Manual grinding takes 1-2 minutes per 18g dose — time-consuming daily",
+      "Capacity limited to ~30g — insufficient for brewing multiple large cups"
     ],
     "specs": {
       "Burr Type": "Conical steel",

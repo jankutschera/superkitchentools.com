@@ -12,14 +12,14 @@
     "imageUrl": "/images/products/air-fryer.jpg",
     "features": [
       "4-quart basket fits 2 lbs of fries or a 4-lb chicken",
-      "Wide temperature range: 105\u00b0F to 400\u00b0F covers dehydrate through air fry",
+      "Wide temperature range: 105°F to 400°F covers dehydrate through air fry",
       "Ceramic-coated nonstick basket is PTFE-free and dishwasher-safe",
       "4 cooking functions: Air Fry, Roast, Reheat, Dehydrate",
       "Up to 75% less fat than traditional frying with tested recipes",
       "Compact footprint fits under most kitchen cabinets"
     ],
     "pros": [
-      "Wide temperature range starting at 105\u00b0F enables genuine dehydrating capability",
+      "Wide temperature range starting at 105°F enables genuine dehydrating capability",
       "Ceramic-coated PTFE-free basket is a real differentiator for health-conscious buyers",
       "Compact size is ideal for 1-2 person households or limited counter space"
     ],
@@ -29,7 +29,7 @@
     ],
     "specs": {
       "Capacity": "4 quarts",
-      "Temperature Range": "105\u00b0F - 400\u00b0F",
+      "Temperature Range": "105°F - 400°F",
       "Wattage": "1550W",
       "Dimensions": "11.7 x 9.2 x 12 inches",
       "Weight": "7.7 lbs"
@@ -62,12 +62,12 @@
       "130+ tested recipes provide immediate cooking confidence for new users"
     ],
     "cons": [
-      "App connectivity requires account creation \u2014 not offline-friendly",
+      "App connectivity requires account creation — not offline-friendly",
       "Touchscreen less reliable over time than physical buttons in some units"
     ],
     "specs": {
       "Capacity": "5 quarts",
-      "Temperature Range": "170\u00b0F - 400\u00b0F",
+      "Temperature Range": "170°F - 400°F",
       "Wattage": "1500W",
       "Dimensions": "11.8 x 11.8 x 12.8 inches",
       "Weight": "10.7 lbs"
@@ -97,7 +97,7 @@
     "pros": [
       "Twin TurboStar fat extraction is measurably more effective than standard air fryers",
       "Analog dial is more intuitive and reliable than touchscreens for older cooks",
-      "Philips invented the air fryer \u2014 this shows in engineering quality"
+      "Philips invented the air fryer — this shows in engineering quality"
     ],
     "cons": [
       "Premium price is difficult to justify given competitive alternatives at half the cost",
@@ -105,7 +105,7 @@
     ],
     "specs": {
       "Capacity": "3 lbs",
-      "Temperature Range": "175\u00b0F - 400\u00b0F",
+      "Temperature Range": "175°F - 400°F",
       "Wattage": "2225W",
       "Dimensions": "13.8 x 16.5 x 15 inches",
       "Weight": "17.5 lbs"
@@ -125,24 +125,24 @@
     "imageUrl": "/images/products/air-fryer.jpg",
     "features": [
       "ClearCook window allows monitoring without opening the basket",
-      "EvenCrisp Technology with 360\u00b0 airflow for consistent results",
+      "EvenCrisp Technology with 360° airflow for consistent results",
       "6-quart capacity handles family-sized portions",
       "7 built-in programs: Air Fry, Roast, Broil, Bake, Dehydrate, Reheat, Proof",
       "OdorErase filtered lid controls cooking odors",
       "Dishwasher-safe basket and tray"
     ],
     "pros": [
-      "ClearCook window eliminates basket-opening guesswork \u2014 a genuine practical benefit",
+      "ClearCook window eliminates basket-opening guesswork — a genuine practical benefit",
       "OdorErase filter tackles fishy and pungent food smells effectively",
       "6-quart size handles family meals without batch cooking"
     ],
     "cons": [
       "Window tends to fog and grease up requiring cleaning between uses",
-      "Larger footprint than 4-quart models \u2014 requires dedicated counter space"
+      "Larger footprint than 4-quart models — requires dedicated counter space"
     ],
     "specs": {
       "Capacity": "6 quarts",
-      "Temperature Range": "95\u00b0F - 400\u00b0F",
+      "Temperature Range": "95°F - 400°F",
       "Wattage": "1500W",
       "Dimensions": "13.5 x 12.8 x 14 inches",
       "Weight": "11.9 lbs"
@@ -159,7 +159,7 @@
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 34680,
-    "imageUrl": "/images/products/air-fryer.jpg",
+    "imageUrl": "/images/products/air-fryer-2.jpg",
     "features": [
       "Two independent 4-quart baskets for simultaneous cooking of different foods",
       "Smart Finish technology syncs baskets to finish at the same time",
@@ -169,17 +169,17 @@
       "Independent temperature and time control for each zone"
     ],
     "pros": [
-      "Dual zone enables protein and sides to finish simultaneously \u2014 genuine time-saver",
+      "Dual zone enables protein and sides to finish simultaneously — genuine time-saver",
       "8-quart total capacity eliminates batch cooking for families",
       "Smart Finish technology is well-implemented and reliable"
     ],
     "cons": [
       "Large footprint (roughly 16 inches wide) demands significant counter space",
-      "Higher price than single-basket models \u2014 cost justified only for regular family cooking"
+      "Higher price than single-basket models — cost justified only for regular family cooking"
     ],
     "specs": {
       "Total Capacity": "8 quarts (2x 4-qt)",
-      "Temperature Range": "105\u00b0F - 450\u00b0F",
+      "Temperature Range": "105°F - 450°F",
       "Wattage": "2400W",
       "Dimensions": "16.5 x 14 x 11.7 inches",
       "Weight": "18.8 lbs"
@@ -196,7 +196,7 @@
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 21560,
-    "imageUrl": "/images/products/air-fryer.jpg",
+    "imageUrl": "/images/products/air-fryer-2.jpg",
     "features": [
       "Compact 3.8-quart square basket for 1-3 servings",
       "Simplified 5-function interface for straightforward air frying",
@@ -216,7 +216,7 @@
     ],
     "specs": {
       "Capacity": "3.8 quarts",
-      "Temperature Range": "170\u00b0F - 400\u00b0F",
+      "Temperature Range": "170°F - 400°F",
       "Wattage": "1500W",
       "Dimensions": "10.5 x 10.5 x 12.6 inches",
       "Weight": "9.3 lbs"
@@ -233,22 +233,22 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 12890,
-    "imageUrl": "/images/products/air-fryer.jpg",
+    "imageUrl": "/images/products/air-fryer-2.jpg",
     "features": [
       "13 cooking functions including Air Fry, Toast, Bake, Broil, and Dehydrate",
-      "Interior capacity: 1 cu ft \u2014 handles a 12-cup muffin tin or 9x13 baking pan",
+      "Interior capacity: 1 cu ft — handles a 12-cup muffin tin or 9x13 baking pan",
       "Element IQ system adjusts heat distribution for different functions",
       "Convection fan with two speeds for air frying and super convection",
       "Interior light and clear door for monitoring without opening",
       "Includes air fry basket, pizza pan, roasting rack, and baking pan"
     ],
     "pros": [
-      "Replaces both a toaster oven and an air fryer \u2014 genuine space and cost consolidation",
-      "13 functions handled well \u2014 not compromised jack-of-all-trades performance",
+      "Replaces both a toaster oven and an air fryer — genuine space and cost consolidation",
+      "13 functions handled well — not compromised jack-of-all-trades performance",
       "Interior capacity handles full sheet pans of food simultaneously"
     ],
     "cons": [
-      "At $400, it's a significant investment \u2014 justified only if replacing both an oven and air fryer",
+      "At $400, it's a significant investment — justified only if replacing both an oven and air fryer",
       "Large countertop footprint not practical for small kitchens"
     ],
     "specs": {
@@ -270,7 +270,7 @@
     "currency": "USD",
     "rating": 4.3,
     "reviewCount": 16720,
-    "imageUrl": "/images/products/air-fryer.jpg",
+    "imageUrl": "/images/products/air-fryer-3.jpg",
     "features": [
       "Extra-large 8-quart capacity serves 4-6 people",
       "Digital touchscreen with 7 preset cooking functions",
@@ -285,12 +285,12 @@
       "Auto shut-off provides safety peace of mind"
     ],
     "cons": [
-      "Temperature accuracy is inconsistent \u2014 runs hot compared to display reading",
+      "Temperature accuracy is inconsistent — runs hot compared to display reading",
       "Shakier build quality than Ninja or COSORI at a similar price point"
     ],
     "specs": {
       "Capacity": "8 quarts",
-      "Temperature Range": "200\u00b0F - 400\u00b0F",
+      "Temperature Range": "200°F - 400°F",
       "Wattage": "1700W",
       "Dimensions": "14.5 x 13 x 14 inches",
       "Weight": "14.5 lbs"
@@ -307,7 +307,7 @@
     "currency": "USD",
     "rating": 4.2,
     "reviewCount": 29430,
-    "imageUrl": "/images/products/air-fryer.jpg",
+    "imageUrl": "/images/products/air-fryer-3.jpg",
     "features": [
       "5.8-quart capacity handles medium family-sized portions",
       "8 preset cooking functions with digital display",
@@ -327,7 +327,7 @@
     ],
     "specs": {
       "Capacity": "5.8 quarts",
-      "Temperature Range": "180\u00b0F - 400\u00b0F",
+      "Temperature Range": "180°F - 400°F",
       "Wattage": "1700W",
       "Dimensions": "12 x 11.5 x 12.8 inches",
       "Weight": "11 lbs"
@@ -344,17 +344,17 @@
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 19870,
-    "imageUrl": "/images/products/air-fryer.jpg",
+    "imageUrl": "/images/products/air-fryer-3.jpg",
     "features": [
       "6-quart capacity cooks up to 3 lbs of fries at once",
-      "5 cooking functions: Air Fry, Roast, Reheat, Dehydrate, Max Crisp up to 450\u00b0F",
-      "Max Crisp at 450\u00b0F delivers extra-crispy texture for frozen foods",
-      "Wide temperature range starting at 105\u00b0F for dehydrating",
+      "5 cooking functions: Air Fry, Roast, Reheat, Dehydrate, Max Crisp up to 450°F",
+      "Max Crisp at 450°F delivers extra-crispy texture for frozen foods",
+      "Wide temperature range starting at 105°F for dehydrating",
       "Ceramic-coated PTFE/PFOA-free basket",
       "Dishwasher-safe parts for easy cleanup"
     ],
     "pros": [
-      "Max Crisp at 450\u00b0F is the highest temperature in its class \u2014 genuinely crispier results",
+      "Max Crisp at 450°F is the highest temperature in its class — genuinely crispier results",
       "6-quart size hits the sweet spot for 2-4 person households",
       "Ceramic PTFE-free coating is more durable than traditional nonstick"
     ],
@@ -364,7 +364,7 @@
     ],
     "specs": {
       "Capacity": "6 quarts",
-      "Temperature Range": "105\u00b0F - 450\u00b0F",
+      "Temperature Range": "105°F - 450°F",
       "Wattage": "1750W",
       "Dimensions": "13.4 x 12.4 x 13.7 inches",
       "Weight": "12.3 lbs"
