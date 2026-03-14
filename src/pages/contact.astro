@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { generateBreadcrumbSchema } from "../lib/seo.ts";
+
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "Contact", href: "/contact/" },
+];
+
+const schemas = [
+  generateBreadcrumbSchema([
+    { name: "Home", url: "https://superkitchentools.com/" },
+    { name: "Contact", url: "https://superkitchentools.com/contact/" },
+  ]),
+];
+---
+
+<BaseLayout
+  title="Contact SuperKitchenTools — Get in Touch"
+  description="Have a question about a product recommendation or found an error in our reviews? Contact the SuperKitchenTools team. We typically respond within 48 hours."
+  breadcrumbs={breadcrumbs}
+  schemas={schemas}
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Hero -->
+    <div class="mb-10">
+      <h1 class="text-3xl font-extrabold text-primary font-heading mb-4">
+        Contact Us
+      </h1>
+      <p class="text-lg text-muted leading-relaxed">
+        Have a question about a product recommendation? Found an error in our reviews?
+        We'd love to hear from you.
+      </p>
+    </div>
+
+    <!-- General Contact -->
+    <section class="mb-8 p-6 bg-white border border-gray-200 rounded-xl">
+      <div class="flex items-start gap-4">
+        <span class="shrink-0 text-accent mt-0.5" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </span>
+        <div>
+          <h2 class="font-bold text-primary mb-2">General Inquiries</h2>
+          <p class="text-sm text-muted leading-relaxed mb-4">
+            Questions about product recommendations, errors in our reviews, or suggestions
+            for products we should cover — reach us at:
+          </p>
+          <a
+            href="mailto:hello@superkitchentools.com"
+            class="inline-flex items-center gap-2 px-5 py-3 bg-accent text-white text-sm font-bold rounded-lg hover:bg-accent/90 transition-colors"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            hello@superkitchentools.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partnership -->
+    <section class="mb-8 p-6 bg-white border border-gray-200 rounded-xl">
+      <div class="flex items-start gap-4">
+        <span class="shrink-0 text-accent mt-0.5" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+        </span>
+        <div>
+          <h2 class="font-bold text-primary mb-2">Partnerships &amp; Advertising</h2>
+          <p class="text-sm text-muted leading-relaxed mb-4">
+            For partnership and advertising inquiries, please email:
+          </p>
+          <a
+            href="mailto:partnerships@superkitchentools.com"
+            class="inline-flex items-center gap-2 px-5 py-3 bg-white border border-gray-200 text-primary text-sm font-bold rounded-lg hover:border-accent/30 hover:bg-gray-50 transition-colors"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            partnerships@superkitchentools.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Response Time -->
+    <div class="p-5 bg-gray-50 border border-gray-200 rounded-xl">
+      <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
+        </svg>
+        <p class="text-sm text-muted">
+          <strong class="text-primary">Response time:</strong> We typically respond within 48 hours.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import AffiliateDisclosure from "../../components/AffiliateDisclosure.astro";
+import { getAllCategories } from "../../lib/categories.ts";
+import { getProductsByCategory } from "../../lib/products.ts";
+import { generateBreadcrumbSchema } from "../../lib/seo.ts";
+import type { Category } from "../../lib/products.ts";
+
+const categories = getAllCategories();
+const categoryProducts = categories.map((cat: Category) => ({
+  category: cat,
+  products: getProductsByCategory(cat.slug),
+})).filter(({ products }) => products.length > 0);
+
+const totalProducts = categoryProducts.reduce((sum, { products }) => sum + products.length, 0);
+
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "All Reviews", href: "/reviews/" },
+];
+
+const schemas = [
+  generateBreadcrumbSchema([
+    { name: "Home", url: "https://superkitchentools.com/" },
+    { name: "All Reviews", url: "https://superkitchentools.com/reviews/" },
+  ]),
+];
+---
+
+<BaseLayout
+  title="All Kitchen Tool Reviews — SuperKitchenTools 2026"
+  description={`Browse all ${totalProducts}+ kitchen tool reviews across ${categories.length} categories. Expert-tested picks for every budget and kitchen type.`}
+  breadcrumbs={breadcrumbs}
+  schemas={schemas}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Disclosure -->
+    <AffiliateDisclosure variant="inline" />
+
+    <!-- Hero -->
+    <div class="mt-8 mb-10">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading mb-4">
+        All Product Reviews
+      </h1>
+      <p class="text-lg text-muted leading-relaxed max-w-3xl">
+        Browse all {totalProducts}+ kitchen tool reviews across {categories.length} categories.
+        Every product has a full review with specs, pros, cons, and an honest verdict.
+      </p>
+    </div>
+
+    <!-- Category sections -->
+    {categoryProducts.map(({ category, products }) => (
+      <section class="mb-16">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-xl font-bold text-primary">
+            {category.displayName}
+            <span class="ml-2 text-sm font-normal text-muted">({products.length} reviews)</span>
+          </h2>
+          <a
+            href={`/best/${category.slug}/`}
+            class="text-sm font-semibold text-accent hover:underline whitespace-nowrap"
+          >
+            See best picks &rarr;
+          </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {products.map((product) => (
+            <ProductCard product={product} category={category.slug} />
+          ))}
+        </div>
+      </section>
+    ))}
+
+  </div>
+</BaseLayout>
