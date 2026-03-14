@@ -1,34 +1,60 @@
 ---
 import type { Category } from "../lib/products.ts";
-import CategoryIcon from "./icons/CategoryIcon.astro";
 
 interface Props {
   categories: Category[];
 }
 
 const { categories } = Astro.props;
+
+// Map category slugs to available hero images
+const categoryImages: Record<string, string> = {
+  "chefs-knives": "/images/categories/chefs-knives.jpg",
+  "cutting-boards": "/images/categories/cutting-boards.jpg",
+  "cast-iron-cookware": "/images/categories/cast-iron-cookware.jpg",
+  "air-fryers": "/images/categories/air-fryers.jpg",
+  "stand-mixers": "/images/categories/stand-mixers.jpg",
+  "coffee-makers": "/images/categories/coffee-makers.jpg",
+  "blenders": "/images/categories/blenders.jpg",
+  "food-processors": "/images/categories/food-processors.jpg",
+  "pressure-cookers": "/images/categories/pressure-cookers.jpg",
+  "baking-tools": "/images/categories/baking-tools.jpg",
+};
 ---
 
 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-  {categories.map((category) => (
-    <a
-      href={`/best/${category.slug}/`}
-      class="group flex flex-col items-center gap-3 p-5 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-accent/30 hover:-translate-y-0.5 transition-all duration-200 text-center"
-    >
-      <span class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 text-primary group-hover:text-accent group-hover:bg-accent/8 transition-colors">
-        <CategoryIcon slug={category.slug} size={24} />
-      </span>
-      <div>
-        <h3 class="text-sm font-semibold text-primary group-hover:text-accent transition-colors leading-snug">
-          {category.displayName}
-        </h3>
-        <p class="text-xs text-muted mt-1 line-clamp-2 leading-snug">
-          {category.description}
-        </p>
-      </div>
-      <span class="mt-auto text-xs font-medium text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-        See Best Picks &rarr;
-      </span>
-    </a>
-  ))}
+  {categories.map((category) => {
+    const imgSrc = categoryImages[category.slug] ?? null;
+    return (
+      <a
+        href={`/best/${category.slug}/`}
+        class="group relative rounded-xl overflow-hidden aspect-[4/3] block"
+        aria-label={`Best ${category.displayName}`}
+      >
+        {/* Photo background */}
+        {imgSrc ? (
+          <div
+            class="absolute inset-0 category-hero-bg transition-transform duration-500 group-hover:scale-105"
+            style={`background-image: url('${imgSrc}');`}
+            aria-hidden="true"
+          ></div>
+        ) : (
+          <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900" aria-hidden="true"></div>
+        )}
+
+        {/* Dark gradient overlay — stronger at bottom */}
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 group-hover:from-black/70 transition-all duration-300" aria-hidden="true"></div>
+
+        {/* Text content at bottom */}
+        <div class="absolute inset-x-0 bottom-0 p-3.5">
+          <h3 class="text-white font-bold text-sm leading-tight font-heading drop-shadow-sm">
+            {category.displayName}
+          </h3>
+          <p class="text-white/75 text-xs mt-0.5 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            See best picks &rarr;
+          </p>
+        </div>
+      </a>
+    );
+  })}
 </div>

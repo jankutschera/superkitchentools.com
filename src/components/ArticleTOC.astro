@@ -10,21 +10,27 @@ interface Props {
 }
 
 const { headings } = Astro.props;
-
 const filtered = headings.filter((h) => h.depth >= 2 && h.depth <= 4);
 ---
 
 {filtered.length > 0 && (
-  <nav aria-label="Table of contents" class="bg-gray-50 border border-gray-200 rounded-xl p-4">
-    <p class="text-xs font-bold uppercase tracking-wide text-muted mb-3">On This Page</p>
-    <ol class="flex flex-col gap-1.5">
+  <nav aria-label="Table of contents" class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+    <div class="bg-gray-50 border-b border-gray-200 px-4 py-3">
+      <p class="text-xs font-bold uppercase tracking-[0.1em] text-muted flex items-center gap-2">
+        <svg class="w-3.5 h-3.5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h10" />
+        </svg>
+        On This Page
+      </p>
+    </div>
+    <ol class="p-4 flex flex-col gap-1">
       {filtered.map((heading) => {
         const indent = (heading.depth - 2) * 12;
         return (
           <li style={`padding-left: ${indent}px`}>
             <a
               href={`#${heading.slug}`}
-              class={`text-sm text-muted hover:text-accent transition-colors ${heading.depth === 2 ? "font-medium" : ""}`}
+              class={`block py-1 text-sm hover:text-accent transition-colors leading-snug ${heading.depth === 2 ? "text-primary font-medium" : "text-muted"}`}
             >
               {heading.text}
             </a>

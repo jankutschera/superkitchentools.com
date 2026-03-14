@@ -6,41 +6,25 @@ interface Props {
 
 const { type, text } = Astro.props;
 
-const badgeConfig = {
+const config = {
   "best-seller": {
     label: text ?? "Best Seller",
     classes: "bg-amber-100 text-amber-800 border border-amber-200",
   },
   "amazon-choice": {
     label: text ?? "Amazon's Choice",
-    classes: "bg-gray-900 text-white",
+    classes: "bg-gray-900 text-white border border-gray-800",
   },
   deal: {
     label: text ?? "Deal",
-    classes: "bg-success/10 text-success border border-success/20",
+    classes: "bg-emerald-50 text-emerald-700 border border-emerald-200",
   },
-};
-
-const config = badgeConfig[type];
+}[type];
 ---
 
-<span
-  class={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold leading-none ${config.classes}`}
->
+<span class={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-semibold leading-none tracking-wide ${config.classes}`}>
   {type === "best-seller" && (
-    <!-- Trophy icon -->
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="11"
-      height="11"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
       <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
       <path d="M4 22h16" />
@@ -50,36 +34,12 @@ const config = badgeConfig[type];
     </svg>
   )}
   {type === "amazon-choice" && (
-    <!-- Checkmark icon -->
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="11"
-      height="11"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <polyline points="20 6 9 17 4 12" />
     </svg>
   )}
   {type === "deal" && (
-    <!-- Tag / deal icon -->
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="11"
-      height="11"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
       <line x1="7" y1="7" x2="7.01" y2="7" />
     </svg>

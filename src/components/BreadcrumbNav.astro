@@ -7,19 +7,21 @@ const { items } = Astro.props;
 ---
 
 <nav aria-label="Breadcrumb" class="py-3">
-  <ol class="flex flex-wrap items-center gap-1.5 text-sm">
+  <ol class="flex flex-wrap items-center gap-1 text-sm">
     {items.map((item, index) => {
       const isLast = index === items.length - 1;
       return (
-        <li class="flex items-center gap-1.5">
+        <li class="flex items-center gap-1">
           {isLast ? (
-            <span class="text-primary font-medium" aria-current="page">{item.label}</span>
+            <span class="text-primary font-medium truncate max-w-[200px]" aria-current="page">{item.label}</span>
           ) : (
             <>
-              <a href={item.href} class="text-muted hover:text-accent transition-colors">
+              <a href={item.href} class="text-muted hover:text-accent transition-colors whitespace-nowrap">
                 {item.label}
               </a>
-              <span class="text-muted" aria-hidden="true">›</span>
+              <svg class="w-3.5 h-3.5 text-gray-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" />
+              </svg>
             </>
           )}
         </li>
