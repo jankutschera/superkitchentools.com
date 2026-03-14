@@ -45,7 +45,7 @@ const formattedPrice = product.price.toLocaleString("en-US", {
 
     <!-- Brand + Name -->
     <div class="mb-3">
-      <p class="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted mb-1">{product.brand}</p>
+      <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-1">{product.brand}</p>
       <h3 class="font-bold text-primary leading-snug text-base line-clamp-2 font-heading">
         <a href={`/reviews/${product.slug}/`} class="hover:text-accent transition-colors">
           {product.name}

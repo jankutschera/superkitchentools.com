@@ -178,24 +178,19 @@ const navLinks = [
   =============================== -->
   <footer class="bg-primary text-gray-300 mt-16">
     <!-- Sister Sites Banner -->
-    <div class="border-b border-white/8 py-6">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">From Our Network</p>
-        <div class="flex flex-wrap gap-4">
-          {sisterSites.map((site) => (
-            <a
-              href={site.url}
-              target="_blank"
-              rel="noopener"
-              class="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
-            >
-              <span class="w-1 h-1 rounded-full bg-accent shrink-0"></span>
-              <span class="font-medium">{site.name}</span>
-              <span class="text-gray-600">&ndash;</span>
-              <span>{site.tagline}</span>
-            </a>
-          ))}
-        </div>
+    <div class="border-b border-white/8 py-3">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center gap-x-4 gap-y-1">
+        <span class="text-[10px] font-semibold uppercase tracking-widest text-gray-600">Network</span>
+        {sisterSites.map((site) => (
+          <a
+            href={site.url}
+            target="_blank"
+            rel="noopener"
+            class="text-xs text-gray-500 hover:text-gray-300 transition-colors"
+          >
+            {site.name}
+          </a>
+        ))}
       </div>
     </div>
 
