@@ -1,0 +1,528 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import AffiliateDisclosure from "../../components/AffiliateDisclosure.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import PriceTag from "../../components/PriceTag.astro";
+import DealBadge from "../../components/DealBadge.astro";
+import RatingStars from "../../components/RatingStars.astro";
+import BuyBox from "../../components/BuyBox.astro";
+import SisterSiteLink from "../../components/SisterSiteLink.astro";
+import { getAllCategories } from "../../lib/categories.ts";
+import { getProductsByCategory } from "../../lib/products.ts";
+import { affiliateUrl } from "../../lib/affiliateUrl.ts";
+import { generateItemListSchema, generateProductSchema, generateFAQSchema, generateBreadcrumbSchema } from "../../lib/seo.ts";
+import { getSisterSitesForCategory } from "../../lib/sisterSites.ts";
+import type { Product } from "../../lib/products.ts";
+
+export function getStaticPaths() {
+  const categories = getAllCategories();
+  return categories.map((cat) => ({
+    params: { category: cat.slug },
+    props: { category: cat, products: getProductsByCategory(cat.slug) },
+  }));
+}
+
+const { category, products } = Astro.props;
+
+// Category-specific FAQs
+function getCategoryFAQs(slug: string): { question: string; answer: string }[] {
+  const faqs: Record<string, { question: string; answer: string }[]> = {
+    "chefs-knives": [
+      {
+        question: "What size chef's knife is best for home cooks?",
+        answer: "An 8-inch chef's knife is the sweet spot for most home cooks. It handles the majority of prep tasks — chopping vegetables, slicing meat, mincing herbs — without being unwieldy. Smaller cooks or those with small cutting boards may prefer a 6-inch knife.",
+      },
+      {
+        question: "German vs Japanese chef's knife — which should I choose?",
+        answer: "German knives (Wüsthof, Henckels) are heavier, more durable, and easier to maintain — great all-rounders for everyday use. Japanese knives are lighter, hold a sharper edge longer, but require more careful maintenance and are better suited to precision cutting tasks.",
+      },
+      {
+        question: "How often should I sharpen my chef's knife?",
+        answer: "Hone your knife before every use with a honing steel to realign the edge. Full sharpening (whetstones or a professional sharpener) is needed every 6-12 months with regular home use. Signs it's time: the knife slides off a tomato rather than biting in.",
+      },
+      {
+        question: "Are expensive chef's knives worth it?",
+        answer: "A mid-range knife ($50-$150) offers the best value for home cooks. The Victorinox Fibrox Pro at $50 is used in professional kitchens worldwide. Above $150, you're paying for aesthetics and marginal performance improvements that most home cooks won't notice.",
+      },
+      {
+        question: "Can I put my chef's knife in the dishwasher?",
+        answer: "No. Dishwashers dull edges rapidly through vibration and caustic detergents, and wood handles crack and warp. Always hand wash chef's knives and dry immediately. This single habit extends knife life by years.",
+      },
+    ],
+    "cutting-boards": [
+      {
+        question: "Wood or plastic cutting board — which is more hygienic?",
+        answer: "Wood has natural antimicrobial properties that cause bacteria to migrate below the surface and die off. Plastic boards can be sanitized at higher temperatures (dishwasher) but develop grooves faster that trap bacteria. For most home kitchens, a well-maintained wood board is equally safe.",
+      },
+      {
+        question: "How do I oil and maintain a wood cutting board?",
+        answer: "Apply food-grade mineral oil monthly (or when the wood looks dry/gray). Pour on a generous amount, spread evenly, let it soak in for several hours, then wipe off the excess. Beeswax board cream adds extra protection. Never use olive oil — it goes rancid.",
+      },
+      {
+        question: "What size cutting board do I need?",
+        answer: "For a home kitchen, the minimum useful size is 12x18 inches. Larger is almost always better — you can work with bigger ingredients and keep off-cuts on the board while you continue prepping. The most common regret is buying a board that's too small.",
+      },
+      {
+        question: "Should I have separate cutting boards for meat and vegetables?",
+        answer: "Yes — food safety best practice is a dedicated board for raw meat, poultry, and seafood, separate from produce and ready-to-eat foods. Color-coded boards make this easier. This applies equally to wood and plastic.",
+      },
+      {
+        question: "What's the difference between edge-grain and end-grain cutting boards?",
+        answer: "Edge-grain boards show the side of the wood and are more affordable and durable. End-grain boards (showing the cut end of the wood) are gentler on knife edges and self-heal minor cuts, but cost more and require more maintenance. Both are excellent choices for home cooks.",
+      },
+    ],
+    "cast-iron-cookware": [
+      {
+        question: "How do I season a cast iron skillet?",
+        answer: "Clean the pan, dry completely, apply a very thin layer of flaxseed oil or vegetable shortening all over (including the outside), then bake upside-down at 450°F for one hour. Repeat 3-4 times for a solid initial seasoning. Subsequent cooking with fats builds seasoning naturally.",
+      },
+      {
+        question: "Can cast iron go in the dishwasher?",
+        answer: "Never put cast iron in the dishwasher — the harsh detergents strip seasoning and the extended moisture causes rust. Clean with hot water and a stiff brush immediately after use, dry completely on the stovetop over low heat, and apply a thin layer of oil before storing.",
+      },
+      {
+        question: "Is cast iron safe for cooking acidic foods like tomato sauce?",
+        answer: "Short-term contact with acidic foods is fine, but cooking tomato sauce or wine for extended periods in an unseasoned or newly seasoned cast iron pan will strip the seasoning and may impart a metallic taste. Enameled cast iron has no restrictions with acidic foods.",
+      },
+      {
+        question: "Why is my cast iron rusty and how do I fix it?",
+        answer: "Surface rust forms when cast iron is stored wet or left undried. To fix: scrub with steel wool to remove all rust, wash with soap and water, dry completely (oven at 200°F for 15 minutes), then re-season fully. Rust doesn't ruin cast iron — it's always recoverable.",
+      },
+      {
+        question: "What size cast iron skillet is most versatile?",
+        answer: "A 10-inch skillet is the most versatile size for 1-4 people. It fits most stovetop burners, handles a 2-person meal comfortably, and is lighter than a 12-inch. Upgrade to 12-inch if you regularly cook for 4+ people or want to sear large steaks.",
+      },
+    ],
+    "air-fryers": [
+      {
+        question: "What size air fryer do I need?",
+        answer: "A 4-5 quart air fryer serves 2-3 people comfortably. For families of 4+, a 6-8 quart model is better. The basket size is more important than the quart rating — a square basket uses space more efficiently than a round one at the same stated capacity.",
+      },
+      {
+        question: "Can I use an air fryer instead of an oven?",
+        answer: "For small batches and foods that benefit from circulating hot air (fries, wings, reheated leftovers), an air fryer is faster and more efficient than an oven. For large quantities, baking, or sheet pan meals, a full oven remains necessary. Air fryers are a supplement, not a replacement.",
+      },
+      {
+        question: "Do air fryers really make food crispy without oil?",
+        answer: "Air fryers produce excellent crispiness on foods with natural fat (chicken, bacon) with no added oil. For leaner foods (vegetables, fish), a light spray of oil produces significantly better results. 'Oil-free' is possible but 'better with a little oil' is the honest answer.",
+      },
+      {
+        question: "How do I prevent food from sticking in my air fryer?",
+        answer: "Most air fryer baskets have non-stick coatings, but a light spray of cooking oil before adding food prevents sticking and improves crispiness. Parchment paper liners (cut to fit) work well for delicate items. Avoid aerosol cooking sprays that contain soy lecithin — they damage non-stick coatings over time.",
+      },
+      {
+        question: "How do I clean an air fryer?",
+        answer: "Most air fryer baskets and inserts are dishwasher-safe. For stubborn buildup, soak in hot soapy water for 30 minutes, then scrub gently with a non-abrasive sponge. The exterior just needs a wipe-down. Clean after every use to prevent smoke and odor from burnt food residue.",
+      },
+    ],
+    "stand-mixers": [
+      {
+        question: "KitchenAid vs Cuisinart stand mixer — which is better?",
+        answer: "KitchenAid wins on attachment ecosystem (pasta maker, meat grinder, ice cream bowl, and 12+ more), color options, and brand longevity. Cuisinart wins on motor power per dollar and bowl capacity. If you'll ever use accessories, buy KitchenAid. For pure baking without attachments, Cuisinart offers better value.",
+      },
+      {
+        question: "What wattage stand mixer do I need for bread dough?",
+        answer: "Bread dough requires at least 300W, with 500W recommended for regular bread baking. KitchenAid's Artisan (325W) handles most bread doughs but struggles with very stiff bagel dough. Their Professional 600 (575W) is purpose-built for heavy loads.",
+      },
+      {
+        question: "Can a stand mixer replace a food processor?",
+        answer: "A stand mixer and food processor do different jobs. Stand mixers excel at beating, whipping, and kneading dough. Food processors excel at chopping, slicing, and pureeing. Some overlap exists with attachments, but they're complementary tools, not substitutes.",
+      },
+      {
+        question: "How do I prevent my stand mixer from walking on the counter?",
+        answer: "Place a non-slip mat under the base. 'Walking' typically happens when mixing heavy loads at too high a speed — start on speed 1-2 and work up gradually for stiff doughs. The mixer should sit on a firm, level surface with room to access the head-lift lever.",
+      },
+      {
+        question: "How long do KitchenAid stand mixers last?",
+        answer: "With normal home use, a KitchenAid stand mixer routinely lasts 15-25 years. Models purchased in the 1980s are still in daily use. The most common failure is the worm gear wearing down under heavy loads at high speeds — fixable with a $20 part. KitchenAid customer service is notably good at supporting older models.",
+      },
+    ],
+    "coffee-makers": [
+      {
+        question: "What is SCA Gold Cup certification?",
+        answer: "The Specialty Coffee Association's Gold Cup standard certifies that a brewer extracts coffee between 18-22% TDS (total dissolved solids) at 195-205°F with a 6-minute brew time. It's the most meaningful quality certification for drip coffee makers — machines with this cert consistently produce excellent coffee regardless of price.",
+      },
+      {
+        question: "How often should I descale my coffee maker?",
+        answer: "Descale every 1-3 months depending on your water hardness. Hard water (common in most of the US) builds scale faster. Signs it's time: longer brew times, changed coffee flavor, and visible mineral deposits. Use a commercial descaler or a 50/50 white vinegar and water solution.",
+      },
+      {
+        question: "What's the ideal water temperature for brewing coffee?",
+        answer: "Between 195-205°F (90-96°C), just off the boil. Cooler water under-extracts, producing weak, sour coffee. Most consumer drip machines average 180-190°F — SCA-certified machines are validated to reach the proper temperature consistently throughout the brew cycle.",
+      },
+      {
+        question: "Burr grinder vs blade grinder for coffee — does it matter?",
+        answer: "Yes, significantly. Burr grinders produce uniform particle size for even extraction. Blade grinders chop inconsistently, producing both fine powder and coarse chunks that brew at different rates, resulting in bitter and sour notes simultaneously. A $40 burr grinder improves coffee quality more than upgrading from a $100 to a $200 coffee maker.",
+      },
+      {
+        question: "How long does brewed coffee stay fresh in a thermal carafe?",
+        answer: "In a quality insulated thermal carafe, coffee stays at proper drinking temperature (160-185°F) for about 2 hours and remains palatable for up to 4 hours. Glass carafes with hot plates continue extracting compounds from the coffee — thermal is better for quality preservation.",
+      },
+    ],
+    "blenders": [
+      {
+        question: "Is a Vitamix worth the price?",
+        answer: "For smoothie enthusiasts, nut butter makers, and home cooks who blend daily, yes. The 10-year warranty, commercial-grade motor longevity, and superior performance on demanding tasks (hot soups, nut milks, frozen desserts) justify the $350-$600 cost over a 5-10 year period. For occasional blending, a $100-$150 mid-range blender is sufficient.",
+      },
+      {
+        question: "Can I make hot soup in a blender?",
+        answer: "Yes — high-powered blenders (Vitamix, Blendtec) can heat soup through friction alone. For standard blenders, blend hot liquids with the center cap removed and a folded towel held firmly on top to allow steam to escape. Never fill more than half full with hot liquid — pressure buildup can cause dangerous blowouts.",
+      },
+      {
+        question: "What is blender horsepower and does it matter?",
+        answer: "Peak HP ratings in marketing are often inflated. More meaningful is continuous HP (motor running load). For home use, 1.5 HP continuous (Vitamix, Blendtec range) handles all tasks. Budget blenders at 0.5-1 HP work fine for smoothies but struggle with frozen fruit, ice, and thick mixtures.",
+      },
+      {
+        question: "How do I properly clean a blender?",
+        answer: "The fastest method: add warm water and a drop of dish soap, blend on high for 30 seconds, rinse. For deeper cleaning, disassemble the blade base monthly. Never soak blade assemblies — water infiltrates the bearing seal and causes rust. Most containers are top-rack dishwasher safe.",
+      },
+      {
+        question: "What's the difference between a personal blender and a full-size blender?",
+        answer: "Personal blenders (Nutribullet, Magic Bullet) blend directly in the cup you drink from — convenient for daily smoothies. Full-size blenders handle larger quantities, hot liquids, and tougher blending tasks. Both fill different needs: personal blenders win on convenience, full-size on versatility.",
+      },
+    ],
+    "food-processors": [
+      {
+        question: "What size food processor is best for a home kitchen?",
+        answer: "A 9-11 cup food processor handles most home cooking tasks: slicing vegetables, making pie dough, pureeing hummus, shredding cheese. 14-cup models suit larger families or batch cooking. Mini food processors (3-4 cups) are useful for garlic, herbs, and small tasks but too small for main cooking jobs.",
+      },
+      {
+        question: "Can I use a food processor instead of a blender?",
+        answer: "Food processors handle chopping, slicing, shredding, and thick purees better than blenders. Blenders handle liquids, smoothies, and very smooth purees better than food processors. A food processor can make salsa but struggles with smoothies; a blender can puree soup but can't slice potatoes. They complement rather than replace each other.",
+      },
+      {
+        question: "How do I get consistently thin slices from a food processor?",
+        answer: "Use firm, cold vegetables — chilled produce slices more uniformly. Apply even pressure through the feed tube with the food pusher, keeping the speed consistent. Use the correct thickness disc for your desired result. Irregular pieces of food in the chute cause uneven slices.",
+      },
+      {
+        question: "Why is my food processor leaking from the bottom?",
+        answer: "Leaking from the base usually indicates the bowl gasket (rubber seal) is worn or improperly seated. Check that the bowl is fully locked onto the base before starting. If the gasket is damaged, replacement gaskets are inexpensive and easy to swap — Cuisinart and KitchenAid both sell them directly.",
+      },
+      {
+        question: "How do I make pie dough in a food processor without overworking it?",
+        answer: "Use very cold (or frozen) butter cut into small cubes. Pulse (don't run continuously) in short 1-second bursts, 15-20 times, until butter pieces are pea-sized. Add cold water one tablespoon at a time, pulsing after each addition. Stop when dough just comes together — overworking develops gluten and makes tough pastry.",
+      },
+    ],
+    "pressure-cookers": [
+      {
+        question: "Is the Instant Pot safe to use?",
+        answer: "Modern electric pressure cookers including the Instant Pot have multiple safety mechanisms: pressure sensors, automatic pressure release, lid locks, and overheat protection. When used correctly (never overfilling, ensuring valve is properly set), they are extremely safe — safer in many ways than stovetop pressure cookers.",
+      },
+      {
+        question: "What can you cook in a pressure cooker?",
+        answer: "Pressure cookers excel at beans (30 minutes from dried vs 3 hours on stove), tough braising cuts (pot roast, short ribs), stocks and broths (45 minutes vs 4+ hours), rice, and hard-boiled eggs. They work less well for delicate fish, pasta dishes, and anything where texture monitoring is important.",
+      },
+      {
+        question: "Natural release vs quick release — what's the difference?",
+        answer: "Natural release (letting pressure drop on its own, 10-30 minutes) is used for large cuts of meat, beans, and grains — sudden pressure changes can toughen proteins or cause foamy liquids to spurt. Quick release (manually opening the valve) is used for vegetables and seafood where you want to stop cooking immediately.",
+      },
+      {
+        question: "Can a pressure cooker replace a slow cooker?",
+        answer: "Yes for most recipes. Pressure cooking mimics slow cooking results in 1/4 of the time. Most Instant Pot models include a slow cooker function. The slow cooker function on electric pressure cookers runs slightly hotter than dedicated slow cookers — use the 'less' heat setting to compensate.",
+      },
+      {
+        question: "How much liquid do I need in a pressure cooker?",
+        answer: "Electric pressure cookers require a minimum of 1 cup of liquid to build steam pressure. Stovetop models generally need 1/2 cup. The liquid doesn't have to be water — broth, wine, and canned tomatoes all count. Don't overfill: maximum fill line for solid foods is 2/3 full, 1/2 full for foamy foods like beans and grains.",
+      },
+    ],
+    "baking-tools": [
+      {
+        question: "What's the difference between a half sheet pan and a quarter sheet pan?",
+        answer: "A half sheet pan (18x13 inches) is the standard size used in professional kitchens — fits in most home ovens and handles cookies, roasted vegetables, and sheet cakes. A quarter sheet pan (9x13 inches) is ideal for smaller batches or toaster ovens. The Nordic Ware half sheet is the industry standard reference pan.",
+      },
+      {
+        question: "Why do bakers line sheet pans with parchment paper?",
+        answer: "Parchment paper prevents sticking without adding fat, allows even browning (direct contact with an unlined hot pan can overbrown bottoms), and makes cleanup trivial. Silpat silicone mats achieve similar results and are reusable — they insulate slightly more, which slows browning and produces chewier cookies versus crispier ones on parchment.",
+      },
+      {
+        question: "Should I use dark or light colored baking pans?",
+        answer: "Light-colored aluminum pans (Nordic Ware, USA Pan) produce more even browning because they reflect heat. Dark non-stick pans absorb heat and cause faster, sometimes excessive browning on edges and bottoms. For cookies and cakes, lighter pans produce more consistent results. Reduce oven temperature by 25°F when using dark pans.",
+      },
+      {
+        question: "How do I prevent cookies from spreading too much on a baking sheet?",
+        answer: "Key factors: use room-temperature (not melted) butter unless the recipe specifies otherwise, chill your dough for at least 30 minutes before baking, use a cool (not hot) baking sheet, and line with parchment rather than greasing. Over-greased pans cause significant spreading.",
+      },
+      {
+        question: "What baking tools do beginners really need?",
+        answer: "Start with: one half sheet pan, a 9x13 baking dish, a 9-inch round cake pan, a rubber spatula, a balloon whisk, and a digital kitchen scale. The scale is the most impactful upgrade — weight measurements produce consistent results that volume measurements can't match. Add a stand mixer once you bake regularly.",
+      },
+    ],
+  };
+
+  return faqs[slug] ?? [
+    {
+      question: `What should I look for when buying ${slug.replace(/-/g, " ")}?`,
+      answer: "Focus on build quality, material durability, ease of cleaning, and value for your budget. Read user reviews for long-term durability data that short-term tests miss.",
+    },
+    {
+      question: `How much should I spend on ${slug.replace(/-/g, " ")}?`,
+      answer: "Mid-range products ($50-$150) offer the best value for home cooks. Budget options often cut corners on materials; premium options offer diminishing returns for casual use.",
+    },
+    {
+      question: `What brands make the best ${slug.replace(/-/g, " ")}?`,
+      answer: "Look for established brands with strong warranty support and accessible customer service. Our ranked picks above represent the best options currently available across different price points.",
+    },
+    {
+      question: `How do I care for my ${slug.replace(/-/g, " ")} to make it last?`,
+      answer: "Follow the manufacturer's cleaning and storage instructions. Most kitchen tools last significantly longer with hand washing, proper drying, and appropriate storage away from moisture.",
+    },
+    {
+      question: `When should I replace my ${slug.replace(/-/g, " ")}?`,
+      answer: "Replace when performance noticeably degrades, surfaces are worn or compromised, or safety is a concern. Quality kitchen tools should last 5-15 years with proper care.",
+    },
+  ];
+}
+
+const displayedProducts = products.slice(0, 10);
+const top3Products = displayedProducts.slice(0, 3);
+const faqs = getCategoryFAQs(category.slug);
+const sisterSites = getSisterSitesForCategory(category.slug);
+const firstSisterSite = sisterSites[0];
+
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "Best Picks", href: "/best/" },
+  { label: `Best ${category.displayName}`, href: `/best/${category.slug}/` },
+];
+
+const schemas = [
+  generateItemListSchema(displayedProducts, `Best ${category.displayName} 2026`),
+  ...displayedProducts.map((p: Product) => generateProductSchema(p)),
+  generateFAQSchema(faqs),
+  generateBreadcrumbSchema([
+    { name: "Home", url: "https://superkitchentools.com/" },
+    { name: "Best Picks", url: "https://superkitchentools.com/best/" },
+    { name: `Best ${category.displayName}`, url: `https://superkitchentools.com/best/${category.slug}/` },
+  ]),
+];
+---
+
+<BaseLayout
+  title={category.metaTitle}
+  description={category.metaDescription}
+  breadcrumbs={breadcrumbs}
+  schemas={schemas}
+>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+    <!-- Disclosure -->
+    <AffiliateDisclosure variant="inline" />
+
+    <!-- Hero -->
+    <div class="mt-8 mb-10">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading mb-4">
+        Best {category.displayName} in 2026
+      </h1>
+      <p class="text-lg text-muted leading-relaxed max-w-3xl mb-3">
+        {category.description}
+      </p>
+      <p class="text-sm text-muted">
+        <svg class="inline-block w-4 h-4 mr-1 -mt-0.5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Last updated: March 2026
+      </p>
+    </div>
+
+    <!-- Quick Comparison Table — Top 3 -->
+    {top3Products.length >= 2 && (
+      <div class="mb-12 bg-gray-50 rounded-xl border border-gray-200 p-6">
+        <h2 class="text-lg font-bold text-primary mb-4">Quick Comparison: Top 3 Picks</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-200">
+                <th class="text-left py-2 pr-4 text-xs font-semibold uppercase tracking-wide text-muted w-1/4">Product</th>
+                <th class="text-left py-2 pr-4 text-xs font-semibold uppercase tracking-wide text-muted">Rating</th>
+                <th class="text-left py-2 pr-4 text-xs font-semibold uppercase tracking-wide text-muted">Price</th>
+                <th class="text-left py-2 text-xs font-semibold uppercase tracking-wide text-muted">Best For</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {top3Products.map((product: Product, i: number) => (
+                <tr class="hover:bg-white transition-colors">
+                  <td class="py-3 pr-4">
+                    <div class="flex items-center gap-2">
+                      {i === 0 && (
+                        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-accent text-white text-xs font-bold shrink-0">#1</span>
+                      )}
+                      {i !== 0 && (
+                        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gray-200 text-primary text-xs font-bold shrink-0">#{i + 1}</span>
+                      )}
+                      <a href={`/reviews/${product.slug}/`} class="font-medium text-primary hover:text-accent transition-colors line-clamp-2 text-xs leading-snug">
+                        {product.name}
+                      </a>
+                    </div>
+                  </td>
+                  <td class="py-3 pr-4 whitespace-nowrap">
+                    <span class="text-stars font-semibold">{product.rating.toFixed(1)} ★</span>
+                  </td>
+                  <td class="py-3 pr-4 font-semibold text-primary whitespace-nowrap">
+                    ${product.price.toFixed(2)}
+                  </td>
+                  <td class="py-3 text-muted text-xs">
+                    {product.pros[0] ? product.pros[0].split('—')[0].trim() : "Top pick"}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+
+    <!-- Products List -->
+    <div class="flex flex-col gap-12">
+      {displayedProducts.map((product: Product, index: number) => {
+        const rank = index + 1;
+        const isTopPick = index === 0;
+        const amazonUrl = affiliateUrl(product.asin);
+
+        return (
+          <article
+            id={`pick-${rank}`}
+            class={`rounded-xl border ${isTopPick ? "border-accent/30 bg-amber-50/30 shadow-md" : "border-gray-200 bg-white shadow-sm"} overflow-hidden`}
+          >
+            {/* Rank Header */}
+            <div class={`flex items-center gap-3 px-6 py-4 border-b ${isTopPick ? "border-accent/20 bg-amber-50/50" : "border-gray-100 bg-gray-50"}`}>
+              <span
+                class={`inline-flex items-center justify-center w-9 h-9 rounded-full text-base font-extrabold shrink-0 ${isTopPick ? "bg-accent text-white" : "bg-gray-200 text-primary"}`}
+              >
+                #{rank}
+              </span>
+              <div class="flex flex-col min-w-0">
+                {isTopPick && (
+                  <span class="text-xs font-semibold uppercase tracking-wide text-accent mb-0.5">
+                    Our Top Pick
+                  </span>
+                )}
+                <h2 class="text-lg font-bold text-primary leading-snug">
+                  <a href={`/reviews/${product.slug}/`} class="hover:text-accent transition-colors">
+                    {product.name}
+                  </a>
+                </h2>
+              </div>
+              <div class="ml-auto flex gap-2 shrink-0">
+                {product.isBestSeller && <span class="hidden sm:block"><slot />{/* DealBadge rendered below */}</span>}
+              </div>
+            </div>
+
+            {/* Product Body */}
+            <div class="p-6">
+              <div class="flex flex-col md:flex-row gap-6">
+
+                {/* Image */}
+                <div class="md:w-48 shrink-0">
+                  <a href={`/reviews/${product.slug}/`} class="block relative">
+                    <img
+                      src={product.imageUrl}
+                      alt={product.name}
+                      width="192"
+                      height="192"
+                      loading={index < 2 ? "eager" : "lazy"}
+                      class="w-full md:w-48 aspect-square object-contain rounded-lg bg-gray-50 p-3"
+                      onerror="this.src='/images/placeholder-product.svg'"
+                    />
+                    {product.isBestSeller && (
+                      <div class="absolute top-2 left-2">
+                        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-200">
+                          🏆 Best Seller
+                        </span>
+                      </div>
+                    )}
+                    {!product.isBestSeller && product.isAmazonChoice && (
+                      <div class="absolute top-2 left-2">
+                        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-gray-900 text-white">
+                          ✓ Amazon's Choice
+                        </span>
+                      </div>
+                    )}
+                  </a>
+                </div>
+
+                {/* Details */}
+                <div class="flex-1 min-w-0 flex flex-col gap-4">
+
+                  {/* Brand + Rating */}
+                  <div class="flex flex-wrap items-center gap-3">
+                    <span class="text-xs font-semibold uppercase tracking-wide text-muted">{product.brand}</span>
+                    <span class="text-gray-300" aria-hidden="true">•</span>
+                    <span class="inline-flex items-center gap-1 text-sm">
+                      <span class="text-stars font-bold">{product.rating.toFixed(1)} ★</span>
+                      <span class="text-muted">({product.reviewCount.toLocaleString()} reviews)</span>
+                    </span>
+                  </div>
+
+                  {/* Pros/Cons */}
+                  <ProsConsList pros={product.pros} cons={product.cons} />
+
+                  {/* Key Specs */}
+                  {Object.keys(product.specs).length > 0 && (
+                    <div class="overflow-x-auto">
+                      <table class="w-full text-sm border border-gray-100 rounded-lg overflow-hidden">
+                        <caption class="text-xs font-semibold uppercase tracking-wide text-muted text-left pb-2">
+                          Key Specs
+                        </caption>
+                        <tbody class="divide-y divide-gray-100">
+                          {Object.entries(product.specs).slice(0, 5).map(([key, val]) => (
+                            <tr class="bg-white">
+                              <td class="px-3 py-2 font-medium text-primary bg-gray-50 w-1/3">{key}</td>
+                              <td class="px-3 py-2 text-muted">{val}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+
+                  {/* Price + CTA */}
+                  <div class="pt-2">
+                    <PriceTag price={product.price} amazonUrl={amazonUrl} />
+                  </div>
+
+                  {/* Top Pick BuyBox */}
+                  {isTopPick && (
+                    <div class="mt-2">
+                      <BuyBox product={product} />
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="mt-16" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class="text-2xl font-bold text-primary mb-6">
+        Frequently Asked Questions About {category.displayName}
+      </h2>
+      <div class="flex flex-col gap-4">
+        {faqs.map((faq, i) => (
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer list-none hover:bg-gray-50 transition-colors">
+              <span class="font-semibold text-primary">{faq.question}</span>
+              <svg class="w-5 h-5 text-muted shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 pt-1 text-muted leading-relaxed border-t border-gray-100">
+              {faq.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- Sister Site Link -->
+    {firstSisterSite && (
+      <div class="mt-12 pt-8 border-t border-gray-100">
+        <p class="text-xs font-semibold uppercase tracking-wide text-muted mb-3">From Our Network</p>
+        <SisterSiteLink site={firstSisterSite} variant="card" />
+      </div>
+    )}
+
+  </div>
+</BaseLayout>

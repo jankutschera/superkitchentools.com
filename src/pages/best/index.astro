@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CategoryGrid from "../../components/CategoryGrid.astro";
+import { getAllCategories } from "../../lib/categories.ts";
+import { generateBreadcrumbSchema } from "../../lib/seo.ts";
+
+const categories = getAllCategories();
+
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "Best Picks", href: "/best/" },
+];
+
+const schemas = [
+  generateBreadcrumbSchema([
+    { name: "Home", url: "https://superkitchentools.com/" },
+    { name: "Best Picks", url: "https://superkitchentools.com/best/" },
+  ]),
+];
+---
+
+<BaseLayout
+  title="Best Kitchen Tools by Category — SuperKitchenTools 2026"
+  description="Browse the best kitchen tools across 10 categories. Expert-tested picks for chef's knives, air fryers, stand mixers, cast iron, coffee makers, and more."
+  breadcrumbs={breadcrumbs}
+  schemas={schemas}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Hero -->
+    <div class="mb-10">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading mb-4">
+        Best Kitchen Tools by Category
+      </h1>
+      <p class="text-lg text-muted leading-relaxed max-w-3xl">
+        We research, test, and rank the best kitchen gear across 10 categories.
+        Select a category to see our full ranked list with detailed reviews, specs,
+        pros and cons, and honest buying advice.
+      </p>
+    </div>
+
+    <!-- Methodology Note -->
+    <div class="mb-10 p-5 bg-gray-50 border border-gray-200 rounded-xl flex items-start gap-4">
+      <span class="text-2xl shrink-0" aria-hidden="true">🔬</span>
+      <div>
+        <h2 class="font-bold text-primary text-sm mb-1">How We Choose Our Best Picks</h2>
+        <p class="text-sm text-muted leading-relaxed">
+          Every recommendation starts with cross-referencing professional test results, long-term user reviews,
+          and real-world cooking performance data. We highlight the trade-offs honestly — not just the positives —
+          and rank products for different budgets and use cases. Our picks are not influenced by manufacturer
+          relationships or advertising.{" "}
+          <a href="/about/" class="text-accent hover:underline">Learn more about our methodology.</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Category Grid -->
+    <CategoryGrid categories={categories} />
+
+    <!-- Bottom CTA -->
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {[
+        {
+          icon: "⚡",
+          title: "Comparison Pages",
+          text: "See how the top options stack up head-to-head in our detailed comparison articles.",
+          href: "/vs/victorinox-fibrox-pro-vs-wusthof-classic/",
+          cta: "See an example →",
+        },
+        {
+          icon: "📋",
+          title: "Full Reviews",
+          text: "Every product in our database has a dedicated review page with specs, pros, cons, and a verdict.",
+          href: "/reviews/",
+          cta: "Browse all reviews →",
+        },
+        {
+          icon: "🏷️",
+          title: "Shop by Brand",
+          text: "Looking for a specific brand? Browse all KitchenAid, Lodge, Vitamix, and more.",
+          href: "/brands/",
+          cta: "See all brands →",
+        },
+      ].map((item) => (
+        <a
+          href={item.href}
+          class="group flex flex-col gap-3 p-5 bg-white border border-gray-100 rounded-xl hover:border-accent/30 hover:shadow-md transition-all duration-200"
+        >
+          <span class="text-2xl" aria-hidden="true">{item.icon}</span>
+          <h3 class="font-bold text-primary group-hover:text-accent transition-colors">
+            {item.title}
+          </h3>
+          <p class="text-sm text-muted leading-relaxed flex-1">{item.text}</p>
+          <span class="text-sm font-semibold text-accent">{item.cta}</span>
+        </a>
+      ))}
+    </div>
+
+  </div>
+</BaseLayout>

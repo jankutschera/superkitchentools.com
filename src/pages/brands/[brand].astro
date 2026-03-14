@@ -1,0 +1,149 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import AffiliateDisclosure from "../../components/AffiliateDisclosure.astro";
+import { getAllProducts } from "../../lib/products.ts";
+import { generateItemListSchema, generateBreadcrumbSchema } from "../../lib/seo.ts";
+import type { Product } from "../../lib/products.ts";
+
+export function getStaticPaths() {
+  const products = getAllProducts();
+  const brands = [...new Set(products.map((p) => p.brand))];
+  return brands.map((brand) => ({
+    params: { brand: brand.toLowerCase().replace(/\s+/g, "-") },
+    props: {
+      brandName: brand,
+      products: products.filter((p) => p.brand === brand),
+    },
+  }));
+}
+
+const { brandName, products } = Astro.props;
+
+// Brief brand intro based on name
+function getBrandIntro(name: string, productCount: number): string {
+  const intros: Record<string, string> = {
+    Victorinox:
+      "Victorinox has been crafting professional-grade cutlery in Switzerland since 1884. Best known for the Swiss Army Knife, their Fibrox Pro line brings commercial kitchen quality to home cooks at accessible prices — the same knives used in culinary schools worldwide.",
+    "Wüsthof":
+      "Wüsthof has been forging knives in Solingen, Germany — the \"City of Blades\" — since 1814. Their Classic and Ikon lines represent the gold standard of German knife craftsmanship, favored by professional chefs and serious home cooks who want a lifetime cutting tool.",
+    Lodge:
+      "Lodge has manufactured cast iron cookware in South Pittsburg, Tennessee since 1896. The last American cast iron manufacturer, Lodge produces skillets, Dutch ovens, and griddles that are pre-seasoned, extremely durable, and backed by a multigenerational reputation for quality.",
+    "John Boos":
+      "John Boos & Co. has been crafting butcher blocks and cutting boards in Effingham, Illinois since 1887. Their solid maple boards are the industry standard for professional kitchens and serious home cooks who want a lifetime cutting surface that improves with use and proper care.",
+    OXO:
+      "OXO was founded in 1990 with a mission to make tools that work better for everyone. Known for their ergonomic Good Grips line, OXO produces over 1,000 kitchen tools designed with input from people of all abilities — clean, practical, and built to last.",
+    Ninja:
+      "Ninja has rapidly become one of America's most popular kitchen appliance brands since launching in 2009. Their air fryers, blenders, and pressure cookers consistently offer strong features at competitive price points, making them a go-to choice for value-conscious home cooks.",
+    COSORI:
+      "COSORI has become a dominant force in the air fryer market with their focus on smart connectivity and user-friendly design. Their products integrate with the VeSync app for remote monitoring and access to hundreds of tested recipes.",
+    KitchenAid:
+      "KitchenAid stand mixers have been an American kitchen icon since 1919. The Artisan series is the most recognized stand mixer in the world, offering an unmatched attachment ecosystem and available in over 30 colors. Built to last decades with proper care.",
+    Cuisinart:
+      "Cuisinart revolutionized American home cooking with the food processor in 1973 and has been a kitchen staple ever since. Their stand mixers, food processors, and coffee makers consistently offer competitive performance at prices that undercut premium competitors.",
+    Breville:
+      "Breville brings an engineer's precision to kitchen appliances. Founded in Australia, their food processors and coffee makers are known for innovative features — like the Sous Chef's dual-bowl system and the Precision Brewer's SCA-certified temperature control — that justify their premium positioning.",
+    Vitamix:
+      "Vitamix has been the benchmark for professional blending since 1949. Their commercial-grade motors, 10-year warranties, and exceptional performance on demanding tasks (nut butters, hot soups, frozen desserts) have earned a cult following among serious home cooks and culinary professionals.",
+    "Instant Pot":
+      "Instant Pot launched in 2010 and created an entirely new category of home cooking. With over 3 million recipes in their community and the most reviews of any single kitchen appliance on Amazon, the Instant Pot Duo is the gateway drug to pressure cooking for millions of households.",
+    "Nordic Ware":
+      "Nordic Ware has been making bakeware in Minneapolis, Minnesota since 1946. Their half sheet pans are the industry reference standard — the same pure aluminum construction used by professional pastry chefs and food writers who need consistent, predictable results every time.",
+    "USA Pan":
+      "USA Pan manufactures bakeware in Pittsburgh, Pennsylvania using American-made aluminized steel. Their AMERICOAT PTFE-free non-stick coating and corrugated base design produce excellent baked goods with easy release, backed by a lifetime warranty.",
+  };
+
+  return (
+    intros[name] ??
+    `${name} is a trusted kitchen brand with ${productCount} product${productCount !== 1 ? "s" : ""} in our database. Their kitchen tools are known for quality construction and reliable performance that home cooks trust.`
+  );
+}
+
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "Brands", href: "/brands/" },
+  { label: brandName, href: `/brands/${brandName.toLowerCase().replace(/\s+/g, "-")}/` },
+];
+
+const schemas = [
+  generateItemListSchema(products, `${brandName} Kitchen Tools`),
+  generateBreadcrumbSchema([
+    { name: "Home", url: "https://superkitchentools.com/" },
+    { name: "Brands", url: "https://superkitchentools.com/brands/" },
+    {
+      name: brandName,
+      url: `https://superkitchentools.com/brands/${brandName.toLowerCase().replace(/\s+/g, "-")}/`,
+    },
+  ]),
+];
+
+const brandIntro = getBrandIntro(brandName, products.length);
+---
+
+<BaseLayout
+  title={`${brandName} Kitchen Tools — Reviews & Recommendations 2026`}
+  description={`All ${brandName} kitchen tools reviewed and ranked. ${products.length} product${products.length !== 1 ? "s" : ""} tested and rated. Find the best ${brandName} gear for your kitchen.`}
+  breadcrumbs={breadcrumbs}
+  schemas={schemas}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+    <!-- Disclosure -->
+    <AffiliateDisclosure variant="inline" />
+
+    <!-- Hero -->
+    <div class="mt-8 mb-10">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading mb-4">
+        {brandName} Kitchen Tools — Reviews &amp; Recommendations
+      </h1>
+      <p class="text-lg text-muted leading-relaxed max-w-3xl">{brandIntro}</p>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="flex flex-wrap gap-6 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-200">
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+        </svg>
+        <span class="text-sm font-semibold text-primary">{products.length} products reviewed</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-stars" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <span class="text-sm font-semibold text-primary">
+          Avg. {(products.reduce((sum: number, p: Product) => sum + p.rating, 0) / products.length).toFixed(1)} stars
+        </span>
+      </div>
+      {products.some((p: Product) => p.isBestSeller) && (
+        <div class="flex items-center gap-2">
+          <span class="text-base" aria-hidden="true">🏆</span>
+          <span class="text-sm font-semibold text-primary">
+            {products.filter((p: Product) => p.isBestSeller).length} Amazon Best Seller{products.filter((p: Product) => p.isBestSeller).length !== 1 ? "s" : ""}
+          </span>
+        </div>
+      )}
+    </div>
+
+    <!-- Products Grid -->
+    <section>
+      <h2 class="text-xl font-bold text-primary mb-6">All {brandName} Products</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {products.map((product: Product) => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="mt-12 text-center">
+      <a
+        href="/best/"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 text-primary text-sm font-semibold rounded-lg hover:border-accent/30 hover:bg-gray-50 transition-colors"
+      >
+        Browse All Categories →
+      </a>
+    </div>
+
+  </div>
+</BaseLayout>

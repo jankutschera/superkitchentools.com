@@ -1,0 +1,129 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about/" },
+];
+---
+
+<BaseLayout
+  title="About SuperKitchenTools — Our Mission & Editorial Standards"
+  description="Learn how SuperKitchenTools researches and recommends kitchen gear. Our methodology, editorial standards, and commitment to honest, independent recommendations."
+  breadcrumbs={breadcrumbs}
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Hero -->
+    <div class="mb-10">
+      <h1 class="text-3xl font-extrabold text-primary font-heading mb-4">
+        About SuperKitchenTools
+      </h1>
+      <p class="text-lg text-muted leading-relaxed">
+        We exist to cut through the noise and give you honest, research-backed answers
+        to the question: "What kitchen tool should I actually buy?"
+      </p>
+    </div>
+
+    <!-- Mission -->
+    <section class="mb-10 p-6 bg-accent/5 border border-accent/20 rounded-xl">
+      <h2 class="text-xl font-bold text-primary mb-3">Our Mission</h2>
+      <p class="text-muted leading-relaxed">
+        Every year, millions of people buy kitchen tools they regret. Either they bought
+        the wrong thing for their needs, overpaid for features they don't use, or were
+        misled by marketing copy that sounds like a review. SuperKitchenTools exists to
+        fix that. We do the research, test the trade-offs, and give you clear, specific
+        buying guidance — for every budget and every kitchen setup.
+      </p>
+    </section>
+
+    <!-- How We Research -->
+    <section class="mb-10">
+      <h2 class="text-xl font-bold text-primary mb-5">How We Research & Recommend</h2>
+      <div class="flex flex-col gap-6">
+        {[
+          {
+            icon: "🔬",
+            title: "Multi-Source Research",
+            body: "We cross-reference professional test results from outlets like Serious Eats, Cook's Illustrated, and Wirecutter with aggregated Amazon review data (focusing on verified purchaser reviews with detailed long-term use reports). We weight real-world durability heavily — a product that works for 6 months but fails at 18 is not a good product.",
+          },
+          {
+            icon: "⚖️",
+            title: "Honest Trade-offs",
+            body: "Every product recommendation includes genuine cons, not invented ones. If a product has a significant flaw that affects a meaningful portion of buyers, we say so clearly — even if it risks reducing affiliate revenue. Our goal is for you to buy the right thing, not just to buy.",
+          },
+          {
+            icon: "🎯",
+            title: "Audience-Specific Guidance",
+            body: "A professional chef and a casual weekend cook have different needs. We tell you exactly who a product is right for, and who it isn't. The best chef's knife overall might not be the best chef's knife for your budget, hand size, or cooking style.",
+          },
+          {
+            icon: "🔄",
+            title: "Regular Updates",
+            body: "Kitchen product lines change. New models launch, prices shift, quality control varies. We review and update our picks regularly to ensure the information you're reading reflects the current market — not a snapshot from 3 years ago.",
+          },
+        ].map((item) => (
+          <div class="flex items-start gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <span class="text-2xl shrink-0" aria-hidden="true">{item.icon}</span>
+            <div>
+              <h3 class="font-bold text-primary mb-2">{item.title}</h3>
+              <p class="text-sm text-muted leading-relaxed">{item.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Editorial Standards -->
+    <section class="mb-10">
+      <h2 class="text-xl font-bold text-primary mb-4">Editorial Standards</h2>
+      <ul class="flex flex-col gap-3 text-muted">
+        {[
+          "No manufacturer pays to appear on our site or influence our rankings.",
+          "We do not accept free products in exchange for reviews.",
+          "Affiliate commissions do not influence ranking order — a lower-commission product gets a higher rank if it's genuinely better.",
+          "We cite our sources where possible and distinguish between firsthand testing data and aggregated review data.",
+          "Our 'Last updated' dates on review pages reflect when we last verified the information is current.",
+        ].map((item) => (
+          <li class="flex items-start gap-2.5">
+            <svg class="w-4 h-4 mt-0.5 text-success shrink-0 fill-current" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Affiliate Disclosure Link -->
+    <div class="p-5 bg-gray-50 border border-gray-200 rounded-xl mb-10">
+      <p class="text-sm text-muted leading-relaxed">
+        <strong class="text-primary">Transparency note:</strong> SuperKitchenTools earns revenue
+        through the Amazon Associates program. When you buy through our links, we earn a small
+        commission at no extra cost to you. This is how we fund our research and keep the site
+        free. See our full{" "}
+        <a href="/disclosure/" class="text-accent hover:underline font-medium">Affiliate Disclosure</a>
+        {" "}for details.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <section>
+      <h2 class="text-xl font-bold text-primary mb-3">Get In Touch</h2>
+      <p class="text-muted leading-relaxed">
+        Have a question about a product we reviewed? Think we got something wrong?
+        Want to suggest a category or product we should cover? We'd love to hear from you.
+      </p>
+      <a
+        href="mailto:hello@superkitchentools.com"
+        class="inline-flex items-center gap-2 mt-4 px-5 py-3 bg-accent text-white text-sm font-bold rounded-lg hover:bg-accent/90 transition-colors"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        hello@superkitchentools.com
+      </a>
+    </section>
+
+  </div>
+</BaseLayout>

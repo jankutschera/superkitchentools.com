@@ -4,3 +4,5 @@ dist/
 .superpowers/
 .astro/
 .DS_Store
+.playwright-mcp/
+*.png

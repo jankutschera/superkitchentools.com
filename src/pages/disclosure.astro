@@ -1,0 +1,122 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "Affiliate Disclosure", href: "/disclosure/" },
+];
+---
+
+<BaseLayout
+  title="Affiliate Disclosure — SuperKitchenTools"
+  description="SuperKitchenTools is a participant in the Amazon Associates program. Learn how our affiliate partnerships work and how we maintain editorial independence."
+  breadcrumbs={breadcrumbs}
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <h1 class="text-3xl font-extrabold text-primary font-heading mb-2">Affiliate Disclosure</h1>
+    <p class="text-sm text-muted mb-10">Last updated: March 2026</p>
+
+    <!-- Quick Summary -->
+    <div class="p-5 bg-accent/5 border border-accent/20 rounded-xl mb-10 flex items-start gap-4">
+      <svg class="w-6 h-6 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <p class="text-sm text-primary leading-relaxed">
+        <strong>The short version:</strong> We earn a small commission when you buy through our Amazon links.
+        This costs you nothing extra. It does not influence which products we recommend — our editorial
+        process is independent and we say what we genuinely think.
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-8">
+
+      <section>
+        <h2 class="text-xl font-bold text-primary mb-3">Amazon Associates Membership</h2>
+        <p class="text-muted leading-relaxed">
+          SuperKitchenTools.com is a participant in the <strong>Amazon Services LLC Associates Program</strong>,
+          an affiliate advertising program designed to provide a means for sites to earn advertising fees
+          by advertising and linking to Amazon.com.
+        </p>
+        <p class="text-muted leading-relaxed mt-3">
+          When you click a link to Amazon on this site and make a purchase (of any product, not only
+          the one we linked to), we may earn a commission. The commission is paid by Amazon — the price
+          you pay is identical to what you'd pay navigating to Amazon directly.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-primary mb-3">How Commissions Work</h2>
+        <ul class="flex flex-col gap-3 text-muted">
+          {[
+            "Amazon pays us a percentage of the sale price for qualifying purchases.",
+            "Commission rates vary by product category — kitchen appliances typically earn 4-8%.",
+            "We receive no upfront payment from Amazon or any manufacturer.",
+            "We do not receive free products in exchange for reviews.",
+            "Commissions are how this site generates revenue to fund research and operations.",
+          ].map((item) => (
+            <li class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 mt-0.5 text-success shrink-0 fill-current" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-primary mb-3">Editorial Independence</h2>
+        <p class="text-muted leading-relaxed mb-3">
+          Our editorial rankings and recommendations are made independently of affiliate considerations.
+          Specifically:
+        </p>
+        <ul class="flex flex-col gap-3 text-muted">
+          {[
+            "We rank products based on performance, value, and user satisfaction — not commission rates.",
+            "If a lower-commission product is genuinely better, it gets a higher ranking.",
+            "We list real pros and cons for every product, including cons that could reduce purchase likelihood.",
+            "No manufacturer pays to appear on our site or influence our rankings.",
+            "We use the same data sources (professional reviews, aggregated user data, specification sheets) regardless of whether a product is available on Amazon.",
+          ].map((item) => (
+            <li class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 mt-0.5 text-success shrink-0 fill-current" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-primary mb-3">Prices & Availability</h2>
+        <p class="text-muted leading-relaxed">
+          Prices shown on this site are accurate at the time of publication but can change frequently
+          on Amazon. Always check the Amazon listing for the current price before purchasing. The phrase
+          "at time of writing" or "at time of publishing" in our content reflects this.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-primary mb-3">FTC Compliance</h2>
+        <p class="text-muted leading-relaxed">
+          This disclosure is made in accordance with the FTC's 16 CFR § 255 guidelines on Endorsements
+          and Testimonials in Advertising. We are required by law to disclose any material connection
+          between ourselves and the products we recommend. Our Amazon affiliate relationship constitutes
+          such a connection.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-primary mb-3">Questions</h2>
+        <p class="text-muted leading-relaxed">
+          If you have any questions about our affiliate relationships or editorial process, please
+          contact us at{" "}
+          <a href="mailto:hello@superkitchentools.com" class="text-accent hover:underline">hello@superkitchentools.com</a>.
+        </p>
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getAllCategories } from "../lib/categories.ts";
+import type { Category } from "../lib/products.ts";
+
+const categories = getAllCategories().slice(0, 6);
+---
+
+<BaseLayout
+  title="Page Not Found — SuperKitchenTools"
+  description="Sorry, we couldn't find that page. Browse our kitchen tool categories or search our best picks."
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+
+    <span class="text-7xl mb-6 block" aria-hidden="true">🍳</span>
+
+    <h1 class="text-4xl font-extrabold text-primary font-heading mb-4">
+      404 — Page Not Found
+    </h1>
+
+    <p class="text-lg text-muted leading-relaxed mb-8 max-w-lg mx-auto">
+      Looks like this page got lost at the back of the cabinet. It may have been moved,
+      renamed, or it never existed. Let's get you back to something useful.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-3 justify-center mb-14">
+      <a
+        href="/"
+        class="px-6 py-3 bg-accent text-white text-sm font-bold rounded-lg hover:bg-accent/90 transition-colors"
+      >
+        Back to Homepage
+      </a>
+      <a
+        href="/best/"
+        class="px-6 py-3 bg-white border border-gray-200 text-primary text-sm font-semibold rounded-lg hover:border-accent/30 hover:bg-gray-50 transition-colors"
+      >
+        Browse Best Picks
+      </a>
+    </div>
+
+    <!-- Popular Categories -->
+    <div class="text-left">
+      <h2 class="text-base font-bold text-primary mb-4 text-center">Popular Categories</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {categories.map((cat: Category) => (
+          <a
+            href={`/best/${cat.slug}/`}
+            class="group flex items-center gap-3 px-4 py-3 bg-white border border-gray-100 rounded-xl hover:border-accent/30 hover:shadow-sm transition-all"
+          >
+            <span class="text-xl shrink-0" aria-hidden="true">{cat.icon}</span>
+            <span class="text-sm font-medium text-primary group-hover:text-accent transition-colors leading-snug">
+              {cat.displayName}
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

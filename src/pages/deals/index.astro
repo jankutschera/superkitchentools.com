@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getAllCategories } from "../../lib/categories.ts";
+import type { Category } from "../../lib/products.ts";
+
+const categories = getAllCategories();
+
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "Deals", href: "/deals/" },
+];
+---
+
+<BaseLayout
+  title="Today's Best Kitchen Deals — SuperKitchenTools"
+  description="Find the best deals on kitchen tools today. Deals update automatically when our Amazon PA-API connection is active. Browse our best-pick categories in the meantime."
+  breadcrumbs={breadcrumbs}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+    <!-- Hero -->
+    <div class="text-center mb-14">
+      <span class="text-5xl mb-5 block" aria-hidden="true">🔥</span>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading mb-4">
+        Today's Kitchen Deals
+      </h1>
+      <p class="text-lg text-muted leading-relaxed max-w-xl mx-auto">
+        Live deal tracking is coming soon. We'll surface real-time Amazon price drops on all
+        the kitchen tools in our database once our PA-API connection is active.
+      </p>
+    </div>
+
+    <!-- Coming Soon Card -->
+    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 mb-12">
+      <div class="flex items-start gap-4 mb-6">
+        <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-lg font-bold text-primary mb-1">What's Coming</h2>
+          <p class="text-muted text-sm leading-relaxed">
+            Once connected to the Amazon Product Advertising API, this page will auto-update with:
+          </p>
+        </div>
+      </div>
+      <ul class="flex flex-col gap-3 pl-14">
+        {[
+          "Real-time price drops on all products in our database",
+          "Lightning deals and limited-time offers",
+          "Price history charts to verify genuine savings",
+          "Email alerts for products on your watchlist",
+          "Daily deal digests for each kitchen category",
+        ].map((item) => (
+          <li class="flex items-start gap-2.5 text-sm text-muted">
+            <svg class="w-4 h-4 mt-0.5 text-success shrink-0 fill-current" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Alternative: Category Links -->
+    <div>
+      <h2 class="text-xl font-bold text-primary mb-2">Browse Our Best Picks Instead</h2>
+      <p class="text-muted text-sm mb-6">
+        All our recommended products are already at excellent prices — check our
+        category pages to find the best value options right now.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {categories.map((cat: Category) => (
+          <a
+            href={`/best/${cat.slug}/`}
+            class="group flex items-center gap-3 px-4 py-3 bg-white border border-gray-100 rounded-xl hover:border-accent/30 hover:shadow-sm transition-all"
+          >
+            <span class="text-xl shrink-0" aria-hidden="true">{cat.icon}</span>
+            <span class="text-sm font-medium text-primary group-hover:text-accent transition-colors leading-snug line-clamp-2">
+              Best {cat.displayName}
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Notify CTA placeholder -->
+    <div class="mt-12 p-6 bg-accent/5 border border-accent/20 rounded-xl text-center">
+      <p class="text-sm font-semibold text-primary mb-1">Want to be notified when deals go live?</p>
+      <p class="text-sm text-muted">
+        Until the deals feature launches, bookmark this page or follow our best-picks pages for the latest recommendations.
+      </p>
+    </div>
+
+  </div>
+</BaseLayout>
