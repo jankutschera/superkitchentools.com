@@ -1,0 +1,374 @@
+[
+  {
+    "asin": "B00327SB04",
+    "slug": "instant-pot-duo-7-in-1-6-quart",
+    "name": "Instant Pot Duo 7-in-1 Electric Pressure Cooker, 6 Quart",
+    "brand": "Instant Pot",
+    "category": "pressure-cookers",
+    "price": 99.95,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 128450,
+    "imageUrl": "https://m.media-amazon.com/images/I/B00FLYWNYQ._AC_SL1500_.jpg",
+    "features": [
+      "7-in-1 multifunctional: Pressure Cook, Slow Cook, Rice, Sauté, Steam, Warm, Yogurt",
+      "6-quart capacity serves 4-6 people",
+      "10+ safety features including overheat protection and lid lock",
+      "Delay start up to 24 hours for meal timing flexibility",
+      "Stainless steel inner pot (no coating to peel)",
+      "The original Instant Pot — most accessories and recipes written for this model"
+    ],
+    "pros": [
+      "Largest community and recipe ecosystem of any pressure cooker — 3 million+ Instant Pot recipes",
+      "Stainless steel inner pot is more durable and easier to clean than coated alternatives",
+      "7 functions in one appliance replaces multiple single-purpose kitchen tools"
+    ],
+    "cons": [
+      "Learning curve for pressure cooking — new users often have concerns about safety",
+      "Not as beginner-friendly as models with guided cooking programs"
+    ],
+    "specs": {
+      "Capacity": "6 quarts",
+      "Functions": "7 (Pressure, Slow Cook, Rice, Sauté, Steam, Warm, Yogurt)",
+      "Pressure Settings": "Low and High",
+      "Inner Pot": "Stainless steel",
+      "Dimensions": "13.4 x 12.2 x 12.5 inches"
+    },
+    "isBestSeller": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B075CYPBM7",
+    "slug": "instant-pot-duo-nova-6-quart",
+    "name": "Instant Pot Duo Nova 6-Quart 7-in-1 Smart Cooker",
+    "brand": "Instant Pot",
+    "category": "pressure-cookers",
+    "price": 89.95,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 42680,
+    "imageUrl": "https://m.media-amazon.com/images/I/B075CYPBM7._AC_SL1500_.jpg",
+    "features": [
+      "Improved steam release with QuickCool Technology",
+      "Easy-seal lid automatically seals when turned to pressure position",
+      "Same 7 functions as Duo with guided recipe buttons",
+      "Altitude adjustment automatically modifies cook times",
+      "Keep Warm function holds temperature for up to 10 hours",
+      "14 preset smart programs covering common pressure cooking tasks"
+    ],
+    "pros": [
+      "Auto-sealing lid eliminates the most common Instant Pot mistake (forgetting to seal)",
+      "Altitude adjustment is genuinely useful for cooks above 3,000 feet elevation",
+      "14 guided programs reduce the learning curve significantly for beginners"
+    ],
+    "cons": [
+      "Slightly pricier than the base Duo despite comparable cooking results",
+      "Auto-seal mechanism can be harder to clean thoroughly"
+    ],
+    "specs": {
+      "Capacity": "6 quarts",
+      "Functions": "7 + 14 Smart Programs",
+      "Lid Type": "Auto-seal",
+      "Altitude Adjustment": "Yes",
+      "Dimensions": "13.4 x 12.2 x 12.5 inches"
+    },
+    "isAmazonChoice": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00BSJVXGU",
+    "slug": "instant-pot-ultra-10-in-1-6-quart",
+    "name": "Instant Pot Ultra 10-in-1 Electric Pressure Cooker, 6 Quart",
+    "brand": "Instant Pot",
+    "category": "pressure-cookers",
+    "price": 149.95,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 18740,
+    "imageUrl": "https://m.media-amazon.com/images/I/B00BSJVXGU._AC_SL1500_.jpg",
+    "features": [
+      "10-in-1 multifunctional including sous vide and sterilize functions",
+      "Altitude adjustment for precise pressure control at any elevation",
+      "Custom programming saves personalized cooking programs",
+      "Progress indicator shows current cooking stage",
+      "Steam release reset button for ultra-safe pressure release",
+      "Smart detection for altitude, temperature, and pressure adjustment"
+    ],
+    "pros": [
+      "Sous vide function adds precision low-temperature cooking not available on Duo",
+      "Custom program save is genuinely useful for frequently made family recipes",
+      "Progress indicator shows cooking stage — eliminates guesswork about where you are in the cycle"
+    ],
+    "cons": [
+      "More complex interface takes longer to learn than simpler Duo",
+      "$50 more than Duo for features most home cooks may never use"
+    ],
+    "specs": {
+      "Capacity": "6 quarts",
+      "Functions": "10 (incl. Sous Vide, Sterilize)",
+      "Custom Programs": "Yes",
+      "Progress Indicator": "Yes",
+      "Dimensions": "13.2 x 12.5 x 12.5 inches"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B083MFX695",
+    "slug": "instant-pot-pro-crisp-11-in-1",
+    "name": "Instant Pot Pro Crisp 11-in-1 Air Fryer & Electric Pressure Cooker, 8 Quart",
+    "brand": "Instant Pot",
+    "category": "pressure-cookers",
+    "price": 199.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 11340,
+    "imageUrl": "https://m.media-amazon.com/images/I/B083MFX695._AC_SL1500_.jpg",
+    "features": [
+      "Pressure cook AND air fry — two appliances in one unit",
+      "8-quart capacity for large families or batch cooking",
+      "Air fry, Air Roast, Air Broil, Bake/Roast, Dehydrate, and Rotisserie functions",
+      "EvenCrisp Technology for consistent air frying results",
+      "Pressure cook lid and air fryer lid both included",
+      "Compatible with standard Instant Pot accessories"
+    ],
+    "pros": [
+      "Pressure cooker and air fryer combination saves significant counter and storage space",
+      "8-quart size handles party-sized batches for both functions",
+      "Compatible with existing Instant Pot accessories and community recipes"
+    ],
+    "cons": [
+      "Switching between pressure and air fry lids requires handling two large lids",
+      "Air frying performance is adequate but not equal to a dedicated air fryer"
+    ],
+    "specs": {
+      "Capacity": "8 quarts",
+      "Functions": "11 (Pressure + Air Fry/Roast/Broil/Bake/Dehydrate/Rotisserie)",
+      "Lids Included": "2 (pressure and air fryer)",
+      "Dimensions": "13.7 x 13.7 x 16.2 inches",
+      "Weight": "23 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B0796NJ73P",
+    "slug": "ninja-fd401-foodi-12-in-1",
+    "name": "Ninja FD401 Foodi 12-in-1 Deluxe XL Pressure Cooker & Air Fryer",
+    "brand": "Ninja",
+    "category": "pressure-cookers",
+    "price": 199.99,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 23670,
+    "imageUrl": "https://m.media-amazon.com/images/I/B0796NJ73P._AC_SL1500_.jpg",
+    "features": [
+      "TenderCrisp Technology pressure cooks then air-finishes in one step",
+      "8-quart pressure cooking and 5-quart air frying capacity",
+      "12 cooking programs from Pressure Cook to Air Crisp",
+      "Reversible rack with high and low positions",
+      "Triple fusion heat for even air frying",
+      "Glossy finish with intuitive control panel"
+    ],
+    "pros": [
+      "TenderCrisp switching from pressure to air-fry is seamless without moving food",
+      "Ninja's air frying performance is slightly better than Instant Pot's air fryer version",
+      "8-quart pressure capacity handles whole chickens and large pot roasts"
+    ],
+    "cons": [
+      "Large footprint — approximately 16x16 inches — requires dedicated counter space",
+      "Air fry lid attached to unit can't be stored separately"
+    ],
+    "specs": {
+      "Pressure Capacity": "8 quarts",
+      "Air Fry Capacity": "5 quarts",
+      "Functions": "12",
+      "Dimensions": "16.5 x 15.6 x 14.7 inches",
+      "Weight": "24.4 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B09GZPQ97G",
+    "slug": "kuhn-rikon-duromatic-stovetop-pressure-cooker",
+    "name": "Kuhn Rikon Duromatic 5-Quart Pressure Cooker",
+    "brand": "Kuhn Rikon",
+    "category": "pressure-cookers",
+    "price": 199.95,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 2840,
+    "imageUrl": "https://m.media-amazon.com/images/I/B09GZPQ97G._AC_SL1500_.jpg",
+    "features": [
+      "Swiss-made stovetop pressure cooker for true high-pressure cooking performance",
+      "18/10 stainless steel construction — dishwasher-safe and induction compatible",
+      "Operating pressure of 15 PSI — higher than most electric pressure cookers",
+      "Visual pressure indicators show pressure level without opening",
+      "Spring-valve system maintains pressure without constant monitoring",
+      "Lifetime warranty from Kuhn Rikon"
+    ],
+    "pros": [
+      "15 PSI stovetop pressure is higher than electric models — genuinely faster cooking",
+      "Swiss manufacturing quality is evident in fit, finish, and longevity",
+      "Lifetime warranty reflects confidence in a product built to last generations"
+    ],
+    "cons": [
+      "Requires stove attention — no set-and-forget convenience of electric models",
+      "Learning curve for stovetop pressure cooking is steeper than electric"
+    ],
+    "specs": {
+      "Capacity": "5 quarts",
+      "Material": "18/10 stainless steel",
+      "Max Pressure": "15 PSI",
+      "Induction Compatible": "Yes",
+      "Country of Origin": "Switzerland"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00WUJKYE0",
+    "slug": "instant-pot-lux-6-in-1-8-quart",
+    "name": "Instant Pot Lux 6-in-1 Multi-Use Pressure Cooker, 8 Quart",
+    "brand": "Instant Pot",
+    "category": "pressure-cookers",
+    "price": 79.95,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 31240,
+    "imageUrl": "https://m.media-amazon.com/images/I/B00WUJKYE0._AC_SL1500_.jpg",
+    "features": [
+      "6-in-1 functions: Pressure Cook, Slow Cook, Sauté, Rice, Steam, Warm",
+      "8-quart capacity for large family meals and batch cooking",
+      "Stainless steel inner pot and steam rack",
+      "12 preset smart cooking programs",
+      "Dual pressure (low and high) settings",
+      "Delay start up to 24 hours"
+    ],
+    "pros": [
+      "8-quart capacity at $80 is exceptional value for large families",
+      "Most affordable entry into quality Instant Pot pressure cooking",
+      "6 functions cover everyday cooking needs without unnecessary extras"
+    ],
+    "cons": [
+      "No yogurt function — a limitation versus higher-tier Duo models",
+      "6-in-1 is less versatile than Duo 7-in-1 for similar price difference"
+    ],
+    "specs": {
+      "Capacity": "8 quarts",
+      "Functions": "6",
+      "Smart Programs": "12",
+      "Inner Pot": "Stainless steel",
+      "Dimensions": "14.8 x 13.5 x 13.5 inches"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B09PVQ6H27",
+    "slug": "crock-pot-express-8-quart-pressure-cooker",
+    "name": "Crock-Pot Express 8-Quart Pressure Cooker",
+    "brand": "Crock-Pot",
+    "category": "pressure-cookers",
+    "price": 79.99,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 16870,
+    "imageUrl": "https://m.media-amazon.com/images/I/B09PVQ6H27._AC_SL1500_.jpg",
+    "features": [
+      "8-quart capacity for large family meals",
+      "Pressure Cook, Slow Cook, Brown/Sauté, Sear, Steam, Strain, and Warm",
+      "Strain function has built-in strainer lid — unique in this category",
+      "Non-stick coated inner pot for easy cleanup",
+      "Digital control panel with clear interface",
+      "Slow cook lid included alongside pressure lid"
+    ],
+    "pros": [
+      "Built-in strainer lid function is unique — eliminates need for a separate colander",
+      "8-quart at $80 matches Instant Pot Lux pricing with an extra function",
+      "Crock-Pot brand familiarity makes it approachable for slow-cooker households"
+    ],
+    "cons": [
+      "Non-stick coating will degrade over time with use — stainless is more durable",
+      "Smaller recipe and accessory community than Instant Pot"
+    ],
+    "specs": {
+      "Capacity": "8 quarts",
+      "Functions": "7 (incl. built-in strainer)",
+      "Inner Pot": "Non-stick coated",
+      "Dimensions": "14.5 x 13 x 13.5 inches",
+      "Weight": "16 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B08JK4SG6L",
+    "slug": "fissler-vitaquick-8-5-quart-pressure-cooker",
+    "name": "Fissler Vitaquick 8.5-Quart Pressure Cooker",
+    "brand": "Fissler",
+    "category": "pressure-cookers",
+    "price": 279.95,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 1980,
+    "imageUrl": "https://m.media-amazon.com/images/I/B08JK4SG6L._AC_SL1500_.jpg",
+    "features": [
+      "German-engineered stovetop pressure cooker with two pressure levels",
+      "CookStar all-stove base — works on all heat sources including induction",
+      "Aroma button releases steam gradually for safe lid opening",
+      "Visual pressure indicator visible from across the kitchen",
+      "Heavy-gauge stainless steel construction",
+      "10-year manufacturer warranty"
+    ],
+    "pros": [
+      "German engineering results in the tightest-fitting lid and most precise pressure control",
+      "CookStar base ensures perfectly even heat distribution on all cooktops",
+      "Two pressure settings allow delicate vegetables and tough meats in one cooker"
+    ],
+    "cons": [
+      "At $280, it's expensive for a stovetop model when electric options cost less",
+      "Requires learning specific stovetop pressure technique"
+    ],
+    "specs": {
+      "Capacity": "8.5 quarts",
+      "Material": "18/10 stainless steel",
+      "Pressure Levels": "2",
+      "Induction Compatible": "Yes",
+      "Country of Origin": "Germany"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B08L8JVQTD",
+    "slug": "instant-pot-rio-wide-6-quart",
+    "name": "Instant Pot Rio Wide, 6-Quart Multi-Cooker",
+    "brand": "Instant Pot",
+    "category": "pressure-cookers",
+    "price": 79.95,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 7840,
+    "imageUrl": "https://m.media-amazon.com/images/I/B08L8JVQTD._AC_SL1500_.jpg",
+    "features": [
+      "Wide pot design improves sautéing area versus standard Instant Pot",
+      "6-quart capacity in a wider, shallower pot for easier access",
+      "7-in-1 functions matching the Duo",
+      "Wider lid opening makes cleanup easier",
+      "Same accessory compatibility as standard Instant Pot models",
+      "Nonstick inner pot option available"
+    ],
+    "pros": [
+      "Wider pot enables genuine one-layer searing unlike deep narrow standard Instant Pot",
+      "Easier to reach bottom and sides for cleaning than standard narrow pot",
+      "Standard 7-in-1 functions at competitive pricing"
+    ],
+    "cons": [
+      "Wider shape takes up more horizontal counter space than standard model",
+      "Less community recipe support specifically developed for the Rio Wide"
+    ],
+    "specs": {
+      "Capacity": "6 quarts",
+      "Functions": "7",
+      "Pot Shape": "Wide and shallow",
+      "Inner Pot": "Stainless steel",
+      "Dimensions": "15.7 x 13 x 12.3 inches"
+    },
+    "lastUpdated": "2026-03-14"
+  }
+]

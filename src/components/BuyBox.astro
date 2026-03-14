@@ -1,0 +1,68 @@
+---
+import type { Product } from "../lib/products.ts";
+import { affiliateUrl } from "../lib/affiliateUrl.ts";
+import RatingStars from "./RatingStars.astro";
+import DealBadge from "./DealBadge.astro";
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+const amazonUrl = affiliateUrl(product.asin);
+const formatted = product.price.toLocaleString("en-US", {
+  style: "currency",
+  currency: "USD",
+});
+---
+
+<aside
+  class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 flex flex-col gap-4"
+  style="position: sticky; top: 1rem;"
+>
+  <!-- Badge -->
+  {product.isBestSeller && <DealBadge type="best-seller" />}
+  {!product.isBestSeller && product.isAmazonChoice && <DealBadge type="amazon-choice" />}
+
+  <!-- Image -->
+  <a href={amazonUrl} rel="nofollow sponsored" target="_blank" class="block">
+    <img
+      src={product.imageUrl}
+      alt={product.name}
+      width="200"
+      height="200"
+      loading="lazy"
+      class="w-full max-w-[160px] mx-auto aspect-square object-contain"
+      onerror="this.src='/images/placeholder-product.svg'"
+    />
+  </a>
+
+  <!-- Name -->
+  <h3 class="font-semibold text-sm text-primary leading-snug line-clamp-3">{product.name}</h3>
+
+  <!-- Rating -->
+  <RatingStars rating={product.rating} reviewCount={product.reviewCount} />
+
+  <!-- Price -->
+  <div class="flex flex-col gap-0.5">
+    <span class="text-2xl font-bold text-primary">{formatted}</span>
+    <p class="text-xs text-muted">Price at time of writing</p>
+  </div>
+
+  <!-- CTA Button -->
+  <a
+    href={amazonUrl}
+    rel="nofollow sponsored"
+    target="_blank"
+    class="block w-full py-3 px-4 bg-accent text-white text-center text-sm font-bold rounded-lg hover:bg-accent/90 active:scale-[0.98] transition-all"
+  >
+    View on Amazon
+    <svg class="inline-block w-4 h-4 ml-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+    </svg>
+  </a>
+
+  <p class="text-xs text-muted text-center">
+    As an Amazon Associate, we earn from qualifying purchases.
+  </p>
+</aside>

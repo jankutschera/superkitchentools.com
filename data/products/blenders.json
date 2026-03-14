@@ -1,0 +1,374 @@
+[
+  {
+    "asin": "B008J8MJIQ",
+    "slug": "vitamix-5200-blender",
+    "name": "Vitamix 5200 Blender, Professional-Grade",
+    "brand": "Vitamix",
+    "category": "blenders",
+    "price": 449.95,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 21340,
+    "imageUrl": "https://m.media-amazon.com/images/I/B008J8MJIQ._AC_SL1500_.jpg",
+    "features": [
+      "2.0 HP motor handles ice, frozen fruit, nuts, and fibrous vegetables",
+      "Variable speed control plus pulse for full texture management",
+      "64-oz low-profile container maximizes capacity under kitchen cabinets",
+      "Laser-cut, hardened stainless steel blades that never need sharpening",
+      "Self-cleaning cycle with warm water and dish soap in 30-60 seconds",
+      "10-year full warranty — one of the best in the industry"
+    ],
+    "pros": [
+      "10-year warranty is unique and substantiated by genuine longevity in commercial use",
+      "Motor power handles tasks that destroy lesser blenders — nut butters, hot soups, frozen desserts",
+      "Self-cleaning feature is genuinely useful and works in under a minute"
+    ],
+    "cons": [
+      "Loud — among the loudest blenders available at peak performance",
+      "At $450, it's a premium investment primarily justified for heavy daily use"
+    ],
+    "specs": {
+      "Motor": "2.0 HP peak",
+      "Container Capacity": "64 oz",
+      "Speed Settings": "Variable (10)",
+      "Dimensions": "20.5 x 8.75 x 7.25 inches",
+      "Warranty": "10 years"
+    },
+    "isBestSeller": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B01AXM4WV2",
+    "slug": "ninja-professional-72-oz-countertop-blender",
+    "name": "Ninja Professional 72 oz Countertop Blender",
+    "brand": "Ninja",
+    "category": "blenders",
+    "price": 99.99,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 68430,
+    "imageUrl": "https://m.media-amazon.com/images/I/B01AXM4WV2._AC_SL1500_.jpg",
+    "features": [
+      "1000-watt motor with Total Crushing Technology",
+      "72-oz pitcher handles large batches for families",
+      "3 blade speeds plus pulse function",
+      "XL pitcher with pour spout and vented lid",
+      "Dishwasher-safe pitcher and blades for easy cleanup",
+      "Total Crushing blades for ice and frozen ingredients"
+    ],
+    "pros": [
+      "Best budget performance for ice crushing and frozen smoothies",
+      "72-oz capacity makes it ideal for large batches and families",
+      "Dishwasher-safe construction makes cleanup minimal"
+    ],
+    "cons": [
+      "Struggles with very thick nut butters and hot liquids under pressure",
+      "Noise level is significant — one of the louder budget blenders"
+    ],
+    "specs": {
+      "Motor": "1000W",
+      "Container Capacity": "72 oz",
+      "Speed Settings": "3 + pulse",
+      "Dimensions": "17 x 7.5 x 9.5 inches",
+      "Weight": "5.5 lbs"
+    },
+    "isAmazonChoice": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B07VX9CDGT",
+    "slug": "blendtec-classic-575-blender",
+    "name": "Blendtec Classic 575 Blender with WildSide+ Jar",
+    "brand": "Blendtec",
+    "category": "blenders",
+    "price": 349.95,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 9870,
+    "imageUrl": "https://m.media-amazon.com/images/I/B07VX9CDGT._AC_SL1500_.jpg",
+    "features": [
+      "3.8 HP motor — the most powerful residential blender motor available",
+      "WildSide+ jar with 90-degree angle creates a vortex for complete blending",
+      "Blunt blades (safe to clean by hand) that are nearly as effective as sharp",
+      "6 pre-programmed cycles including smoothies, salsa, and ice cream",
+      "8 manual speed settings",
+      "7-year warranty on motor and jar"
+    ],
+    "pros": [
+      "3.8 HP motor outperforms Vitamix in pure power metrics",
+      "Blunt blades are safer for children and during hand-washing",
+      "WildSide+ jar's 90-degree angle eliminates need for tamper on most blends"
+    ],
+    "cons": [
+      "Fewer jar size options than Vitamix — no 32-oz personal size",
+      "Preset cycles are less customizable than Vitamix's variable speed"
+    ],
+    "specs": {
+      "Motor": "3.8 HP peak",
+      "Container Capacity": "90 oz (WildSide+)",
+      "Speed Settings": "8 manual + 6 presets",
+      "Dimensions": "15 x 7.9 x 9.3 inches",
+      "Warranty": "7 years"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00W0GHSHO",
+    "slug": "vitamix-e310-explorian-blender",
+    "name": "Vitamix E310 Explorian Blender",
+    "brand": "Vitamix",
+    "category": "blenders",
+    "price": 349.95,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 14280,
+    "imageUrl": "https://m.media-amazon.com/images/I/B00W0GHSHO._AC_SL1500_.jpg",
+    "features": [
+      "Full Vitamix motor and blade quality at an entry-level Vitamix price",
+      "48-oz container for single servings and smaller batches",
+      "10-speed variable dial control plus pulse",
+      "Same laser-cut hardened steel blades as premium models",
+      "Self-cleaning in 30-60 seconds",
+      "5-year warranty for Explorian series"
+    ],
+    "pros": [
+      "Genuine Vitamix performance at the most accessible Vitamix price point",
+      "48-oz container is better sized for 1-2 person households than the 64-oz",
+      "Full variable speed control enables better texture control than preset-only blenders"
+    ],
+    "cons": [
+      "5-year warranty (vs. 10 for premium models) is a real trade-off",
+      "48-oz container can't handle family-sized batches"
+    ],
+    "specs": {
+      "Motor": "2.0 HP peak",
+      "Container Capacity": "48 oz",
+      "Speed Settings": "Variable (10)",
+      "Dimensions": "17.25 x 7.7 x 8.5 inches",
+      "Warranty": "5 years"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B07PJKSVXY",
+    "slug": "ninja-foodi-cold-hot-blender",
+    "name": "Ninja Hot and Cold Brewed System",
+    "brand": "Ninja",
+    "category": "blenders",
+    "price": 149.99,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 8730,
+    "imageUrl": "https://m.media-amazon.com/images/I/B07PJKSVXY._AC_SL1500_.jpg",
+    "features": [
+      "1400-watt motor handles both hot and cold blending",
+      "Auto-iQ programs automatically adjust speed for soups and smoothies",
+      "XL 72-oz pitcher with heat-safe lid",
+      "Dishwasher-safe components for quick cleanup",
+      "Stacked blade assembly reaches all areas of the pitcher",
+      "Tamper included for thick blends"
+    ],
+    "pros": [
+      "1400-watt motor outperforms standard Ninja at similar price",
+      "Large 72-oz capacity serves 4-6 people without batching",
+      "Heat-safe pitcher is a practical differentiator for soup making"
+    ],
+    "cons": [
+      "Auto-iQ programs limit manual speed control flexibility",
+      "Lid can be difficult to seal completely when filling to capacity"
+    ],
+    "specs": {
+      "Motor": "1400W",
+      "Container Capacity": "72 oz",
+      "Heat-Safe": "Yes",
+      "Dimensions": "18 x 8 x 9.5 inches",
+      "Weight": "7.5 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B085HZKN4Y",
+    "slug": "nutribullet-pro-900-series",
+    "name": "NutriBullet Pro 900 Series Personal Blender",
+    "brand": "NutriBullet",
+    "category": "blenders",
+    "price": 79.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 89540,
+    "imageUrl": "https://m.media-amazon.com/images/I/B085HZKN4Y._AC_SL1500_.jpg",
+    "features": [
+      "900-watt motor for single-serve smoothies and nutrient extraction",
+      "Twist-to-blend cup design for mess-free operation and drinking",
+      "32-oz and 24-oz cups included with lip rings",
+      "Cyclonic blade action breaks down tough ingredients",
+      "Dishwasher-safe cups and lids",
+      "Compact footprint stores in small spaces"
+    ],
+    "pros": [
+      "Single-serve design is the most convenient for daily smoothie drinkers",
+      "Drink directly from the blending cup — zero transfer and cleanup",
+      "Small footprint fits in even the most cramped kitchen spaces"
+    ],
+    "cons": [
+      "Not suitable for large batches — single-serve only",
+      "Motor struggles with frozen fruit and ice at maximum capacity"
+    ],
+    "specs": {
+      "Motor": "900W",
+      "Cup Capacities": "32 oz and 24 oz",
+      "Blade": "Cyclonic extractor",
+      "Dimensions": "13 x 5 x 5 inches",
+      "Weight": "2.7 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B08KH9HBMM",
+    "slug": "vitamix-a3500-ascent-series",
+    "name": "Vitamix A3500 Ascent Series Smart Blender",
+    "brand": "Vitamix",
+    "category": "blenders",
+    "price": 699.95,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 6840,
+    "imageUrl": "https://m.media-amazon.com/images/I/B08KH9HBMM._AC_SL1500_.jpg",
+    "features": [
+      "Touchscreen interface with 5 programmable settings",
+      "Built-in wireless connectivity via Vitamix Perfect Blend app",
+      "Motor base detects container size and adjusts program accordingly",
+      "Self-detect technology works with full Ascent container lineup",
+      "10-year full warranty",
+      "Timer display shows remaining blend time"
+    ],
+    "pros": [
+      "Smart container detection eliminates manual size adjustment",
+      "App integration provides unlimited recipe programs beyond built-in presets",
+      "Touchscreen is easier to clean than buttons or dials"
+    ],
+    "cons": [
+      "At $700, it's significantly more expensive than A2500 without proportional performance gains",
+      "App dependency adds a maintenance variable — app support is not guaranteed forever"
+    ],
+    "specs": {
+      "Motor": "2.2 HP peak",
+      "Container Capacity": "64 oz",
+      "Interface": "Touchscreen",
+      "Warranty": "10 years",
+      "Weight": "12.5 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B0097YQGHM",
+    "slug": "cuisinart-sbr-1100-smart-stick-hand-blender",
+    "name": "Cuisinart RHB-100TG EvolutionX Cordless Hand Blender",
+    "brand": "Cuisinart",
+    "category": "blenders",
+    "price": 69.99,
+    "currency": "USD",
+    "rating": 4.3,
+    "reviewCount": 11280,
+    "imageUrl": "https://m.media-amazon.com/images/I/B0097YQGHM._AC_SL1500_.jpg",
+    "features": [
+      "Cordless design with rechargeable lithium battery",
+      "8 speeds for precise control of pureeing and emulsifying",
+      "Fits standard wide-mouth mason jars for direct blending and storage",
+      "Bell-shaped blending guard prevents splashing",
+      "Detachable shaft dishwasher-safe",
+      "2 charge indicators for battery monitoring"
+    ],
+    "pros": [
+      "Cordless design is genuinely convenient for use directly in pots on the stove",
+      "Mason jar compatibility enables blend-and-store in a single container",
+      "Bell guard nearly eliminates splashing compared to standard immersion blenders"
+    ],
+    "cons": [
+      "Battery life limits extended use sessions",
+      "Lower blending power than corded immersion blenders"
+    ],
+    "specs": {
+      "Type": "Cordless immersion/hand blender",
+      "Speed Settings": "8",
+      "Battery": "Rechargeable lithium",
+      "Shaft Length": "7 inches",
+      "Weight": "1.5 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B08THWQFB7",
+    "slug": "breville-super-q-blender",
+    "name": "Breville Super Q Blender",
+    "brand": "Breville",
+    "category": "blenders",
+    "price": 499.95,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 4320,
+    "imageUrl": "https://m.media-amazon.com/images/I/B08THWQFB7._AC_SL1500_.jpg",
+    "features": [
+      "1800-watt 3.5 HP DC motor — the most powerful in this guide",
+      "NoiseCancel technology with silencing enclosure reduces volume by 50%",
+      "LCD display with timer and 12 speed settings",
+      "5 intelligent programs: Smoothie, Frozen, Nut Butter, Juice, and Clean",
+      "2-liter jug plus 700ml personal cup included",
+      "Tamper included for ultra-thick blends"
+    ],
+    "pros": [
+      "Quietest high-performance blender available — noise enclosure is genuine soundproofing",
+      "1800-watt motor with DC efficiency is more powerful than Vitamix AC motors",
+      "Two included jars cover both family and personal blending needs"
+    ],
+    "cons": [
+      "At $500, it's competing directly with Vitamix without the same brand legacy",
+      "Noise enclosure adds significant counter space and can't be used open"
+    ],
+    "specs": {
+      "Motor": "1800W (3.5 HP)",
+      "Jug Capacity": "2 liters (67 oz)",
+      "Noise Reduction": "Yes (enclosure)",
+      "Speed Settings": "12 + 5 presets",
+      "Warranty": "10 years"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B07F6VQW3Q",
+    "slug": "nutribullet-blender-combo-1200w",
+    "name": "NutriBullet Blender Combo, 1200 Watt",
+    "brand": "NutriBullet",
+    "category": "blenders",
+    "price": 129.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 32450,
+    "imageUrl": "https://m.media-amazon.com/images/I/B07F6VQW3Q._AC_SL1500_.jpg",
+    "features": [
+      "1200-watt motor handles both full pitcher and personal cup blending",
+      "64-oz pitcher for large batches plus 32-oz personal cup",
+      "Compatible with original NutriBullet cups and lids",
+      "Easy-lift pitcher handle with pour spout",
+      "3 speeds plus pulse and Auto-Clean cycle",
+      "Dishwasher-safe cups, lids, and pitcher"
+    ],
+    "pros": [
+      "Dual-use design handles both family batches and single-serve with one machine",
+      "1200-watt motor is significantly more powerful than base NutriBullet Pro",
+      "Backward compatibility with existing NutriBullet cups is a practical plus"
+    ],
+    "cons": [
+      "Takes up more counter space than the personal NutriBullet",
+      "Pitcher doesn't perform at the same level as dedicated full-size blenders"
+    ],
+    "specs": {
+      "Motor": "1200W",
+      "Pitcher Capacity": "64 oz",
+      "Cup Capacity": "32 oz",
+      "Speed Settings": "3 + pulse + auto-clean",
+      "Weight": "6.2 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  }
+]

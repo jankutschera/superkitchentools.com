@@ -1,0 +1,374 @@
+[
+  {
+    "asin": "B009JXPS6U",
+    "slug": "cuisinart-14-cup-food-processor-dfp-14bcwx",
+    "name": "Cuisinart DFP-14BCWX 14-Cup Food Processor",
+    "brand": "Cuisinart",
+    "category": "food-processors",
+    "price": 199.95,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 28750,
+    "imageUrl": "https://m.media-amazon.com/images/I/B009JXPS6U._AC_SL1500_.jpg",
+    "features": [
+      "720-watt motor handles shredding, slicing, chopping, and kneading",
+      "14-cup work bowl capacity for large-batch processing",
+      "S-blade, slicing disc, shredding disc, and dough blade included",
+      "Extra-large feed tube accommodates whole fruits and vegetables",
+      "Dishwasher-safe bowl, lid, and blades for easy cleanup",
+      "Simple 3-button controls: On, Off/Pulse, and dedicated Pulse"
+    ],
+    "pros": [
+      "Most trusted food processor brand for home cooks — Cuisinart reliability is well-documented",
+      "14-cup capacity handles family-sized meal prep without refilling bowl",
+      "Simple 3-button operation means minimal learning curve"
+    ],
+    "cons": [
+      "Plastic bowl can stain with tomatoes, turmeric, and other pigments",
+      "Slicing disc produces less uniform slices than a mandoline"
+    ],
+    "specs": {
+      "Bowl Capacity": "14 cups",
+      "Motor": "720W",
+      "Included Blades": "S-blade, slicing disc, shredding disc, dough blade",
+      "Feed Tube": "Extra-large",
+      "Dimensions": "11.5 x 9 x 15 inches"
+    },
+    "isBestSeller": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B076QVMN8B",
+    "slug": "breville-bfp800xl-sous-chef-16-cup",
+    "name": "Breville BFP800XL Sous Chef 16 Cup Food Processor",
+    "brand": "Breville",
+    "category": "food-processors",
+    "price": 399.95,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 8940,
+    "imageUrl": "https://m.media-amazon.com/images/I/B076QVMN8B._AC_SL1500_.jpg",
+    "features": [
+      "1200-watt motor handles virtually any food processing task",
+      "16-cup full-size bowl plus 2.5-cup mini bowl for small tasks",
+      "24 functions accessible via integrated disc storage",
+      "Super-wide feed chute accommodates whole vegetables without pre-cutting",
+      "LCD display with countdown timer for consistent results",
+      "Induction motor with no brushes — designed to last longer"
+    ],
+    "pros": [
+      "1200-watt induction motor outperforms standard food processor motors",
+      "Dual-bowl system handles both full-batch and small-quantity tasks without changing bowls",
+      "Wide feed chute reduces pre-prep time significantly"
+    ],
+    "cons": [
+      "At $400, it's a significant investment compared to Cuisinart for similar output",
+      "16 cups is more capacity than most home cooks need regularly"
+    ],
+    "specs": {
+      "Bowl Capacity": "16 cups full / 2.5 cup mini",
+      "Motor": "1200W induction",
+      "LCD Display": "Yes (countdown timer)",
+      "Feed Chute Width": "5.5 inches",
+      "Dimensions": "12.8 x 9.6 x 17.4 inches"
+    },
+    "isAmazonChoice": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B008C5U3X0",
+    "slug": "kitchenaid-7-cup-food-processor-kfp0718",
+    "name": "KitchenAid 7-Cup Food Processor",
+    "brand": "KitchenAid",
+    "category": "food-processors",
+    "price": 99.99,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 16540,
+    "imageUrl": "https://m.media-amazon.com/images/I/B008C5U3X0._AC_SL1500_.jpg",
+    "features": [
+      "7-cup capacity ideal for small families or weekly meal prep",
+      "240-watt motor for everyday chopping and slicing",
+      "Multi-purpose blade, slicing disc, and reversible shredding disc",
+      "ExactSlice system adjusts slice thickness from thin to thick",
+      "Compact footprint for smaller kitchens",
+      "Available in multiple colors matching KitchenAid appliance line"
+    ],
+    "pros": [
+      "ExactSlice external thickness adjustment is more intuitive than competing disc systems",
+      "KitchenAid color options allow matching with stand mixer and other appliances",
+      "7-cup size is right-sized for everyday tasks without overwhelming storage"
+    ],
+    "cons": [
+      "240-watt motor struggles with dense, hard vegetables at full capacity",
+      "7-cup bowl limits usefulness for larger batch cooking"
+    ],
+    "specs": {
+      "Bowl Capacity": "7 cups",
+      "Motor": "240W",
+      "Included Discs": "Multi-purpose blade, slicing, reversible shredding",
+      "ExactSlice": "Yes",
+      "Dimensions": "9.2 x 9.3 x 13.8 inches"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B0892FP6V9",
+    "slug": "ninja-fn100-professional-food-processor",
+    "name": "Ninja FN100 Pro Food Processor, 9-Cup Bowl",
+    "brand": "Ninja",
+    "category": "food-processors",
+    "price": 79.99,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 22180,
+    "imageUrl": "https://m.media-amazon.com/images/I/B0892FP6V9._AC_SL1500_.jpg",
+    "features": [
+      "450-watt motor with reversible disc for slicing and shredding",
+      "9-cup bowl handles medium family prep tasks",
+      "Auto-spiralizer function for vegetable noodles (zucchini, beets, etc.)",
+      "4 manual and automatic speeds plus pulse",
+      "Dishwasher-safe components for easy cleanup",
+      "Compact design with integrated cord storage"
+    ],
+    "pros": [
+      "Built-in spiralizer is a genuine differentiator for vegetable-forward cooking",
+      "Best-value 9-cup processor under $80 with solid performance",
+      "Compact design with cord storage solves the tangled-cord storage problem"
+    ],
+    "cons": [
+      "Spiralizer function is slower and less consistent than a dedicated spiralizer",
+      "Plastic components flex more than Cuisinart or Breville under heavy use"
+    ],
+    "specs": {
+      "Bowl Capacity": "9 cups",
+      "Motor": "450W",
+      "Spiralizer": "Yes (built-in)",
+      "Speed Settings": "4 + pulse",
+      "Dimensions": "11 x 8 x 13 inches"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B07C12QHXD",
+    "slug": "cuisinart-mini-prep-plus-4-cup",
+    "name": "Cuisinart Mini-Prep Plus 4-Cup Food Processor",
+    "brand": "Cuisinart",
+    "category": "food-processors",
+    "price": 49.95,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 31240,
+    "imageUrl": "https://m.media-amazon.com/images/I/B07C12QHXD._AC_SL1500_.jpg",
+    "features": [
+      "Compact 4-cup bowl for small tasks like herbs, garlic, and nuts",
+      "AutoReversing SmartPower blade chops and grinds in different directions",
+      "Two-speed buttons: chop (forward blade) and grind (reverse blade)",
+      "Dishwasher-safe bowl and blade",
+      "Takes up minimal counter space",
+      "Stainless steel blade is reversible for dual-action processing"
+    ],
+    "pros": [
+      "AutoReversing blade makes it uniquely effective at both chopping AND grinding",
+      "Perfect size for garlic, ginger, herbs, and small spice quantities",
+      "Most affordable entry into Cuisinart food processing quality"
+    ],
+    "cons": [
+      "4-cup capacity is insufficient for full recipe quantities",
+      "No slicing or shredding discs — pure chop/grind functionality only"
+    ],
+    "specs": {
+      "Bowl Capacity": "4 cups",
+      "Motor": "250W",
+      "Blade": "Reversible SmartPower",
+      "Speed Settings": "2 (chop/grind)",
+      "Dimensions": "7.8 x 6.7 x 9.1 inches"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B007WDXOEY",
+    "slug": "hamilton-beach-food-processor-10-cup",
+    "name": "Hamilton Beach 10-Cup Food Processor & Vegetable Chopper",
+    "brand": "Hamilton Beach",
+    "category": "food-processors",
+    "price": 49.99,
+    "currency": "USD",
+    "rating": 4.3,
+    "reviewCount": 24780,
+    "imageUrl": "https://m.media-amazon.com/images/I/B007WDXOEY._AC_SL1500_.jpg",
+    "features": [
+      "10-cup bowl at entry-level price point",
+      "450-watt motor for chopping, shredding, and slicing",
+      "Reversible slicing/shredding disc and S-blade included",
+      "Stainless steel disc and blade for durability",
+      "Large feed tube reduces pre-cutting prep",
+      "Bowl, lid, and blades are all dishwasher-safe"
+    ],
+    "pros": [
+      "10-cup capacity at $50 is the best value proposition in food processors",
+      "Stainless steel disc and blade are more durable than plastic alternatives",
+      "Dishwasher-safe construction minimizes post-prep cleanup time"
+    ],
+    "cons": [
+      "Motor struggles with harder ingredients like carrots and beets at full bowl",
+      "Plastic body feels less substantial than Cuisinart at same price"
+    ],
+    "specs": {
+      "Bowl Capacity": "10 cups",
+      "Motor": "450W",
+      "Included Blades": "S-blade, slicing/shredding disc",
+      "Feed Tube": "Large",
+      "Weight": "5.4 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B0013CDAMC",
+    "slug": "magimix-5200xl-food-processor",
+    "name": "Magimix 5200XL Premium Food Processor",
+    "brand": "Magimix",
+    "category": "food-processors",
+    "price": 699.99,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 1890,
+    "imageUrl": "https://m.media-amazon.com/images/I/B0013CDAMC._AC_SL1500_.jpg",
+    "features": [
+      "Exclusive induction motor runs at 3 speeds in one direction only — eliminating motor stress",
+      "Three nested bowl sizes (small, medium, large) included",
+      "Cuisinart invented the food processor; Magimix makes the original Robot-Coupe for home use",
+      "30-year motor and 5-year product warranty",
+      "Professional-grade stainless steel blades and discs",
+      "Made in France at the Robot-Coupe facility"
+    ],
+    "pros": [
+      "30-year motor warranty is the longest of any food processor — backed by genuine durability",
+      "Three included bowls eliminate the need to wash between tasks of different volumes",
+      "Robot-Coupe manufacturing pedigree ensures the highest component quality"
+    ],
+    "cons": [
+      "At $700, it costs more than most cooks' entire small appliance budget",
+      "French voltage designed unit may require voltage converter in some regions"
+    ],
+    "specs": {
+      "Bowl Capacities": "Small (1.2L), Medium (2.6L), Large (3.6L)",
+      "Motor": "Induction, 1100W",
+      "Warranty": "30 years motor, 5 years product",
+      "Country of Origin": "France",
+      "Weight": "16.8 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00EMXB66C",
+    "slug": "cuisinart-elemental-8-cup-food-processor",
+    "name": "Cuisinart Elemental 8 Cup Food Processor",
+    "brand": "Cuisinart",
+    "category": "food-processors",
+    "price": 79.95,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 12430,
+    "imageUrl": "https://m.media-amazon.com/images/I/B00EMXB66C._AC_SL1500_.jpg",
+    "features": [
+      "8-cup bowl for everyday chopping, pureeing, and mixing",
+      "350-watt motor with 2-speed control plus pulse",
+      "Stainless steel blade and reversible shredding/slicing disc",
+      "Recipe book included for immediate inspiration",
+      "Easy-to-clean components — all dishwasher-safe",
+      "Compact design for kitchens with limited counter space"
+    ],
+    "pros": [
+      "Cuisinart reliability at the most affordable size in the lineup",
+      "8-cup bowl is ideal for couples and small families",
+      "Straightforward 2-speed operation requires no manual"
+    ],
+    "cons": [
+      "350-watt motor is the least powerful Cuisinart — struggles with large quantities",
+      "No mini bowl included for small-quantity tasks"
+    ],
+    "specs": {
+      "Bowl Capacity": "8 cups",
+      "Motor": "350W",
+      "Speed Settings": "2 + pulse",
+      "Included Blades": "Stainless blade, reversible disc",
+      "Dimensions": "9.6 x 8.3 x 13.2 inches"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B07N6TWH47",
+    "slug": "ninja-professional-food-processor-fp301",
+    "name": "Ninja Professional Food Processor with Auto-IQ, 12-Cup",
+    "brand": "Ninja",
+    "category": "food-processors",
+    "price": 119.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 18340,
+    "imageUrl": "https://m.media-amazon.com/images/I/B07N6TWH47._AC_SL1500_.jpg",
+    "features": [
+      "800-watt motor with Auto-IQ pre-programmed intelligence",
+      "12-cup full-size bowl handles large batch recipes",
+      "Auto-IQ programs: Chop, Puree, and Dough — eliminate speed guessing",
+      "3 speeds plus pulse for manual control",
+      "Reversible slicing disc and shredding disc included",
+      "Dishwasher-safe all components"
+    ],
+    "pros": [
+      "Auto-IQ programs remove guesswork from common processing tasks",
+      "800-watt motor handles dense vegetables without hesitation",
+      "12-cup capacity covers full recipe quantities without splitting batches"
+    ],
+    "cons": [
+      "Auto-IQ programs can over-process ingredients if left running — requires monitoring",
+      "Wide base takes up significant counter footprint"
+    ],
+    "specs": {
+      "Bowl Capacity": "12 cups",
+      "Motor": "800W",
+      "Auto-IQ Programs": "Chop, Puree, Dough",
+      "Speed Settings": "3 + pulse",
+      "Dimensions": "12.2 x 9 x 14.5 inches"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00LVQ4U1W",
+    "slug": "robot-coupe-r2-commercial-food-processor",
+    "name": "Robot-Coupe R2N Commercial Food Processor",
+    "brand": "Robot-Coupe",
+    "category": "food-processors",
+    "price": 599.00,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 1240,
+    "imageUrl": "https://m.media-amazon.com/images/I/B00LVQ4U1W._AC_SL1500_.jpg",
+    "features": [
+      "Commercial-grade 1 HP motor with no brushes for maximum longevity",
+      "3-quart stainless steel bowl with safety lid",
+      "NSF-certified for commercial kitchen and restaurant use",
+      "Induction motor produces no sparks and no motor noise",
+      "Permanently sealed bearings require no maintenance",
+      "Made in France — the original food processor manufacturer"
+    ],
+    "pros": [
+      "The standard in professional restaurant kitchens for decades",
+      "Stainless steel bowl is more durable and hygienic than plastic equivalents",
+      "Induction motor will outlast plastic-bodied competitors by years of professional use"
+    ],
+    "cons": [
+      "At $600, it's priced for commercial use — difficult to justify for home cooks",
+      "3-quart capacity is smaller than many home processors in its price range"
+    ],
+    "specs": {
+      "Bowl Capacity": "3 quarts (stainless steel)",
+      "Motor": "1 HP induction",
+      "NSF Certified": "Yes",
+      "Country of Origin": "France",
+      "Weight": "17.4 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  }
+]

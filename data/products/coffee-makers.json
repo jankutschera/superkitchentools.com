@@ -1,0 +1,379 @@
+[
+  {
+    "asin": "B00YCEL4TQ",
+    "slug": "breville-precision-brewer-thermal",
+    "name": "Breville BDC450 Precision Brewer Thermal Coffee Maker",
+    "brand": "Breville",
+    "category": "coffee-makers",
+    "price": 199.95,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 23840,
+    "imageUrl": "https://m.media-amazon.com/images/I/B00YCEL4TQ._AC_SL1500_.jpg",
+    "features": [
+      "SCA Gold Cup certified — meets Specialty Coffee Association brewing standards",
+      "Precise 200°F brewing temperature for optimal extraction",
+      "Thermal carafe keeps coffee hot for 2+ hours without a warming plate",
+      "Adjustable brewing modes: Fast, Regular, Strong, and Gold Cup",
+      "Programmable 24-hour timer for wake-up brewing",
+      "Accommodates 1x4 or flat-bottom filters for flexible use"
+    ],
+    "pros": [
+      "SCA Gold Cup certification is the best proof of drip coffee quality",
+      "Thermal carafe eliminates the bitter taste of warming plate coffee",
+      "200°F brewing temperature is consistently accurate unlike budget machines"
+    ],
+    "cons": [
+      "At $200, it's a premium investment for a drip machine",
+      "Thermal carafe requires pouring carefully — narrow opening drips slightly"
+    ],
+    "specs": {
+      "Capacity": "60 oz (12 cups)",
+      "Brewing Temperature": "200°F",
+      "Carafe Type": "Double-wall stainless thermal",
+      "Programmable": "Yes (24-hour)",
+      "Dimensions": "15.5 x 8 x 16 inches"
+    },
+    "isBestSeller": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B076GLNS2J",
+    "slug": "oxo-brew-9-cup-coffee-maker",
+    "name": "OXO Brew 9-Cup Coffee Maker",
+    "brand": "OXO",
+    "category": "coffee-makers",
+    "price": 199.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 12430,
+    "imageUrl": "https://m.media-amazon.com/images/I/B076GLNS2J._AC_SL1500_.jpg",
+    "features": [
+      "SCA Gold Cup certified — one of the few drip makers to pass rigorous testing",
+      "Rainmaker shower head distributes water evenly over all coffee grounds",
+      "Precise temperature control with optimized pre-infusion bloom",
+      "9-cup stainless steel thermal carafe",
+      "One-touch brewing with intuitive controls",
+      "Pod-free design — no proprietary consumables"
+    ],
+    "pros": [
+      "Rainmaker shower head produces more even extraction than standard drip",
+      "9-cup size is the practical sweet spot for 1-4 person households",
+      "OXO reliability and clean design stand out in a crowded category"
+    ],
+    "cons": [
+      "9-cup capacity may not suit large households needing 12-cup batches",
+      "No programmable timer on base model"
+    ],
+    "specs": {
+      "Capacity": "9 cups",
+      "Brewing Temperature": "197.6°F - 204.8°F",
+      "Carafe Type": "Stainless thermal",
+      "Programmable": "No",
+      "Dimensions": "14.2 x 8.7 x 15.5 inches"
+    },
+    "isAmazonChoice": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00FLYWNYQ",
+    "slug": "baratza-encore-burr-grinder",
+    "name": "Baratza Encore Conical Burr Coffee Grinder",
+    "brand": "Baratza",
+    "category": "coffee-makers",
+    "subcategory": "grinders",
+    "price": 169.00,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 18920,
+    "imageUrl": "https://m.media-amazon.com/images/I/B00FLYWNYQ._AC_SL1500_.jpg",
+    "features": [
+      "40 grind settings cover everything from fine espresso to coarse French press",
+      "Conical burr set produces consistent particle size for even extraction",
+      "Baratza's service ecosystem — easily repaired rather than replaced",
+      "Pulse button for precise dosing",
+      "Hardened steel conical burrs for durability",
+      "Made in Taiwan with Baratza's quality control oversight"
+    ],
+    "pros": [
+      "Widely considered the best entry-level burr grinder for the price",
+      "Baratza repair program means the grinder can last 10+ years with maintenance",
+      "40 settings provide enough range for drip, pour-over, and French press"
+    ],
+    "cons": [
+      "Not recommended for espresso — insufficient grind fineness and consistency",
+      "Static can cause grounds to cling to hopper and grounds bin"
+    ],
+    "specs": {
+      "Grind Settings": "40",
+      "Burr Type": "Conical steel",
+      "Hopper Capacity": "8 oz",
+      "Weight": "7.5 lbs",
+      "Wattage": "110W"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B01HCEVKDK",
+    "slug": "cuisinart-dcc-3200-perfectemp-14-cup",
+    "name": "Cuisinart DCC-3200P1 PerfecTemp 14-Cup Programmable Coffee Maker",
+    "brand": "Cuisinart",
+    "category": "coffee-makers",
+    "price": 79.95,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 42780,
+    "imageUrl": "https://m.media-amazon.com/images/I/B01HCEVKDK._AC_SL1500_.jpg",
+    "features": [
+      "14-cup capacity handles large households or office settings",
+      "PerfecTemp technology maintains precise brewing temperature",
+      "Adjustable keep-warm temperature from 150°F to 185°F",
+      "24-hour programmable timer for automatic brewing",
+      "Brew Strength control: Regular or Bold",
+      "Charcoal water filter included to improve taste"
+    ],
+    "pros": [
+      "14-cup capacity at $80 is outstanding value for large households",
+      "Adjustable keep-warm temperature is a unique feature preventing burned coffee",
+      "24-hour programming covers any morning schedule"
+    ],
+    "cons": [
+      "Glass carafe with warming plate degrades coffee quality after 30+ minutes",
+      "Not SCA certified — brewing temperature less precise than Breville or OXO"
+    ],
+    "specs": {
+      "Capacity": "14 cups",
+      "Brewing Temperature": "Precise (not published)",
+      "Carafe Type": "Glass with warming plate",
+      "Programmable": "Yes (24-hour)",
+      "Weight": "5.3 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B0B4P4NFNL",
+    "slug": "de-longhi-dedica-espresso-machine",
+    "name": "De'Longhi Dedica Style EC685M Espresso Machine",
+    "brand": "De'Longhi",
+    "category": "coffee-makers",
+    "subcategory": "espresso",
+    "price": 229.95,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 14380,
+    "imageUrl": "https://m.media-amazon.com/images/I/B0B4P4NFNL._AC_SL1500_.jpg",
+    "features": [
+      "15-bar professional pump pressure for genuine espresso extraction",
+      "Ultra-compact 6-inch wide body fits in tight kitchen spaces",
+      "Manual frother for steamed milk and cappuccinos",
+      "Thermoblock heating system ready in 35 seconds",
+      "Single and double espresso shot programs",
+      "Compatible with ESE pods or ground coffee"
+    ],
+    "pros": [
+      "6-inch body is the most compact espresso machine in its class",
+      "15-bar pump pressure matches machines at twice the price",
+      "35-second heat-up time is among the fastest in the category"
+    ],
+    "cons": [
+      "Small 34oz water tank requires frequent refilling with regular use",
+      "Manual frother requires technique — less consistent than automatic frothers"
+    ],
+    "specs": {
+      "Pump Pressure": "15 bar",
+      "Width": "6 inches",
+      "Tank Capacity": "34 oz",
+      "Heat-Up Time": "35 seconds",
+      "Weight": "8.2 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B08XQ4CY8C",
+    "slug": "fellow-ode-brew-grinder",
+    "name": "Fellow Ode Brew Grinder Gen 2",
+    "brand": "Fellow",
+    "category": "coffee-makers",
+    "subcategory": "grinders",
+    "price": 365.00,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 3840,
+    "imageUrl": "https://m.media-amazon.com/images/I/B08XQ4CY8C._AC_SL1500_.jpg",
+    "features": [
+      "83mm flat burrs designed for filter coffee — exceptional particle uniformity",
+      "31 grind settings (Gen 2 adds micro-adjustments between main settings)",
+      "Single-dose design with zero retention — no stale grounds",
+      "Anti-static grounds catch eliminates mess",
+      "Quiet Brewing Mode reduces motor noise by 50%",
+      "Clocks a full dose in under 10 seconds"
+    ],
+    "pros": [
+      "Flat burr design produces the most uniform grind for filter coffee methods",
+      "Zero-retention single-dose design means fresher coffee with no stale leftovers",
+      "Industrial design makes it the most aesthetically premium grinder available"
+    ],
+    "cons": [
+      "Not suitable for espresso — flat burr geometry optimized for filter only",
+      "At $365, it's a luxury purchase for home filter coffee enthusiasts"
+    ],
+    "specs": {
+      "Burr Size": "83mm flat steel",
+      "Grind Settings": "31 (with micro-adjustment)",
+      "Retention": "Near-zero",
+      "Weight": "5.5 lbs",
+      "Wattage": "180W"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00NHPXOUS",
+    "slug": "nespresso-vertuo-next-coffee-machine",
+    "name": "Nespresso Vertuo Next Coffee and Espresso Machine",
+    "brand": "Nespresso",
+    "category": "coffee-makers",
+    "price": 139.00,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 31560,
+    "imageUrl": "https://m.media-amazon.com/images/I/B00NHPXOUS._AC_SL1500_.jpg",
+    "features": [
+      "Centrifusion technology spins pods at 7,000 RPM for espresso and coffee",
+      "6 cup sizes from espresso (1.35 oz) to Alto (14 oz)",
+      "Automatic pod recognition via barcode scan",
+      "15-second heat-up time",
+      "WiFi connected for software updates",
+      "Slim design — only 5.5 inches wide"
+    ],
+    "pros": [
+      "Simplest operation of any espresso-adjacent machine — insert, close, press",
+      "6 cup size options cover every coffee occasion",
+      "WiFi connectivity enables recipe updates via Nespresso app"
+    ],
+    "cons": [
+      "Proprietary pod ecosystem locks you into Nespresso pricing ($0.90-$1.40 per pod)",
+      "Output is not true espresso by technical standards despite marketing"
+    ],
+    "specs": {
+      "Cup Sizes": "6 (1.35 oz to 14 oz)",
+      "Heat-Up Time": "15 seconds",
+      "Tank Capacity": "37 oz",
+      "Width": "5.5 inches",
+      "Weight": "8.4 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B07PCKNMBF",
+    "slug": "hario-v60-pour-over-starter-kit",
+    "name": "Hario V60 Coffee Pour Over Starter Kit",
+    "brand": "Hario",
+    "category": "coffee-makers",
+    "subcategory": "pour-over",
+    "price": 34.99,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 8930,
+    "imageUrl": "https://m.media-amazon.com/images/I/B07PCKNMBF._AC_SL1500_.jpg",
+    "features": [
+      "Includes V60 dripper, glass server, measuring spoon, and paper filters",
+      "Spiral ribs inside dripper maintain proper airflow for optimal extraction",
+      "Single large hole provides barista-controlled brew time",
+      "Heat-resistant glass server with 600ml capacity",
+      "Made in Japan with Japanese quality standards",
+      "The industry standard for specialty coffee pour-over brewing"
+    ],
+    "pros": [
+      "Produces the brightest, clearest coffee flavor of any brewing method",
+      "Full control over brew time and technique allows infinite recipe refinement",
+      "Glass dripper and server are BPA-free and easy to clean"
+    ],
+    "cons": [
+      "Requires technique — produces poor results without proper grind size and pour rate",
+      "Proprietary Hario V60 filters are required — not compatible with other brands"
+    ],
+    "specs": {
+      "Dripper Size": "02 (for 1-4 cups)",
+      "Server Capacity": "600ml",
+      "Material": "Borosilicate glass",
+      "Filters Included": "40",
+      "Origin": "Japan"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00LOCNZ9I",
+    "slug": "bonavita-8-cup-coffee-maker-bv1900ts",
+    "name": "Bonavita 8-Cup One-Touch Coffee Maker",
+    "brand": "Bonavita",
+    "category": "coffee-makers",
+    "price": 79.99,
+    "currency": "USD",
+    "rating": 4.3,
+    "reviewCount": 17650,
+    "imageUrl": "https://m.media-amazon.com/images/I/B00LOCNZ9I._AC_SL1500_.jpg",
+    "features": [
+      "SCA Gold Cup certified for precise 195-205°F brewing temperature",
+      "Pre-infusion mode saturates grounds before full brewing for better extraction",
+      "Stainless steel thermal carafe maintains temperature for 4+ hours",
+      "8-cup capacity in a compact, minimal footprint",
+      "Single button operation — no complicated programming",
+      "Flat-bottomed filter basket for even saturation"
+    ],
+    "pros": [
+      "SCA certified quality at the lowest price of any certified drip maker",
+      "Pre-infusion bloom produces noticeably better extraction than standard drip",
+      "Single-button simplicity makes it the easiest quality coffee maker to use"
+    ],
+    "cons": [
+      "No programmable timer — must be present to start brewing",
+      "8-cup capacity may be insufficient for large households"
+    ],
+    "specs": {
+      "Capacity": "8 cups",
+      "Brewing Temperature": "195°F - 205°F",
+      "Carafe Type": "Stainless thermal",
+      "Programmable": "No",
+      "Weight": "4.2 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B09B3TB4N9",
+    "slug": "timemore-c3-manual-hand-grinder",
+    "name": "TIMEMORE Chestnut C3 Pro Manual Hand Coffee Grinder",
+    "brand": "TIMEMORE",
+    "category": "coffee-makers",
+    "subcategory": "grinders",
+    "price": 79.95,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 6780,
+    "imageUrl": "https://m.media-amazon.com/images/I/B09B3TB4N9._AC_SL1500_.jpg",
+    "features": [
+      "Professional-grade steel conical burrs in a compact hand grinder",
+      "32-click step adjustment covers French press through fine pour-over",
+      "Aluminum alloy body with comfortable grip for efficient hand cranking",
+      "Transparent grounds jar shows grind level during use",
+      "Designed for travel — fits in any bag or camping kit",
+      "Produces grind quality comparable to electric grinders at twice the price"
+    ],
+    "pros": [
+      "Best grind quality available in a portable, travel-friendly package",
+      "Burr quality rivals electric grinders at significantly lower cost",
+      "No electricity required — perfect for camping or minimalist setups"
+    ],
+    "cons": [
+      "Manual grinding takes 1-2 minutes per 18g dose — time-consuming daily",
+      "Capacity limited to ~30g — insufficient for brewing multiple large cups"
+    ],
+    "specs": {
+      "Burr Type": "Conical steel",
+      "Grind Settings": "32 clicks",
+      "Bean Capacity": "30g",
+      "Dimensions": "7 x 2 inches",
+      "Weight": "10.6 oz"
+    },
+    "lastUpdated": "2026-03-14"
+  }
+]

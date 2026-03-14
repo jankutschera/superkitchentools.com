@@ -1,0 +1,21 @@
+---
+interface Props {
+  variant: "inline" | "footer";
+}
+
+const { variant } = Astro.props;
+---
+
+{variant === "inline" ? (
+  <p class="text-sm text-muted bg-gray-50 border border-gray-200 rounded-lg px-4 py-3">
+    <svg class="inline-block w-4 h-4 mr-1.5 -mt-0.5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    As an Amazon Associate, we earn from qualifying purchases.{" "}
+    <a href="/disclosure/" class="text-accent hover:underline">Learn more</a>
+  </p>
+) : (
+  <p class="text-xs text-muted">
+    <a href="/disclosure/" class="hover:text-accent transition-colors">Affiliate Disclosure</a>
+  </p>
+)}

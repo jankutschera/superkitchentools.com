@@ -1,0 +1,33 @@
+---
+import type { Category } from "../lib/products.ts";
+
+interface Props {
+  categories: Category[];
+}
+
+const { categories } = Astro.props;
+---
+
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+  {categories.map((category) => (
+    <a
+      href={`/best/${category.slug}/`}
+      class="group flex flex-col items-center gap-3 p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-accent/30 hover:-translate-y-0.5 transition-all duration-200 text-center"
+    >
+      <span class="text-3xl" role="img" aria-label={category.displayName}>
+        {category.icon}
+      </span>
+      <div>
+        <h3 class="text-sm font-semibold text-primary group-hover:text-accent transition-colors leading-snug">
+          {category.displayName}
+        </h3>
+        <p class="text-xs text-muted mt-1 line-clamp-2 leading-snug">
+          {category.description}
+        </p>
+      </div>
+      <span class="mt-auto text-xs font-medium text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+        See Best Picks →
+      </span>
+    </a>
+  ))}
+</div>

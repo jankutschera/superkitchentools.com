@@ -1,0 +1,374 @@
+[
+  {
+    "asin": "B00005UP2P",
+    "slug": "kitchenaid-artisan-5-quart-stand-mixer",
+    "name": "KitchenAid Artisan Series 5-Quart Tilt-Head Stand Mixer",
+    "brand": "KitchenAid",
+    "category": "stand-mixers",
+    "price": 449.99,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 36750,
+    "imageUrl": "https://m.media-amazon.com/images/I/B00005UP2P._AC_SL1500_.jpg",
+    "features": [
+      "5-quart stainless steel bowl handles up to 9 dozen cookies or 4 loaves of bread",
+      "10 speed settings for everything from stir to maximum mixing",
+      "Tilt-head design allows easy bowl and attachment access",
+      "Power Hub with over 10 optional attachments (pasta, grinder, ice cream)",
+      "Includes flat beater, dough hook, and wire whip",
+      "Available in 30+ colors to match any kitchen aesthetic"
+    ],
+    "pros": [
+      "Attachment ecosystem is unmatched — transforms into a kitchen multi-tool",
+      "Built to last decades — many KitchenAid owners use the same mixer for 20+ years",
+      "5-quart capacity handles virtually every baking project a home cook encounters"
+    ],
+    "cons": [
+      "At $450, it's the most expensive option in this guide without a clear performance edge over the 4.5-qt model",
+      "Tilt-head can wobble slightly when mixing very stiff doughs at high speeds"
+    ],
+    "specs": {
+      "Bowl Capacity": "5 quarts",
+      "Motor": "325 Watt",
+      "Speed Settings": "10",
+      "Dimensions": "14.1 x 8.7 x 13.9 inches",
+      "Weight": "26 lbs"
+    },
+    "isBestSeller": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B008DBCGEK",
+    "slug": "kitchenaid-professional-600-6-quart",
+    "name": "KitchenAid Professional 600 Series 6-Quart Bowl-Lift Stand Mixer",
+    "brand": "KitchenAid",
+    "category": "stand-mixers",
+    "price": 549.99,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 18920,
+    "imageUrl": "https://m.media-amazon.com/images/I/B008DBCGEK._AC_SL1500_.jpg",
+    "features": [
+      "6-quart stainless steel bowl handles up to 13 dozen cookies or 8 loaves",
+      "575-watt motor handles heavy bread doughs without straining",
+      "Bowl-lift design provides stability for heavy batches",
+      "10 speed settings with soft start to prevent flour explosions",
+      "Commercial-style dough hook, flat beater, and wire whip included",
+      "Compatible with all KitchenAid Hub attachments"
+    ],
+    "pros": [
+      "575-watt motor handles stiff bread doughs that would strain a standard Artisan",
+      "Bowl-lift is more stable than tilt-head for very heavy mixing",
+      "6-quart capacity is essential for high-volume bakers making double batches"
+    ],
+    "cons": [
+      "Bowl-lift mechanism requires two-step process to change attachments vs. tilt-head",
+      "Larger footprint than Artisan — harder to store in cabinets"
+    ],
+    "specs": {
+      "Bowl Capacity": "6 quarts",
+      "Motor": "575 Watt",
+      "Speed Settings": "10",
+      "Dimensions": "16.5 x 11.3 x 16.3 inches",
+      "Weight": "29 lbs"
+    },
+    "isAmazonChoice": true,
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B01MFG0T6O",
+    "slug": "cuisinart-sm-50-5-5-quart-stand-mixer",
+    "name": "Cuisinart SM-50 5.5-Quart Stand Mixer",
+    "brand": "Cuisinart",
+    "category": "stand-mixers",
+    "price": 249.95,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 14320,
+    "imageUrl": "https://m.media-amazon.com/images/I/B01MFG0T6O._AC_SL1500_.jpg",
+    "features": [
+      "5.5-quart stainless steel bowl with ergonomic handle",
+      "500-watt motor with 12 speeds for precise mixing control",
+      "Tilt-back head for easy attachment and bowl access",
+      "Comes with dough hook, flat mixing paddle, and chef's whisk",
+      "Splash guard with pour spout prevents mess during liquid addition",
+      "Die-cast metal construction throughout for durability"
+    ],
+    "pros": [
+      "Best alternative to KitchenAid at almost half the price with comparable performance",
+      "12 speed settings provide finer control than KitchenAid's 10",
+      "Included splash guard is a practical accessory that costs extra with KitchenAid"
+    ],
+    "cons": [
+      "Attachment compatibility is limited to Cuisinart accessories only",
+      "Motor struggles more than KitchenAid on stiff brioche or bagel doughs"
+    ],
+    "specs": {
+      "Bowl Capacity": "5.5 quarts",
+      "Motor": "500 Watt",
+      "Speed Settings": "12",
+      "Dimensions": "14.6 x 9.4 x 14 inches",
+      "Weight": "23 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B09GJT6Z6R",
+    "slug": "bosch-universal-plus-stand-mixer",
+    "name": "Bosch Universal Plus Stand Mixer with Bowl",
+    "brand": "Bosch",
+    "category": "stand-mixers",
+    "price": 399.99,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 6840,
+    "imageUrl": "https://m.media-amazon.com/images/I/B09GJT6Z6R._AC_SL1500_.jpg",
+    "features": [
+      "6.5-quart stainless steel bowl with bottom-drive motor for more powerful mixing",
+      "800-watt motor handles the stiffest bread and bagel doughs effortlessly",
+      "Unique bottom-mounted motor creates less noise and more efficient power delivery",
+      "Dough hook, wire whips, and cookie paddles included",
+      "Blender attachment and ice cream bowl optional accessories",
+      "European engineering with decades of professional use"
+    ],
+    "pros": [
+      "Bottom-drive motor at 800 watts genuinely outperforms KitchenAid for bread baking",
+      "6.5-quart capacity with more efficient bowl utilization than top-drive models",
+      "Quieter operation than comparable power KitchenAid mixers"
+    ],
+    "cons": [
+      "Less attachment variety than KitchenAid's extensive ecosystem",
+      "Unusual aesthetics — boxy shape is less visually appealing to many buyers"
+    ],
+    "specs": {
+      "Bowl Capacity": "6.5 quarts",
+      "Motor": "800 Watt",
+      "Drive Type": "Bottom-mount",
+      "Dimensions": "15.5 x 12.3 x 13.4 inches",
+      "Weight": "19 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B07RR48GQ1",
+    "slug": "kenwood-chef-xl-stand-mixer-6-7-quart",
+    "name": "Kenwood Chef XL Stand Mixer, 6.7-Quart",
+    "brand": "Kenwood",
+    "category": "stand-mixers",
+    "price": 329.99,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 3980,
+    "imageUrl": "https://m.media-amazon.com/images/I/B07RR48GQ1._AC_SL1500_.jpg",
+    "features": [
+      "6.7-quart stainless steel bowl for large batch baking",
+      "1000-watt motor handles the heaviest doughs and largest batches",
+      "Fold function for gentle incorporation of delicate ingredients",
+      "K-Beater, dough hook, and balloon whisk included",
+      "AT attachment hub compatible with 15+ accessories",
+      "LED display with digital timer and temperature probe capability"
+    ],
+    "pros": [
+      "1000-watt motor is the most powerful in this class for home bakers",
+      "Fold function is a unique feature for delicate mousse and meringue work",
+      "LED display with digital controls is more precise than analog speed dials"
+    ],
+    "cons": [
+      "Less widely available in the US — parts and service harder to access",
+      "AT attachment hub has some compatibility issues with older accessories"
+    ],
+    "specs": {
+      "Bowl Capacity": "6.7 quarts",
+      "Motor": "1000 Watt",
+      "Speed Settings": "Variable with Fold function",
+      "Dimensions": "15.5 x 13.5 x 14.6 inches",
+      "Weight": "28 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B07BCTQQY6",
+    "slug": "hamilton-beach-stand-mixer-4-quart",
+    "name": "Hamilton Beach 63390 7-Speed Stand Mixer, 4-Quart",
+    "brand": "Hamilton Beach",
+    "category": "stand-mixers",
+    "price": 99.99,
+    "currency": "USD",
+    "rating": 4.3,
+    "reviewCount": 21450,
+    "imageUrl": "https://m.media-amazon.com/images/I/B07BCTQQY6._AC_SL1500_.jpg",
+    "features": [
+      "Budget-friendly entry with 300-watt motor",
+      "7-speed settings for basic mixing tasks",
+      "4-quart stainless steel bowl handles everyday baking",
+      "Tilt-head design for easy attachment swapping",
+      "Flat beater, dough hook, and wire whip included",
+      "Whisk attachment is dishwasher-safe"
+    ],
+    "pros": [
+      "Entry-level price makes stand mixing accessible for occasional bakers",
+      "7-speed control provides adequate variety for most cookie and cake recipes",
+      "Compact 4-quart size is appropriate for small households"
+    ],
+    "cons": [
+      "300-watt motor struggles noticeably with thick bread doughs",
+      "Plastic body components feel flimsy compared to die-cast competitors"
+    ],
+    "specs": {
+      "Bowl Capacity": "4 quarts",
+      "Motor": "300 Watt",
+      "Speed Settings": "7",
+      "Dimensions": "12.3 x 8.1 x 13.7 inches",
+      "Weight": "10.8 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B07KTZQCJK",
+    "slug": "breville-bakery-chef-9-5-quart",
+    "name": "Breville BEM800XL Scraper Mixer Pro, 5-Quart",
+    "brand": "Breville",
+    "category": "stand-mixers",
+    "price": 399.95,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 4210,
+    "imageUrl": "https://m.media-amazon.com/images/I/B07KTZQCJK._AC_SL1500_.jpg",
+    "features": [
+      "Unique scraper beater continuously scrapes bowl sides for better incorporation",
+      "550-watt motor with 12-speed settings",
+      "5-quart stainless steel bowl with ergonomic handle",
+      "Fold function for delicate ingredient incorporation",
+      "LED display with digital timer",
+      "Includes scraper beater, dough hook, and balloon whisk"
+    ],
+    "pros": [
+      "Scraper beater solves the common problem of unmixed ingredients clinging to bowl sides",
+      "12-speed digital control is more precise than KitchenAid's analog dial",
+      "Fold function genuinely preserves air in delicate batters and mousses"
+    ],
+    "cons": [
+      "Scraper beater requires cleaning the scraper attachment separately",
+      "Limited attachment ecosystem compared to KitchenAid's expansive hub"
+    ],
+    "specs": {
+      "Bowl Capacity": "5 quarts",
+      "Motor": "550 Watt",
+      "Speed Settings": "12",
+      "Dimensions": "15.2 x 10 x 14.4 inches",
+      "Weight": "24 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B09GZQ7CFM",
+    "slug": "smeg-smf03-stand-mixer-5-quart",
+    "name": "SMEG SMF03 5-Quart Stand Mixer",
+    "brand": "SMEG",
+    "category": "stand-mixers",
+    "price": 599.95,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 2870,
+    "imageUrl": "https://m.media-amazon.com/images/I/B09GZQ7CFM._AC_SL1500_.jpg",
+    "features": [
+      "Retro Italian design with chrome accents in multiple colorways",
+      "800-watt motor with 10-speed settings and planetary mixing action",
+      "5-quart stainless steel bowl with matching design",
+      "Soft-touch controls with LED indicator lights",
+      "Bowl light illuminates interior for monitoring",
+      "All-metal construction — no plastic body components"
+    ],
+    "pros": [
+      "Unmatched aesthetic — the most beautiful stand mixer available",
+      "All-metal body is genuinely premium in feel and durability",
+      "800-watt motor matches performance needs for serious home bakers"
+    ],
+    "cons": [
+      "At $600, it's primarily a design purchase — KitchenAid performs comparably for $150 less",
+      "Attachment ecosystem is more limited than KitchenAid"
+    ],
+    "specs": {
+      "Bowl Capacity": "5 quarts",
+      "Motor": "800 Watt",
+      "Speed Settings": "10",
+      "Dimensions": "14.2 x 9.4 x 14.2 inches",
+      "Weight": "28 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B0894TNRRQ",
+    "slug": "kitchenaid-4-5-quart-tilt-head-mixer-classic",
+    "name": "KitchenAid Classic Plus 4.5-Quart Tilt-Head Stand Mixer",
+    "brand": "KitchenAid",
+    "category": "stand-mixers",
+    "price": 279.99,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 28430,
+    "imageUrl": "https://m.media-amazon.com/images/I/B0894TNRRQ._AC_SL1500_.jpg",
+    "features": [
+      "4.5-quart stainless steel bowl handles up to 7 dozen cookies",
+      "275-watt motor for everyday mixing tasks",
+      "10-speed settings from gentle fold to high-speed whipping",
+      "Power Hub compatible with all KitchenAid attachments",
+      "Flat beater, dough hook, and 6-wire whip included",
+      "Available in classic white and select additional colors"
+    ],
+    "pros": [
+      "Most affordable entry into the KitchenAid attachment ecosystem",
+      "4.5-quart bowl is sufficient for most everyday baking tasks",
+      "KitchenAid reliability at the lowest price point in the lineup"
+    ],
+    "cons": [
+      "275-watt motor is the least powerful in the KitchenAid range — struggles with bread",
+      "Fewer color options than the Artisan series"
+    ],
+    "specs": {
+      "Bowl Capacity": "4.5 quarts",
+      "Motor": "275 Watt",
+      "Speed Settings": "10",
+      "Dimensions": "13.9 x 8.7 x 14 inches",
+      "Weight": "22 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  },
+  {
+    "asin": "B00EJPWRAQ",
+    "slug": "ankarsrum-original-mixer-7-quart",
+    "name": "Ankarsrum Assistent Original Stand Mixer, 7-Quart",
+    "brand": "Ankarsrum",
+    "category": "stand-mixers",
+    "price": 799.00,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 3240,
+    "imageUrl": "https://m.media-amazon.com/images/I/B00EJPWRAQ._AC_SL1500_.jpg",
+    "features": [
+      "Bottom-drive motor mounted in base with rotating bowl system",
+      "1400-watt motor handles even the stiffest whole wheat bread doughs",
+      "7-quart stainless steel bowl for large-batch baking",
+      "Unique roller and scraper tool kneads bread without overworking gluten",
+      "Durable Scandinavian design built to last generations",
+      "Made in Sweden since 1940 — a cult favorite among serious bread bakers"
+    ],
+    "pros": [
+      "1400-watt bottom-drive motor is unmatched for bread baking performance",
+      "Unique kneading action is gentler on gluten than standard dough hooks",
+      "Swedish build quality is the most durable in the stand mixer category"
+    ],
+    "cons": [
+      "At $800, it's a specialist purchase — difficult to justify for general baking",
+      "Learning curve is steep — rotating bowl system is unfamiliar to most bakers"
+    ],
+    "specs": {
+      "Bowl Capacity": "7 quarts",
+      "Motor": "1400 Watt",
+      "Drive Type": "Bottom-mount rotating",
+      "Country of Origin": "Sweden",
+      "Weight": "21 lbs"
+    },
+    "lastUpdated": "2026-03-14"
+  }
+]

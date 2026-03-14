@@ -1,0 +1,22 @@
+{
+  "sites": [
+    {
+      "name": "EasytoCookMeals",
+      "url": "https://easytocookmeals.com",
+      "tagline": "Easy Recipes for Busy People",
+      "categories": ["all"]
+    },
+    {
+      "name": "CookSoups",
+      "url": "https://cooksoups.com",
+      "tagline": "Soup Recipes for Every Season",
+      "categories": ["cast-iron-cookware", "pressure-cookers", "blenders"]
+    },
+    {
+      "name": "Vegan Alternatives",
+      "url": "https://vegan-alternatives.com",
+      "tagline": "Plant-Based Product Alternatives",
+      "categories": ["blenders", "food-processors", "baking-tools"]
+    }
+  ]
+}

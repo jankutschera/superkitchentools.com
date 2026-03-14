@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogImage?: string;
+  schemas?: string[];
+}
+
+const { title, description, canonical, ogImage, schemas } = Astro.props;
+
+const defaultOgImage = "https://superkitchentools.com/og-default.jpg";
+const resolvedOgImage = ogImage ?? defaultOgImage;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={resolvedOgImage} />
+<meta property="og:site_name" content="SuperKitchenTools" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={resolvedOgImage} />
+
+<!-- JSON-LD Schema -->
+{schemas && schemas.map((schema) => (
+  <script type="application/ld+json" set:html={schema} />
+))}

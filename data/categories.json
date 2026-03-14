@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "chefs-knives",
+    "name": "chefs-knives",
+    "displayName": "Chef's Knives & Knife Sets",
+    "description": "From entry-level workhorses to heirloom-quality Japanese blades, find the right chef's knife for your kitchen.",
+    "metaTitle": "Best Chef's Knives & Knife Sets 2026 — Tested & Ranked",
+    "metaDescription": "We tested 40+ chef's knives to find the best for every budget. See our top picks for 2026 and find yours today.",
+    "icon": "🔪",
+    "commissionTier": "tier1"
+  },
+  {
+    "slug": "cutting-boards",
+    "name": "cutting-boards",
+    "displayName": "Cutting Boards",
+    "description": "Wood, plastic, or bamboo — the right cutting board protects your knives and keeps prep hygienic.",
+    "metaTitle": "Best Cutting Boards 2026 — Wood, Plastic & Bamboo Ranked",
+    "metaDescription": "Find the best cutting board for your kitchen in 2026. We compare wood, plastic, and bamboo boards by durability, hygiene, and value.",
+    "icon": "🪵",
+    "commissionTier": "tier1"
+  },
+  {
+    "slug": "cast-iron-cookware",
+    "name": "cast-iron-cookware",
+    "displayName": "Cast Iron Cookware",
+    "description": "Cast iron skillets, Dutch ovens, and griddles that last a lifetime with proper care.",
+    "metaTitle": "Best Cast Iron Cookware 2026 — Skillets, Dutch Ovens & More",
+    "metaDescription": "Our top-rated cast iron skillets and Dutch ovens for 2026. Expert-tested picks for searing, braising, and baking that last for decades.",
+    "icon": "🍳",
+    "commissionTier": "tier1"
+  },
+  {
+    "slug": "air-fryers",
+    "name": "air-fryers",
+    "displayName": "Air Fryers",
+    "description": "Crispy results with less oil — we rank the top air fryers by size, features, and real-world performance.",
+    "metaTitle": "Best Air Fryers 2026 — Tested for Crispiness, Capacity & Value",
+    "metaDescription": "We tested 20+ air fryers to rank the best for 2026. Find the right size and features for crispy, healthy cooking at home.",
+    "icon": "🌡️",
+    "commissionTier": "tier1"
+  },
+  {
+    "slug": "stand-mixers",
+    "name": "stand-mixers",
+    "displayName": "Stand Mixers",
+    "description": "KitchenAid, Cuisinart, and beyond — find the best stand mixer for baking bread, cake, and more.",
+    "metaTitle": "Best Stand Mixers 2026 — KitchenAid vs Competitors, Ranked",
+    "metaDescription": "Find the best stand mixer for your baking needs in 2026. We compare KitchenAid, Cuisinart, and more by power, capacity, and attachments.",
+    "icon": "🎂",
+    "commissionTier": "tier1"
+  },
+  {
+    "slug": "coffee-makers",
+    "name": "coffee-makers",
+    "displayName": "Coffee Makers & Grinders",
+    "description": "Drip machines, espresso makers, pour-over, and burr grinders — all the coffee gear you need reviewed.",
+    "metaTitle": "Best Coffee Makers & Grinders 2026 — Drip, Espresso & Pour-Over",
+    "metaDescription": "Our expert picks for the best coffee makers and grinders in 2026. From budget drip machines to espresso setups, find your perfect brew.",
+    "icon": "☕",
+    "commissionTier": "tier1"
+  },
+  {
+    "slug": "blenders",
+    "name": "blenders",
+    "displayName": "Blenders",
+    "description": "High-performance blenders for smoothies, soups, and sauces. Tested for power, noise, and ease of cleaning.",
+    "metaTitle": "Best Blenders 2026 — High-Performance Picks for Every Budget",
+    "metaDescription": "We tested Vitamix, Blendtec, Ninja, and more to find the best blenders of 2026. Find your match by budget, use case, and kitchen space.",
+    "icon": "🥤",
+    "commissionTier": "tier1"
+  },
+  {
+    "slug": "food-processors",
+    "name": "food-processors",
+    "displayName": "Food Processors",
+    "description": "Chop, slice, shred, and puree in seconds. We rank the best food processors by capacity, blades, and motor strength.",
+    "metaTitle": "Best Food Processors 2026 — Top Picks for Speed & Versatility",
+    "metaDescription": "Find the best food processor for your kitchen in 2026. We compare Cuisinart, KitchenAid, Breville, and more by performance and value.",
+    "icon": "🥕",
+    "commissionTier": "tier1"
+  },
+  {
+    "slug": "pressure-cookers",
+    "name": "pressure-cookers",
+    "displayName": "Instant Pots & Pressure Cookers",
+    "description": "Instant Pots, electric pressure cookers, and stovetop models ranked for speed, safety, and versatility.",
+    "metaTitle": "Best Instant Pots & Pressure Cookers 2026 — Ranked & Reviewed",
+    "metaDescription": "Our top picks for Instant Pots and pressure cookers in 2026. Expert reviews covering capacity, safety, and multi-cooker features.",
+    "icon": "♨️",
+    "commissionTier": "tier1"
+  },
+  {
+    "slug": "baking-tools",
+    "name": "baking-tools",
+    "displayName": "Baking Tools & Sheets",
+    "description": "Sheet pans, rolling pins, bench scrapers, and all the baking tools that pros and home bakers actually use.",
+    "metaTitle": "Best Baking Tools & Sheet Pans 2026 — Pro Picks for Home Bakers",
+    "metaDescription": "Find the best baking tools and sheet pans in 2026. From Nordic Ware to Silpat, we rank everything you need for perfect baking results.",
+    "icon": "🧁",
+    "commissionTier": "tier1"
+  }
+]

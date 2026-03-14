@@ -1,0 +1,255 @@
+---
+import "../styles/global.css";
+import SEOHead from "../components/SEOHead.astro";
+import BreadcrumbNav from "../components/BreadcrumbNav.astro";
+import AffiliateDisclosure from "../components/AffiliateDisclosure.astro";
+import { getAllSisterSites } from "../lib/sisterSites.ts";
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  breadcrumbs?: { label: string; href: string }[];
+  schemas?: string[];
+  ogImage?: string;
+}
+
+const { title, description, canonical, breadcrumbs, schemas, ogImage } = Astro.props;
+
+const siteUrl = "https://superkitchentools.com";
+const resolvedCanonical = canonical ?? (siteUrl + Astro.url.pathname);
+
+const sisterSites = getAllSisterSites();
+
+const navLinks = [
+  { label: "Best Picks", href: "/best/" },
+  { label: "Guides", href: "/guides/" },
+  { label: "Deals", href: "/deals/" },
+  { label: "About", href: "/about/" },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <SEOHead
+    title={title}
+    description={description}
+    canonical={resolvedCanonical}
+    ogImage={ogImage}
+    schemas={schemas}
+  />
+</head>
+<body class="bg-bg text-primary font-body min-h-screen flex flex-col">
+
+  <!-- Skip to main content (accessibility) -->
+  <a
+    href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent text-white px-4 py-2 rounded-md text-sm font-medium z-50"
+  >
+    Skip to main content
+  </a>
+
+  <!-- ============================
+       HEADER
+  =============================== -->
+  <header class="sticky top-0 z-40 bg-bg/95 backdrop-blur-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2.5 shrink-0 group">
+          <span class="text-2xl" aria-hidden="true">🍴</span>
+          <div class="leading-none">
+            <span class="text-base font-extrabold text-primary group-hover:text-accent transition-colors tracking-tight">
+              SuperKitchenTools
+            </span>
+            <span class="block text-[10px] text-muted font-medium tracking-wide uppercase">
+              Expert-Tested Picks
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
+          {navLinks.map((link) => (
+            <a
+              href={link.href}
+              class="px-3 py-2 text-sm font-medium text-muted hover:text-primary hover:bg-gray-100 rounded-md transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="/reviews/"
+            class="ml-2 px-4 py-2 bg-accent text-white text-sm font-semibold rounded-lg hover:bg-accent/90 transition-colors"
+          >
+            All Reviews
+          </a>
+        </nav>
+
+        <!-- Mobile hamburger (CSS-only) -->
+        <label
+          for="mobile-menu-toggle"
+          class="md:hidden flex flex-col justify-center items-center w-10 h-10 cursor-pointer gap-1.5 rounded-md hover:bg-gray-100 transition-colors"
+          aria-label="Toggle menu"
+        >
+          <span class="w-5 h-0.5 bg-primary rounded-full transition-all"></span>
+          <span class="w-5 h-0.5 bg-primary rounded-full transition-all"></span>
+          <span class="w-5 h-0.5 bg-primary rounded-full transition-all"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (CSS-only via hidden checkbox) -->
+    <input type="checkbox" id="mobile-menu-toggle" class="sr-only peer" />
+    <div class="md:hidden hidden peer-checked:block border-t border-gray-200 bg-bg">
+      <nav class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1" aria-label="Mobile navigation">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="px-3 py-2.5 text-sm font-medium text-primary hover:bg-gray-100 rounded-md transition-colors"
+          >
+            {link.label}
+          </a>
+        ))}
+        <a
+          href="/reviews/"
+          class="mt-1 px-3 py-2.5 bg-accent text-white text-sm font-semibold rounded-lg text-center hover:bg-accent/90 transition-colors"
+        >
+          All Reviews
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================
+       BREADCRUMBS
+  =============================== -->
+  {breadcrumbs && breadcrumbs.length > 0 && (
+    <div class="bg-gray-50 border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <BreadcrumbNav items={breadcrumbs} />
+      </div>
+    </div>
+  )}
+
+  <!-- ============================
+       MAIN CONTENT
+  =============================== -->
+  <main id="main-content" class="flex-1">
+    <slot />
+  </main>
+
+  <!-- ============================
+       FOOTER
+  =============================== -->
+  <footer class="bg-gray-900 text-gray-300 mt-16">
+    <!-- Sister Sites Banner -->
+    <div class="border-b border-gray-800 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">From Our Network</p>
+        <div class="flex flex-wrap gap-4">
+          {sisterSites.map((site) => (
+            <a
+              href={site.url}
+              target="_blank"
+              rel="noopener"
+              class="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              <span class="w-1 h-1 rounded-full bg-accent shrink-0"></span>
+              <span class="font-medium">{site.name}</span>
+              <span class="text-gray-600">–</span>
+              <span>{site.tagline}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Footer -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Brand -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xl" aria-hidden="true">🍴</span>
+            <span class="text-base font-extrabold text-white">SuperKitchenTools</span>
+          </div>
+          <p class="text-sm text-gray-400 leading-relaxed max-w-sm">
+            Expert-tested kitchen gear recommendations. We research, test, and rank the best kitchen tools so you can cook better.
+          </p>
+          <div class="mt-4">
+            <AffiliateDisclosure variant="footer" />
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Top Categories</p>
+          <ul class="flex flex-col gap-2">
+            {[
+              { label: "Chef's Knives", href: "/best/chefs-knives/" },
+              { label: "Air Fryers", href: "/best/air-fryers/" },
+              { label: "Stand Mixers", href: "/best/stand-mixers/" },
+              { label: "Cast Iron", href: "/best/cast-iron-cookware/" },
+              { label: "Coffee Makers", href: "/best/coffee-makers/" },
+              { label: "Blenders", href: "/best/blenders/" },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-sm text-gray-400 hover:text-white transition-colors">
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Company</p>
+          <ul class="flex flex-col gap-2">
+            {[
+              { label: "About Us", href: "/about/" },
+              { label: "Privacy Policy", href: "/privacy/" },
+              { label: "Affiliate Disclosure", href: "/disclosure/" },
+              { label: "Contact", href: "/contact/" },
+            ].map((item) => (
+              <li>
+                <a href={item.href} class="text-sm text-gray-400 hover:text-white transition-colors">
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-10 pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+        <p class="text-xs text-gray-600">
+          &copy; 2026 SuperKitchenTools. All rights reserved.
+        </p>
+        <p class="text-xs text-gray-600">
+          SuperKitchenTools is a participant in the Amazon Services LLC Associates Program.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Plausible Analytics -->
+  <script defer data-domain="superkitchentools.com" src="https://applause.adhd-founder.com/js/script.js"></script>
+
+</body>
+</html>

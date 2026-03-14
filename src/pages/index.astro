@@ -1,14 +1,127 @@
 ---
-import '../styles/global.css';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CategoryGrid from "../components/CategoryGrid.astro";
+import ProductCard from "../components/ProductCard.astro";
+import AffiliateDisclosure from "../components/AffiliateDisclosure.astro";
+import { getAllCategories } from "../lib/categories.ts";
+import { getAllProducts } from "../lib/products.ts";
+import { generateItemListSchema } from "../lib/seo.ts";
+
+const categories = getAllCategories();
+const allProducts = getAllProducts();
+
+// Featured products: first isBestSeller from each of 3 categories
+const featuredProducts = allProducts
+  .filter((p) => p.isBestSeller)
+  .slice(0, 6);
+
+const schema = generateItemListSchema(featuredProducts, "Best Kitchen Tools 2026");
 ---
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SuperKitchenTools — Expert-Tested Kitchen Gear</title>
-</head>
-<body class="bg-bg text-primary font-body">
-  <h1 class="text-4xl font-heading font-bold text-center py-20">SuperKitchenTools</h1>
-  <p class="text-center text-muted">Building...</p>
-</body>
-</html>
+
+<BaseLayout
+  title="SuperKitchenTools — Expert-Tested Kitchen Gear Reviews 2026"
+  description="Find the best chef's knives, air fryers, stand mixers, and more. Expert-tested, honestly reviewed kitchen tools for every budget and cooking style."
+  schemas={[schema]}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-gray-50 to-bg py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-4">
+        Expert-Tested Kitchen Gear
+      </span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-tight mb-6 font-heading">
+        Find the Best<br class="hidden sm:block" />
+        Kitchen Tools in 2026
+      </h1>
+      <p class="text-lg md:text-xl text-muted max-w-2xl mx-auto mb-8 leading-relaxed">
+        We research, test, and rank the top kitchen gear across 10 categories.
+        No fluff — just honest picks that help you cook better.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a
+          href="/best/"
+          class="px-6 py-3 bg-accent text-white text-base font-semibold rounded-lg hover:bg-accent/90 transition-colors"
+        >
+          See Best Picks
+        </a>
+        <a
+          href="/reviews/"
+          class="px-6 py-3 bg-white text-primary text-base font-semibold rounded-lg border border-gray-200 hover:border-accent/40 hover:bg-gray-50 transition-colors"
+        >
+          Browse All Reviews
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclosure -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+    <AffiliateDisclosure variant="inline" />
+  </div>
+
+  <!-- Categories -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-primary font-heading">Shop by Category</h2>
+        <p class="text-muted mt-1">10 categories covering every corner of your kitchen</p>
+      </div>
+      <a href="/best/" class="hidden sm:inline-block text-sm text-accent font-medium hover:underline">
+        View all →
+      </a>
+    </div>
+    <CategoryGrid categories={categories} />
+  </section>
+
+  <!-- Featured Products -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold text-primary font-heading">Top-Rated Picks</h2>
+          <p class="text-muted mt-1">Best sellers across our most popular categories</p>
+        </div>
+        <a href="/reviews/" class="hidden sm:inline-block text-sm text-accent font-medium hover:underline">
+          All reviews →
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {featuredProducts.map((product) => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us Section -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary font-heading text-center mb-12">
+      How We Pick the Best Gear
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[
+        {
+          icon: "🔬",
+          title: "Research-First",
+          text: "Every recommendation starts with thorough research across professional reviews, user feedback, and expert testing data."
+        },
+        {
+          icon: "⚖️",
+          title: "Honest Trade-offs",
+          text: "We tell you what each product does badly, not just what it does well. Real cons, not invented ones."
+        },
+        {
+          icon: "💡",
+          title: "Clear Guidance",
+          text: "We explain who each product is right for — so you buy the correct tool for your actual cooking needs."
+        }
+      ].map((item) => (
+        <div class="text-center">
+          <span class="text-4xl mb-4 block" role="img" aria-hidden="true">{item.icon}</span>
+          <h3 class="text-lg font-bold text-primary mb-2">{item.title}</h3>
+          <p class="text-muted text-sm leading-relaxed">{item.text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

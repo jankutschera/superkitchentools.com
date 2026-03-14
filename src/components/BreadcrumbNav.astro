@@ -1,0 +1,29 @@
+---
+interface Props {
+  items: { label: string; href: string }[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="py-3">
+  <ol class="flex flex-wrap items-center gap-1.5 text-sm">
+    {items.map((item, index) => {
+      const isLast = index === items.length - 1;
+      return (
+        <li class="flex items-center gap-1.5">
+          {isLast ? (
+            <span class="text-primary font-medium" aria-current="page">{item.label}</span>
+          ) : (
+            <>
+              <a href={item.href} class="text-muted hover:text-accent transition-colors">
+                {item.label}
+              </a>
+              <span class="text-muted" aria-hidden="true">›</span>
+            </>
+          )}
+        </li>
+      );
+    })}
+  </ol>
+</nav>

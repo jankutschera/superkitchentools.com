@@ -1,0 +1,73 @@
+---
+import type { Product } from "../lib/products.ts";
+import { affiliateUrl } from "../lib/affiliateUrl.ts";
+import RatingStars from "./RatingStars.astro";
+import PriceTag from "./PriceTag.astro";
+import DealBadge from "./DealBadge.astro";
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+const amazonUrl = affiliateUrl(product.asin);
+const firstFeatures = product.features.slice(0, 3);
+---
+
+<article class="group bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 overflow-hidden flex flex-col">
+  <!-- Image -->
+  <a href={`/reviews/${product.slug}/`} class="block relative aspect-square bg-gray-50 overflow-hidden">
+    <img
+      src={product.imageUrl}
+      alt={product.name}
+      loading="lazy"
+      width="400"
+      height="400"
+      class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+      onerror="this.src='/images/placeholder-product.svg'"
+    />
+    {product.isBestSeller && (
+      <div class="absolute top-2 left-2">
+        <DealBadge type="best-seller" />
+      </div>
+    )}
+    {!product.isBestSeller && product.isAmazonChoice && (
+      <div class="absolute top-2 left-2">
+        <DealBadge type="amazon-choice" />
+      </div>
+    )}
+  </a>
+
+  <!-- Content -->
+  <div class="flex flex-col flex-1 p-4 gap-3">
+    <!-- Title -->
+    <div>
+      <p class="text-xs text-muted font-medium uppercase tracking-wide mb-1">{product.brand}</p>
+      <h3 class="font-semibold text-primary leading-snug line-clamp-2">
+        <a href={`/reviews/${product.slug}/`} class="hover:text-accent transition-colors">
+          {product.name}
+        </a>
+      </h3>
+    </div>
+
+    <!-- Rating -->
+    <RatingStars rating={product.rating} reviewCount={product.reviewCount} />
+
+    <!-- Top Features -->
+    <ul class="flex flex-col gap-1.5">
+      {firstFeatures.map((feature) => (
+        <li class="flex items-start gap-2 text-sm text-muted">
+          <svg class="w-3.5 h-3.5 mt-0.5 text-success shrink-0 fill-current" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+          <span class="line-clamp-2">{feature}</span>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Price — pinned to bottom -->
+    <div class="mt-auto pt-3 border-t border-gray-100">
+      <PriceTag price={product.price} amazonUrl={amazonUrl} />
+    </div>
+  </div>
+</article>

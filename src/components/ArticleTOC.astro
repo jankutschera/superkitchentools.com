@@ -1,0 +1,36 @@
+---
+interface Heading {
+  text: string;
+  slug: string;
+  depth: number;
+}
+
+interface Props {
+  headings: Heading[];
+}
+
+const { headings } = Astro.props;
+
+const filtered = headings.filter((h) => h.depth >= 2 && h.depth <= 4);
+---
+
+{filtered.length > 0 && (
+  <nav aria-label="Table of contents" class="bg-gray-50 border border-gray-200 rounded-xl p-4">
+    <p class="text-xs font-bold uppercase tracking-wide text-muted mb-3">On This Page</p>
+    <ol class="flex flex-col gap-1.5">
+      {filtered.map((heading) => {
+        const indent = (heading.depth - 2) * 12;
+        return (
+          <li style={`padding-left: ${indent}px`}>
+            <a
+              href={`#${heading.slug}`}
+              class={`text-sm text-muted hover:text-accent transition-colors ${heading.depth === 2 ? "font-medium" : ""}`}
+            >
+              {heading.text}
+            </a>
+          </li>
+        );
+      })}
+    </ol>
+  </nav>
+)}
