@@ -47,7 +47,7 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 22140,
-    "imageUrl": "/images/products/cutting-board.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/519zNuJtqlL._SL500_.jpg",
     "features": [
       "Three-board set in small, medium, and large sizes for different tasks",
       "Non-slip feet keep boards stable on countertops",
@@ -337,7 +337,7 @@
     "name": "Caraway Cutting Board Set — Two-Piece Prep & Serve Collection",
     "brand": "Caraway",
     "category": "cutting-boards",
-    "price": 55.0,
+    "price": 55,
     "currency": "USD",
     "rating": 4.2,
     "reviewCount": 2140,

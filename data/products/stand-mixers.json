@@ -9,7 +9,7 @@
     "currency": "USD",
     "rating": 4.8,
     "reviewCount": 36750,
-    "imageUrl": "/images/products/stand-mixer.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41XdbZukUFL._SL500_.jpg",
     "features": [
       "5-quart stainless steel bowl handles up to 9 dozen cookies or 4 loaves of bread",
       "10 speed settings for everything from stir to maximum mixing",
@@ -340,7 +340,7 @@
     "name": "Ankarsrum Assistent Original Stand Mixer, 7-Quart",
     "brand": "Ankarsrum",
     "category": "stand-mixers",
-    "price": 799.0,
+    "price": 799,
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 3240,
