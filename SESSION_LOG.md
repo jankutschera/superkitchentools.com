@@ -2,7 +2,7 @@
 
 ## Projekt Status
 - **Letztes Update:** 2026-03-16
-- **Status:** MVP live, abwarten — nächste Projekte: cooksoups.com + vegan-alternatives.com
+- **Status:** MVP live, wartet ab. Focus shifted zu CookSoups + Vegan-Alternatives.
 
 ## Was gebaut wurde
 - 291 Seiten auf Astro 6 + Tailwind CSS 4
@@ -25,23 +25,18 @@
 
 ## Amazon PA-API
 - Script: `scripts/fetch-product-images.mjs`
-- Credentials in `.env` (senner-21, DE marketplace)
+- Credentials: senner-21, DE marketplace (eligible), US NICHT eligible
 - 12 echte Bilder geholt, Rest hat keine DE-ASINs
-- Account ist eligible auf DE, NICHT auf US
-- Sobald US-Account eligible: Credentials updaten + Script laufen lassen
 
-## Cross-Linking Netzwerk
-| Domain | Rolle | Status | Projekt-Pfad |
-|---|---|---|---|
-| superkitchentools.com | Kitchen Tools (US) | Live | ~/dev/superkitchentools |
-| easytocookmeals.com | Rezepte (persönlich, mit Sandra, vegan) | Live | ~/Dev/easytocookmeals.com |
-| cooksoups.com | Soup Recipes | Projektiert | ~/dev/archive-scraper |
-| vegan-alternatives.com | Vegan Product Alternatives | Projektiert | ~/dev/vegan-alternatives.com |
+## Portfolio-Arbeit in dieser Session
+- CookSoups.com: Canonical www-Fix, AdSense entfernt, Top-5 Rezepte SEO-optimiert, Emma Sullivan → CookSoups Kitchen, Cross-Links zu Netzwerk eingebaut
+- Portfolio-Übersicht erstellt: ~/.claude/knowledge/food-portfolio.md
+- GSC Service Account für cooksoups + vegan-alternatives eingerichtet
+- Nächstes Projekt: vegan-alternatives.com Astro-Migration
 
-## Nächste Schritte (wenn wieder aufgenommen)
-- [ ] US Amazon Associates Account beantragen + PA-API freischalten
-- [ ] Echte Produktbilder für alle 150 Produkte via PA-API
-- [ ] Lighthouse Performance > 95 (aktuell 79 — Fonts + Bilder)
-- [ ] Weitere Buying Guides basierend auf SEO Research (Cookware Sets 40.5k/mo, Espresso Machines 33.1k/mo, Woks 27.1k/mo)
-- [ ] Content-Tiefe erhöhen (längere Reviews, mehr redaktioneller Text)
-- [ ] cooksoups.com und vegan-alternatives.com aufbauen und cross-linken
+## Nächste Schritte
+- [ ] CookSoups GSC-Daten in 1-2 Wochen prüfen (indexieren die Seiten jetzt?)
+- [ ] Vegan-Alternatives.com: Astro 6 Migration + Content-Aufbau (eigener Chat)
+- [ ] US Amazon Associates Account → PA-API für alle 150 Produkte
+- [ ] Lighthouse Performance > 95
+- [ ] diaetkost.com konzipieren
