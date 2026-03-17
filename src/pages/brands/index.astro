@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getAllProducts } from "../../lib/products.ts";
+import { getAllProducts, toBrandSlug } from "../../lib/products.ts";
 import { generateBreadcrumbSchema } from "../../lib/seo.ts";
 import type { Product } from "../../lib/products.ts";
 
@@ -14,7 +14,7 @@ for (const product of products) {
     existing.count += 1;
   } else {
     brandMap.set(product.brand, {
-      slug: product.brand.toLowerCase().replace(/\s+/g, "-"),
+      slug: toBrandSlug(product.brand),
       count: 1,
     });
   }

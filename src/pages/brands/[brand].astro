@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProductCard from "../../components/ProductCard.astro";
 import AffiliateDisclosure from "../../components/AffiliateDisclosure.astro";
-import { getAllProducts } from "../../lib/products.ts";
+import { getAllProducts, toBrandSlug } from "../../lib/products.ts";
 import { generateItemListSchema, generateBreadcrumbSchema } from "../../lib/seo.ts";
 import type { Product } from "../../lib/products.ts";
 
@@ -10,7 +10,7 @@ export function getStaticPaths() {
   const products = getAllProducts();
   const brands = [...new Set(products.map((p) => p.brand))];
   return brands.map((brand) => ({
-    params: { brand: brand.toLowerCase().replace(/\s+/g, "-") },
+    params: { brand: toBrandSlug(brand) },
     props: {
       brandName: brand,
       products: products.filter((p) => p.brand === brand),
@@ -62,7 +62,7 @@ function getBrandIntro(name: string, productCount: number): string {
 const breadcrumbs = [
   { label: "Home", href: "/" },
   { label: "Brands", href: "/brands/" },
-  { label: brandName, href: `/brands/${brandName.toLowerCase().replace(/\s+/g, "-")}/` },
+  { label: brandName, href: `/brands/${toBrandSlug(brandName)}/` },
 ];
 
 const schemas = [
@@ -72,7 +72,7 @@ const schemas = [
     { name: "Brands", url: "https://superkitchentools.com/brands/" },
     {
       name: brandName,
-      url: `https://superkitchentools.com/brands/${brandName.toLowerCase().replace(/\s+/g, "-")}/`,
+      url: `https://superkitchentools.com/brands/${toBrandSlug(brandName)}/`,
     },
   ]),
 ];

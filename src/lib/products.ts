@@ -79,3 +79,20 @@ export function getProduct(slug: string): Product | undefined {
 export function getProductByAsin(asin: string): Product | undefined {
   return getAllProducts().find((p) => p.asin === asin);
 }
+
+/**
+ * Converts a brand name to a URL-safe slug.
+ * Handles umlauts (ü→u, ö→o, ä→a, ß→ss), removes apostrophes,
+ * and replaces remaining non-alphanumeric characters with dashes.
+ */
+export function toBrandSlug(brand: string): string {
+  return brand
+    .toLowerCase()
+    .replace(/ü/g, "u")
+    .replace(/ö/g, "o")
+    .replace(/ä/g, "a")
+    .replace(/ß/g, "ss")
+    .replace(/['']/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
