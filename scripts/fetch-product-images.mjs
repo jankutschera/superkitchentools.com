@@ -6,11 +6,16 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PRODUCTS_DIR = path.join(__dirname, '..', 'data', 'products');
 
-const ACCESS_KEY = 'REDACTED_ACCESS_KEY';
-const SECRET_KEY = 'REDACTED_SECRET_KEY';
-const PARTNER_TAG = 'REDACTED_PARTNER_TAG';
-const HOST = 'webservices.amazon.de';
-const REGION = 'eu-west-1';
+const ACCESS_KEY = process.env.AMAZON_ACCESS_KEY;
+const SECRET_KEY = process.env.AMAZON_SECRET_KEY;
+const PARTNER_TAG = process.env.AMAZON_PARTNER_TAG || 'senner-21';
+const HOST = process.env.AMAZON_HOST || 'webservices.amazon.de';
+const REGION = process.env.AMAZON_REGION || 'eu-west-1';
+
+if (!ACCESS_KEY || !SECRET_KEY) {
+  console.error('Missing AMAZON_ACCESS_KEY or AMAZON_SECRET_KEY in .env');
+  process.exit(1);
+}
 const API_PATH = '/paapi5/getitems';
 const TARGET = 'com.amazon.paapi5.v1.ProductAdvertisingAPIv1.GetItems';
 
