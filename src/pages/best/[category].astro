@@ -647,7 +647,6 @@ const schemas = [
               <tr class="bg-gray-50 border-b border-gray-200">
                 <th class="text-left px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.08em] text-muted w-2/5">Product</th>
                 <th class="text-left px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.08em] text-muted">Rating</th>
-                <th class="text-left px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.08em] text-muted">Price</th>
                 <th class="text-left px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.08em] text-muted hidden sm:table-cell">Best For</th>
               </tr>
             </thead>
@@ -671,9 +670,6 @@ const schemas = [
                       </svg>
                       {product.rating.toFixed(1)}
                     </span>
-                  </td>
-                  <td class="px-5 py-4 font-bold text-primary whitespace-nowrap">
-                    ${product.price.toFixed(2)}
                   </td>
                   <td class="px-5 py-4 text-muted text-xs hidden sm:table-cell max-w-[160px]">
                     <span class="line-clamp-2">{product.pros[0] ? product.pros[0].split('—')[0].trim() : "Top pick"}</span>

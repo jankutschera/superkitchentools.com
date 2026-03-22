@@ -56,11 +56,7 @@ const faqs = [
   },
   {
     question: `Is the ${productA.name} or ${productB.name} better value for money?`,
-    answer: (() => {
-      const cheaper = productA.price < productB.price ? productA : productB;
-      const priceDiff = Math.abs(productA.price - productB.price).toFixed(2);
-      return `The ${cheaper.name} is $${priceDiff} less expensive at $${cheaper.price.toFixed(2)}. Whether the premium for the ${cheaper.asin === productA.asin ? productB.name : productA.name} is justified depends on how much you'll use the features it adds. For most home cooks, the more affordable option delivers sufficient performance.`;
-    })(),
+    answer: `Check current prices on Amazon for the latest deals on both products. Value depends on your specific needs — consider which features matter most to you and whether the trade-offs in our comparison above are worth it for your cooking style.`,
   },
   {
     question: `Which should I choose: ${productA.name} or ${productB.name}?`,
@@ -208,9 +204,6 @@ const schemas = [
           )}
         </div>
         <div class="p-5 flex flex-col gap-4">
-          <div class="flex items-baseline gap-2">
-            <span class="text-xl font-extrabold text-primary">${productA.price.toFixed(2)}</span>
-          </div>
           <RatingStars rating={productA.rating} reviewCount={productA.reviewCount} />
           <ProsConsList pros={productA.pros} cons={productA.cons} />
           <div class="pt-2 flex flex-col gap-2">
@@ -266,9 +259,6 @@ const schemas = [
           )}
         </div>
         <div class="p-5 flex flex-col gap-4">
-          <div class="flex items-baseline gap-2">
-            <span class="text-xl font-extrabold text-primary">${productB.price.toFixed(2)}</span>
-          </div>
           <RatingStars rating={productB.rating} reviewCount={productB.reviewCount} />
           <ProsConsList pros={productB.pros} cons={productB.cons} />
           <div class="pt-2 flex flex-col gap-2">

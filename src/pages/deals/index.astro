@@ -6,21 +6,10 @@ import type { Product } from "../../lib/products.ts";
 
 const allProducts = getAllProducts();
 
-// Top 5: highest rating, ties broken by lowest price
+// Top picks: highest rating, ties broken by review count
 const topPicks = [...allProducts]
-  .sort((a, b) => b.rating - a.rating || a.price - b.price)
-  .slice(0, 5);
-
-// Budget picks: under $50, sorted by rating desc
-const budgetPicks = [...allProducts]
-  .filter((p) => p.price < 50)
-  .sort((a, b) => b.rating - a.rating || a.price - b.price)
-  .slice(0, 6);
-
-// Best value: highest rating-to-price ratio
-const bestValue = [...allProducts]
-  .sort((a, b) => b.rating / b.price - a.rating / a.price)
-  .slice(0, 5);
+  .sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount)
+  .slice(0, 10);
 
 const breadcrumbs = [
   { label: "Home", href: "/" },
@@ -29,8 +18,8 @@ const breadcrumbs = [
 ---
 
 <BaseLayout
-  title="Best Value Kitchen Deals — SuperKitchenTools"
-  description="Find the best-value kitchen tools right now. Top-rated picks, budget buys under $50, and the best rating-to-price ratio products across all categories."
+  title="Top-Rated Kitchen Tools — SuperKitchenTools"
+  description="Find the highest-rated kitchen tools right now. Top-rated picks across all categories, sorted by customer ratings and reviews."
   breadcrumbs={breadcrumbs}
 >
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -44,69 +33,29 @@ const breadcrumbs = [
         </svg>
       </span>
       <h1 class="text-3xl md:text-4xl font-extrabold text-primary font-heading mb-4">
-        Best Value Kitchen Deals
+        Top-Rated Kitchen Tools
       </h1>
       <p class="text-lg text-muted leading-relaxed max-w-xl mx-auto">
-        Hand-picked kitchen tools with the best combination of ratings, reviews, and price.
-        Updated regularly across all categories.
+        The highest-rated kitchen tools across all categories, hand-picked by our editorial team.
+        Updated regularly.
       </p>
     </div>
 
-    <!-- Top 5 Best-Rated Products -->
+    <!-- Top-Rated Products -->
     <section class="mb-16">
       <div class="flex items-center gap-3 mb-6">
-        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-accent text-white text-sm font-bold shrink-0" aria-hidden="true">1</span>
+        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-accent text-white text-sm font-bold shrink-0" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        </span>
         <div>
-          <h2 class="text-2xl font-extrabold text-primary font-heading leading-tight">Top 5 Best-Rated Picks</h2>
+          <h2 class="text-2xl font-extrabold text-primary font-heading leading-tight">Top-Rated Picks</h2>
           <p class="text-sm text-muted mt-0.5">Highest-rated products across all categories</p>
         </div>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
         {topPicks.map((product: Product) => (
-          <ProductCard product={product} />
-        ))}
-      </div>
-    </section>
-
-    <!-- Budget Picks Under $50 -->
-    {budgetPicks.length > 0 && (
-      <section class="mb-16">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-success text-white shrink-0" aria-hidden="true">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <line x1="12" y1="1" x2="12" y2="23" />
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-            </svg>
-          </span>
-          <div>
-            <h2 class="text-2xl font-extrabold text-primary font-heading leading-tight">Budget Picks Under $50</h2>
-            <p class="text-sm text-muted mt-0.5">Top-rated tools that won't break the bank</p>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {budgetPicks.map((product: Product) => (
-            <ProductCard product={product} />
-          ))}
-        </div>
-      </section>
-    )}
-
-    <!-- Best Value (rating/price ratio) -->
-    <section class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-white shrink-0" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-            <polyline points="17 6 23 6 23 12" />
-          </svg>
-        </span>
-        <div>
-          <h2 class="text-2xl font-extrabold text-primary font-heading leading-tight">Best Value</h2>
-          <p class="text-sm text-muted mt-0.5">Highest quality-per-dollar across the entire catalog</p>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-        {bestValue.map((product: Product) => (
           <ProductCard product={product} />
         ))}
       </div>

@@ -13,10 +13,6 @@ interface Props {
 const { product, category = "" } = Astro.props;
 const amazonUrl = affiliateUrl(product.asin);
 const topPro = product.pros[0] ?? product.features[0] ?? "";
-const formattedPrice = product.price.toLocaleString("en-US", {
-  style: "currency",
-  currency: "USD",
-});
 ---
 
 <article class="pcard">
@@ -74,9 +70,8 @@ const formattedPrice = product.price.toLocaleString("en-US", {
       </p>
     )}
 
-    <!-- Price + CTA -->
+    <!-- CTA -->
     <div class="pcard-footer">
-      <span class="pcard-price">{formattedPrice}</span>
       <a
         href={amazonUrl}
         rel="nofollow sponsored"
@@ -84,7 +79,7 @@ const formattedPrice = product.price.toLocaleString("en-US", {
         class="pcard-buy"
         aria-label={`Check price for ${product.name} on Amazon`}
       >
-        Check Price
+        Check Price on Amazon
         <svg width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
@@ -269,24 +264,16 @@ const formattedPrice = product.price.toLocaleString("en-US", {
   .pcard-footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem;
     padding-top: 1rem;
     border-top: 1px solid var(--border);
     margin-top: auto;
   }
 
-  .pcard-price {
-    font-family: var(--font-ui);
-    font-size: 1.1875rem;
-    font-weight: 800;
-    color: var(--charcoal);
-    letter-spacing: -0.02em;
-  }
-
   .pcard-buy {
+    width: 100%;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.375rem;
     padding: 0.6875rem 0.875rem;
     min-height: 2.75rem;
