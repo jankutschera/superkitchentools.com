@@ -1,6 +1,6 @@
 [
   {
-    "asin": "B01CHJQZHA",
+    "asin": "B000IAZC4Q",
     "slug": "victorinox-fibrox-pro-8-inch",
     "name": "Victorinox Fibrox Pro 8-Inch Chef's Knife",
     "brand": "Victorinox",
@@ -9,7 +9,7 @@
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 38420,
-    "imageUrl": "/images/products/chefs-knife.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/21HCl3XqLWL._SL500_.jpg",
     "features": [
       "High-carbon stainless steel blade holds an edge longer than standard steel",
       "Ergonomic Fibrox Pro handle with slip-resistant grip stays secure even when wet",
@@ -113,7 +113,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B000BO5XSE",
+    "asin": "B002NFZ8AC",
     "slug": "mac-mth-80-8-inch-chefs-knife",
     "name": "MAC MTH-80 Professional 8-Inch Chef's Knife with Dimples",
     "brand": "MAC",
@@ -122,7 +122,7 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 5210,
-    "imageUrl": "/images/products/chefs-knife.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/21jUV4yKxYL._SL500_.jpg",
     "features": [
       "Japanese high-carbon steel (AB steel) hardened to 59-61 HRC for long edge retention",
       "Dimples along the blade reduce friction and food sticking",
@@ -150,7 +150,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B000N8OYYY",
+    "asin": "B005P0OPVA",
     "slug": "mercer-culinary-genesis-8-inch",
     "name": "Mercer Culinary Genesis 8-Inch Forged Chef's Knife",
     "brand": "Mercer Culinary",
@@ -159,7 +159,7 @@
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 14380,
-    "imageUrl": "/images/products/chefs-knife-2.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/31GU2U2UV4L._SL500_.jpg",
     "features": [
       "High-carbon German steel with taper-ground edge for precision cutting",
       "Santoprene handle with textured finger points for non-slip grip",
@@ -187,7 +187,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B0000CFMZD",
+    "asin": "B000UAPQGS",
     "slug": "tojiro-dp-gyuto-240mm",
     "name": "Tojiro DP Gyuto 240mm Chef's Knife",
     "brand": "Tojiro",
@@ -196,7 +196,7 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 3870,
-    "imageUrl": "/images/products/chefs-knife-2.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/31MxMKYoMwL._SL500_.jpg",
     "features": [
       "VG-10 core steel clad with 13-chrome stainless layers for hardness and corrosion resistance",
       "Traditional Japanese gyuto profile — thin, flat edge ideal for push cuts",
@@ -224,7 +224,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B07BC2QRKR",
+    "asin": "B0992L5N78",
     "slug": "dalstrong-gladiator-8-inch-chefs-knife",
     "name": "Dalstrong Gladiator Series 8-Inch Chef's Knife",
     "brand": "Dalstrong",
@@ -233,7 +233,7 @@
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 22650,
-    "imageUrl": "/images/products/chefs-knife-2.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41Vd34JcoZL._SL500_.jpg",
     "features": [
       "ThyssenKrupp high-carbon stainless steel (1.4116) hardened to 56+ HRC",
       "Tapered bolster for a comfortable pinch grip and smooth honing",
@@ -261,7 +261,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B07K2W6HYW",
+    "asin": "B0000ACOUU",
     "slug": "zwilling-pro-8-inch-chefs-knife",
     "name": "Zwilling Pro 8-Inch Chef's Knife",
     "brand": "Zwilling J.A. Henckels",
@@ -270,7 +270,7 @@
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 4120,
-    "imageUrl": "/images/products/chefs-knife-3.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/21LQkMqx8zL._SL500_.jpg",
     "features": [
       "Special formula steel with SIGMAFORGE one-piece precision forging",
       "FRIODUR ice-hardened blade for exceptional durability and flexibility",
@@ -298,7 +298,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B000UIODG0",
+    "asin": "B0000Y7KNQ",
     "slug": "shun-classic-8-inch-chefs-knife",
     "name": "Shun Classic 8-Inch Chef's Knife",
     "brand": "Shun",
@@ -307,7 +307,7 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 6840,
-    "imageUrl": "/images/products/chefs-knife-3.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/31I+3OK8e9L._SL500_.jpg",
     "features": [
       "VG-MAX cutting core with 68 layers of Damascus stainless cladding",
       "16-degree edge angle (per side) for acute, razor-like sharpness",

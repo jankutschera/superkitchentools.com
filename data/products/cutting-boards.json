@@ -1,6 +1,6 @@
 [
   {
-    "asin": "B00G5YJUFC",
+    "asin": "B0000CFV4K",
     "slug": "boos-maple-cutting-board-18x12",
     "name": "John Boos Block Classic Maple Wood Edge Grain Cutting Board, 18x12x1.5",
     "brand": "John Boos",
@@ -9,7 +9,7 @@
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 15620,
-    "imageUrl": "/images/products/cutting-board.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41PGwfsEFyL._SL500_.jpg",
     "features": [
       "Hard rock maple construction — one of the most knife-friendly wood species",
       "Edge-grain orientation provides a durable and attractive work surface",
@@ -75,7 +75,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B00BVKFPSE",
+    "asin": "B0F37X28JK",
     "slug": "teakhaus-teak-edge-grain-board-24x18",
     "name": "TeakHaus Edge Grain Teak Wood Cutting Board, 24x18",
     "brand": "TeakHaus",
@@ -84,7 +84,7 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 6730,
-    "imageUrl": "/images/products/cutting-board.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/51YQQwqLuQL._SL500_.jpg",
     "features": [
       "Sustainably sourced East African teak with natural oils for moisture resistance",
       "Large 24x18 inch surface handles full-size roasts and large prep tasks",
@@ -112,7 +112,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B002MHT6AY",
+    "asin": "B08FMJ9S2P",
     "slug": "totally-bamboo-cutting-board-large",
     "name": "Totally Bamboo Big Board Extra Large Cutting Board, 30x15",
     "brand": "Totally Bamboo",
@@ -121,7 +121,7 @@
     "currency": "USD",
     "rating": 4.3,
     "reviewCount": 8950,
-    "imageUrl": "/images/products/cutting-board.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/512CmBP3hkL._SL500_.jpg",
     "features": [
       "Extra-large 30x15 inch surface for family-sized meal prep",
       "Bamboo is 16% harder than maple for superior durability",
@@ -148,7 +148,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B00ACJUQ3U",
+    "asin": "B0C94LCLRZ",
     "slug": "boos-walnut-end-grain-board-18x12",
     "name": "John Boos Block Walnut End Grain Cutting Board with Juice Groove, 18x12",
     "brand": "John Boos",
@@ -157,7 +157,7 @@
     "currency": "USD",
     "rating": 4.8,
     "reviewCount": 4280,
-    "imageUrl": "/images/products/cutting-board-2.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41zZihslQRL._SL500_.jpg",
     "features": [
       "End-grain walnut construction — knife edges slip between wood fibers rather than cutting across them",
       "Self-healing surface shows fewer cut marks over time than edge-grain boards",
@@ -185,7 +185,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B009M9B5HE",
+    "asin": "B0008221B6",
     "slug": "epicurean-cutting-board-11x15",
     "name": "Epicurean Kitchen Series Cutting Board, 11x15 Inch",
     "brand": "Epicurean",
@@ -194,7 +194,7 @@
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 11240,
-    "imageUrl": "/images/products/cutting-board-2.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/31cvfao6jlL._SL500_.jpg",
     "features": [
       "Made from natural wood fiber composite (Richlite) — a compressed paper and resin material",
       "Dishwasher-safe for full sanitation — unlike solid wood boards",
@@ -222,7 +222,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B00KDFA86Y",
+    "asin": "B007TKHU3Y",
     "slug": "winco-white-plastic-cutting-board-12x18",
     "name": "Winco Polyethylene Cutting Board, 12 x 18 x 0.5 Inch, White",
     "brand": "Winco",
@@ -231,7 +231,7 @@
     "currency": "USD",
     "rating": 4.4,
     "reviewCount": 7630,
-    "imageUrl": "/images/products/cutting-board-2.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/11xL95U+sTS._SL500_.jpg",
     "features": [
       "NSF-certified for commercial and home kitchen use",
       "High-density polyethylene (HDPE) is industry standard for food safety",
@@ -259,7 +259,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B01N0GLFBB",
+    "asin": "B0DCPTJDYX",
     "slug": "farberware-flexible-cutting-mats-4-pack",
     "name": "Farberware Flexible Cutting Mats, 4-Pack with Food Icons",
     "brand": "Farberware",
@@ -268,7 +268,7 @@
     "currency": "USD",
     "rating": 4.3,
     "reviewCount": 19870,
-    "imageUrl": "/images/products/cutting-board-3.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41j4UADby1L._SL500_.jpg",
     "features": [
       "Four flexible mats with food-type icons for cross-contamination prevention",
       "Flexible material allows easy transfer of chopped food to pots and pans",
@@ -296,7 +296,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B00I8LBFKM",
+    "asin": "B08FMJ9S2P",
     "slug": "sonder-los-angeles-teak-charcuterie-board",
     "name": "Sonder Los Angeles Large Teak Wood Charcuterie Cutting Board with Juice Groove",
     "brand": "Sonder Los Angeles",
@@ -305,7 +305,7 @@
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 5480,
-    "imageUrl": "/images/products/cutting-board-3.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/512CmBP3hkL._SL500_.jpg",
     "features": [
       "Thick 1.25-inch natural teak wood with live-edge aesthetic",
       "Deep juice groove on reverse side for meat carving",
@@ -332,7 +332,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B0BSMTR3RK",
+    "asin": "B0F9X5RMJK",
     "slug": "caraway-cutting-board-set",
     "name": "Caraway Cutting Board Set — Two-Piece Prep & Serve Collection",
     "brand": "Caraway",
@@ -341,7 +341,7 @@
     "currency": "USD",
     "rating": 4.2,
     "reviewCount": 2140,
-    "imageUrl": "/images/products/cutting-board-3.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41YMXRHbIjL._SL500_.jpg",
     "features": [
       "Two boards: large prep board (14x10\") and small serving board (8x6\")",
       "BPA-free, food-safe polypropylene in coordinating Caraway colors",

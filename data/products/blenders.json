@@ -38,7 +38,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B01AXM4WV2",
+    "asin": "B0D8QQ2LY5",
     "slug": "ninja-professional-72-oz-countertop-blender",
     "name": "Ninja Professional 72 oz Countertop Blender",
     "brand": "Ninja",
@@ -47,7 +47,7 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 68430,
-    "imageUrl": "/images/products/blender.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41SdWZUyqCL._SL500_.jpg",
     "features": [
       "1000-watt motor with Total Crushing Technology",
       "72-oz pitcher handles large batches for families",
@@ -76,7 +76,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B07VX9CDGT",
+    "asin": "B0033WTB3O",
     "slug": "blendtec-classic-575-blender",
     "name": "Blendtec Classic 575 Blender with WildSide+ Jar",
     "brand": "Blendtec",
@@ -85,7 +85,7 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 9870,
-    "imageUrl": "/images/products/blender.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41uVsoidPvL._SL500_.jpg",
     "features": [
       "3.8 HP motor — the most powerful residential blender motor available",
       "WildSide+ jar with 90-degree angle creates a vortex for complete blending",
@@ -113,7 +113,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B00W0GHSHO",
+    "asin": "B0DFWGBW5M",
     "slug": "vitamix-e310-explorian-blender",
     "name": "Vitamix E310 Explorian Blender",
     "brand": "Vitamix",
@@ -122,7 +122,7 @@
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 14280,
-    "imageUrl": "/images/products/blender.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41GRQmx66AL._SL500_.jpg",
     "features": [
       "Full Vitamix motor and blade quality at an entry-level Vitamix price",
       "48-oz container for single servings and smaller batches",
@@ -187,7 +187,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B085HZKN4Y",
+    "asin": "B0B3RV1NDX",
     "slug": "nutribullet-pro-900-series",
     "name": "NutriBullet Pro 900 Series Personal Blender",
     "brand": "NutriBullet",
@@ -196,7 +196,7 @@
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 89540,
-    "imageUrl": "/images/products/blender-2.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/31In4tsb0eL._SL500_.jpg",
     "features": [
       "900-watt motor for single-serve smoothies and nutrient extraction",
       "Twist-to-blend cup design for mess-free operation and drinking",
@@ -224,7 +224,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B08KH9HBMM",
+    "asin": "B09SZNBTNQ",
     "slug": "vitamix-a3500-ascent-series",
     "name": "Vitamix A3500 Ascent Series Smart Blender",
     "brand": "Vitamix",
@@ -233,7 +233,7 @@
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 6840,
-    "imageUrl": "/images/products/blender-2.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41OHBf67EnL._SL500_.jpg",
     "features": [
       "Touchscreen interface with 5 programmable settings",
       "Built-in wireless connectivity via Vitamix Perfect Blend app",
@@ -261,7 +261,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B0097YQGHM",
+    "asin": "B0924TJMCG",
     "slug": "cuisinart-sbr-1100-smart-stick-hand-blender",
     "name": "Cuisinart RHB-100TG EvolutionX Cordless Hand Blender",
     "brand": "Cuisinart",
@@ -270,7 +270,7 @@
     "currency": "USD",
     "rating": 4.3,
     "reviewCount": 11280,
-    "imageUrl": "/images/products/blender-3.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/31lweuCvApL._SL500_.jpg",
     "features": [
       "Cordless design with rechargeable lithium battery",
       "8 speeds for precise control of pureeing and emulsifying",
@@ -298,7 +298,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B08THWQFB7",
+    "asin": "B07Q4X16Z1",
     "slug": "breville-super-q-blender",
     "name": "Breville Super Q Blender",
     "brand": "Breville",
@@ -307,7 +307,7 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 4320,
-    "imageUrl": "/images/products/blender-3.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/31YQCrR74UL._SL500_.jpg",
     "features": [
       "1800-watt 3.5 HP DC motor — the most powerful in this guide",
       "NoiseCancel technology with silencing enclosure reduces volume by 50%",
@@ -335,7 +335,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B07F6VQW3Q",
+    "asin": "B0CW1JTHZ6",
     "slug": "nutribullet-blender-combo-1200w",
     "name": "NutriBullet Blender Combo, 1200 Watt",
     "brand": "NutriBullet",
@@ -344,7 +344,7 @@
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 32450,
-    "imageUrl": "/images/products/blender-3.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41fAS-IGi2L._SL500_.jpg",
     "features": [
       "1200-watt motor handles both full pitcher and personal cup blending",
       "64-oz pitcher for large batches plus 32-oz personal cup",

@@ -38,7 +38,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B0000T0OAK",
+    "asin": "B00151WA06",
     "slug": "microplane-classic-zester-grater",
     "name": "Microplane Classic Zester / Grater",
     "brand": "Microplane",
@@ -47,7 +47,7 @@
     "currency": "USD",
     "rating": 4.8,
     "reviewCount": 43180,
-    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/313UAorevsL._SL500_.jpg",
     "features": [
       "Photo-etched razor-sharp blades produce fine, fluffy zest without pith",
       "Works for lemon/lime zest, Parmesan, chocolate, nutmeg, ginger, and garlic",
@@ -113,7 +113,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B000BVFZCE",
+    "asin": "B003L0OYJ4",
     "slug": "oxo-good-grips-12-inch-locking-tongs",
     "name": "OXO Good Grips 12-Inch Locking Tongs",
     "brand": "OXO",
@@ -122,7 +122,7 @@
     "currency": "USD",
     "rating": 4.8,
     "reviewCount": 31220,
-    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/2196zn+nXCL._SL500_.jpg",
     "features": [
       "Non-slip, heat-resistant handles with ergonomic grip",
       "Stainless steel tong arms rated to 400°F for stovetop and grill use",
@@ -187,7 +187,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B00004TYCL",
+    "asin": "B001UK1BM0",
     "slug": "kuhn-rikon-auto-safety-master-can-opener",
     "name": "Kuhn Rikon Auto Safety LidLifter Can Opener",
     "brand": "Kuhn Rikon",
@@ -196,7 +196,7 @@
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 22870,
-    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/313VpjNO52L._SL500_.jpg",
     "features": [
       "Cuts along the side of the lid rather than the top — no sharp edges on lid or can",
       "Lid-lifting mechanism removes the cut lid without touching it directly",
@@ -224,7 +224,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B000CWWZFE",
+    "asin": "B00004OCNS",
     "slug": "joseph-joseph-twist-whisk",
     "name": "OXO Good Grips 11-Inch Balloon Whisk",
     "brand": "OXO",
@@ -233,7 +233,7 @@
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 17230,
-    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/2144YRbWv4L._SL500_.jpg",
     "features": [
       "Thick, heavy stainless steel wires resist bending under vigorous whisking",
       "Soft, non-slip handle provides secure grip even with wet hands",
@@ -261,7 +261,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B078JB4YNB",
+    "asin": "B095MFLBGL",
     "slug": "kitchenaid-stainless-steel-turner-spatula",
     "name": "KitchenAid Classic Slotted Turner Spatula",
     "brand": "KitchenAid",
@@ -270,7 +270,7 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 23450,
-    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/31leqPkLE9L._SL500_.jpg",
     "features": [
       "Angled blade provides maximum leverage for flipping pancakes, burgers, and fish",
       "Nylon construction is safe for non-stick cookware — won't scratch coatings",
@@ -298,7 +298,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B01HRUHJDW",
+    "asin": "B07W5JN2PL",
     "slug": "norpro-stainless-colander-set",
     "name": "OXO Good Grips 3-Piece Fine Mesh Strainer Set",
     "brand": "OXO",
@@ -307,7 +307,7 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 11870,
-    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/31abAlqqyZL._SL500_.jpg",
     "features": [
       "Set of 3 fine mesh strainers in small (1.5 cup), medium (3 cup), and large (8 cup) sizes",
       "Fine mesh is tight enough to strain citrus seeds, tea leaves, and spice powders",
@@ -335,7 +335,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B00B1YDLCI",
+    "asin": "B002XOB0P0",
     "slug": "progressive-international-egg-separator",
     "name": "Chef'n FreshForce Citrus Juicer",
     "brand": "Chef'n",
@@ -344,7 +344,7 @@
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 19540,
-    "imageUrl": "/images/products/kitchen-gadget-product.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/31ff+y3pQrL._SL500_.jpg",
     "features": [
       "Gear-action mechanism doubles the pressing force for maximum juice extraction",
       "Works for lemons, limes, and small oranges with the same tool",

@@ -38,7 +38,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B008DBCGEK",
+    "asin": "B0BJ36HT9V",
     "slug": "kitchenaid-professional-600-6-quart",
     "name": "KitchenAid Professional 600 Series 6-Quart Bowl-Lift Stand Mixer",
     "brand": "KitchenAid",
@@ -47,7 +47,7 @@
     "currency": "USD",
     "rating": 4.8,
     "reviewCount": 18920,
-    "imageUrl": "/images/products/stand-mixer.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/317ZsdR5zAL._SL500_.jpg",
     "features": [
       "6-quart stainless steel bowl handles up to 13 dozen cookies or 8 loaves",
       "575-watt motor handles heavy bread doughs without straining",
@@ -76,7 +76,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B01MFG0T6O",
+    "asin": "B0FLDC3C5B",
     "slug": "cuisinart-sm-50-5-5-quart-stand-mixer",
     "name": "Cuisinart SM-50 5.5-Quart Stand Mixer",
     "brand": "Cuisinart",
@@ -85,7 +85,7 @@
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 14320,
-    "imageUrl": "/images/products/stand-mixer.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/313vR-zy-TL._SL500_.jpg",
     "features": [
       "5.5-quart stainless steel bowl with ergonomic handle",
       "500-watt motor with 12 speeds for precise mixing control",
@@ -113,7 +113,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B09GJT6Z6R",
+    "asin": "B008U8XHB8",
     "slug": "bosch-universal-plus-stand-mixer",
     "name": "Bosch Universal Plus Stand Mixer with Bowl",
     "brand": "Bosch",
@@ -122,7 +122,7 @@
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 6840,
-    "imageUrl": "/images/products/stand-mixer.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/31mE2XtIeZL._SL500_.jpg",
     "features": [
       "6.5-quart stainless steel bowl with bottom-drive motor for more powerful mixing",
       "800-watt motor handles the stiffest bread and bagel doughs effortlessly",
@@ -150,7 +150,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B07RR48GQ1",
+    "asin": "B06XJ4N5SL",
     "slug": "kenwood-chef-xl-stand-mixer-6-7-quart",
     "name": "Kenwood Chef XL Stand Mixer, 6.7-Quart",
     "brand": "Kenwood",
@@ -159,7 +159,7 @@
     "currency": "USD",
     "rating": 4.4,
     "reviewCount": 3980,
-    "imageUrl": "/images/products/stand-mixer-2.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/412YNfNEygL._SL500_.jpg",
     "features": [
       "6.7-quart stainless steel bowl for large batch baking",
       "1000-watt motor handles the heaviest doughs and largest batches",
@@ -187,7 +187,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B07BCTQQY6",
+    "asin": "B0FXDXRXRR",
     "slug": "hamilton-beach-stand-mixer-4-quart",
     "name": "Hamilton Beach 63390 7-Speed Stand Mixer, 4-Quart",
     "brand": "Hamilton Beach",
@@ -196,7 +196,7 @@
     "currency": "USD",
     "rating": 4.3,
     "reviewCount": 21450,
-    "imageUrl": "/images/products/stand-mixer-2.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41OPL8wb9+L._SL500_.jpg",
     "features": [
       "Budget-friendly entry with 300-watt motor",
       "7-speed settings for basic mixing tasks",
@@ -261,7 +261,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B09GZQ7CFM",
+    "asin": "B093WNR81C",
     "slug": "smeg-smf03-stand-mixer-5-quart",
     "name": "SMEG SMF03 5-Quart Stand Mixer",
     "brand": "SMEG",
@@ -270,7 +270,7 @@
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 2870,
-    "imageUrl": "/images/products/stand-mixer-3.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/210taSse1+L._SL500_.jpg",
     "features": [
       "Retro Italian design with chrome accents in multiple colorways",
       "800-watt motor with 10-speed settings and planetary mixing action",
@@ -298,7 +298,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B0894TNRRQ",
+    "asin": "B0CSYSKZQC",
     "slug": "kitchenaid-4-5-quart-tilt-head-mixer-classic",
     "name": "KitchenAid Classic Plus 4.5-Quart Tilt-Head Stand Mixer",
     "brand": "KitchenAid",
@@ -307,7 +307,7 @@
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 28430,
-    "imageUrl": "/images/products/stand-mixer-3.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/419mdZfjqbL._SL500_.jpg",
     "features": [
       "4.5-quart stainless steel bowl handles up to 7 dozen cookies",
       "275-watt motor for everyday mixing tasks",
@@ -335,7 +335,7 @@
     "lastUpdated": "2026-03-14"
   },
   {
-    "asin": "B00EJPWRAQ",
+    "asin": "B06ZXS219Z",
     "slug": "ankarsrum-original-mixer-7-quart",
     "name": "Ankarsrum Assistent Original Stand Mixer, 7-Quart",
     "brand": "Ankarsrum",
@@ -344,7 +344,7 @@
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 3240,
-    "imageUrl": "/images/products/stand-mixer-3.jpg",
+    "imageUrl": "https://m.media-amazon.com/images/I/41P-yIJYpdL._SL500_.jpg",
     "features": [
       "Bottom-drive motor mounted in base with rotating bowl system",
       "1400-watt motor handles even the stiffest whole wheat bread doughs",
